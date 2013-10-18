@@ -1,0 +1,5 @@
+Friday, June 24th
+
+--- Copied the frames and library from problem 103
+--- Changed the math to work with 5 instead of problem 103's 4
+--- Made the radius line vertical instead of problem 103's horizontal line

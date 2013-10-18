@@ -1,0 +1,8 @@
+Friday, June 24
+--- Split the single, choose_a, hint into 2 hints: formula and choose_a.
+--- Resized the blue area box animation to fit the black box better.
+--- Took the sound file "area_equals_height_times_width.swf" from problem 032, renamed and used it in the formula hint.
+
+October 2008  (Ivon)
+
+---- Problem repeats hints, so added some stops

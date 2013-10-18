@@ -1,0 +1,3 @@
+Tuesday, June 29th
+--- Split the single, choose_a, hint into 2 hints: cross_out and choose_a.
+--- Synched the animations to the new layout

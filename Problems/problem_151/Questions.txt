@@ -1,0 +1,1 @@
+Should there be two "choose" hints. The left over faded out information needs to be different if you use estimation or math.

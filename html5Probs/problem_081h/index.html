@@ -1,0 +1,307 @@
+
+
+<html>
+<head>
+<title>UMass Math Tutor</title>
+<link type="text/css" href="css/south-street/jquery-ui-1.8.22.custom.css" rel="stylesheet"/>
+<link href="css/navlog.css" rel="stylesheet" type="text/css">
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.22.custom.min.js"></script>
+<script type="text/javascript">
+
+    var elapsedTime =11327729;
+    var lastProbType = null;
+    var probElapsedTime = 0;
+    var clock = 0;
+    var lastProbId =17;
+    var debug = false;
+    var topicId =18;
+
+    function debugAlert(msg) {
+        if (debug) {
+            alert(msg);
+        }
+    }
+
+    // don't send an endExternalActivity if the last prob was 4mality.  4mality sends its own begin/ends
+    function sendEndEvent() {
+        if (lastProbType != '4Mality') {
+            $.post("/mt/TutorBrain?action=EndExternalActivity&sessionId=42315&elapsedTime="
+                    + elapsedTime + "&probElapsedTime=" + probElapsedTime + "&xactId=" + lastProbId);
+        }
+        else {
+            $.post("/mt/TutorBrain?action=FormalityEndProblem&sessionId=42315&elapsedTime="
+                    + elapsedTime + "&probElapsedTime=" + probElapsedTime + "&probId=" + lastProbId);
+        }
+    }
+
+
+    function processNextProblemResult(responseText, textStatus, XMLHttpRequest) {
+        debugAlert("Server returns " + responseText);
+        var re = new RegExp("<activity>(.)*</activity>");
+        var m = re.exec(responseText);
+        if (m == null) {
+            debugAlert("no match");
+        }
+        else {
+            var activityXML = m[0];
+            debugAlert("activity is: " + activityXML);
+            var dom = $.parseXML(activityXML),
+                    $xml = $(dom),
+                    $prob = $xml.find("problemURL"),
+                    $xact = $xml.find("externalURL"),
+                    $topicIntro = $xml.find("topicIntro"),
+                    $instr = $xml.find("instructions");
+
+            var instructions = $instr.text();
+            $("#instructionsP").text(instructions);
+            var now = new Date().getTime();
+            probElapsedTime += now - clock;
+            elapsedTime += now - clock;
+            clock = now;
+
+            // got back XML that indicates its an external problem
+            if ($xact.length > 0) {
+                var pid = $xact.attr("id");
+                var resource = $xact.text();
+                debugAlert("Its an external problem.   Changing iframe src attribute to " + resource);
+                // Don't send an endExternalActivity if the last prob was 4mality.  They send their own begin/ends
+                sendEndEvent();
+                probElapsedTime = 0;
+                $.post("/mt/TutorBrain?action=BeginExternalActivity&sessionId=42315&elapsedTime="
+                        + elapsedTime + "&probElapsedTime=" + probElapsedTime + "&xactId=" + pid);
+                lastProbId = pid;
+                lastProbType = 'External';
+                $("#iframe").attr("src", resource);
+
+            }
+            else if ($prob.length > 0) {
+                var mode = $prob.attr("mode");
+
+                if (mode == "4Mality") {
+                    var pid = $prob.attr("id");
+                    var resource = $prob.text();
+                    debugAlert("Its a 4mality problem.  URL is " + resource);
+                    sendEndEvent();
+                    probElapsedTime = 0;
+                    // formality problems call the servlet with their own begin /end events
+                    lastProbId = pid;
+                    lastProbType = '4Mality';
+                    // Change the src of the iframe to be the Formality page.  The user ID for 4mality doesn't matter as long as it exists
+                    $("#iframe").attr("src", "http://localhost:8082/mt/FormalityServlet?fxn=wayang&mode=viewq&qID="
+                            + resource + "&un=1864&wayangProbId=" + pid +
+                            "&wayangStudId=18879&wayangSessId=42315&elapsedTime=" + elapsedTime
+                            + "&wayangServletContext=" + 'mt');
+
+                }
+                else {
+                    var pid = $prob.attr("id");
+                    var resource = $prob.text();
+
+                    debugAlert("its a flash problem.   We need to call WoLogin or something");
+                    // send an END for the first xAct
+                    debugAlert("Calling servlet with EndExternalActivity");
+                    // don't send an endExternalActivity if the last prob was 4mality bc 4mality sends its own begin/ends
+                    sendEndEvent();
+                    lastProbType = 'Flash';
+                    // not sure what the other params are for flash to show a problem in the tutor hut
+                    
+                    document.location.href = "http://localhost/wayang2/flash/client/WoLogin_k12.swf?sessnum=42315&sessionId=42315&learningHutChoice=true&elapsedTime=" + elapsedTime + "&learningCompanion=&problem_name=" + resource + "&mode=practice"; // &topicId=" + topicId;
+                }
+            }
+            else if ($topicIntro.length > 0) {
+                var resource = $topicIntro.find("resource").text();
+                sendEndEvent();
+                lastProbType = 'Flash';
+                document.location.href = "http://localhost/wayang2/flash/client/WoLogin_k12.swf?sessnum=42315&sessionId=42315&learningHutChoice=true&elapsedTime=" + elapsedTime + "&learningCompanion=&problem_name=" + resource + "&mode=practice"; //&topicId=" + topicId;
+            }
+            // We got XML that we don't understand so it must be an intervention.   We call Flash and pass it the XML
+            else {
+                sendEndEvent();
+                lastProbType = 'Flash';
+                debugAlert('Calling Flash for intervention XML: ' + activityXML);
+                
+                document.location.href = "http://localhost/wayang2/flash/client/WoLogin_k12.swf?sessnum=42315&sessionId=42315&learningHutChoice=true&elapsedTime=" + elapsedTime + "&learningCompanion=&intervention=" + encodeURIComponent(activityXML) + "&mode=intervention"; // &topicId=" + topicId;
+                
+
+            }
+
+        }
+    }
+
+    // Unfortunately the back button will run this function too which means that it can generate a BeginExternalActivity
+    $(document).ready(function () {
+        var d = new Date();
+        var startTime = d.getTime();
+
+        $("#nextProb").click(function () {
+            // get the id of the next problem from the input box
+
+            d = new Date();
+            var now = d.getTime();
+            probElapsedTime += now - clock;
+            clock = now;
+            elapsedTime += probElapsedTime;
+            // For debugging we need to uncomment the input box that allows us to type in the id of the next problem we wish
+            // the server to return when we click "Next"
+            if (debug) {
+                var nextProbId = $("#probId").val();
+                var wantExternal = $("#checkbox").prop('checked');
+                $.get("/mt/TutorBrain?action=NextProblem&sessionId=42315&elapsedTime="
+                        + elapsedTime + "&probElapsedTime=" + probElapsedTime + "&probID=" + nextProbId + "&isExternal=" + wantExternal,
+                        processNextProblemResult);
+            }
+            else {
+                // call the server with a nextProblem event and the callback fn processNextProblemResult will deal with result
+                $.get("/mt/TutorBrain?action=NextProblem&sessionId=42315&elapsedTime="
+                        + elapsedTime + "&probElapsedTime=" + probElapsedTime, processNextProblemResult);
+            }
+
+        });
+
+        $('#dialog').dialog({
+            autoOpen: true,
+            width: 600,
+            buttons: {
+                "Ok": function () {
+                    $(this).dialog("close");
+                },
+                "Cancel": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+        $("#instructions").click(function () {
+            // probably want something slicker than this alert dialog.
+            
+            $("#dialog").dialog('open');
+            return false;
+        });
+
+        $("#myProg").click(function () {
+            d = new Date();
+            var now = d.getTime();
+            probElapsedTime += now - startTime;
+            elapsedTime += probElapsedTime;
+            document.location.href = "/mt/TutorBrain?action=navigation&sessionId=42315&elapsedTime=" + elapsedTime + "&from=sat_hut&to=my_progress";
+
+        });
+        d = new Date();
+        clock = d.getTime();
+        var loadTime = clock - startTime;
+        elapsedTime += loadTime;
+        probElapsedTime = loadTime;
+        lastProbType = 'External';
+
+        // send a BEGIN for the xAct if its not a 4mality prob.   4mality sends its own begin event
+        if (lastProbType != '4Mality') {
+            $.get("/mt/TutorBrain?action=BeginExternalActivity&sessionId=42315&elapsedTime=" + elapsedTime + "&probElapsedTime=" + probElapsedTime + "&xactId=17");
+        }
+    });
+
+
+</script>
+</head>
+<body>
+
+  <p>
+    <!-- Header -->
+  </p>
+  <table id="banner" width="100%">
+    <tr>
+      <td width="130" align="left" style="width:130px"><a href="http://wayangoutpost.com/"> <img src="img/leaf.jpg"
+                                                                                                   alt="UMass Math Tutor"
+                                                                                                   width="94"
+                                                                                                   height="77"/> </a>
+      </td>
+      <td width="162" align="left" valign="top" bgcolor="#FFDC75"><b>Wayang Math Tutor</b></td>
+      <td width="1197" align="right" bgcolor="#FFDC75"><a href="http://www.apache.org/"> <img src="img/header.png"
+                                                                                                height="65" width="693"
+                                                                                                alt="UMass Math Tutor"/>
+        </a></td>
+    </tr>
+  </table>
+  
+  <div class="containerTop">
+    <table>
+      <tr>
+        <!-- Table of Contents -->
+        <td valign="top">
+          <table width="100%" border="1" cellspacing="0" cellpadding="3">
+            <tr>
+              <th>Help Me</th>
+              </tr>
+            <tr>
+              <td class="menu">
+                <a id="read" href="#">Read Problem</a><br/>
+                <a id="hint" href="#">Hint</a><br/>
+                <a id="replay" href="#">Replay Hint</a><br/>
+                <a id="solve" href="#">Solve Problem</a><br/>
+                &nbsp;
+                </td>
+              </tr>
+            </table>
+          
+          <br/>
+          <table width="100%" border="1" cellspacing="0" cellpadding="3">
+            <tr>
+              <th>Resources</th>
+              </tr>
+            <tr>
+              <td valign="top" class="menu">
+                <a id="example" href="#">Show Example</a><br/>
+                <a id="video" href="#">Show Video</a><br/>
+                <a id="formulas" href="#">Formulas</a><br/>
+                <a id="glossary" href="#">Glossary</a><br/>
+                &nbsp;
+                </td>
+              </tr>
+            </table>
+          
+          <br/>
+          <table width="100%" border="1" cellspacing="0" cellpadding="3">
+            <tr>
+              <th>Places</th>
+              </tr>
+            <tr>
+              <td valign="top" class="menu">
+                <a id="mpp" href="#">My Progress</a><br/>
+                <a id="home" href="#">Home</a><br/>
+                &nbsp;
+                </td>
+              </tr>
+            </table>
+          
+          
+          </td>
+        <td valign="top">&nbsp;</td>
+        
+        <td>
+          <iframe  id="iframe"
+                        name="iframe1"
+                        width="1000"
+                        height="600"
+                        src="http://cadmium.cs.umass.edu/wayang2/flash/Problems/AW_001/AdditionDecimals.swf"
+                        frameborder="yes"
+                        scrolling="yes">
+          </iframe>
+        </table>
+  </div>
+  </td></tr>
+  </table>
+  <div id="dialog" title="Instructions">
+    <p id="instructionsP">This is a problem about ADDING two DECIMAL numbers. You will have to CLICK on the text box in order to type the sum of the column, and then hit RETURN. Continue with the next one.</p>
+  </div>
+  <div class="containerL">
+    <div class="content">
+      <div class="prob1"><a id="nextProb" href="#" class="logbutton">New Problem</a>
+        <!-- end .content -->
+      </div>
+      <div class="inst2"><a id="instructions"  href="#" class="logbutton">Instructions</a></div>
+      <div class="prog3"><a id="myProg" href="#" class="logbutton">My Progress</a></div>
+    </div>
+    <!-- end .container --></div>
+</div>
+</body>
+</html>

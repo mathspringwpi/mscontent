@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<script type="text/javascript" src="swfobject.js">   </script>
+	<head>
+		<title>probplayer</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css" media="screen">
+		html, body { height:100%; background-color: #ffffff;}
+		body { margin:0; padding:0; overflow:hidden; }
+		#flashContent { width:100%; height:100%; }
+		</style>
+
+        <script type="text/javascript" >
+
+
+            function playHint (n) {
+                alert("Calling Flash");
+                document.getElementById("probplayer").myExternalMethod(n);
+
+            }
+
+            var flashvars = {
+
+            }
+            var params = {
+                wmode: "transparent",
+                allowscriptaccess: "always"
+            }
+
+            var attributes = {
+                id: "probplayer",
+                name: "probplayer"
+            }
+            swfobject.embedSWF("probplayer_LC.swf", "probplayer", "600", "600", "8" , "#FFFFFF", flashvars, params, attributes);
+
+        </script>
+
+
+	</head>
+	<body>
+       <button onClick="playHint(1)">Play Hint 1</button>
+       <button onClick="playHint(2)">Play Hint 2</button>
+       <button onClick="playHint(3)">Play Hint 3</button>
+       <button onClick="playHint(4)">Play Hint 4</button><br><br>
+		<div id="probplayer">
+
+		</div>
+
+
+	</body>
+</html>

@@ -1,0 +1,3 @@
+Wednesday, June 29th
+---  Question shape and text moved from inside choose_e movieclip to the question layer on the main timeline
+---  Fixed a typo in the question's text
