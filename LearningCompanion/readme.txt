@@ -1,0 +1,1 @@
+This directory contains HTML files that implement learning companions
