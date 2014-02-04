@@ -445,11 +445,7 @@ sym.stop();
    //Edge symbol: 'EButton_3_1'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_E_Button}", "click", function(sym, e) {
-         answerClicked(sym, "E");
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.stop();
