@@ -2,22 +2,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CreateJS export from confidence low</title>
+<title>CreateJS export from ANXIOUSCOMBO2</title>
 
-<script src="createJs/easeljs-0.6.0.min.js"></script>
-<script src="createJs/tweenjs-0.4.0.min.js"></script>
-<script src="createJs/movieclip-0.6.0.min.js"></script>
-<script src="createJs/preloadjs-0.3.0.min.js"></script>
-<script src="createJs/soundjs-0.4.0.min.js"></script>
-
-<script src="confidence low.js"></script>
+<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/preloadjs-0.3.0.min.js"></script>
+<script src="http://code.createjs.com/soundjs-0.4.0.min.js"></script>
+<script src="ANXIOUSCOMBO2.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
 
 function init() {
 	canvas = document.getElementById("canvas");
-	exportRoot = new lib.confidencelow();
+
+	var manifest = [
+		{src:"sounds/Female_AnxFrustrVerbalAck3.mp3|Female_AnxFrustrVerbalAck3.ogg", id:"Female_AnxFrustrVerbalAck3"},
+		{src:"sounds/Female_Connector3.mp3|Female_Connector3.ogg", id:"Female_Connector3"},
+		{src:"sounds/FemaleGeneralAttribution5.mp3|FemaleGeneralAttribution5.ogg", id:"FemaleGeneralAttribution5"}
+	];
+
+	var loader = new createjs.LoadQueue(false);
+	loader.installPlugin(createjs.Sound);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(manifest);
+}
+
+function handleComplete() {
+	exportRoot = new lib.ANXIOUSCOMBO2();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
@@ -25,6 +38,10 @@ function init() {
 
 	createjs.Ticker.setFPS(24);
 	createjs.Ticker.addEventListener("tick", stage);
+}
+
+function playSound(id, loop) {
+	createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
 }
 </script>
 </head>
