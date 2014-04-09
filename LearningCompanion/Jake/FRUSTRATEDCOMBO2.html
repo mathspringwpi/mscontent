@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CreateJS export from FRUSTRATEDCOMBO2</title>
+<title>CreateJS export from frustratedCombo2</title>
 
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
@@ -10,8 +10,7 @@
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
 
-
-<script src="FRUSTRATEDCOMBO2.js"></script>
+<script src="frustratedCombo2.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
@@ -20,10 +19,10 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/Male_AnxFrustrVerbalAck2.mp3|Male_AnxFrustrVerbalAck2.ogg", id:"Male_AnxFrustrVerbalAck2"},
-		{src:"sounds/Male_Connector1.mp3|Male_Connector1.ogg", id:"Male_Connector1"},
-		{src:"sounds/Male_Connector2.mp3|Male_Connector2.ogg", id:"Male_Connector2"},
-		{src:"sounds/MaleNoEffortAttribution2.mp3|MaleNoEffortAttribution2.ogg", id:"MaleNoEffortAttribution2"}
+		{src:"sounds/Male_AnxFrustrVerbalAck2.mp3|sounds/Male_AnxFrustrVerbalAck2.ogg", id:"Male_AnxFrustrVerbalAck2"},
+		{src:"sounds/Male_Connector1.mp3|sounds/Male_Connector1.ogg", id:"Male_Connector1"},
+		{src:"sounds/Male_Connector2.mp3|sounds/Male_Connector2.ogg", id:"Male_Connector2"},
+		{src:"sounds/MaleNoEffortAttribution2.mp3|sounds/MaleNoEffortAttribution2.ogg", id:"MaleNoEffortAttribution2"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -33,7 +32,7 @@ function init() {
 }
 
 function handleComplete() {
-	exportRoot = new lib.FRUSTRATEDCOMBO2();
+	exportRoot = new lib.frustratedCombo2();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
