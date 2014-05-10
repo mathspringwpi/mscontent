@@ -19,7 +19,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/Male_AnxFrustrVerbalAck2.mp3|sounds/Male_AnxFrustrVerbalAck2.ogg", id:"Male_AnxFrustrVerbalAck2"}
+		{src:"sounds/Male_AnxFrustrVerbalAck2.mp3|Male_AnxFrustrVerbalAck2.ogg", id:"Male_AnxFrustrVerbalAck2"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -46,6 +46,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="270" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="550" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>

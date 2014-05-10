@@ -2,15 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CreateJS export from correcteffort2</title>
+<title>CreateJS export from correctEffort2</title>
 
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
 <script src="createJs/movieclip-0.6.0.min.js"></script>
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
-
-<script src="correcteffort2.js"></script>
+<script src="correctEffort2.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
@@ -19,7 +18,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/Male_CorrectEffort2.mp3|sounds/Male_CorrectEffort2.ogg", id:"Male_CorrectEffort2"}
+		{src:"sounds/Male_CorrectEffort2.mp3|/Male_CorrectEffort2.ogg", id:"Male_CorrectEffort2"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -29,7 +28,7 @@ function init() {
 }
 
 function handleComplete() {
-	exportRoot = new lib.correcteffort2();
+	exportRoot = new lib.correctEffort2();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
@@ -46,6 +45,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="270" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="550" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>

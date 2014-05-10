@@ -9,8 +9,6 @@
 <script src="createJs/movieclip-0.6.0.min.js"></script>
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
-
-
 <script src="incorrect4.js"></script>
 
 <script>
@@ -20,7 +18,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/Male_Incorrect4.mp3|sounds/Male_Incorrect4.ogg", id:"Male_Incorrect4"}
+		{src:"sounds/Male_Incorrect4.mp3|Male_Incorrect4.ogg", id:"Male_Incorrect4"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -47,6 +45,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="270" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="550" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>

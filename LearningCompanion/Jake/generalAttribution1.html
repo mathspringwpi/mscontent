@@ -3,13 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>CreateJS export from generalAttribution1</title>
-
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
 <script src="createJs/movieclip-0.6.0.min.js"></script>
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
-
 <script src="generalAttribution1.js"></script>
 
 <script>
@@ -19,7 +17,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/MaleGeneralAttribution1.mp3|sounds/MaleGeneralAttribution1.ogg", id:"MaleGeneralAttribution1"}
+		{src:"sounds/MaleGeneralAttribution1.mp3|MaleGeneralAttribution1.ogg", id:"MaleGeneralAttribution1"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -46,6 +44,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="270" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="550" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>
