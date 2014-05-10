@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>CreateJS export from effortAttribution3</title>
-
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
 <script src="createJs/movieclip-0.6.0.min.js"></script>
@@ -18,7 +17,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/FemaleEffortAttribution3.mp3|sounds/FemaleEffortAttribution3.ogg", id:"FemaleEffortAttribution3"}
+		{src:"sounds/FemaleEffortAttribution3.mp3|FemaleEffortAttribution3.ogg", id:"FemaleEffortAttribution3"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -45,6 +44,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="270" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="560" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>
