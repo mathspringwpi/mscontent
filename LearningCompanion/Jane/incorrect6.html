@@ -18,8 +18,9 @@ function init() {
 	canvas = document.getElementById("canvas");
 	images = images||{};
 
-	var manifest = [{},
+	var manifest = [
 		
+		{src:"sounds/Female_SolvingTogether.mp3", id:"Female_SolvingTogether"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -51,6 +52,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="250" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="250" height="600" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>
