@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CreateJS export from jake_anim</title>
+<title>CreateJS export from jake_anim 2</title>
 
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
@@ -18,23 +18,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/Male_Correct1.mp3", id:"Male_Correct1"},
-		{src:"sounds/Male_Correct2.mp3", id:"Male_Correct2"},
-		{src:"sounds/Male_Correct3.mp3", id:"Male_Correct3"},
-		{src:"sounds/Male_Correct4.mp3", id:"Male_Correct4"},
-		{src:"sounds/Male_CorrectEffort1.mp3", id:"Male_CorrectEffort1"},
-		{src:"sounds/Male_CorrectEffort2.mp3", id:"Male_CorrectEffort2"},
-		{src:"sounds/Male_CorrectNoEffort1.mp3", id:"Male_CorrectNoEffort1"},
-		{src:"sounds/Male_CorrectNoEffort2.mp3", id:"Male_CorrectNoEffort2"},
-		{src:"sounds/Male_CorrectNoEffort2_Prefix.mp3", id:"Male_CorrectNoEffort2_Prefix"},
-		{src:"sounds/Male_Incorrect1.mp3", id:"Male_Incorrect1"},
-		{src:"sounds/Male_Incorrect2.mp3", id:"Male_Incorrect2"},
-		{src:"sounds/Male_Incorrect3.mp3", id:"Male_Incorrect3"},
-		{src:"sounds/Male_Incorrect4.mp3", id:"Male_Incorrect4"},
-		{src:"sounds/Male_IncorrectEffort1.mp3", id:"Male_IncorrectEffort1"},
-		{src:"sounds/Male_IncorrectEffort2.mp3", id:"Male_IncorrectEffort2"},
-		{src:"sounds/Male_IncorrectNoEffort1.mp3", id:"Male_IncorrectNoEffort1"},
-		{src:"sounds/Male_IncorrectNoEffort2.mp3", id:"Male_IncorrectNoEffort2"},
+		
 		{src:"sounds/Male_SolvingTogether.mp3", id:"Male_SolvingTogether"}
 	];
 
@@ -45,7 +29,7 @@ function init() {
 }
 
 function handleComplete() {
-	exportRoot = new lib.jake_anim();
+	exportRoot = new lib.jake_anim2();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
@@ -62,6 +46,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="300" height="450" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="600" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>

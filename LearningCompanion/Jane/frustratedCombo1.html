@@ -2,14 +2,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CreateJS export from FRUSTRATEDCOMBO1</title>
+<title>CreateJS export from frustratedCombo1</title>
 
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
 <script src="createJs/movieclip-0.6.0.min.js"></script>
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
-
 <script src="frustratedCombo1.js"></script>
 
 <script>
@@ -19,7 +18,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/Female_Connector1.mp3|Female_Connector1.ogg", id:"Female_Connector1"},
+		{src:"sounds/Female_Connector1.mp3|sounds/Female_Connector1.ogg", id:"Female_Connector1"},
 		{src:"sounds/Female_FrustratedVerbalAck2.mp3|Female_FrustratedVerbalAck2.ogg", id:"Female_FrustratedVerbalAck2"},
 		{src:"sounds/FemaleEffortAttribution3.mp3|FemaleEffortAttribution3.ogg", id:"FemaleEffortAttribution3"}
 	];
@@ -31,7 +30,7 @@ function init() {
 }
 
 function handleComplete() {
-	exportRoot = new lib.FRUSTRATEDCOMBO1();
+	exportRoot = new lib.frustratedCombo1();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
@@ -48,6 +47,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="270" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="600" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>

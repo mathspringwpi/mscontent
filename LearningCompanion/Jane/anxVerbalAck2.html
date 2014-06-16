@@ -10,6 +10,7 @@
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
 
+
 <script src="anxVerbalAck2.js"></script>
 
 <script>
@@ -19,7 +20,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/Female_AnxVerbalAck2.mp3|sounds/Female_AnxVerbalAck2.ogg", id:"Female_AnxVerbalAck2"}
+		{src:"sounds/Female_AnxVerbalAck2.mp3|Female_AnxVerbalAck2.ogg", id:"Female_AnxVerbalAck2"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -46,6 +47,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="270" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="600" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>

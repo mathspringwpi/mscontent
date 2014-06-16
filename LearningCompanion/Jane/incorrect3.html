@@ -18,7 +18,8 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/Female_Incorrect3_version1.mp3|sounds/Female_Incorrect3_version1.ogg", id:"Female_Incorrect3_version1"}
+		{src:"sounds/Female_Incorrect3_version1cutmp3net.mp3|Female_Incorrect3_version1cutmp3net.ogg", id:"Female_Incorrect3_version1cutmp3net"},
+		{src:"sounds/Female_Incorrect3_version1.mp3|Female_Incorrect3_version1.ogg", id:"Female_Incorrect3_version1"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -45,6 +46,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="250" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="250" height="600" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>

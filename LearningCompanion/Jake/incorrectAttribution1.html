@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <title>CreateJS export from incorrectAttribution1</title>
 
+
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
 <script src="createJs/movieclip-0.6.0.min.js"></script>
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
-
 <script src="incorrectAttribution1.js"></script>
 
 <script>
@@ -19,7 +19,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 
 	var manifest = [
-		{src:"sounds/Male_Incorrect_Attribution1.mp3|sounds/Male_Incorrect_Attribution1.ogg", id:"Male_Incorrect_Attribution1"}
+		{src:"sounds/Male_Incorrect_Attribution1.mp3|Male_Incorrect_Attribution1.ogg", id:"Male_Incorrect_Attribution1"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -46,6 +46,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="270" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="600" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>

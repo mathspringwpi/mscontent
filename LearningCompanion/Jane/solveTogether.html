@@ -2,15 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CreateJS export from solve together</title>
+<title>CreateJS export from solveTogether</title>
 
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
 <script src="createJs/movieclip-0.6.0.min.js"></script>
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
-
-<script src="solve together.js"></script>
+<script src="solveTogether.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
@@ -20,7 +19,7 @@ function init() {
 
 	var manifest = [
 		
-		{src:"sounds/Female_SolvingTogether.mp3|sounds/Female_SolvingTogether.ogg", id:"Female_SolvingTogether"}
+		{src:"sounds/Female_SolvingTogether.mp3|Female_SolvingTogether.ogg", id:"Female_SolvingTogether"}
 	];
 
 	var loader = new createjs.LoadQueue(false);
@@ -30,7 +29,7 @@ function init() {
 }
 
 function handleComplete() {
-	exportRoot = new lib.solvetogether();
+	exportRoot = new lib.solveTogether();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
@@ -47,6 +46,6 @@ function playSound(id, loop) {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="250" height="420" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="270" height="600" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>
