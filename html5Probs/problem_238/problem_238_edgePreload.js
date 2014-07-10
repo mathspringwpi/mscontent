@@ -69,4 +69,4 @@ dlContent={dom: [
 ]}
 ;//simpleContent
 
-})( "EDGE-247728331");
+})( "EdgeProblem");

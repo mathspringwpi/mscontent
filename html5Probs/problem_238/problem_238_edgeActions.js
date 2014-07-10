@@ -43,7 +43,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          nope:[
          
-         '../problemUtils.js'//,
+         '../js/problemUtils.js'//,
          //'example.js',
          //'example2.js',
          
@@ -420,4 +420,4 @@ sym.stop();
    })("Answers_1");
    //Edge symbol end:'Answers_1'
 
-})(jQuery, AdobeEdge, "EDGE-247728331");
+})(jQuery, AdobeEdge, "EdgeProblem");
