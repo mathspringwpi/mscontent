@@ -23,6 +23,12 @@ var symbols = {
     content: {
             dom: [
             {
+                id: 'triangleonleft2',
+                type: 'image',
+                rect: ['-17px', '37px','200px','229px','auto', 'auto'],
+                fill: ["rgba(0,0,0,0)",im+"triangleonleft2.png",'0px','0px']
+            },
+            {
                 id: 'triangleonright',
                 type: 'image',
                 rect: ['94px', '-10px','300px','300px','auto', 'auto'],
@@ -35,11 +41,6 @@ var symbols = {
                 text: "If the triangles shown here have the same perimeter, what is the value of x? ",
                 align: "left",
                 font: ['Georgia, Times New Roman, Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Answers',
-                type: 'rect',
-                rect: ['48', '181','auto','auto','auto', 'auto']
             },
             {
                 id: 'AnswerEText',
@@ -188,12 +189,6 @@ var symbols = {
                 font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(19,19,19,1.00)", "normal", "none", "normal"]
             },
             {
-                id: 'triangleonleft2',
-                type: 'image',
-                rect: ['-17px', '37px','200px','229px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"triangleonleft2.png",'0px','0px']
-            },
-            {
                 id: 'Text',
                 type: 'text',
                 rect: ['270px', '110px','42px','20px','auto', 'auto'],
@@ -284,6 +279,11 @@ var symbols = {
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
                 source: ['media/answerhint.ogg']
+            },
+            {
+                id: 'Answers',
+                type: 'rect',
+                rect: ['48', '181','auto','auto','auto', 'auto']
             }],
             symbolInstances: [
             {
@@ -655,12 +655,12 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
+                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
                         font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        type: 'text',
                         id: 'Text8',
                         text: 'E',
                         align: 'center',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
+                        type: 'text'
                     },
                     {
                         rect: ['-8px', '-3px', '42px', '33px', 'auto', 'auto'],
