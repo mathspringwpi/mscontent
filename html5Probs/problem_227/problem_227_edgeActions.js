@@ -15,20 +15,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
-         playSound(sym,"question.ogg");
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5978, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 7000, function(sym, e) {
-         playSound(sym,"hint1a.ogg");
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 162806, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 135000, function(sym, e) {
          maybeStop(sym)
 
       });
@@ -71,82 +66,47 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 58000, function(sym, e) {
-         playSound(sym,"hint1b.ogg");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 89000, function(sym, e) {
-         playSound(sym,"hint2.ogg");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 115000, function(sym, e) {
-         playSound(sym,"hint3a.ogg");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 133000, function(sym, e) {
-         playSound(sym,"hint3b.ogg");
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 140000, function(sym, e) {
-         playSound(sym,"hint4.ogg");
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 152000, function(sym, e) {
-         //Hint 5
-         //This hint has no sound
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 154000, function(sym, e) {
-         //Answer Hint
-         //This hint has no sound
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 153735, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 129735, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 151250, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 127000, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 139776, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 118500, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 114757, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 99000, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 79000, function(sym, e) {
-         //Hint 2
-         //Sound plays in a few seconds
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 78641, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 67000, function(sym, e) {
          maybeStop(sym)
 
       });

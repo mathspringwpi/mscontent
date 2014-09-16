@@ -1812,7 +1812,6 @@ var symbols = {
                 { id: "eid248", tween: [ "style", "${_Hint1c}", "opacity", '1', { fromValue: '0.000000'}], position: 22000, duration: 1000 },
                 { id: "eid242", tween: [ "style", "${_Hint1a}", "opacity", '1', { fromValue: '0.000000'}], position: 10000, duration: 1000 },
                 { id: "eid297", tween: [ "style", "${_Hint_3a}", "opacity", '1', { fromValue: '0.000000'}], position: 85000, duration: 1000 },
-                { id: "eid366", tween: [ "style", "${_Hint_3a}", "opacity", '0', { fromValue: '1'}], position: 112000, duration: 750 },
                 { id: "eid276", tween: [ "style", "${_One_third_Hint_2}", "opacity", '1', { fromValue: '0.000000'}], position: 61000, duration: 1000 },
                 { id: "eid359", tween: [ "style", "${_Choose_A}", "opacity", '1', { fromValue: '0.000000'}], position: 164000, duration: 1000 },
                 { id: "eid353", tween: [ "style", "${_equal_2}", "opacity", '1', { fromValue: '0.000000'}], position: 155000, duration: 1000 },
