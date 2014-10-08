@@ -15,15 +15,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 9000, function(sym, e) {
-         maybeStop(sym)
-
-      });
-      //Edge binding end
+      
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 95339, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 94839, function(sym, e) {
          maybeStop(sym)
 
       });
@@ -72,7 +68,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 76000, function(sym, e) {
+         playSound(sym,"hint4.ogg");
+         
+
+      });
+      //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 30000, function(sym, e) {
          maybeStop(sym)
@@ -96,13 +97,19 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 80250, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 80000, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
       
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 9000, function(sym, e) {
+         maybeStop(sym)
+
+      });
+      //Edge binding end
 
    })("stage");
    //Edge symbol end:'stage'

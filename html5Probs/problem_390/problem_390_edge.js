@@ -33,12 +33,12 @@ var symbols = {
             {
                 id: 'Answers',
                 type: 'rect',
-                rect: ['48', '181','auto','auto','auto', 'auto']
+                rect: ['19px', '378px','auto','auto','auto', 'auto']
             },
             {
                 id: 'Answer_B',
                 type: 'group',
-                rect: ['89px', '240px','18','16','auto', 'auto'],
+                rect: ['84px', '450px','18','16','auto', 'auto'],
                 c: [
                 {
                     id: '_35',
@@ -164,7 +164,7 @@ var symbols = {
             {
                 id: 'Answer_A',
                 type: 'group',
-                rect: ['81px', '191px','18','2','auto', 'auto'],
+                rect: ['76px', '401px','18','2','auto', 'auto'],
                 c: [
                 {
                     id: 'Rectangle5',
@@ -193,7 +193,7 @@ var symbols = {
             {
                 id: 'Answer_C',
                 type: 'group',
-                rect: ['95px', '289px','18','16','auto', 'auto'],
+                rect: ['90px', '499px','18','16','auto', 'auto'],
                 c: [
                 {
                     id: '_15',
@@ -222,7 +222,7 @@ var symbols = {
             {
                 id: 'Answer_D',
                 type: 'group',
-                rect: ['92px', '323px','18','16','auto', 'auto'],
+                rect: ['87px', '533px','18','16','auto', 'auto'],
                 c: [
                 {
                     id: '_35_d',
@@ -667,6 +667,14 @@ var symbols = {
                 font: ['Arial, Helvetica, sans-serif', 14, "rgba(3,130,27,1.00)", "700", "none", "normal"]
             },
             {
+                id: 'question',
+                display: 'none',
+                type: 'audio',
+                tag: 'audio',
+                rect: ['0', '0','320px','45px','auto', 'auto'],
+                source: ['media/question.mp3','media/question.ogg']
+            },
+            {
                 id: 'hint1a',
                 display: 'none',
                 type: 'audio',
@@ -761,14 +769,6 @@ var symbols = {
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
                 source: ['media/answer.mp3','media/answer.ogg']
-            },
-            {
-                id: 'question',
-                display: 'none',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/question.mp3','media/question.ogg']
             }],
             symbolInstances: [
             {
@@ -912,16 +912,16 @@ var symbols = {
                 ["color", "background-color", 'rgba(2,70,147,1.00)']
             ],
             "${_Answer_B}": [
-                ["style", "left", '89px'],
-                ["style", "top", '240px']
+                ["style", "left", '84px'],
+                ["style", "top", '450px']
             ],
             "${_Problem_fraction_3_over_5Copy}": [
                 ["style", "left", '-35px'],
                 ["style", "top", '6px']
             ],
             "${_Answers}": [
-                ["style", "top", '168px'],
-                ["style", "left", '24px']
+                ["style", "top", '378px'],
+                ["style", "left", '19px']
             ],
             "${_Sound_Container}": [
                 ["style", "display", 'none'],
@@ -933,8 +933,8 @@ var symbols = {
                 ["color", "color", 'rgba(2,70,147,1)']
             ],
             "${_Answer_D}": [
-                ["style", "left", '92px'],
-                ["style", "top", '323px']
+                ["style", "left", '87px'],
+                ["style", "top", '533px']
             ],
             "${_problem_fraction_3_over_7}": [
                 ["style", "left", '19px'],
@@ -948,8 +948,8 @@ var symbols = {
                 ["style", "width", '24px']
             ],
             "${_Answer_C}": [
-                ["style", "left", '95px'],
-                ["style", "top", '289px']
+                ["style", "left", '90px'],
+                ["style", "top", '499px']
             ],
             "${__35}": [
                 ["style", "top", '-4px'],
@@ -1274,8 +1274,8 @@ var symbols = {
                 ["style", "top", '5px']
             ],
             "${_Answer_A}": [
-                ["style", "left", '81px'],
-                ["style", "top", '191px']
+                ["style", "left", '76px'],
+                ["style", "top", '401px']
             ],
             "${_Rectangle5}": [
                 ["style", "top", '0px'],
@@ -1294,93 +1294,93 @@ var symbols = {
         "Default Timeline": {
             fromState: "Base State",
             toState: "",
-            duration: 148000,
+            duration: 149000,
             autoPlay: true,
             labels: {
                 "Read Question": 2000,
-                "Hint 1": 7000,
-                "Hint 2": 48000,
-                "Hint 3": 95000,
-                "Hint 4": 113000,
-                "Answer Hint": 139000
+                "Hint 1": 8000,
+                "Hint 2": 49000,
+                "Hint 3": 96000,
+                "Hint 4": 114000,
+                "Answer Hint": 140000
             },
             timeline: [
-                { id: "eid169", tween: [ "color", "${_problem_7Copy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid238", tween: [ "color", "${_Blue_rectangle_3}", "background-color", 'rgba(21,196,92,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(21,196,92,1.00)'}], position: 83500, duration: 0 },
-                { id: "eid306", tween: [ "color", "${_Choose_B}", "color", 'rgba(3,130,27,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,130,27,1.00)'}], position: 147000, duration: 0 },
-                { id: "eid278", tween: [ "style", "${_Hint_3_text_}", "opacity", '1', { fromValue: '0.000000'}], position: 111000, duration: 1000 },
-                { id: "eid193", tween: [ "style", "${_Horizontal_a}", "opacity", '1', { fromValue: '0.000000'}], position: 59000, duration: 2500 },
-                { id: "eid187", tween: [ "style", "${_Vertical_lines}", "opacity", '0.99000000953674', { fromValue: '0'}], position: 27000, duration: 1000 },
-                { id: "eid168", tween: [ "color", "${_problem_3_secondCopy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid302", tween: [ "color", "${_Rectangle29}", "border-color", 'rgb(2, 70, 147)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgb(2, 70, 147)'}], position: 139000, duration: 0 },
-                { id: "eid171", tween: [ "color", "${_problem_5Copy3}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid218", tween: [ "style", "${_Hint_2_text_1_3_of_fifths}", "opacity", '1', { fromValue: '0.000000'}], position: 78000, duration: 1000 },
-                { id: "eid209", tween: [ "color", "${_h_3_b}", "border-color", 'rgba(179,176,176,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 72000, duration: 1000 },
-                { id: "eid272", tween: [ "color", "${_h_3_b}", "border-color", 'rgba(0,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(179,176,176,1)'}], position: 95000, duration: 1000 },
-                { id: "eid175", tween: [ "color", "${_Rectangle4Copy3}", "background-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid295", tween: [ "style", "${_Hint_3_text_}", "display", 'none', { fromValue: 'block'}], position: 137000, duration: 0 },
-                { id: "eid284", tween: [ "color", "${_Hint_3_text_}", "color", 'rgba(109,113,115,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(5,90,156,1)'}], position: 124000, duration: 500 },
+                { id: "eid169", tween: [ "color", "${_problem_7Copy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid238", tween: [ "color", "${_Blue_rectangle_3}", "background-color", 'rgba(21,196,92,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(21,196,92,1.00)'}], position: 84500, duration: 0 },
+                { id: "eid306", tween: [ "color", "${_Choose_B}", "color", 'rgba(3,130,27,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,130,27,1.00)'}], position: 148000, duration: 0 },
+                { id: "eid278", tween: [ "style", "${_Hint_3_text_}", "opacity", '1', { fromValue: '0.000000'}], position: 112000, duration: 1000 },
+                { id: "eid193", tween: [ "style", "${_Horizontal_a}", "opacity", '1', { fromValue: '0.000000'}], position: 60000, duration: 2500 },
+                { id: "eid187", tween: [ "style", "${_Vertical_lines}", "opacity", '0.99000000953674', { fromValue: '0'}], position: 28000, duration: 1000 },
+                { id: "eid168", tween: [ "color", "${_problem_3_secondCopy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid302", tween: [ "color", "${_Rectangle29}", "border-color", 'rgb(2, 70, 147)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgb(2, 70, 147)'}], position: 140000, duration: 0 },
+                { id: "eid171", tween: [ "color", "${_problem_5Copy3}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid218", tween: [ "style", "${_Hint_2_text_1_3_of_fifths}", "opacity", '1', { fromValue: '0.000000'}], position: 79000, duration: 1000 },
+                { id: "eid209", tween: [ "color", "${_h_3_b}", "border-color", 'rgba(179,176,176,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 73000, duration: 1000 },
+                { id: "eid272", tween: [ "color", "${_h_3_b}", "border-color", 'rgba(0,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(179,176,176,1)'}], position: 96000, duration: 1000 },
+                { id: "eid175", tween: [ "color", "${_Rectangle4Copy3}", "background-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid295", tween: [ "style", "${_Hint_3_text_}", "display", 'none', { fromValue: 'block'}], position: 138000, duration: 0 },
+                { id: "eid284", tween: [ "color", "${_Hint_3_text_}", "color", 'rgba(109,113,115,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(5,90,156,1)'}], position: 125000, duration: 500 },
                 { id: "eid29", tween: [ "style", "${_QuestionSound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid170", tween: [ "color", "${_MultiplicationCopy3_Of}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid296", tween: [ "color", "${_Hint_4_text_warning}", "color", 'rgba(170,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(170,2,2,1.00)'}], position: 137000, duration: 0 },
-                { id: "eid164", tween: [ "color", "${_Rectangle3Copy}", "background-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid91", tween: [ "style", "${_TutorialText}", "display", 'block', { fromValue: 'none'}], position: 61000, duration: 0 },
-                { id: "eid177", tween: [ "color", "${_problem_3_secondCopy3}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid203", tween: [ "color", "${_h_1_b}", "border-color", 'rgba(179,176,176,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 72000, duration: 1000 },
-                { id: "eid248", tween: [ "color", "${_h_1_b}", "border-color", 'rgba(0,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(179,176,176,1)'}], position: 95000, duration: 1000 },
-                { id: "eid162", tween: [ "color", "${_problem_5Copy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid300", tween: [ "color", "${_answer_9}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 139000, duration: 0 },
-                { id: "eid293", tween: [ "style", "${_Hint_2_text_1_3_of_fifths}", "display", 'none', { fromValue: 'block'}], position: 137000, duration: 0 },
-                { id: "eid237", tween: [ "style", "${_Blue_rectangle_2}", "opacity", '1', { fromValue: '0.000000'}], position: 82000, duration: 1000 },
-                { id: "eid292", tween: [ "style", "${_Hint_4_expression}", "opacity", '1', { fromValue: '0.000000'}], position: 125000, duration: 1000 },
-                { id: "eid301", tween: [ "color", "${_answer_35}", "color", 'rgba(2,70,147,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1)'}], position: 139000, duration: 0 },
-                { id: "eid299", tween: [ "style", "${_Hint_4_text_warning}", "opacity", '1', { fromValue: '0'}], position: 137000, duration: 1000 },
-                { id: "eid234", tween: [ "color", "${_Blue_rectangle_2}", "background-color", 'rgba(21,196,92,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(21,196,92,1.00)'}], position: 82000, duration: 0 },
-                { id: "eid165", tween: [ "color", "${_Rectangle3Copy}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid176", tween: [ "color", "${_Rectangle4Copy3}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid289", tween: [ "color", "${_Rectangle28}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 125000, duration: 0 },
-                { id: "eid190", tween: [ "style", "${_Yellow_rectangle}", "opacity", '1', { fromValue: '0.000000'}], position: 36000, duration: 1000 },
-                { id: "eid163", tween: [ "color", "${_problem_3Copy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid178", tween: [ "color", "${_problem_7Copy3}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid53", tween: [ "style", "${_TutorialText}", "opacity", '0', { fromValue: '1'}], position: 36000, duration: 11000 },
-                { id: "eid309", tween: [ "style", "${_Choose_B}", "opacity", '1', { fromValue: '0.000000'}], position: 147000, duration: 1000 },
-                { id: "eid241", tween: [ "style", "${_Blue_rectangle_3}", "opacity", '1', { fromValue: '0.000000'}], position: 83500, duration: 1000 },
-                { id: "eid166", tween: [ "color", "${_Rectangle4Copy}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
+                { id: "eid170", tween: [ "color", "${_MultiplicationCopy3_Of}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid296", tween: [ "color", "${_Hint_4_text_warning}", "color", 'rgba(170,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(170,2,2,1.00)'}], position: 138000, duration: 0 },
+                { id: "eid164", tween: [ "color", "${_Rectangle3Copy}", "background-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid91", tween: [ "style", "${_TutorialText}", "display", 'block', { fromValue: 'none'}], position: 62000, duration: 0 },
+                { id: "eid177", tween: [ "color", "${_problem_3_secondCopy3}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid203", tween: [ "color", "${_h_1_b}", "border-color", 'rgba(179,176,176,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 73000, duration: 1000 },
+                { id: "eid248", tween: [ "color", "${_h_1_b}", "border-color", 'rgba(0,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(179,176,176,1)'}], position: 96000, duration: 1000 },
+                { id: "eid162", tween: [ "color", "${_problem_5Copy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid300", tween: [ "color", "${_answer_9}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 140000, duration: 0 },
+                { id: "eid293", tween: [ "style", "${_Hint_2_text_1_3_of_fifths}", "display", 'none', { fromValue: 'block'}], position: 138000, duration: 0 },
+                { id: "eid237", tween: [ "style", "${_Blue_rectangle_2}", "opacity", '1', { fromValue: '0.000000'}], position: 83000, duration: 1000 },
+                { id: "eid292", tween: [ "style", "${_Hint_4_expression}", "opacity", '1', { fromValue: '0.000000'}], position: 126000, duration: 1000 },
+                { id: "eid301", tween: [ "color", "${_answer_35}", "color", 'rgba(2,70,147,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1)'}], position: 140000, duration: 0 },
+                { id: "eid299", tween: [ "style", "${_Hint_4_text_warning}", "opacity", '1', { fromValue: '0'}], position: 138000, duration: 1000 },
+                { id: "eid234", tween: [ "color", "${_Blue_rectangle_2}", "background-color", 'rgba(21,196,92,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(21,196,92,1.00)'}], position: 83000, duration: 0 },
+                { id: "eid165", tween: [ "color", "${_Rectangle3Copy}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid176", tween: [ "color", "${_Rectangle4Copy3}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid289", tween: [ "color", "${_Rectangle28}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 126000, duration: 0 },
+                { id: "eid190", tween: [ "style", "${_Yellow_rectangle}", "opacity", '1', { fromValue: '0.000000'}], position: 37000, duration: 1000 },
+                { id: "eid163", tween: [ "color", "${_problem_3Copy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid178", tween: [ "color", "${_problem_7Copy3}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid53", tween: [ "style", "${_TutorialText}", "opacity", '0', { fromValue: '1'}], position: 37000, duration: 11000 },
+                { id: "eid309", tween: [ "style", "${_Choose_B}", "opacity", '1', { fromValue: '0.000000'}], position: 148000, duration: 1000 },
+                { id: "eid241", tween: [ "style", "${_Blue_rectangle_3}", "opacity", '1', { fromValue: '0.000000'}], position: 84500, duration: 1000 },
+                { id: "eid166", tween: [ "color", "${_Rectangle4Copy}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
                 { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid196", tween: [ "style", "${_Horizontal_b}", "opacity", '1', { fromValue: '0.000000'}], position: 59000, duration: 2500 },
-                { id: "eid167", tween: [ "color", "${_Rectangle4Copy}", "background-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid211", tween: [ "color", "${_h_4_b}", "border-color", 'rgba(179,176,176,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 72000, duration: 1000 },
-                { id: "eid275", tween: [ "color", "${_h_4_b}", "border-color", 'rgba(0,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(179,176,176,1)'}], position: 95000, duration: 1000 },
-                { id: "eid286", tween: [ "color", "${_Hint_1_text_2_3_of_7th}", "color", 'rgba(109,113,115,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(128,0,0,1)'}], position: 124000, duration: 500 },
-                { id: "eid288", tween: [ "color", "${_Hint_2_text_1_3_of_fifths}", "color", 'rgba(109,113,115,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(128,0,0,1)'}], position: 124000, duration: 500 },
-                { id: "eid229", tween: [ "style", "${_Blue_rectangle_1}", "opacity", '1', { fromValue: '0.000000'}], position: 81000, duration: 1000 },
-                { id: "eid207", tween: [ "color", "${_h_2_b}", "border-color", 'rgba(179,176,176,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 72000, duration: 1000 },
-                { id: "eid269", tween: [ "color", "${_h_2_b}", "border-color", 'rgba(0,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(179,176,176,1)'}], position: 95000, duration: 1000 },
-                { id: "eid161", tween: [ "color", "${_MultiplicationCopy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid172", tween: [ "color", "${_problem_3Copy3}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid173", tween: [ "color", "${_Rectangle3Copy3}", "background-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid233", tween: [ "color", "${_Blue_rectangle_1}", "background-color", 'rgba(21,196,92,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(21,196,92,1.00)'}], position: 82000, duration: 0 },
-                { id: "eid181", tween: [ "style", "${_Hint_1_text}", "opacity", '1', { fromValue: '0.000000'}], position: 15000, duration: 1000 },
-                { id: "eid212", tween: [ "style", "${_Hint_1_text}", "opacity", '0', { fromValue: '1'}], position: 32000, duration: 0 },
+                { id: "eid196", tween: [ "style", "${_Horizontal_b}", "opacity", '1', { fromValue: '0.000000'}], position: 60000, duration: 2500 },
+                { id: "eid167", tween: [ "color", "${_Rectangle4Copy}", "background-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid211", tween: [ "color", "${_h_4_b}", "border-color", 'rgba(179,176,176,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 73000, duration: 1000 },
+                { id: "eid275", tween: [ "color", "${_h_4_b}", "border-color", 'rgba(0,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(179,176,176,1)'}], position: 96000, duration: 1000 },
+                { id: "eid286", tween: [ "color", "${_Hint_1_text_2_3_of_7th}", "color", 'rgba(109,113,115,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(128,0,0,1)'}], position: 125000, duration: 500 },
+                { id: "eid288", tween: [ "color", "${_Hint_2_text_1_3_of_fifths}", "color", 'rgba(109,113,115,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(128,0,0,1)'}], position: 125000, duration: 500 },
+                { id: "eid229", tween: [ "style", "${_Blue_rectangle_1}", "opacity", '1', { fromValue: '0.000000'}], position: 82000, duration: 1000 },
+                { id: "eid207", tween: [ "color", "${_h_2_b}", "border-color", 'rgba(179,176,176,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 73000, duration: 1000 },
+                { id: "eid269", tween: [ "color", "${_h_2_b}", "border-color", 'rgba(0,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(179,176,176,1)'}], position: 96000, duration: 1000 },
+                { id: "eid161", tween: [ "color", "${_MultiplicationCopy}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid172", tween: [ "color", "${_problem_3Copy3}", "color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid173", tween: [ "color", "${_Rectangle3Copy3}", "background-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid233", tween: [ "color", "${_Blue_rectangle_1}", "background-color", 'rgba(21,196,92,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(21,196,92,1.00)'}], position: 83000, duration: 0 },
+                { id: "eid181", tween: [ "style", "${_Hint_1_text}", "opacity", '1', { fromValue: '0.000000'}], position: 16000, duration: 1000 },
+                { id: "eid212", tween: [ "style", "${_Hint_1_text}", "opacity", '0', { fromValue: '1'}], position: 33000, duration: 0 },
                 { id: "eid160", tween: [ "color", "${_Rectangle3}", "border-color", 'rgb(0, 0, 0)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgb(0, 0, 0)'}], position: 2000, duration: 0 },
-                { id: "eid184", tween: [ "style", "${_Hint_1_rectangle}", "opacity", '1', { fromValue: '0.000000'}], position: 25000, duration: 1000 },
-                { id: "eid174", tween: [ "color", "${_Rectangle3Copy3}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 14000, duration: 0 },
-                { id: "eid305", tween: [ "style", "${_Answer_Hint}", "opacity", '1', { fromValue: '0.000000'}], position: 139000, duration: 1000 },
-                { id: "eid294", tween: [ "style", "${_Hint_1_text_2_3_of_7th}", "display", 'none', { fromValue: 'block'}], position: 137000, duration: 0 },
-                { id: "eid215", tween: [ "style", "${_Hint_1_text_2_3_of_7th}", "opacity", '1', { fromValue: '0.000000'}], position: 33000, duration: 1000 },
+                { id: "eid184", tween: [ "style", "${_Hint_1_rectangle}", "opacity", '1', { fromValue: '0.000000'}], position: 26000, duration: 1000 },
+                { id: "eid174", tween: [ "color", "${_Rectangle3Copy3}", "border-color", 'rgba(2,70,147,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(2,70,147,1.00)'}], position: 15000, duration: 0 },
+                { id: "eid305", tween: [ "style", "${_Answer_Hint}", "opacity", '1', { fromValue: '0.000000'}], position: 140000, duration: 1000 },
+                { id: "eid294", tween: [ "style", "${_Hint_1_text_2_3_of_7th}", "display", 'none', { fromValue: 'block'}], position: 138000, duration: 0 },
+                { id: "eid215", tween: [ "style", "${_Hint_1_text_2_3_of_7th}", "opacity", '1', { fromValue: '0.000000'}], position: 34000, duration: 1000 },
                 { id: "eid310", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question}', [] ], ""], position: 2000 },
-                { id: "eid311", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1a}', [] ], ""], position: 7000 },
-                { id: "eid312", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1b}', [] ], ""], position: 17000 },
-                { id: "eid313", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1c}', [] ], ""], position: 29000 },
-                { id: "eid314", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1d}', [] ], ""], position: 38000 },
-                { id: "eid315", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2a}', [] ], ""], position: 48000 },
-                { id: "eid316", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2b}', [] ], ""], position: 63000 },
-                { id: "eid317", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2c}', [] ], ""], position: 74000 },
-                { id: "eid318", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2d}', [] ], ""], position: 81000 },
-                { id: "eid319", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3}', [] ], ""], position: 97000 },
-                { id: "eid320", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4a}', [] ], ""], position: 113000 },
-                { id: "eid321", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4b}', [] ], ""], position: 127000 },
-                { id: "eid322", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answer}', [] ], ""], position: 141000 }            ]
+                { id: "eid311", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1a}', [] ], ""], position: 8000 },
+                { id: "eid312", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1b}', [] ], ""], position: 18000 },
+                { id: "eid313", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1c}', [] ], ""], position: 30000 },
+                { id: "eid314", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1d}', [] ], ""], position: 39000 },
+                { id: "eid315", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2a}', [] ], ""], position: 49000 },
+                { id: "eid316", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2b}', [] ], ""], position: 64000 },
+                { id: "eid317", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2c}', [] ], ""], position: 75000 },
+                { id: "eid318", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2d}', [] ], ""], position: 82000 },
+                { id: "eid319", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3}', [] ], ""], position: 98000 },
+                { id: "eid320", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4a}', [] ], ""], position: 114000 },
+                { id: "eid321", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4b}', [] ], ""], position: 128000 },
+                { id: "eid322", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answer}', [] ], ""], position: 142000 }            ]
         }
     }
 },
