@@ -14,6 +14,10 @@ function getEdgeCompositionId () {
     return "EdgeProblem";    // hardwired for now
 }
 
+function probUtilsInit(sym) {
+    maybeStop(sym);
+}
+
 function answerClicked (sym, buttonName) {
     debugAlert(buttonName + " was clicked. Calling parent.answerChosen.");
     window.parent.tutorhut_answerChosen(sym,buttonName);               // TODO this is failing on macs because of security from tutor.mathspring.org to rose.cs.umass.edu

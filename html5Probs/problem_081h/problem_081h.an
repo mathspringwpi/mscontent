@@ -1,3 +1,4 @@
+
 {
 
 	"viewStartMs":"15019.37890625",
@@ -50,33 +51,33 @@
 			"animationEnabled":"true",
 			"timelineColor3":"0x5b6c4d",
 			"timelineColor":"0x91c767"},
+		"defaultStageParentHeight":"600px",
 		"element_${_Hint2_Text}":{
 			"timelineColor2":"0xb099ce",
 			"animationEnabled":"true",
 			"timelineColor3":"0x70657c",
 			"timelineColor":"0xceaef4"},
-		"defaultStageParentHeight":"600px",
 		"element_${_Radius_approx}":{
 			"timelineColor2":"0x1095d2",
 			"animationEnabled":"true",
 			"timelineColor3":"0x29647e",
 			"timelineColor":"0x00a9fa"},
-		"defaultStageParentWidth":"600px",
-		"element_${_hint3}":{
-			"timelineColor2":"0x326a96",
-			"animationEnabled":"true",
-			"timelineColor3":"0x385063",
-			"timelineColor":"0x2f73ad"},
-		"element_${_Main_Circle}":{
-			"timelineColor2":"0xcbbd71",
-			"animationEnabled":"true",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79"},
 		"element_${_Edge_black_circle}":{
 			"timelineColor2":"0x107faa",
 			"animationEnabled":"true",
 			"timelineColor3":"0x295a6d",
 			"timelineColor":"0x008dc8"},
+		"defaultStageParentWidth":"600px",
+		"element_${_Main_Circle}":{
+			"timelineColor2":"0xcbbd71",
+			"animationEnabled":"true",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79"},
+		"element_${_hint3}":{
+			"timelineColor2":"0x326a96",
+			"animationEnabled":"true",
+			"timelineColor3":"0x385063",
+			"timelineColor":"0x2f73ad"},
 		"element_${_Text20}":{
 			"timelineColor2":"0x81aa62",
 			"animationEnabled":"true",
@@ -88,28 +89,11 @@
 	"usedBOM":"false",
 	"nextElementColorIndex":"3",
 	"stage-Default Timeline_playhead_ms":"300",
-	"viewStartY":"384",
+	"HTMLFileName":"problem_081h.html",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
       \"Default Timeline\": {\
-            \"ElementKeyframes\": {\
-                \"${_Edge_black_circle}\": [], \
-                \"${_hint3}\": [], \
-                \"${_Green_Circle}\": [], \
-                \"${_Underline}\": [], \
-                \"${_Main_Circle}\": [], \
-                \"${_Center_black_circle}\": [], \
-                \"${_Radius_approx}\": [], \
-                \"${_QuestionSound_Container}\": [], \
-                \"${_Text20}\": [], \
-                \"${_Radius_Text}\": [], \
-                \"${_Hint2_Text}\": [], \
-                \"${_Answers}\": [], \
-                \"${_Hint1_Text}\": [], \
-                \"${_Answer_Text}\": [], \
-                \"${_hint4}\": []\
-            }\
       }\
    }},\
 \"AButton\": {\
@@ -151,4 +135,4 @@
 \
    }}\
 }",
-	"HTMLFileName":"problem_081h.html"}
+	"viewStartY":"384"}
