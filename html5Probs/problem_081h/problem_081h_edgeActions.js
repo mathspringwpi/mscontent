@@ -36,7 +36,7 @@ complete: init
 
 function init() {
 	console.log("Loaded libraries successfully");
-	console.log(location.pathname);
+	probUtilsInit(sym);
 }
 
       });

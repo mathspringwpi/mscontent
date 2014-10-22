@@ -56,7 +56,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          );
          
          function init() {
-         	console.log("Loaded libraries successfully");
+	   probUtilsInit(sym);
+	   
+	   console.log("Loaded libraries successfully");
          }
 
       });

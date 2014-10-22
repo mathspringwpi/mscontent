@@ -1,0 +1,78 @@
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+function isArray(parsedItem) {
+    return Object.prototype.toString.call(parsedItem) === '[object Array]';
+}
+
+// var plusScore = sym.getVariable("myScore");
+// plusScore = plusScore + 1;
+// sym.setVariable("myScore", plusScore);
+// sym.$("Score").html(plusScore);
+
+function getConstraintJSon() {
+    var bindings = window.parent.getProblemParams();
+    return bindings;
+}
+
+function getConstraints() {
+    var rand = -1;
+    var constraints = {};
+    var constraints = getConstraintJSon();
+    data = constraints;
+    $.each( data, function(key, val) {
+        if (isArray(val)) {
+            if (rand == -1) {
+                rand = randomIntFromInterval(0, val.length-1);
+            }
+            constraints[key] = val[rand];
+        }
+        else {
+            constraints[key] = val;
+        }
+    });
+    return constraints;
+}
+
+function replaceVars(sym) {
+    // create map from var name to selected random item or regular item
+    // then iterate over children of stage and replace instances of var with corresponding item
+
+
+    var constraints = getConstraints();
+    var collection = sym.$("Stage").children();
+    $.each(collection,function(){
+        for (var key in constraints) {
+            var regex = new RegExp("(\\W|^)\\"+key+"(\\W|$)", "gi");
+            $(this).html($(this).html().replace(regex, "$1"+constraints[key]+"$2"));
+        }
+    })
+}
+
+function parametrize(sym) {
+    replaceVars(sym);
+    // var rand = -1
+    // $.getJSON("params.json", function( data ) {
+    // 	$.each( data, function(key, val) {
+    // 		if (isArray(val)) {
+    // 			if (rand == -1) {
+    // 				rand = randomIntFromInterval(0, val.length-1);
+    // 			}
+    // 			sym.$(key).html(val[rand]);
+    // 		}
+    // 		else {
+    // 			sym.$(key).html(val);
+    // 		}
+    // 	});
+    // });
+
+}
+
+// insert code to be run when the symbol is created here
+
+// $.get("dynamic.html", {}, function(res, code) {
+//    sym.$("Text").html(res);
+//    sym.play(0);
+// });

@@ -23,194 +23,55 @@ var symbols = {
     content: {
             dom: [
             {
-                id: 'Triangle',
-                type: 'group',
-                rect: ['270', '125px','249','136','auto', 'auto'],
-                c: [
-                {
-                    id: 'Rectangle3Copy',
-                    type: 'rect',
-                    rect: ['-23px', '66px','207px','4px','auto', 'auto'],
-                    fill: ["rgba(6,6,6,1.00)"],
-                    stroke: [0,"rgb(0, 0, 0)","none"],
-                    transform: [[],['-40']]
-                },
-                {
-                    id: 'Rectangle3',
-                    type: 'rect',
-                    rect: ['125px', '66px','156px','4px','auto', 'auto'],
-                    fill: ["rgba(6,6,6,1.00)"],
-                    stroke: [0,"rgb(0, 0, 0)","none"],
-                    transform: [[],['56']]
-                },
-                {
-                    id: 'Rectangle2',
-                    type: 'rect',
-                    rect: ['0px', '132px','249px','4px','auto', 'auto'],
-                    fill: ["rgba(3,3,3,1.00)"],
-                    stroke: [0,"rgba(0,0,0,1)","none"]
-                }]
-            },
-            {
-                id: 'TextCopy7',
+                id: 'Question_Text',
                 type: 'text',
-                rect: ['471px', '228px','auto','auto','auto', 'auto'],
-                text: "2a",
+                rect: ['15px', '30px','219px','35px','auto', 'auto'],
+                text: "In this figure, what is the value of x?<br>",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
+                font: ['Georgia, Times New Roman, Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
-                id: 'Angle_T',
-                type: 'group',
-                rect: ['450', '201','69','60','auto', 'auto'],
-                c: [
-                {
-                    id: 'Text2',
-                    type: 'text',
-                    rect: ['56px', '-21px','auto','auto','auto', 'auto'],
-                    text: "2a",
-                    align: "left",
-                    font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1.00)", "normal", "none", "italic"]
-                },
-                {
-                    id: 'Rectangle4Copy',
-                    type: 'rect',
-                    rect: ['-252px', '-11px','69px','0px','auto', 'auto'],
-                    fill: ["rgba(212,17,17,1)"],
-                    stroke: [0,"rgb(0, 0, 0)","none"]
-                },
-                {
-                    id: 'Rectangle4',
-                    type: 'rect',
-                    rect: ['-252px', '-11px','69px','0px','auto', 'auto'],
-                    fill: ["rgba(212,17,17,1)"],
-                    stroke: [0,"rgb(0, 0, 0)","none"]
-                }]
-            },
-            {
-                id: 'Text4Copy9',
-                type: 'text',
-                rect: ['376px', '318px','auto','auto','auto', 'auto'],
-                text: "5a =",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy5',
-                type: 'text',
-                rect: ['291', '293','auto','auto','auto', 'auto'],
-                text: "40˚+ 3a + 2a = 180˚",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy2',
-                type: 'text',
-                rect: ['291', '293','auto','auto','auto', 'auto'],
-                text: "40˚+ 3a",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy3',
-                type: 'text',
-                rect: ['291', '293','auto','auto','auto', 'auto'],
-                text: "40˚+ 3a + 2a =",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Group4',
-                type: 'group',
-                rect: ['450', '201','69','60','auto', 'auto'],
-                c: [
-                {
-                    id: 'Angle_TCopy',
-                    type: 'group',
-                    rect: ['0px', '0px','69','60','auto', 'auto'],
-                    c: [
-                    {
-                        id: 'Rectangle4Copy5',
-                        type: 'rect',
-                        rect: ['-252px', '-11px','69px','0px','auto', 'auto'],
-                        fill: ["rgba(212,17,17,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    },
-                    {
-                        id: 'Rectangle4Copy4',
-                        type: 'rect',
-                        rect: ['-252px', '-11px','69px','0px','auto', 'auto'],
-                        fill: ["rgba(212,17,17,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    },
-                    {
-                        id: 'Text2Copy2',
-                        type: 'text',
-                        rect: ['56px', '-21px','auto','auto','auto', 'auto'],
-                        text: "2a",
-                        align: "left",
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
-                    },
-                    {
-                        id: 'Rectangle4Copy3',
-                        type: 'rect',
-                        rect: ['-252px', '-11px','69px','0px','auto', 'auto'],
-                        fill: ["rgba(212,17,17,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    },
-                    {
-                        id: 'Rectangle4Copy2',
-                        type: 'rect',
-                        rect: ['-252px', '-11px','69px','0px','auto', 'auto'],
-                        fill: ["rgba(212,17,17,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    },
-                    {
-                        id: 'Text2Copy',
-                        type: 'text',
-                        rect: ['56px', '-21px','auto','auto','auto', 'auto'],
-                        text: "2a",
-                        align: "left",
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
-                    }]
-                }]
+                id: 'HTML_209Copy',
+                type: 'image',
+                rect: ['74px', '65px','307px','197px','auto', 'auto'],
+                fill: ["rgba(0,0,0,0)",im+"HTML%20209.png",'0px','0px']
             },
             {
                 id: 'Answers',
                 type: 'rect',
-                rect: ['13px', '380px','auto','auto','auto', 'auto']
+                rect: ['48', '181','auto','auto','auto', 'auto']
             },
             {
                 id: 'AnswerDText',
                 type: 'text',
-                rect: ['60px', '505px','101px','20px','auto', 'auto'],
-                text: "36",
+                rect: ['71px', '293px','101px','20px','auto', 'auto'],
+                text: "$ans_D",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerCText',
                 type: 'text',
-                rect: ['60px', '469px','101px','19px','auto', 'auto'],
-                text: "28",
+                rect: ['71px', '257px','101px','19px','auto', 'auto'],
+                text: "$ans_C",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerBText',
                 type: 'text',
-                rect: ['60px', '437px','112px','19px','auto', 'auto'],
-                text: "20",
+                rect: ['71px', '225px','112px','19px','auto', 'auto'],
+                text: "$ans_B",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerAText',
                 type: 'text',
-                rect: ['60px', '402px','109px','19px','auto', 'auto'],
-                text: "10",
+                rect: ['71px', '190px','109px','19px','auto', 'auto'],
+                text: "$ans_A",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'QuestionSound_Container',
@@ -229,317 +90,217 @@ var symbols = {
                 stroke: [1,"rgb(4, 4, 4)","solid"]
             },
             {
-                id: 'TutorialText',
+                id: 'hint1-1',
                 display: 'none',
                 type: 'text',
-                rect: ['260px', '49px','237px','187px','auto', 'auto'],
-                text: "Let's pretend your hint starts here at 0:10. It does not really matter where the hints start and end, as long as they don't overlap. Don't worry that the X and Checks are showing up either - it's just because I set their timeline to 5 seconds in the symbol. They won't appear in the final animation.<br><br>This rectangle is a space for you to draw your animation. An example will follow in hint 2.",
+                rect: ['193px', '257px','346px','49px','auto', 'auto'],
+                text: "The sum of the interior angles of a triangle equals 180º ",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(211,13,13,1.00)", "normal", "none", "normal"]
+            },
+            {
+                id: 'y_is_110',
+                display: 'block',
+                type: 'text',
+                rect: ['330px', '303px','140px','31px','auto', 'auto'],
+                text: "y=180º-$aº-$bº",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(211,13,13,1)", "normal", "none", "normal"]
+            },
+            {
+                id: 'hint1-2',
+                display: 'none',
+                type: 'text',
+                rect: ['294px', '217px','250px','35px','auto', 'auto'],
+                text: "How are the other angles related to x?<br>",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(10,10,10,1.00)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerEText',
                 type: 'text',
-                rect: ['60px', '541px','101px','20px','auto', 'auto'],
-                text: "45",
+                rect: ['71px', '329px','101px','20px','auto', 'auto'],
+                text: "$ans_E",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
-                id: 'Question_TextCopy2',
+                id: 'HTML_209',
+                type: 'image',
+                rect: ['74px', '65px','307px','197px','auto', 'auto'],
+                fill: ["rgba(0,0,0,0)",im+"HTML%20209.png",'0px','0px']
+            },
+            {
+                id: 'angle4_text',
                 type: 'text',
-                rect: ['15px', '30px','219px','124px','auto', 'auto'],
-                text: "<br><br>In the figure on the right, what is the value of ",
+                rect: ['244px', '190px','25px','19px','auto', 'auto'],
+                text: "$d",
                 align: "left",
-                font: ['Georgia, Times New Roman, Times, serif', 18, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 16, "rgba(0,0,0,1)", "400", "none", "normal"]
             },
             {
-                id: 'Text5',
+                id: 'angle2_text',
                 type: 'text',
-                rect: ['193px', '93px','auto','auto','auto', 'auto'],
-                text: "?",
+                rect: ['194px', '115px','21px','19px','auto', 'auto'],
+                text: "$b",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1.00)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 16, "rgba(0,0,0,1)", "400", "none", "normal"]
             },
             {
-                id: 'Text3',
+                id: 'angle1_text',
                 type: 'text',
-                rect: ['175px', '93px','auto','auto','auto', 'auto'],
-                text: "a",
+                rect: ['136px', '164px','15px','19px','auto', 'auto'],
+                text: "$a",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(17,111,64,1.00)", "normal", "none", "italic"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 16, "rgba(0,0,0,1.00)", "400", "none", "normal"]
             },
             {
-                id: 'TextCopy4',
+                id: 'angle3_text',
                 type: 'text',
-                rect: ['523px', '261px','auto','auto','auto', 'auto'],
-                text: "T<br>",
+                rect: ['180px', '220px','15px','19px','auto', 'auto'],
+                text: "$c",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 16, "rgba(0,0,0,1)", "400", "none", "normal"]
             },
             {
-                id: 'TextCopy3',
-                type: 'text',
-                rect: ['419px', '90px','auto','auto','auto', 'auto'],
-                text: "S<br>",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
-            },
-            {
-                id: 'TextCopy2',
-                type: 'text',
-                rect: ['245', '261px','auto','auto','auto', 'auto'],
-                text: "R",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
-            },
-            {
-                id: 'Angle_R',
+                id: 'Triangle_1',
                 type: 'group',
-                rect: ['271', '214','69','47','auto', 'auto'],
+                rect: ['300px', '185px','15px','5','auto', 'auto'],
                 c: [
                 {
-                    id: 'RectangleCopy2',
+                    id: 'Rectangle4',
+                    display: 'none',
                     type: 'rect',
-                    rect: ['-1px', '26px','66px','4px','auto', 'auto'],
-                    fill: ["rgba(192,192,192,1)"],
-                    stroke: [0,"rgba(0,0,0,1)","none"]
-                },
-                {
-                    id: 'RectangleCopy',
-                    type: 'rect',
-                    rect: ['-1px', '26px','66px','4px','auto', 'auto'],
-                    fill: ["rgba(192,192,192,1)"],
-                    stroke: [0,"rgba(0,0,0,1)","none"]
-                },
-                {
-                    id: 'TextCopy',
-                    type: 'text',
-                    rect: ['26px', '14px','auto','auto','auto', 'auto'],
-                    text: "40˚",
-                    align: "left",
-                    font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
-                }]
-            },
-            {
-                id: 'Angle_S',
-                type: 'group',
-                rect: ['385', '124','75','47','auto', 'auto'],
-                c: [
-                {
-                    id: 'Rectangle5Copy',
-                    type: 'rect',
-                    rect: ['-122px', '14px','54px','0px','auto', 'auto'],
-                    fill: ["rgba(212,17,17,1)"],
+                    rect: ['52px', '-19px','125px','5px','auto', 'auto'],
+                    fill: ["rgba(213,10,10,1)"],
                     stroke: [0,"rgb(0, 0, 0)","none"]
                 },
                 {
-                    id: 'Rectangle5',
+                    id: 'Rectangle3',
+                    display: 'none',
                     type: 'rect',
-                    rect: ['-122px', '14px','54px','0px','auto', 'auto'],
-                    fill: ["rgba(212,17,17,1)"],
-                    stroke: [0,"rgb(0, 0, 0)","none"]
+                    rect: ['-133px', '59px','24px','5px','auto', 'auto'],
+                    fill: ["rgba(213,10,10,1)"],
+                    stroke: [0,"rgb(0, 0, 0)","none"],
+                    transform: [[],['-24']]
                 },
                 {
-                    id: 'Text',
-                    type: 'text',
-                    rect: ['25px', '14px','auto','auto','auto', 'auto'],
-                    text: "3a",
-                    align: "left",
-                    font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
+                    id: 'Rectangle2',
+                    display: 'none',
+                    type: 'rect',
+                    rect: ['-150px', '28px','65px','5px','auto', 'auto'],
+                    fill: ["rgba(213,10,10,1.00)"],
+                    stroke: [0,"rgba(0,0,0,1)","none"],
+                    transform: [[],['-68']]
                 }]
             },
             {
-                id: 'TextCopy5',
-                type: 'text',
-                rect: ['410px', '138px','auto','auto','auto', 'auto'],
-                text: "3a",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1.00)", "normal", "none", "italic"]
+                id: 'Equal_1',
+                display: 'none',
+                type: 'ellipse',
+                rect: ['172px', '158px','43px','44px','auto', 'auto'],
+                clip: ['rect(0px 30px 26px 0px)'],
+                borderRadius: ["50%", "50%", "50%", "50%"],
+                fill: ["rgba(213,10,10,0.01)"],
+                stroke: [3,"rgba(165,6,6,1.00)","solid"],
+                transform: [[],['189'],[],['1.196','1.186']]
             },
             {
-                id: 'TextCopy6',
+                id: 'Find_y',
+                display: 'block',
                 type: 'text',
-                rect: ['297px', '228px','auto','auto','auto', 'auto'],
-                text: "40˚",
+                rect: ['294px', '262px','212px','35px','auto', 'auto'],
+                text: "Can you find the value of y ?",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,0.99)", "normal", "none", "italic"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(211,13,13,1)", "normal", "none", "normal"]
             },
             {
-                id: 'Angle_SCopy',
+                id: 'y_equals',
+                display: 'block',
+                type: 'text',
+                rect: ['325px', '230px','171px','49px','auto', 'auto'],
+                text: "y=?",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(211,13,13,1)", "normal", "none", "normal"]
+            },
+            {
+                id: 'hint4_1',
+                display: 'block',
+                type: 'text',
+                rect: ['325px', '266px','200px','31px','auto', 'auto'],
+                text: "y+$aº+$bº=180º",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(211,13,13,1)", "normal", "none", "normal"]
+            },
+            {
+                id: 'y',
+                display: 'block',
+                type: 'text',
+                rect: ['199px', '191px','31px','26px','auto', 'auto'],
+                text: "y<br>",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(211,13,13,1)", "normal", "none", "italic"]
+            },
+            {
+                id: 'Equal_2',
+                display: 'block',
+                type: 'ellipse',
+                rect: ['174px', '162px','43px','44px','auto', 'auto'],
+                clip: ['rect(0px 30px 26px 0px)'],
+                borderRadius: ["50%", "50%", "50%", "50%"],
+                fill: ["rgba(213,10,10,0.01)"],
+                stroke: [3,"rgba(165,6,6,1.00)","solid"],
+                transform: [[],['358'],[],['1.199','1.111']]
+            },
+            {
+                id: 'Answer_Hint_1_',
+                display: 'block',
+                type: 'text',
+                rect: ['315px', '115px','180px','56px','auto', 'auto'],
+                text: "x+y+$cº=180º",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(211,13,13,1)", "normal", "none", "normal"]
+            },
+            {
+                id: 'Triangle_2',
                 type: 'group',
-                rect: ['385', '124','75','47','auto', 'auto'],
-                opacity: 1,
+                rect: ['194px', '69px','50','119','auto', 'auto'],
                 c: [
                 {
-                    id: 'TextCopy8',
-                    type: 'text',
-                    rect: ['25px', '14px','auto','auto','auto', 'auto'],
-                    opacity: 1,
-                    text: "3a",
-                    align: "left",
-                    font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
+                    id: 'Rectangle9',
+                    display: 'none',
+                    type: 'rect',
+                    rect: ['-40px', '58px','130px','5px','auto', 'auto'],
+                    fill: ["rgba(213,10,10,1)"],
+                    stroke: [3,"rgb(165, 6, 6)","none"],
+                    transform: [[],['112']]
                 },
                 {
-                    id: 'Rectangle5Copy3',
+                    id: 'Rectangle8',
+                    display: 'none',
                     type: 'rect',
-                    rect: ['-122px', '14px','54px','0px','auto', 'auto'],
-                    opacity: 1,
-                    fill: ["rgba(212,17,17,1)"],
-                    stroke: [0,"rgb(0, 0, 0)","none"]
+                    rect: ['-91px', '82px','101px','6px','auto', 'auto'],
+                    fill: ["rgba(213,10,10,1)"],
+                    stroke: [3,"rgb(165, 6, 6)","none"],
+                    transform: [[],['-42']]
                 },
                 {
-                    id: 'Rectangle5Copy2',
+                    id: 'Rectangle7',
+                    display: 'none',
                     type: 'rect',
-                    rect: ['-122px', '14px','54px','0px','auto', 'auto'],
-                    opacity: 1,
-                    fill: ["rgba(212,17,17,1)"],
-                    stroke: [0,"rgb(0, 0, 0)","none"]
+                    rect: ['-73px', '116px','72px','5px','auto', 'auto'],
+                    fill: ["rgba(213,10,10,1)"],
+                    stroke: [3,"rgb(165, 6, 6)","none"]
                 }]
             },
             {
-                id: 'Group3',
-                type: 'group',
-                rect: ['271', '214','69','47','auto', 'auto'],
-                c: [
-                {
-                    id: 'Angle_RCopy',
-                    type: 'group',
-                    rect: ['0px', '0px','69','47','auto', 'auto'],
-                    c: [
-                    {
-                        id: 'RectangleCopy6',
-                        type: 'rect',
-                        rect: ['-1px', '26px','66px','4px','auto', 'auto'],
-                        fill: ["rgba(192,192,192,1)"],
-                        stroke: [0,"rgba(0,0,0,1)","none"]
-                    },
-                    {
-                        id: 'RectangleCopy5',
-                        type: 'rect',
-                        rect: ['-1px', '26px','66px','4px','auto', 'auto'],
-                        fill: ["rgba(192,192,192,1)"],
-                        stroke: [0,"rgba(0,0,0,1)","none"]
-                    },
-                    {
-                        id: 'TextCopy10',
-                        type: 'text',
-                        rect: ['26px', '14px','auto','auto','auto', 'auto'],
-                        text: "40˚",
-                        align: "left",
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
-                    },
-                    {
-                        id: 'RectangleCopy4',
-                        type: 'rect',
-                        rect: ['-1px', '26px','66px','4px','auto', 'auto'],
-                        fill: ["rgba(192,192,192,1)"],
-                        stroke: [0,"rgba(0,0,0,1)","none"]
-                    },
-                    {
-                        id: 'RectangleCopy3',
-                        type: 'rect',
-                        rect: ['-1px', '26px','66px','4px','auto', 'auto'],
-                        fill: ["rgba(192,192,192,1)"],
-                        stroke: [0,"rgba(0,0,0,1)","none"]
-                    },
-                    {
-                        id: 'TextCopy9',
-                        type: 'text',
-                        rect: ['26px', '14px','auto','auto','auto', 'auto'],
-                        text: "40˚",
-                        align: "left",
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 24, "rgba(0,0,0,1)", "normal", "none", "italic"]
-                    }]
-                }]
-            },
-            {
-                id: 'Text4',
+                id: 'Answer_Hint_2',
+                display: 'block',
                 type: 'text',
-                rect: ['291', '293','auto','auto','auto', 'auto'],
-                text: "40˚",
+                rect: ['335px', '171px','140px','35px','auto', 'auto'],
+                text: "x=180º-y-$cº",
                 align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy4',
-                type: 'text',
-                rect: ['427px', '295px','auto','auto','auto', 'auto'],
-                text: "?",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy7',
-                type: 'text',
-                rect: ['386px', '318px','auto','auto','auto', 'auto'],
-                text: "a =",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy8',
-                type: 'text',
-                rect: ['427px', '295px','auto','auto','auto', 'auto'],
-                text: "?",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy10',
-                type: 'text',
-                rect: ['415px', '318px','auto','auto','auto', 'auto'],
-                text: "180˚",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy11',
-                type: 'text',
-                rect: ['457px', '317px','auto','auto','auto', 'auto'],
-                text: "- 40˚",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy12',
-                type: 'text',
-                rect: ['510px', '318px','auto','auto','auto', 'auto'],
-                text: "= 140˚",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy13',
-                type: 'text',
-                rect: ['386px', '339px','auto','auto','auto', 'auto'],
-                text: "a =",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy14',
-                type: 'text',
-                rect: ['526px', '343px','auto','auto','auto', 'auto'],
-                text: "140˚/ 5",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy15',
-                type: 'text',
-                rect: ['386px', '370px','auto','auto','auto', 'auto'],
-                text: "a =",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Text4Copy16',
-                type: 'text',
-                rect: ['526px', '370px','auto','auto','auto', 'auto'],
-                text: "28˚",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(224,14,14,1.00)", "normal", "none", "normal"]
             },
             {
                 id: 'question',
@@ -556,11 +317,18 @@ var symbols = {
                 source: ['media/hint1.ogg','media/hint1.mp3']
             },
             {
-                id: 'hint2',
+                id: 'hint2a',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint2.mp3','media/hint2.ogg']
+                source: ['media/hint2a.ogg','media/hint2a.mp3']
+            },
+            {
+                id: 'hint2b',
+                type: 'audio',
+                tag: 'audio',
+                rect: ['0', '0','320px','45px','auto', 'auto'],
+                source: ['media/hint2b.mp3','media/hint2b.ogg']
             },
             {
                 id: 'hint3',
@@ -575,13 +343,6 @@ var symbols = {
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
                 source: ['media/hint4.ogg','media/hint4.mp3']
-            },
-            {
-                id: 'answerhint',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/answerhint.mp3','media/answerhint.ogg']
             }],
             symbolInstances: [
             {
@@ -595,379 +356,29 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_Group3}": [
-                ["style", "top", '214px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '271px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_Text2}": [
-                ["style", "top", '27px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '21px'],
-                ["color", "color", 'rgba(0,0,0,1.00)']
-            ],
-            "${_Text4Copy13}": [
-                ["style", "top", '344px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '386px'],
-                ["style", "font-size", '18px']
-            ],
-            "${_Rectangle4}": [
-                ["style", "top", '28px'],
-                ["transform", "rotateZ", '56deg'],
-                ["style", "height", '4px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '14px']
-            ],
-            "${_Text4Copy}": [
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0.000000'],
-                ["style", "font-size", '18px']
-            ],
-            "${_AnswerDText}": [
-                ["style", "top", '505px'],
-                ["style", "width", '101px'],
-                ["style", "left", '60px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_Rectangle4Copy5}": [
-                ["style", "height", '4px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '0px'],
-                ["style", "top", '56px']
-            ],
-            "${_Rectangle3Copy}": [
-                ["style", "top", '66px'],
-                ["transform", "rotateZ", '-40deg'],
-                ["style", "height", '4px'],
-                ["color", "background-color", 'rgba(6,6,6,1)'],
-                ["style", "left", '-23px'],
-                ["style", "width", '207px']
-            ],
-            "${_Rectangle4Copy4}": [
-                ["style", "top", '28px'],
-                ["transform", "rotateZ", '56deg'],
-                ["style", "height", '4px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '14px']
-            ],
-            "${_Group4}": [
-                ["style", "top", '201px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '450px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_TextCopy}": [
-                ["style", "top", '13px'],
-                ["style", "font-style", 'italic'],
-                ["color", "color", 'rgba(201,11,11,1)'],
-                ["style", "left", '26px'],
-                ["style", "font-size", '24px']
-            ],
-            "${_Text3}": [
-                ["style", "top", '93px'],
-                ["style", "font-style", 'italic'],
-                ["style", "left", '175px'],
-                ["color", "color", 'rgba(17,111,64,1)']
-            ],
-            "${_Rectangle4Copy3}": [
-                ["style", "height", '4px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '0px'],
-                ["style", "top", '56px']
-            ],
-            "${_Text2Copy2}": [
-                ["style", "top", '27px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '21px'],
-                ["color", "color", 'rgba(214,11,11,1)']
-            ],
-            "${_Rectangle4Copy}": [
-                ["style", "height", '4px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '0px'],
-                ["style", "top", '56px']
-            ],
-            "${_Rectangle5Copy2}": [
-                ["style", "top", '19px'],
-                ["transform", "rotateZ", '-40deg'],
-                ["style", "height", '4px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-5px']
-            ],
-            "${_Answers}": [
-                ["style", "top", '380px'],
-                ["style", "left", '13px']
-            ],
-            "${_Rectangle5Copy}": [
-                ["style", "top", '22px'],
-                ["transform", "rotateZ", '56deg'],
-                ["style", "height", '4px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '31px']
-            ],
-            "${_Sound_Container}": [
-                ["style", "display", 'none'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_Question_TextCopy2}": [
-                ["style", "top", '30px'],
-                ["style", "font-size", '18px'],
-                ["style", "font-style", 'normal'],
-                ["style", "height", '124px'],
-                ["style", "font-family", 'Georgia, \'Times New Roman\', Times, serif'],
-                ["style", "left", '15px'],
-                ["style", "width", '219px']
-            ],
-            "${_Text4Copy10}": [
-                ["style", "top", '318px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '415px'],
-                ["style", "font-size", '18px']
-            ],
-            "${_Text4Copy15}": [
-                ["style", "top", '370px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '386px'],
-                ["style", "font-size", '18px']
-            ],
-            "${_RectangleCopy6}": [
-                ["color", "background-color", 'rgba(212,17,17,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '0px'],
-                ["style", "top", '43px']
-            ],
-            "${_RectangleCopy3}": [
-                ["color", "background-color", 'rgba(212,17,17,1)'],
-                ["transform", "rotateZ", '-40deg'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-6px'],
-                ["style", "top", '21px']
-            ],
-            "${_Angle_SCopy}": [
-                ["style", "top", '122px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '389px']
-            ],
-            "${_Angle_S}": [
-                ["style", "top", '124px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '385px']
-            ],
-            "${_Text}": [
-                ["style", "top", '14px'],
-                ["color", "color", 'rgba(220,9,9,1)'],
-                ["style", "font-style", 'italic'],
-                ["style", "opacity", '1'],
-                ["style", "left", '25px'],
-                ["style", "font-size", '24px']
-            ],
-            "${_Rectangle5}": [
-                ["style", "top", '19px'],
-                ["transform", "rotateZ", '-40deg'],
-                ["style", "height", '4px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '-5px']
-            ],
-            "${_TextCopy6}": [
-                ["style", "top", '228px'],
-                ["style", "font-style", 'italic'],
-                ["color", "color", 'rgba(0,0,0,0.99)'],
-                ["style", "left", '297px'],
-                ["style", "font-size", '24px']
-            ],
             "${_Rectangle2}": [
-                ["style", "top", '132px'],
-                ["color", "background-color", 'rgba(3,3,3,1)'],
-                ["style", "left", '0px'],
-                ["style", "height", '4px']
+                ["style", "top", '7px'],
+                ["style", "display", 'none'],
+                ["transform", "rotateZ", '-68deg'],
+                ["style", "height", '7px'],
+                ["color", "background-color", 'rgba(213,10,10,1.00)'],
+                ["style", "left", '-119px'],
+                ["style", "width", '20px']
             ],
-            "${_Text2Copy}": [
-                ["style", "top", '27px'],
+            "${_Equal_1}": [
+                ["color", "background-color", 'rgba(213,10,10,0.01)'],
+                ["transform", "rotateZ", '189deg'],
+                ["transform", "scaleX", '1.19584'],
+                ["style", "border-style", 'solid'],
+                ["style", "border-width", '3px'],
+                ["style", "top", '158px'],
+                ["style", "border-bottom-right-radius", [50,50], {valueTemplate:'@@0@@% @@1@@%'} ],
+                ["transform", "scaleY", '1.18579'],
                 ["style", "opacity", '0'],
-                ["style", "left", '21px'],
-                ["color", "color", 'rgba(214,11,11,1)']
-            ],
-            "${_Text4Copy3}": [
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "font-size", '18px']
-            ],
-            "${_RectangleCopy5}": [
-                ["color", "background-color", 'rgba(212,17,17,1)'],
-                ["transform", "rotateZ", '-40deg'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-6px'],
-                ["style", "top", '21px']
-            ],
-            "${_Text4}": [
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "font-size", '18px']
-            ],
-            "${_Text4Copy8}": [
-                ["style", "top", '319px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '427px'],
-                ["style", "font-size", '18px']
-            ],
-            "${_Text4Copy9}": [
-                ["style", "top", '318px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '376px'],
-                ["style", "font-size", '18px']
-            ],
-            "${_TextCopy5}": [
-                ["style", "top", '138px'],
-                ["color", "color", 'rgba(0,0,0,1.00)'],
-                ["style", "font-style", 'italic'],
-                ["style", "opacity", '1'],
-                ["style", "left", '410px'],
-                ["style", "font-size", '24px']
-            ],
-            "${_Rectangle3}": [
-                ["style", "top", '66px'],
-                ["transform", "rotateZ", '56deg'],
-                ["style", "height", '4px'],
-                ["color", "background-color", 'rgba(6,6,6,1)'],
-                ["style", "left", '125px'],
-                ["style", "width", '156px']
-            ],
-            "${_Angle_RCopy}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '0px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_Text4Copy16}": [
-                ["style", "top", '370px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '526px'],
-                ["style", "font-size", '18px']
-            ],
-            "${_Text4Copy2}": [
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "font-size", '18px']
-            ],
-            "${_Angle_T}": [
-                ["style", "top", '201px'],
-                ["transform", "rotateZ", '0deg'],
-                ["style", "height", '60px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '450px'],
-                ["style", "width", '69px']
-            ],
-            "${_Text4Copy11}": [
-                ["style", "top", '317px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '457px'],
-                ["style", "font-size", '18px']
-            ],
-            "${_AnswerEText}": [
-                ["style", "top", '541px'],
-                ["style", "width", '101px'],
-                ["style", "left", '60px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_Rectangle5Copy3}": [
-                ["style", "top", '22px'],
-                ["transform", "rotateZ", '56deg'],
-                ["style", "height", '4px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '31px']
-            ],
-            "${_AnswerBText}": [
-                ["style", "top", '437px'],
-                ["style", "width", '112px'],
-                ["style", "left", '60px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_Text5}": [
-                ["style", "font-style", 'normal'],
-                ["color", "color", 'rgba(0,0,0,1)'],
-                ["style", "left", '193px'],
-                ["style", "top", '93px']
-            ],
-            "${_RectangleCopy4}": [
-                ["color", "background-color", 'rgba(212,17,17,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '0px'],
-                ["style", "top", '43px']
-            ],
-            "${_AnswerCText}": [
-                ["style", "top", '469px'],
-                ["style", "width", '101px'],
-                ["style", "left", '60px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_Text4Copy5}": [
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "font-size", '18px']
-            ],
-            "${_RectangleCopy}": [
-                ["style", "top", '21px'],
-                ["color", "background-color", 'rgba(212,17,17,1)'],
-                ["style", "left", '-6px'],
-                ["transform", "rotateZ", '-40deg']
-            ],
-            "${_TextCopy2}": [
-                ["style", "top", '261px'],
-                ["style", "font-style", 'italic'],
-                ["style", "font-size", '24px']
-            ],
-            "${_Text4Copy14}": [
-                ["style", "top", '343px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '526px'],
-                ["style", "font-size", '18px']
-            ],
-            "${_TextCopy10}": [
-                ["style", "top", '13px'],
-                ["color", "color", 'rgba(201,11,11,1)'],
-                ["transform", "rotateZ", '0deg'],
-                ["style", "font-style", 'italic'],
-                ["style", "opacity", '0'],
-                ["style", "left", '26px'],
-                ["style", "font-size", '24px']
-            ],
-            "${_Text4Copy7}": [
-                ["style", "top", '318px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '386px'],
-                ["style", "font-size", '18px']
-            ],
-            "${_TextCopy4}": [
-                ["style", "top", '261px'],
-                ["style", "font-style", 'italic'],
-                ["style", "left", '523px'],
-                ["style", "font-size", '24px']
-            ],
-            "${_Angle_R}": [
-                ["style", "top", '214px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '271px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_TextCopy3}": [
-                ["style", "top", '90px'],
-                ["style", "font-style", 'italic'],
-                ["style", "left", '419px'],
-                ["style", "font-size", '24px']
-            ],
-            "${_Triangle}": [
-                ["style", "top", '125px']
+                ["style", "display", 'none'],
+                ["color", "border-color", 'rgba(165,6,6,1.00)'],
+                ["style", "clip", [0,30,26,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
+                ["style", "left", '172px']
             ],
             "${_QuestionSound_Container}": [
                 ["style", "display", 'none'],
@@ -975,64 +386,189 @@ var symbols = {
                 ["color", "background-color", 'rgba(248,250,248,0.00)'],
                 ["style", "width", '17px']
             ],
-            "${_TextCopy9}": [
-                ["style", "top", '13px'],
-                ["color", "color", 'rgba(201,11,11,1)'],
-                ["transform", "rotateZ", '0deg'],
-                ["style", "font-style", 'italic'],
+            "${_Find_y}": [
+                ["style", "display", 'block'],
                 ["style", "opacity", '0'],
-                ["style", "left", '26px'],
-                ["style", "font-size", '24px']
+                ["style", "font-style", 'normal'],
+                ["style", "font-size", '16px']
             ],
-            "${_Text4Copy4}": [
-                ["style", "top", '295px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '427px'],
-                ["style", "font-size", '18px']
+            "${_HTML_209Copy}": [
+                ["style", "top", '65px'],
+                ["style", "height", '197px'],
+                ["style", "left", '74px'],
+                ["style", "width", '307px']
             ],
-            "${_Rectangle4Copy2}": [
-                ["style", "top", '28px'],
-                ["transform", "rotateZ", '56deg'],
-                ["style", "height", '4px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '14px']
+            "${_Rectangle4}": [
+                ["style", "top", '2px'],
+                ["style", "display", 'none'],
+                ["style", "height", '7px'],
+                ["style", "left", '-4px'],
+                ["style", "width", '12px']
             ],
-            "${_Angle_TCopy}": [
-                ["style", "top", '0px'],
-                ["transform", "rotateZ", '0deg'],
-                ["style", "height", '60px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '0px'],
-                ["style", "width", '69px']
+            "${_Rectangle7}": [
+                ["style", "top", '116px'],
+                ["style", "display", 'none'],
+                ["style", "height", '6px'],
+                ["style", "left", '-22px'],
+                ["style", "width", '21px']
             ],
-            "${_TutorialText}": [
-                ["style", "top", '51px'],
-                ["style", "height", '187px'],
+            "${_Triangle_1}": [
+                ["style", "top", '185px'],
                 ["style", "opacity", '1'],
-                ["style", "left", '260px'],
-                ["style", "display", 'none']
+                ["style", "left", '300px'],
+                ["style", "width", '15px']
+            ],
+            "${_Rectangle3}": [
+                ["style", "top", '58px'],
+                ["transform", "rotateZ", '-24deg'],
+                ["style", "height", '7px'],
+                ["style", "display", 'none'],
+                ["style", "left", '-126px'],
+                ["style", "width", '17px']
+            ],
+            "${_hint1-1}": [
+                ["style", "top", '257px'],
+                ["style", "width", '346px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(211,13,13,1.00)'],
+                ["style", "opacity", '0'],
+                ["style", "left", '193px'],
+                ["style", "font-size", '14px']
+            ],
+            "${_AnswerEText}": [
+                ["style", "top", '329px'],
+                ["style", "left", '71px'],
+                ["style", "width", '101px']
+            ],
+            "${_AnswerBText}": [
+                ["style", "top", '225px'],
+                ["style", "height", '19px'],
+                ["style", "font-style", 'normal'],
+                ["style", "left", '71px'],
+                ["style", "width", '112px']
+            ],
+            "${_hint4_1}": [
+                ["style", "top", '266px'],
+                ["style", "display", 'block'],
+                ["style", "height", '27px'],
+                ["style", "opacity", '0'],
+                ["style", "left", '325px'],
+                ["color", "color", 'rgba(211,13,13,1)']
+            ],
+            "${_AnswerCText}": [
+                ["style", "top", '257px'],
+                ["style", "left", '71px'],
+                ["style", "width", '101px']
+            ],
+            "${_Rectangle9}": [
+                ["style", "top", '19px'],
+                ["transform", "rotateZ", '112deg'],
+                ["style", "height", '6px'],
+                ["style", "display", 'none'],
+                ["style", "left", '22px'],
+                ["style", "width", '38px']
             ],
             "${_AnswerAText}": [
-                ["style", "top", '402px'],
+                ["style", "top", '190px'],
                 ["style", "text-align", 'left'],
                 ["style", "height", '19px'],
                 ["style", "width", '109px'],
-                ["style", "left", '60px'],
-                ["style", "font-size", '14px']
+                ["style", "left", '71px'],
+                ["style", "font-size", '12px']
             ],
-            "${_RectangleCopy2}": [
-                ["style", "top", '43px'],
-                ["style", "left", '0px'],
-                ["color", "background-color", 'rgba(212,17,17,1)']
+            "${_Answers}": [
+                ["style", "top", '168px'],
+                ["style", "left", '24px']
             ],
-            "${_TextCopy8}": [
-                ["style", "top", '14px'],
-                ["color", "color", 'rgba(220,9,9,1)'],
-                ["style", "font-style", 'italic'],
+            "${_Sound_Container}": [
+                ["style", "display", 'none'],
+                ["style", "overflow", 'hidden']
+            ],
+            "${_Rectangle8}": [
+                ["style", "top", '105px'],
+                ["transform", "rotateZ", '-42deg'],
+                ["style", "height", '6px'],
+                ["style", "display", 'none'],
+                ["style", "left", '-82px'],
+                ["style", "width", '31px']
+            ],
+            "${_y_equals}": [
+                ["style", "top", '230px'],
+                ["color", "color", 'rgba(211,13,13,1)'],
+                ["style", "display", 'block'],
                 ["style", "opacity", '0'],
-                ["style", "left", '25px'],
-                ["style", "font-size", '24px']
+                ["style", "left", '325px'],
+                ["style", "font-size", '18px']
+            ],
+            "${_angle1_text}": [
+                ["style", "top", '164px'],
+                ["color", "color", 'rgba(0,0,0,1.00)'],
+                ["style", "left", '136px'],
+                ["style", "font-size", '16px']
+            ],
+            "${_angle2_text}": [
+                ["style", "font-size", '16px'],
+                ["style", "left", '194px'],
+                ["style", "width", '21px']
+            ],
+            "${_angle4_text}": [
+                ["style", "top", '190px'],
+                ["style", "font-size", '16px'],
+                ["style", "left", '244px'],
+                ["style", "width", '25px']
+            ],
+            "${_y_is_110}": [
+                ["style", "top", '303px'],
+                ["color", "color", 'rgba(211,13,13,1)'],
+                ["style", "display", 'block'],
+                ["style", "opacity", '0'],
+                ["style", "left", '330px'],
+                ["style", "font-size", '18px']
+            ],
+            "${_y}": [
+                ["style", "top", '191px'],
+                ["style", "font-size", '18px'],
+                ["style", "font-style", 'italic'],
+                ["style", "display", 'block'],
+                ["style", "height", '26px'],
+                ["style", "opacity", '0'],
+                ["style", "left", '199px'],
+                ["style", "width", '31px']
+            ],
+            "${_HTML_209}": [
+                ["style", "height", '197px'],
+                ["style", "top", '65px'],
+                ["style", "left", '74px'],
+                ["style", "width", '307px']
+            ],
+            "${_angle3_text}": [
+                ["style", "top", '220px'],
+                ["style", "left", '180px'],
+                ["style", "font-size", '16px']
+            ],
+            "${_Answer_Hint_1_}": [
+                ["style", "display", 'block'],
+                ["style", "opacity", '0'],
+                ["style", "font-style", 'normal']
+            ],
+            "${_AnswerDText}": [
+                ["style", "top", '293px'],
+                ["style", "left", '71px'],
+                ["style", "width", '101px']
+            ],
+            "${_Question_Text}": [
+                ["style", "top", '30px'],
+                ["style", "width", '219px'],
+                ["style", "height", '35px'],
+                ["style", "font-family", 'Georgia, \'Times New Roman\', Times, serif'],
+                ["style", "left", '15px'],
+                ["style", "font-size", '12px']
+            ],
+            "${_Answer_Hint_2}": [
+                ["color", "color", 'rgba(211,13,13,1.00)'],
+                ["style", "opacity", '0'],
+                ["style", "display", 'block'],
+                ["style", "font-size", '18px']
             ],
             "${_Stage}": [
                 ["color", "background-color", 'rgba(255,255,255,0.00)'],
@@ -1040,24 +576,28 @@ var symbols = {
                 ["style", "height", '600px'],
                 ["style", "width", '600px']
             ],
-            "${_Text2Copy3}": [
-                ["style", "top", '27px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '21px'],
-                ["color", "color", 'rgba(214,11,11,1)']
-            ],
-            "${_TextCopy7}": [
-                ["style", "top", '228px'],
-                ["style", "font-style", 'italic'],
-                ["style", "left", '471px'],
-                ["style", "font-size", '24px']
-            ],
-            "${_Text4Copy12}": [
-                ["style", "top", '318px'],
-                ["color", "color", 'rgba(5,68,15,1)'],
+            "${_Equal_2}": [
+                ["color", "background-color", 'rgba(213,10,10,0.0078)'],
+                ["transform", "rotateZ", '358deg'],
+                ["transform", "scaleX", '1.19895'],
                 ["style", "opacity", '0'],
-                ["style", "left", '510px'],
-                ["style", "font-size", '18px']
+                ["style", "border-width", '3px'],
+                ["style", "top", '162px'],
+                ["style", "border-style", 'solid'],
+                ["transform", "scaleY", '1.11087'],
+                ["style", "left", '174px'],
+                ["style", "display", 'block'],
+                ["color", "border-color", 'rgb(165, 6, 6)'],
+                ["style", "clip", [0,30,26,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
+                ["style", "border-bottom-right-radius", [50,50], {valueTemplate:'@@0@@% @@1@@%'} ]
+            ],
+            "${_hint1-2}": [
+                ["style", "top", '217px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(10,10,10,1.00)'],
+                ["style", "opacity", '0'],
+                ["style", "left", '294px'],
+                ["style", "width", '250px']
             ]
         }
     },
@@ -1065,90 +605,111 @@ var symbols = {
         "Default Timeline": {
             fromState: "Base State",
             toState: "",
-            duration: 81000,
+            duration: 95339,
             autoPlay: true,
             labels: {
                 "Read Question": 2000,
-                "Hint 1": 8000,
-                "Hint 2": 18000,
-                "Hint 3": 30000,
-                "Hint 4": 48000,
-                "Answer Hint": 61000
+                "Hint 1": 10000,
+                "Hint 2": 31000,
+                "Hint 3": 50000,
+                "Hint 4": 67000,
+                "Answer Hint": 81000
             },
             timeline: [
-                { id: "eid217", tween: [ "style", "${_Text2Copy2}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid316", tween: [ "style", "${_Angle_SCopy}", "top", '125px', { fromValue: '122px'}], position: 9500, duration: 250 },
-                { id: "eid319", tween: [ "style", "${_Angle_SCopy}", "top", '30px', { fromValue: '124px'}], position: 12000, duration: 3250 },
-                { id: "eid219", tween: [ "style", "${_Rectangle4Copy4}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid177", tween: [ "style", "${_TextCopy10}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid181", tween: [ "style", "${_TextCopy9}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid165", tween: [ "style", "${_Rectangle5Copy2}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid300", tween: [ "style", "${_Text4Copy16}", "opacity", '1', { fromValue: '0.000000'}], position: 67500, duration: 750 },
-                { id: "eid303", tween: [ "style", "${_Angle_SCopy}", "left", '385px', { fromValue: '389px'}], position: 9500, duration: 250 },
-                { id: "eid318", tween: [ "style", "${_Angle_SCopy}", "left", '318px', { fromValue: '385px'}], position: 12000, duration: 3250 },
-                { id: "eid234", tween: [ "style", "${_Group4}", "top", '31px', { fromValue: '201px'}], position: 12000, duration: 3250 },
-                { id: "eid233", tween: [ "transform", "${_Group4}", "rotateZ", '-180deg', { fromValue: '0deg'}], position: 12000, duration: 3250 },
-                { id: "eid282", tween: [ "style", "${_Text4Copy12}", "opacity", '1', { fromValue: '0.000000'}], position: 58500, duration: 1000 },
-                { id: "eid296", tween: [ "style", "${_Text4Copy12}", "opacity", '0.52398181352459', { fromValue: '1'}], position: 64250, duration: 500 },
-                { id: "eid241", tween: [ "style", "${_Text4Copy2}", "opacity", '1', { fromValue: '0.000000'}], position: 24500, duration: 250 },
-                { id: "eid286", tween: [ "style", "${_Text4Copy2}", "opacity", '0', { fromValue: '1'}], position: 58500, duration: 500 },
-                { id: "eid229", tween: [ "style", "${_Text2Copy}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid91", tween: [ "style", "${_TutorialText}", "display", 'block', { fromValue: 'none'}], position: 22000, duration: 0 },
-                { id: "eid235", tween: [ "style", "${_Group4}", "left", '363px', { fromValue: '450px'}], position: 12000, duration: 3250 },
-                { id: "eid180", tween: [ "style", "${_RectangleCopy4}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid205", tween: [ "transform", "${_Group3}", "rotateZ", '180deg', { fromValue: '0deg'}], position: 12000, duration: 3250 },
-                { id: "eid218", tween: [ "style", "${_Angle_TCopy}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid278", tween: [ "style", "${_Text4Copy10}", "opacity", '1', { fromValue: '0.000000'}], position: 54000, duration: 500 },
-                { id: "eid293", tween: [ "style", "${_Text4Copy10}", "opacity", '0.51511270491803', { fromValue: '1'}], position: 64250, duration: 500 },
-                { id: "eid178", tween: [ "style", "${_RectangleCopy5}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid215", tween: [ "style", "${_Rectangle4Copy2}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid207", tween: [ "style", "${_Group3}", "left", '290px', { fromValue: '271px'}], position: 12000, duration: 3250 },
-                { id: "eid167", tween: [ "style", "${_Rectangle5Copy3}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid322", tween: [ "style", "${_Rectangle5Copy3}", "opacity", '0.99', { fromValue: '1'}], position: 9750, duration: 5500 },
+                { id: "eid440", tween: [ "style", "${_Answer_Hint_1_}", "opacity", '1', { fromValue: '0'}], position: 87000, duration: 1000 },
+                { id: "eid420", tween: [ "color", "${_y_equals}", "color", 'rgba(126,117,117,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(211,13,13,1)'}], position: 67500, duration: 500 },
+                { id: "eid192", tween: [ "style", "${_Rectangle2}", "height", '7px', { fromValue: '7px'}], position: 21500, duration: 0 },
+                { id: "eid288", tween: [ "style", "${_Rectangle2}", "height", '3px', { fromValue: '7px'}], position: 22000, duration: 0 },
+                { id: "eid234", tween: [ "style", "${_Rectangle3}", "width", '90px', { fromValue: '17px'}], position: 22000, duration: 250 },
+                { id: "eid269", tween: [ "style", "${_Rectangle3}", "width", '156px', { fromValue: '90px'}], position: 22250, duration: 250 },
+                { id: "eid384", tween: [ "style", "${_Rectangle7}", "display", 'block', { fromValue: 'none'}], position: 55000, duration: 0 },
+                { id: "eid237", tween: [ "style", "${_Rectangle3}", "display", 'block', { fromValue: 'none'}], position: 22000, duration: 0 },
+                { id: "eid391", tween: [ "style", "${_Rectangle8}", "left", '-100px', { fromValue: '-82px'}], position: 55500, duration: 500 },
+                { id: "eid201", tween: [ "style", "${_Rectangle2}", "top", '29px', { fromValue: '7px'}], position: 21500, duration: 500 },
+                { id: "eid232", tween: [ "style", "${_Rectangle3}", "top", '45px', { fromValue: '58px'}], position: 22000, duration: 250 },
+                { id: "eid250", tween: [ "style", "${_Rectangle3}", "top", '32px', { fromValue: '45px'}], position: 22250, duration: 250 },
+                { id: "eid347", tween: [ "style", "${_Find_y}", "display", 'none', { fromValue: 'block'}], position: 40500, duration: 0, easing: "easeInOutElastic" },
+                { id: "eid353", tween: [ "style", "${_Find_y}", "display", 'block', { fromValue: 'none'}], position: 47500, duration: 0, easing: "easeInOutElastic" },
+                { id: "eid392", tween: [ "style", "${_Rectangle8}", "width", '171px', { fromValue: '31px'}], position: 55500, duration: 500 },
+                { id: "eid274", tween: [ "style", "${_hint1-2}", "display", 'block', { fromValue: 'none'}], position: 28000, duration: 0 },
+                { id: "eid271", tween: [ "style", "${_hint1-2}", "display", 'block', { fromValue: 'block'}], position: 28750, duration: 0 },
+                { id: "eid357", tween: [ "style", "${_hint1-2}", "display", 'block', { fromValue: 'block'}], position: 46750, duration: 0, easing: "easeInOutElastic" },
+                { id: "eid328", tween: [ "style", "${_Equal_2}", "display", 'block', { fromValue: 'block'}], position: 37000, duration: 0, easing: "easeInOutElastic" },
+                { id: "eid448", tween: [ "style", "${_Answer_Hint_2}", "opacity", '1', { fromValue: '0'}], position: 92000, duration: 1000 },
+                { id: "eid331", tween: [ "style", "${_Equal_2}", "opacity", '1', { fromValue: '0'}], position: 37000, duration: 1000, easing: "easeInOutElastic" },
+                { id: "eid364", tween: [ "style", "${_Equal_2}", "opacity", '0', { fromValue: '1'}], position: 50000, duration: 500 },
+                { id: "eid436", tween: [ "style", "${_Equal_2}", "opacity", '1', { fromValue: '0'}], position: 83018, duration: 982 },
+                { id: "eid233", tween: [ "style", "${_Rectangle3}", "left", '-135px', { fromValue: '-126px'}], position: 22000, duration: 250 },
+                { id: "eid268", tween: [ "style", "${_Rectangle3}", "left", '-138px', { fromValue: '-135px'}], position: 22250, duration: 250 },
+                { id: "eid390", tween: [ "style", "${_Rectangle8}", "top", '58px', { fromValue: '105px'}], position: 55500, duration: 500 },
+                { id: "eid429", tween: [ "style", "${_y_is_110}", "opacity", '1', { fromValue: '0'}], position: 73000, duration: 1000 },
+                { id: "eid161", tween: [ "style", "${_hint1-1}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid159", tween: [ "style", "${_hint1-1}", "display", 'block', { fromValue: 'none'}], position: 18000, duration: 0 },
+                { id: "eid160", tween: [ "style", "${_hint1-1}", "display", 'block', { fromValue: 'block'}], position: 19000, duration: 0 },
+                { id: "eid425", tween: [ "style", "${_y_is_110}", "display", 'block', { fromValue: 'block'}], position: 73000, duration: 0 },
                 { id: "eid29", tween: [ "style", "${_QuestionSound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid206", tween: [ "style", "${_Group3}", "top", '31px', { fromValue: '214px'}], position: 12000, duration: 3250 },
-                { id: "eid291", tween: [ "style", "${_Text4Copy14}", "opacity", '1', { fromValue: '0.000000'}], position: 64250, duration: 500 },
-                { id: "eid302", tween: [ "style", "${_Text4Copy14}", "opacity", '0.52394979508197', { fromValue: '1'}], position: 66750, duration: 750 },
-                { id: "eid183", tween: [ "style", "${_RectangleCopy3}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid273", tween: [ "style", "${_Text4Copy8}", "opacity", '1', { fromValue: '0.000000'}], position: 46250, duration: 250 },
-                { id: "eid276", tween: [ "style", "${_Text4Copy8}", "opacity", '0', { fromValue: '1'}], position: 52750, duration: 500 },
+                { id: "eid203", tween: [ "style", "${_Rectangle2}", "width", '68px', { fromValue: '20px'}], position: 21500, duration: 500 },
+                { id: "eid452", tween: [ "color", "${_y_is_110}", "color", 'rgba(108,102,102,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(211,13,13,1)'}], position: 92000, duration: 1000 },
+                { id: "eid382", tween: [ "style", "${_Rectangle7}", "left", '-80px', { fromValue: '-22px'}], position: 55000, duration: 500 },
+                { id: "eid412", tween: [ "style", "${_y_equals}", "opacity", '1', { fromValue: '0'}], position: 64000, duration: 1000 },
+                { id: "eid423", tween: [ "style", "${_y_equals}", "opacity", '0', { fromValue: '1'}], position: 70000, duration: 1000 },
+                { id: "eid249", tween: [ "style", "${_Rectangle4}", "display", 'block', { fromValue: 'none'}], position: 22500, duration: 0 },
+                { id: "eid323", tween: [ "style", "${_Equal_1}", "display", 'block', { fromValue: 'none'}], position: 36000, duration: 0 },
+                { id: "eid413", tween: [ "style", "${_hint4_1}", "display", 'block', { fromValue: 'block'}], position: 67000, duration: 0 },
+                { id: "eid247", tween: [ "style", "${_Rectangle4}", "left", '-107px', { fromValue: '-4px'}], position: 22500, duration: 500 },
+                { id: "eid389", tween: [ "style", "${_Rectangle8}", "height", '6px', { fromValue: '6px'}], position: 55500, duration: 0 },
+                { id: "eid395", tween: [ "style", "${_Rectangle8}", "height", '3px', { fromValue: '6px'}], position: 56000, duration: 0 },
+                { id: "eid327", tween: [ "style", "${_Equal_1}", "opacity", '1', { fromValue: '0'}], position: 36000, duration: 1000, easing: "easeInOutElastic" },
+                { id: "eid342", tween: [ "style", "${_Equal_1}", "opacity", '0', { fromValue: '1'}], position: 39000, duration: 1078, easing: "easeInOutElastic" },
+                { id: "eid204", tween: [ "style", "${_Rectangle2}", "display", 'block', { fromValue: 'none'}], position: 21500, duration: 0 },
+                { id: "eid334", tween: [ "style", "${_y}", "display", 'block', { fromValue: 'block'}], position: 40078, duration: 0, easing: "easeInOutElastic" },
+                { id: "eid368", tween: [ "style", "${_y}", "top", '158px', { fromValue: '191px'}], position: 51000, duration: 1000 },
+                { id: "eid433", tween: [ "style", "${_y}", "top", '187px', { fromValue: '158px'}], position: 81000, duration: 1000 },
+                { id: "eid416", tween: [ "style", "${_hint4_1}", "opacity", '1', { fromValue: '0'}], position: 67000, duration: 1000 },
+                { id: "eid202", tween: [ "style", "${_Rectangle2}", "left", '-151px', { fromValue: '-119px'}], position: 21500, duration: 500 },
+                { id: "eid242", tween: [ "style", "${_Rectangle2}", "left", '-150px', { fromValue: '-153px'}], position: 22000, duration: 0 },
+                { id: "eid381", tween: [ "style", "${_Rectangle7}", "height", '6px', { fromValue: '6px'}], position: 55000, duration: 0 },
+                { id: "eid385", tween: [ "style", "${_Rectangle7}", "height", '3px', { fromValue: '6px'}], position: 55500, duration: 0 },
+                { id: "eid383", tween: [ "style", "${_Rectangle7}", "width", '79px', { fromValue: '21px'}], position: 55000, duration: 500 },
+                { id: "eid367", tween: [ "style", "${_y}", "left", '180px', { fromValue: '199px'}], position: 51000, duration: 1000 },
+                { id: "eid432", tween: [ "style", "${_y}", "left", '198px', { fromValue: '180px'}], position: 81000, duration: 1000 },
+                { id: "eid403", tween: [ "style", "${_Rectangle9}", "height", '3px', { fromValue: '6px'}], position: 56000, duration: 500 },
+                { id: "eid444", tween: [ "style", "${_Answer_Hint_2}", "display", 'block', { fromValue: 'block'}], position: 92000, duration: 0 },
+                { id: "eid372", tween: [ "style", "${_Triangle_1}", "opacity", '0', { fromValue: '1'}], position: 53000, duration: 500 },
+                { id: "eid275", tween: [ "style", "${_hint1-2}", "opacity", '1', { fromValue: '0'}], position: 28000, duration: 750 },
+                { id: "eid361", tween: [ "style", "${_hint1-2}", "opacity", '0', { fromValue: '1'}], position: 46750, duration: 750, easing: "easeInOutElastic" },
+                { id: "eid443", tween: [ "color", "${_hint4_1}", "color", 'rgba(110,102,102,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(211,13,13,1)'}], position: 87000, duration: 500 },
+                { id: "eid401", tween: [ "style", "${_Rectangle9}", "left", '-39px', { fromValue: '23px'}], position: 56000, duration: 500 },
                 { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid182", tween: [ "style", "${_Angle_RCopy}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid280", tween: [ "style", "${_Text4Copy11}", "opacity", '1', { fromValue: '0.000000'}], position: 55500, duration: 750 },
-                { id: "eid295", tween: [ "style", "${_Text4Copy11}", "opacity", '0.52017161885246', { fromValue: '1'}], position: 64250, duration: 500 },
-                { id: "eid237", tween: [ "style", "${_Text4}", "opacity", '1', { fromValue: '0.000000'}], position: 23000, duration: 500 },
-                { id: "eid287", tween: [ "style", "${_Text4}", "opacity", '0', { fromValue: '1'}], position: 58500, duration: 500 },
-                { id: "eid164", tween: [ "style", "${_TextCopy8}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid323", tween: [ "style", "${_TextCopy8}", "opacity", '0.99', { fromValue: '1'}], position: 9750, duration: 5500 },
-                { id: "eid243", tween: [ "style", "${_Text4Copy3}", "opacity", '1', { fromValue: '0.000000'}], position: 25750, duration: 500 },
-                { id: "eid285", tween: [ "style", "${_Text4Copy3}", "opacity", '0', { fromValue: '1'}], position: 58500, duration: 500 },
-                { id: "eid268", tween: [ "style", "${_Text4Copy5}", "opacity", '1', { fromValue: '0.000000'}], position: 41000, duration: 750 },
-                { id: "eid283", tween: [ "style", "${_Text4Copy5}", "opacity", '0.5182825307377', { fromValue: '1'}], position: 58500, duration: 500 },
-                { id: "eid248", tween: [ "style", "${_Group4}", "opacity", '0', { fromValue: '1'}], position: 37500, duration: 1500 },
-                { id: "eid275", tween: [ "style", "${_Text4Copy9}", "opacity", '1', { fromValue: '0.000000'}], position: 50250, duration: 750 },
-                { id: "eid292", tween: [ "style", "${_Text4Copy9}", "opacity", '0.52017161885246', { fromValue: '1'}], position: 64250, duration: 500 },
-                { id: "eid245", tween: [ "style", "${_Text4Copy4}", "opacity", '1', { fromValue: '0.000000'}], position: 27000, duration: 750 },
-                { id: "eid249", tween: [ "style", "${_Text4Copy4}", "opacity", '0', { fromValue: '1'}], position: 40000, duration: 500 },
-                { id: "eid298", tween: [ "style", "${_Text4Copy15}", "opacity", '1', { fromValue: '0.000000'}], position: 66750, duration: 750 },
-                { id: "eid246", tween: [ "style", "${_Group3}", "opacity", '0', { fromValue: '1'}], position: 37500, duration: 1500 },
-                { id: "eid53", tween: [ "style", "${_TutorialText}", "opacity", '0', { fromValue: '1'}], position: 15000, duration: 3000 },
-                { id: "eid166", tween: [ "style", "${_Angle_SCopy}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid320", tween: [ "style", "${_Angle_SCopy}", "opacity", '0.99000000953674', { fromValue: '1'}], position: 9750, duration: 5500 },
-                { id: "eid321", tween: [ "style", "${_Angle_SCopy}", "opacity", '1', { fromValue: '0.99000000953674'}], position: 15250, duration: 1000 },
-                { id: "eid247", tween: [ "style", "${_Angle_SCopy}", "opacity", '0', { fromValue: '1'}], position: 37500, duration: 1500 },
-                { id: "eid271", tween: [ "style", "${_Text4Copy7}", "opacity", '1', { fromValue: '0.000000'}], position: 45000, duration: 750 },
-                { id: "eid294", tween: [ "style", "${_Text4Copy7}", "opacity", '0', { fromValue: '1'}], position: 64250, duration: 500 },
-                { id: "eid216", tween: [ "style", "${_Rectangle4Copy3}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid228", tween: [ "style", "${_Rectangle4Copy5}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid179", tween: [ "style", "${_RectangleCopy6}", "opacity", '1', { fromValue: '0.000000'}], position: 9500, duration: 250 },
-                { id: "eid289", tween: [ "style", "${_Text4Copy13}", "opacity", '1', { fromValue: '0.000000'}], position: 63000, duration: 500 },
-                { id: "eid301", tween: [ "style", "${_Text4Copy13}", "opacity", '0.52330942622951', { fromValue: '1'}], position: 66750, duration: 750 },
-                { id: "eid326", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question}', [] ], ""], position: 2000 },
-                { id: "eid327", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1}', [] ], ""], position: 8000 },
-                { id: "eid328", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2}', [] ], ""], position: 18000 },
-                { id: "eid329", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3}', [] ], ""], position: 30000 },
-                { id: "eid330", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4}', [] ], ""], position: 48000 },
-                { id: "eid331", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answerhint}', [] ], ""], position: 61000 }            ]
+                { id: "eid355", tween: [ "style", "${_Find_y}", "opacity", '1', { fromValue: '0'}], position: 47500, duration: 500, easing: "easeInOutElastic" },
+                { id: "eid407", tween: [ "style", "${_Find_y}", "opacity", '0', { fromValue: '1'}], position: 58000, duration: 1000 },
+                { id: "eid379", tween: [ "style", "${_Rectangle7}", "top", '116px', { fromValue: '116px'}], position: 55000, duration: 0 },
+                { id: "eid338", tween: [ "style", "${_y}", "opacity", '1', { fromValue: '0'}], position: 40078, duration: 922, easing: "easeInOutElastic" },
+                { id: "eid437", tween: [ "style", "${_Answer_Hint_1_}", "display", 'block', { fromValue: 'block'}], position: 87000, duration: 0 },
+                { id: "eid356", tween: [ "style", "${_Find_y}", "font-size", '16px', { fromValue: '16px'}], position: 48000, duration: 0, easing: "easeInOutElastic" },
+                { id: "eid235", tween: [ "style", "${_Rectangle3}", "height", '7px', { fromValue: '7px'}], position: 22000, duration: 0 },
+                { id: "eid236", tween: [ "style", "${_Rectangle3}", "height", '3px', { fromValue: '7px'}], position: 22500, duration: 0 },
+                { id: "eid248", tween: [ "style", "${_Rectangle4}", "width", '65px', { fromValue: '12px'}], position: 22500, duration: 250 },
+                { id: "eid270", tween: [ "style", "${_Rectangle4}", "width", '116px', { fromValue: '65px'}], position: 22750, duration: 250 },
+                { id: "eid239", tween: [ "style", "${_Rectangle4}", "top", '2px', { fromValue: '2px'}], position: 22500, duration: 0 },
+                { id: "eid408", tween: [ "style", "${_y_equals}", "display", 'block', { fromValue: 'block'}], position: 64000, duration: 0 },
+                { id: "eid454", tween: [ "color", "${_Answer_Hint_2}", "color", 'rgba(211,13,13,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(211,13,13,1.00)'}], position: 92000, duration: 0 },
+                { id: "eid281", tween: [ "color", "${_hint1-1}", "color", 'rgba(211,13,13,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(211,13,13,1.00)'}], position: 18000, duration: 0 },
+                { id: "eid424", tween: [ "style", "${_hint4_1}", "height", '27px', { fromValue: '27px'}], position: 73000, duration: 0 },
+                { id: "eid393", tween: [ "style", "${_Rectangle8}", "display", 'block', { fromValue: 'none'}], position: 55500, duration: 0 },
+                { id: "eid404", tween: [ "style", "${_Rectangle9}", "display", 'block', { fromValue: 'none'}], position: 56000, duration: 0 },
+                { id: "eid400", tween: [ "style", "${_Rectangle9}", "top", '58px', { fromValue: '19px'}], position: 56000, duration: 500 },
+                { id: "eid402", tween: [ "style", "${_Rectangle9}", "width", '127px', { fromValue: '38px'}], position: 56000, duration: 500 },
+                { id: "eid240", tween: [ "style", "${_Rectangle4}", "height", '7px', { fromValue: '7px'}], position: 22500, duration: 0 },
+                { id: "eid289", tween: [ "style", "${_Rectangle4}", "height", '3px', { fromValue: '7px'}], position: 23000, duration: 0 },
+                { id: "eid168", tween: [ "style", "${_hint1-1}", "opacity", '1', { fromValue: '0'}], position: 18000, duration: 1000 },
+                { id: "eid285", tween: [ "style", "${_hint1-1}", "opacity", '0', { fromValue: '1'}], position: 26000, duration: 500 },
+                { id: "eid455", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question}', [] ], ""], position: 2000 },
+                { id: "eid456", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1}', [] ], ""], position: 10000 },
+                { id: "eid457", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2a}', [] ], ""], position: 31000 },
+                { id: "eid458", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2b}', [] ], ""], position: 43000 },
+                { id: "eid459", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3}', [] ], ""], position: 60000 },
+                { id: "eid460", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4}', [] ], ""], position: 76000 }            ]
         }
     }
 },
@@ -1278,12 +839,12 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text8',
                         text: 'E',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
                         rect: ['-8px', '-3px', '42px', '33px', 'auto', 'auto'],
@@ -1635,12 +1196,12 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text7',
                         text: 'D<br>',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
                         rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
@@ -2222,25 +1783,25 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         type: 'text',
-                        rect: ['0px', '5px', '27px', '19px', 'auto', 'auto'],
                         id: 'Text4',
                         text: 'B',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        rect: ['0px', '5px', '27px', '19px', 'auto', 'auto']
                     },
                     {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
+                        id: 'x',
                         fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                     },
                     {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
+                        id: 'check',
                         fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                     }]
                 }
@@ -2591,27 +2152,50 @@ var symbols = {
             symbolInstances: [
             {
                 id: 'DButton',
-                symbolName: 'DButton_3'
+                symbolName: 'DButton_3',
+                autoPlay: {
+
+               }
             },
             {
                 id: 'EButton',
-                symbolName: 'EButton_3'
+                symbolName: 'EButton_3',
+                autoPlay: {
+
+               }
             },
             {
                 id: 'BButton',
-                symbolName: 'BButton_3'
+                symbolName: 'BButton_3',
+                autoPlay: {
+
+               }
             },
             {
                 id: 'CButton',
-                symbolName: 'CButton_3'
+                symbolName: 'CButton_3',
+                autoPlay: {
+
+               }
             },
             {
                 id: 'AButton',
-                symbolName: 'AButton_3'
+                symbolName: 'AButton_3',
+                autoPlay: {
+
+               }
             }            ]
         },
     states: {
         "Base State": {
+            "${_CButton}": [
+                ["style", "left", '8px'],
+                ["style", "top", '86px']
+            ],
+            "${_EButton}": [
+                ["style", "left", '8px'],
+                ["style", "top", '157px']
+            ],
             "${_Group}": [
                 ["style", "top", '2px'],
                 ["style", "left", '0px']
@@ -2634,14 +2218,6 @@ var symbols = {
                 ["style", "left", '8px'],
                 ["style", "top", '50px']
             ],
-            "${_EButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '157px']
-            ],
-            "${_CButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '86px']
-            ],
             "${_AButton}": [
                 ["style", "left", '0px'],
                 ["style", "top", '0px']
@@ -2652,7 +2228,7 @@ var symbols = {
         "Default Timeline": {
             fromState: "Base State",
             toState: "",
-            duration: 0,
+            duration: 10000,
             autoPlay: true,
             timeline: [
             ]

@@ -52,6 +52,7 @@ if(document.addEventListener ){
    aLoader = [
       { load: "edge_includes/jquery-2.0.3.min.js"},
       { load: "edge_includes/edge.3.0.0.min.js"},
+      { load: "js/params.js", user: true },
       { load: "HTML%20209_edge.js"},
       { load: "HTML%20209_edgeActions.js"}];
 
