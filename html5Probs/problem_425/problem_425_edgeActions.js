@@ -21,17 +21,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 16000, function(sym, e) {
-         // This is where your sound code goes. I have provided an example, so
-         // you should not need to change anything, unless you want to move the hint
-         // to a different place on the timeline. Then, just copy what I have in here.
-         // You will need a file called hint1.ogg. If this hint does not have any
-         // sounds, delete this code.
-         
-         playSound(sym,"hint1.ogg");
-
-      });
-      //Edge binding end
+      
 
       
 

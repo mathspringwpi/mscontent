@@ -442,7 +442,6 @@ var symbols = {
             },
             {
                 id: 'hint1a',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -450,7 +449,6 @@ var symbols = {
             },
             {
                 id: 'hint1b',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -458,7 +456,6 @@ var symbols = {
             },
             {
                 id: 'hint1c',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -466,7 +463,6 @@ var symbols = {
             },
             {
                 id: 'hint1d',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -474,7 +470,6 @@ var symbols = {
             },
             {
                 id: 'hint1e',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -482,7 +477,6 @@ var symbols = {
             },
             {
                 id: 'hint2a',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -490,7 +484,6 @@ var symbols = {
             },
             {
                 id: 'hint2b',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -498,7 +491,6 @@ var symbols = {
             },
             {
                 id: 'hint2c',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -506,7 +498,6 @@ var symbols = {
             },
             {
                 id: 'hint3a',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -514,7 +505,6 @@ var symbols = {
             },
             {
                 id: 'hint3b',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -522,7 +512,6 @@ var symbols = {
             },
             {
                 id: 'answerhint1',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -530,7 +519,6 @@ var symbols = {
             },
             {
                 id: 'answerhint2',
-                display: 'none',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
@@ -554,24 +542,25 @@ var symbols = {
                 ["style", "left", '301px'],
                 ["style", "top", '363px']
             ],
-            "${__1_line}": [
-                ["style", "top", '-40px'],
-                ["style", "left", '-46px'],
-                ["style", "height", '24px']
+            "${__2}": [
+                ["style", "top", '0px'],
+                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
+                ["style", "left", '0px'],
+                ["style", "font-size", '14px']
             ],
             "${_QuestionSound_Container}": [
-                ["style", "display", 'none'],
                 ["style", "height", '8px'],
+                ["style", "display", 'none'],
                 ["color", "background-color", 'rgba(248,250,248,0.00)'],
                 ["style", "width", '17px']
             ],
             "${_Addition_or_Subtraction}": [
                 ["style", "top", '0px'],
-                ["style", "width", '205px'],
+                ["style", "font-size", '18px'],
                 ["color", "color", 'rgba(6,74,151,1.00)'],
                 ["style", "font-family", 'Arial, Helvetica, sans-serif'],
                 ["style", "left", '0px'],
-                ["style", "font-size", '18px']
+                ["style", "width", '205px']
             ],
             "${_equals_question_mark}": [
                 ["style", "top", '1px'],
@@ -582,30 +571,28 @@ var symbols = {
             ],
             "${_AnswerDText}": [
                 ["style", "top", '498px'],
-                ["style", "width", '101px'],
+                ["style", "font-size", '14px'],
                 ["style", "font-family", 'Times New Roman, Times, serif'],
                 ["style", "left", '73px'],
-                ["style", "font-size", '14px']
+                ["style", "width", '101px']
             ],
             "${__-2_line}": [
                 ["style", "top", '-40px'],
                 ["style", "left", '-146px'],
                 ["style", "height", '24px']
             ],
-            "${__30}": [
-                ["style", "top", '0px'],
-                ["style", "height", '36px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '205px'],
-                ["color", "color", 'rgba(199,4,4,1.00)']
+            "${_number_line}": [
+                ["style", "top", '-26px'],
+                ["style", "left", '-235px'],
+                ["style", "width", '276px']
             ],
-            "${_Question_Text}": [
+            "${_the_rest_of_sentence}": [
                 ["style", "top", '0px'],
-                ["style", "width", '205px'],
-                ["style", "height", '36px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '16px']
+                ["color", "color", 'rgba(207,0,0,1.00)'],
+                ["style", "font-style", 'normal'],
+                ["style", "font-weight", '400'],
+                ["style", "left", '144px'],
+                ["style", "width", '236px']
             ],
             "${_Hint_3_expression}": [
                 ["style", "left", '156px']
@@ -619,9 +606,9 @@ var symbols = {
             ],
             "${_absolute_value}": [
                 ["style", "top", '0px'],
+                ["color", "color", 'rgba(207,0,0,1.00)'],
                 ["style", "font-style", 'italic'],
                 ["style", "height", '20px'],
-                ["color", "color", 'rgba(207,0,0,1.00)'],
                 ["style", "font-weight", '700'],
                 ["style", "left", '28px'],
                 ["style", "width", '126px']
@@ -637,40 +624,46 @@ var symbols = {
                 ["style", "left", '-97px'],
                 ["style", "font-size", '16px']
             ],
-            "${_order_of_operations}": [
-                ["style", "top", '-136px'],
-                ["style", "font-weight", '700'],
-                ["style", "left", '-60px']
+            "${_Absolute_value_of_-2}": [
+                ["style", "top", '200px'],
+                ["style", "display", 'block'],
+                ["color", "color", 'rgba(1,153,168,0.98)'],
+                ["style", "height", '50px'],
+                ["style", "opacity", '0'],
+                ["style", "left", '197px'],
+                ["style", "width", '70px']
             ],
-            "${_the_rest_of_sentence}": [
-                ["style", "top", '0px'],
-                ["color", "color", 'rgba(207,0,0,1.00)'],
-                ["style", "font-style", 'normal'],
-                ["style", "font-weight", '400'],
-                ["style", "left", '144px'],
-                ["style", "width", '236px']
+            "${_Parentheses}": [
+                ["color", "color", 'rgba(6,74,151,1.00)'],
+                ["style", "top", '-107px'],
+                ["style", "left", '0px'],
+                ["style", "font-size", '18px']
             ],
             "${__-1}": [
                 ["style", "left", '-149px'],
                 ["style", "top", '0px']
             ],
-            "${__0_line}": [
-                ["style", "top", '-40px'],
-                ["style", "left", '-97px'],
-                ["style", "height", '24px']
+            "${_Stage}": [
+                ["color", "background-color", 'rgba(255,255,255,0.00)'],
+                ["style", "width", '600px'],
+                ["style", "height", '600px'],
+                ["style", "overflow", 'hidden']
             ],
-            "${__2}": [
-                ["style", "top", '0px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
+            "${_AnswerBText}": [
+                ["style", "top", '430px'],
+                ["style", "font-size", '14px'],
+                ["style", "font-family", 'Times New Roman, Times, serif'],
+                ["style", "left", '73px'],
+                ["style", "width", '112px']
             ],
-            "${_equals_-13}": [
-                ["style", "top", '0px'],
-                ["color", "color", 'rgba(15,15,15,1.00)'],
+            "${__3x_avsolute_value_of_-2}": [
+                ["style", "top", '243px'],
+                ["style", "display", 'block'],
+                ["color", "color", 'rgba(163,0,0,0.98)'],
+                ["style", "height", '67px'],
                 ["style", "opacity", '0'],
-                ["style", "left", '61px'],
-                ["style", "width", '50px']
+                ["style", "left", '197px'],
+                ["style", "width", '112px']
             ],
             "${__-2}": [
                 ["style", "top", '0px'],
@@ -685,26 +678,26 @@ var symbols = {
             ],
             "${_AnswerEText}": [
                 ["style", "top", '329px'],
-                ["style", "width", '101px'],
+                ["style", "font-size", '14px'],
                 ["style", "left", '71px'],
-                ["style", "font-size", '14px']
+                ["style", "width", '101px']
             ],
-            "${_Distance_2_from_0_text}": [
-                ["style", "top", '105px'],
+            "${_distance_0_to_-2}": [
+                ["style", "top", '140px'],
+                ["color", "background-color", 'rgba(1,153,168,0.98)'],
+                ["color", "border-color", 'rgba(1,153,168,0.98)'],
                 ["style", "display", 'block'],
                 ["style", "opacity", '0'],
-                ["color", "color", 'rgba(0,59,236,0.98)'],
-                ["style", "font-weight", '700'],
-                ["style", "left", '270px'],
-                ["style", "width", '217px']
+                ["style", "left", '171px'],
+                ["style", "width", '86px']
             ],
             "${_Multiplication_or_division}": [
                 ["style", "top", '-35px'],
-                ["style", "font-size", '18px'],
+                ["style", "width", '205px'],
                 ["color", "color", 'rgba(6,74,151,1.00)'],
                 ["style", "font-family", 'Arial, Helvetica, sans-serif'],
                 ["style", "left", '0px'],
-                ["style", "width", '205px']
+                ["style", "font-size", '18px']
             ],
             "${_arrow}": [
                 ["style", "top", '-57px'],
@@ -713,18 +706,20 @@ var symbols = {
                 ["style", "left", '-116px'],
                 ["style", "width", '136px']
             ],
-            "${__6x-5}": [
-                ["style", "top", '0px'],
-                ["color", "color", 'rgba(199,4,4,1.00)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '0px'],
-                ["style", "width", '64px']
+            "${__-1_line}": [
+                ["style", "top", '-40px'],
+                ["style", "left", '-194px'],
+                ["style", "height", '24px']
             ],
-            "${__-30_absolute_value}": [
-                ["style", "height", '20px'],
+            "${_distance_0_to_2}": [
+                ["color", "background-color", 'rgba(0,59,236,0.98)'],
+                ["style", "top", '140px'],
+                ["style", "border-width", '4px'],
                 ["style", "opacity", '0'],
-                ["style", "left", '106px'],
-                ["style", "top", '0px']
+                ["style", "display", 'block'],
+                ["color", "border-color", 'rgba(0,59,236,0.98)'],
+                ["style", "left", '269px'],
+                ["style", "width", '87px']
             ],
             "${_The}": [
                 ["style", "top", '0px'],
@@ -735,28 +730,29 @@ var symbols = {
             ],
             "${_AnswerCText}": [
                 ["style", "top", '462px'],
-                ["style", "width", '101px'],
+                ["style", "font-size", '14px'],
                 ["style", "font-family", 'Times New Roman, Times, serif'],
                 ["style", "left", '73px'],
-                ["style", "font-size", '14px']
+                ["style", "width", '101px']
             ],
-            "${_distance_0_to_-2}": [
-                ["style", "top", '140px'],
-                ["color", "background-color", 'rgba(1,153,168,0.98)'],
-                ["style", "opacity", '0'],
+            "${_Distance_2_from_0_text}": [
+                ["style", "top", '105px'],
                 ["style", "display", 'block'],
-                ["color", "border-color", 'rgba(1,153,168,0.98)'],
-                ["style", "left", '171px'],
-                ["style", "width", '86px']
-            ],
-            "${_Answer_hint-390}": [
-                ["style", "top", '276px'],
-                ["style", "font-size", '18px'],
-                ["style", "height", '43px'],
-                ["color", "color", 'rgba(13,13,13,1)'],
+                ["style", "font-weight", '700'],
+                ["color", "color", 'rgba(0,59,236,0.98)'],
                 ["style", "opacity", '0'],
-                ["style", "left", '399px'],
-                ["style", "width", '58px']
+                ["style", "left", '270px'],
+                ["style", "width", '217px']
+            ],
+            "${__-30_absolute_value}": [
+                ["style", "height", '20px'],
+                ["style", "opacity", '0'],
+                ["style", "left", '106px'],
+                ["style", "top", '0px']
+            ],
+            "${_Answers}": [
+                ["style", "top", '373px'],
+                ["style", "left", '26px']
             ],
             "${_TutorialText}": [
                 ["style", "top", '54px'],
@@ -764,11 +760,6 @@ var symbols = {
                 ["style", "opacity", '1'],
                 ["style", "left", '260px'],
                 ["style", "display", 'none']
-            ],
-            "${_equals_-13_times}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '144px']
             ],
             "${_Number_Line}": [
                 ["style", "display", 'block'],
@@ -778,23 +769,26 @@ var symbols = {
                 ["style", "display", 'none'],
                 ["style", "overflow", 'hidden']
             ],
-            "${_AnswerAText}": [
-                ["style", "top", '395px'],
-                ["style", "text-align", 'left'],
-                ["style", "width", '109px'],
-                ["style", "height", '19px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '73px'],
-                ["style", "font-size", '14px']
+            "${_question}": [
+                ["style", "top", '0px'],
+                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
+                ["style", "left", '61px']
             ],
-            "${_Order_of_Operations}": [
-                ["style", "left", '240px'],
-                ["style", "opacity", '0']
+            "${_Hint2_text}": [
+                ["style", "top", '216px'],
+                ["color", "color", 'rgba(144,0,14,1.00)'],
+                ["style", "opacity", '0'],
+                ["style", "left", '176px'],
+                ["style", "width", '281px']
             ],
             "${__2_line}": [
                 ["style", "top", '-40px'],
                 ["style", "left", '2px'],
                 ["style", "height", '24px']
+            ],
+            "${_Order_of_Operations}": [
+                ["style", "left", '240px'],
+                ["style", "opacity", '0']
             ],
             "${_distance_0_to_-2_text}": [
                 ["style", "top", '105px'],
@@ -804,17 +798,14 @@ var symbols = {
                 ["style", "left", '44px'],
                 ["style", "width", '225px']
             ],
-            "${_Hint2_text}": [
-                ["style", "top", '216px'],
-                ["color", "color", 'rgba(144,0,14,1.00)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '176px'],
-                ["style", "width", '281px']
-            ],
-            "${_question}": [
-                ["style", "top", '0px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '61px']
+            "${_AnswerAText}": [
+                ["style", "top", '395px'],
+                ["style", "text-align", 'left'],
+                ["style", "font-size", '14px'],
+                ["style", "height", '19px'],
+                ["style", "font-family", 'Times New Roman, Times, serif'],
+                ["style", "left", '73px'],
+                ["style", "width", '109px']
             ],
             "${__-13}": [
                 ["style", "top", '0px'],
@@ -823,70 +814,67 @@ var symbols = {
                 ["style", "left", '-36px'],
                 ["style", "width", '35px']
             ],
-            "${_Answers}": [
-                ["style", "top", '373px'],
-                ["style", "left", '26px']
-            ],
-            "${_distance_0_to_2}": [
-                ["color", "background-color", 'rgba(0,59,236,0.98)'],
-                ["style", "top", '140px'],
-                ["style", "left", '269px'],
-                ["color", "border-color", 'rgba(0,59,236,0.98)'],
-                ["style", "display", 'block'],
+            "${_equals_-13_times}": [
+                ["style", "top", '0px'],
                 ["style", "opacity", '0'],
-                ["style", "border-width", '4px'],
-                ["style", "width", '87px']
+                ["style", "left", '144px']
             ],
-            "${__-1_line}": [
-                ["style", "top", '-40px'],
-                ["style", "left", '-194px'],
-                ["style", "height", '24px']
+            "${_Answer_hint-390}": [
+                ["style", "top", '276px'],
+                ["style", "width", '58px'],
+                ["color", "color", 'rgba(13,13,13,1)'],
+                ["style", "height", '43px'],
+                ["style", "opacity", '0'],
+                ["style", "left", '399px'],
+                ["style", "font-size", '18px']
+            ],
+            "${__6x-5}": [
+                ["style", "top", '0px'],
+                ["color", "color", 'rgba(199,4,4,1.00)'],
+                ["style", "opacity", '0'],
+                ["style", "left", '0px'],
+                ["style", "width", '64px']
             ],
             "${__1}": [
                 ["style", "top", '0px'],
                 ["style", "left", '-46px']
             ],
-            "${__3x_avsolute_value_of_-2}": [
-                ["style", "top", '243px'],
-                ["color", "color", 'rgba(163,0,0,0.98)'],
-                ["style", "height", '67px'],
-                ["style", "display", 'block'],
+            "${_equals_-13}": [
+                ["style", "top", '0px'],
+                ["color", "color", 'rgba(15,15,15,1.00)'],
                 ["style", "opacity", '0'],
-                ["style", "left", '197px'],
-                ["style", "width", '112px']
+                ["style", "left", '61px'],
+                ["style", "width", '50px']
             ],
-            "${_AnswerBText}": [
-                ["style", "top", '430px'],
-                ["style", "width", '112px'],
+            "${__1_line}": [
+                ["style", "top", '-40px'],
+                ["style", "left", '-46px'],
+                ["style", "height", '24px']
+            ],
+            "${__0_line}": [
+                ["style", "top", '-40px'],
+                ["style", "left", '-97px'],
+                ["style", "height", '24px']
+            ],
+            "${_order_of_operations}": [
+                ["style", "top", '-136px'],
+                ["style", "font-weight", '700'],
+                ["style", "left", '-60px']
+            ],
+            "${_Question_Text}": [
+                ["style", "top", '0px'],
+                ["style", "font-size", '16px'],
+                ["style", "height", '36px'],
                 ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '73px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(255,255,255,0.00)'],
-                ["style", "overflow", 'hidden'],
-                ["style", "height", '600px'],
-                ["style", "width", '600px']
-            ],
-            "${_Parentheses}": [
-                ["style", "top", '-107px'],
-                ["color", "color", 'rgba(6,74,151,1.00)'],
                 ["style", "left", '0px'],
-                ["style", "font-size", '18px']
+                ["style", "width", '205px']
             ],
-            "${_Absolute_value_of_-2}": [
-                ["style", "top", '200px'],
-                ["color", "color", 'rgba(1,153,168,0.98)'],
-                ["style", "height", '50px'],
-                ["style", "display", 'block'],
+            "${__30}": [
+                ["style", "top", '0px'],
+                ["style", "height", '36px'],
                 ["style", "opacity", '0'],
-                ["style", "left", '197px'],
-                ["style", "width", '70px']
-            ],
-            "${_number_line}": [
-                ["style", "top", '-26px'],
-                ["style", "left", '-235px'],
-                ["style", "width", '276px']
+                ["style", "left", '205px'],
+                ["color", "color", 'rgba(199,4,4,1.00)']
             ]
         }
     },
@@ -905,7 +893,7 @@ var symbols = {
             },
             timeline: [
                 { id: "eid198", tween: [ "style", "${_distance_0_to_-2}", "opacity", '1', { fromValue: '0.000000'}], position: 40500, duration: 500 },
-                { id: "eid285", tween: [ "style", "${_equals_question_mark}", "display", 'none', { fromValue: 'block'}], position: 148000, duration: 0 },
+                { id: "eid245", tween: [ "style", "${__-13}", "opacity", '1', { fromValue: '0.000000'}], position: 112000, duration: 1000 },
                 { id: "eid185", tween: [ "color", "${_distance_0_to_2}", "border-color", 'rgba(0,59,236,0.98)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,59,236,0.98)'}], position: 37000, duration: 0 },
                 { id: "eid190", tween: [ "color", "${_distance_0_to_-2_text}", "color", 'rgba(1,153,168,0.98)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(1,153,168,0.98)'}], position: 42000, duration: 0 },
                 { id: "eid276", tween: [ "style", "${_equals_-13_times}", "opacity", '1', { fromValue: '0.000000'}], position: 118000, duration: 1000 },
@@ -913,7 +901,7 @@ var symbols = {
                 { id: "eid284", tween: [ "style", "${_equals_question_mark}", "opacity", '1', { fromValue: '0.000000'}], position: 120000, duration: 1000 },
                 { id: "eid194", tween: [ "style", "${_distance_0_to_2}", "width", '87px', { fromValue: '87px'}], position: 39500, duration: 0 },
                 { id: "eid168", tween: [ "color", "${_The}", "color", 'rgba(207,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(207,0,0,1.00)'}], position: 23000, duration: 0 },
-                { id: "eid240", tween: [ "style", "${_Hint2_text}", "opacity", '1', { fromValue: '0.000000'}], position: 101000, duration: 1000 },
+                { id: "eid289", tween: [ "style", "${_Answer_hint-390}", "opacity", '1', { fromValue: '0'}], position: 148000, duration: 1000 },
                 { id: "eid211", tween: [ "style", "${_distance_0_to_-2_text}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
                 { id: "eid171", tween: [ "style", "${_Number_Line}", "opacity", '1', { fromValue: '0.000000'}], position: 35000, duration: 1000 },
                 { id: "eid29", tween: [ "style", "${_QuestionSound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
@@ -923,37 +911,37 @@ var symbols = {
                 { id: "eid216", tween: [ "style", "${_distance_0_to_2}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
                 { id: "eid212", tween: [ "style", "${_Absolute_value_of_-2}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
                 { id: "eid201", tween: [ "style", "${_Absolute_value_of_2}", "opacity", '1', { fromValue: '0.000000'}], position: 44000, duration: 1000 },
-                { id: "eid188", tween: [ "style", "${_Distance_2_from_0_text}", "left", '270px', { fromValue: '270px'}], position: 38500, duration: 0 },
-                { id: "eid245", tween: [ "style", "${__-13}", "opacity", '1', { fromValue: '0.000000'}], position: 112000, duration: 1000 },
-                { id: "eid289", tween: [ "style", "${_Answer_hint-390}", "opacity", '1', { fromValue: '0'}], position: 148000, duration: 1000 },
-                { id: "eid293", tween: [ "style", "${_Answer_hint-390}", "font-size", '18px', { fromValue: '18px'}], position: 148000, duration: 0 },
-                { id: "eid281", tween: [ "style", "${__30}", "opacity", '1', { fromValue: '0.000000'}], position: 119000, duration: 1000 },
-                { id: "eid296", tween: [ "style", "${_choose_B}", "opacity", '1', { fromValue: '0.000000'}], position: 153000, duration: 1000 },
-                { id: "eid218", tween: [ "style", "${_Hint_1_text_1}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
-                { id: "eid214", tween: [ "style", "${_Distance_2_from_0_text}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
-                { id: "eid167", tween: [ "color", "${_absolute_value}", "color", 'rgba(207,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(207,0,0,1.00)'}], position: 23000, duration: 0 },
-                { id: "eid215", tween: [ "style", "${_Absolute_value_of_2}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
-                { id: "eid165", tween: [ "style", "${_Hint_1_text_1}", "opacity", '1', { fromValue: '0.000000'}], position: 23000, duration: 1000 },
-                { id: "eid273", tween: [ "style", "${__-30_absolute_value}", "opacity", '1', { fromValue: '0.000000'}], position: 116000, duration: 1000 },
-                { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid210", tween: [ "style", "${__3x_avsolute_value_of_-2}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
-                { id: "eid217", tween: [ "style", "${_Number_Line}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
-                { id: "eid209", tween: [ "style", "${__3x_avsolute_value_of_-2}", "opacity", '1', { fromValue: '0.000000'}], position: 62000, duration: 1000 },
-                { id: "eid234", tween: [ "color", "${_Addition_or_Subtraction}", "color", 'rgba(6,74,151,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(6,74,151,1.00)'}], position: 78000, duration: 0 },
-                { id: "eid233", tween: [ "color", "${_Multiplication_or_division}", "color", 'rgba(6,74,151,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(6,74,151,1.00)'}], position: 78000, duration: 0 },
-                { id: "eid232", tween: [ "color", "${_Exponents}", "color", 'rgba(6,74,151,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(6,74,151,1.00)'}], position: 78000, duration: 0 },
-                { id: "eid178", tween: [ "style", "${_Distance_2_from_0_text}", "opacity", '1', { fromValue: '0.000000'}], position: 38500, duration: 1000 },
-                { id: "eid249", tween: [ "style", "${__6x-5}", "opacity", '1', { fromValue: '0.000000'}], position: 113000, duration: 1000 },
-                { id: "eid204", tween: [ "style", "${_Absolute_value_of_-2}", "opacity", '1', { fromValue: '0.000000'}], position: 46000, duration: 1000 },
-                { id: "eid166", tween: [ "color", "${_the_rest_of_sentence}", "color", 'rgba(207,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(207,0,0,1.00)'}], position: 23000, duration: 0 },
-                { id: "eid269", tween: [ "style", "${_equals_-13}", "opacity", '1', { fromValue: '0.000000'}], position: 115000, duration: 1000 },
-                { id: "eid229", tween: [ "color", "${_Parentheses}", "color", 'rgba(6,74,151,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(6,74,151,1.00)'}], position: 78000, duration: 0 },
-                { id: "eid184", tween: [ "color", "${_distance_0_to_2}", "background-color", 'rgba(0,59,236,0.98)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,59,236,0.98)'}], position: 37000, duration: 0 },
-                { id: "eid241", tween: [ "color", "${__6x-5}", "color", 'rgba(199,4,4,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(199,4,4,1.00)'}], position: 112000, duration: 0 },
-                { id: "eid53", tween: [ "style", "${_TutorialText}", "opacity", '0', { fromValue: '1'}], position: 20000, duration: 3000 },
-                { id: "eid205", tween: [ "color", "${__3x_avsolute_value_of_-2}", "color", 'rgba(163,0,0,0.98)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(163,0,0,0.98)'}], position: 62000, duration: 0 },
-                { id: "eid91", tween: [ "style", "${_TutorialText}", "display", 'block', { fromValue: 'none'}], position: 27000, duration: 0 },
                 { id: "eid213", tween: [ "style", "${_distance_0_to_-2}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
+                { id: "eid91", tween: [ "style", "${_TutorialText}", "display", 'block', { fromValue: 'none'}], position: 27000, duration: 0 },
+                { id: "eid205", tween: [ "color", "${__3x_avsolute_value_of_-2}", "color", 'rgba(163,0,0,0.98)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(163,0,0,0.98)'}], position: 62000, duration: 0 },
+                { id: "eid293", tween: [ "style", "${_Answer_hint-390}", "font-size", '18px', { fromValue: '18px'}], position: 148000, duration: 0 },
+                { id: "eid53", tween: [ "style", "${_TutorialText}", "opacity", '0', { fromValue: '1'}], position: 20000, duration: 3000 },
+                { id: "eid241", tween: [ "color", "${__6x-5}", "color", 'rgba(199,4,4,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(199,4,4,1.00)'}], position: 112000, duration: 0 },
+                { id: "eid184", tween: [ "color", "${_distance_0_to_2}", "background-color", 'rgba(0,59,236,0.98)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,59,236,0.98)'}], position: 37000, duration: 0 },
+                { id: "eid273", tween: [ "style", "${__-30_absolute_value}", "opacity", '1', { fromValue: '0.000000'}], position: 116000, duration: 1000 },
+                { id: "eid167", tween: [ "color", "${_absolute_value}", "color", 'rgba(207,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(207,0,0,1.00)'}], position: 23000, duration: 0 },
+                { id: "eid269", tween: [ "style", "${_equals_-13}", "opacity", '1', { fromValue: '0.000000'}], position: 115000, duration: 1000 },
+                { id: "eid165", tween: [ "style", "${_Hint_1_text_1}", "opacity", '1', { fromValue: '0.000000'}], position: 23000, duration: 1000 },
+                { id: "eid214", tween: [ "style", "${_Distance_2_from_0_text}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
+                { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid281", tween: [ "style", "${__30}", "opacity", '1', { fromValue: '0.000000'}], position: 119000, duration: 1000 },
+                { id: "eid209", tween: [ "style", "${__3x_avsolute_value_of_-2}", "opacity", '1', { fromValue: '0.000000'}], position: 62000, duration: 1000 },
+                { id: "eid217", tween: [ "style", "${_Number_Line}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
+                { id: "eid204", tween: [ "style", "${_Absolute_value_of_-2}", "opacity", '1', { fromValue: '0.000000'}], position: 46000, duration: 1000 },
+                { id: "eid233", tween: [ "color", "${_Multiplication_or_division}", "color", 'rgba(6,74,151,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(6,74,151,1.00)'}], position: 78000, duration: 0 },
+                { id: "eid178", tween: [ "style", "${_Distance_2_from_0_text}", "opacity", '1', { fromValue: '0.000000'}], position: 38500, duration: 1000 },
+                { id: "eid232", tween: [ "color", "${_Exponents}", "color", 'rgba(6,74,151,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(6,74,151,1.00)'}], position: 78000, duration: 0 },
+                { id: "eid249", tween: [ "style", "${__6x-5}", "opacity", '1', { fromValue: '0.000000'}], position: 113000, duration: 1000 },
+                { id: "eid234", tween: [ "color", "${_Addition_or_Subtraction}", "color", 'rgba(6,74,151,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(6,74,151,1.00)'}], position: 78000, duration: 0 },
+                { id: "eid166", tween: [ "color", "${_the_rest_of_sentence}", "color", 'rgba(207,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(207,0,0,1.00)'}], position: 23000, duration: 0 },
+                { id: "eid210", tween: [ "style", "${__3x_avsolute_value_of_-2}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
+                { id: "eid229", tween: [ "color", "${_Parentheses}", "color", 'rgba(6,74,151,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(6,74,151,1.00)'}], position: 78000, duration: 0 },
+                { id: "eid218", tween: [ "style", "${_Hint_1_text_1}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
+                { id: "eid215", tween: [ "style", "${_Absolute_value_of_2}", "display", 'none', { fromValue: 'block'}], position: 71000, duration: 0 },
+                { id: "eid285", tween: [ "style", "${_equals_question_mark}", "display", 'none', { fromValue: 'block'}], position: 148000, duration: 0 },
+                { id: "eid240", tween: [ "style", "${_Hint2_text}", "opacity", '1', { fromValue: '0.000000'}], position: 101000, duration: 1000 },
+                { id: "eid296", tween: [ "style", "${_choose_B}", "opacity", '1', { fromValue: '0.000000'}], position: 153000, duration: 1000 },
+                { id: "eid188", tween: [ "style", "${_Distance_2_from_0_text}", "left", '270px', { fromValue: '270px'}], position: 38500, duration: 0 },
                 { id: "eid297", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question2}', [] ], ""], position: 2000 },
                 { id: "eid298", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1a}', [] ], ""], position: 12000 },
                 { id: "eid299", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1b}', [] ], ""], position: 16000 },
@@ -996,12 +984,12 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         type: 'text',
+                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
                         id: 'Text8',
                         text: 'E',
                         align: 'center',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                     }]
                 }
             ],
@@ -1010,16 +998,16 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
             "${symbolSelector}": [
                 ["style", "height", '26px'],
                 ["style", "width", '101px']
+            ],
+            "${_check}": [
+                ["style", "top", '-16px'],
+                ["style", "height", '42px'],
+                ["style", "display", 'none'],
+                ["style", "left", '-8px'],
+                ["style", "width", '65px']
             ],
             "${_E_Button}": [
                 ["style", "top", '0px'],
@@ -1028,23 +1016,23 @@ var symbols = {
             "${_EllipseCopy8}": [
                 ["style", "top", '0px'],
                 ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
+                ["style", "border-width", '1px'],
                 ["style", "height", '24px'],
                 ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
+                ["style", "left", '0px'],
                 ["style", "width", '25px']
             ],
             "${_Text8}": [
                 ["style", "top", '4px'],
                 ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
+                ["style", "width", '27px'],
                 ["style", "left", '0px'],
-                ["style", "width", '27px']
+                ["style", "font-size", '14px']
             ],
             "${_x}": [
                 ["style", "top", '-3px'],
-                ["style", "height", '33px'],
                 ["style", "display", 'none'],
+                ["style", "height", '33px'],
                 ["style", "left", '-8px'],
                 ["style", "width", '42px']
             ]
@@ -1064,9 +1052,9 @@ var symbols = {
                 { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
                 { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
                 { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
                 { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
+                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
+                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 }            ]
         }
     }
 },
@@ -1132,33 +1120,33 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text8',
                         text: 'E',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text14',
                         text: 'Answer E Text',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'image',
-                        display: 'none',
                         rect: ['-8px', '-3px', '42px', '33px', 'auto', 'auto'],
                         id: 'x',
+                        type: 'image',
+                        display: 'none',
                         fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                     },
                     {
-                        type: 'image',
-                        display: 'none',
                         rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
                         id: 'check',
+                        type: 'image',
+                        display: 'none',
                         fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                     }]
                 }
@@ -1168,23 +1156,21 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
             "${symbolSelector}": [
                 ["style", "height", '26px'],
                 ["style", "width", '101px']
+            ],
+            "${_Text14}": [
+                ["style", "top", '4px'],
+                ["style", "left", '36px'],
+                ["style", "width", '101px']
+            ],
+            "${_check}": [
+                ["style", "top", '-16px'],
+                ["style", "height", '42px'],
+                ["style", "display", 'none'],
+                ["style", "left", '-8px'],
+                ["style", "width", '65px']
             ],
             "${_E_Button}": [
                 ["style", "top", '0px'],
@@ -1193,21 +1179,23 @@ var symbols = {
             "${_EllipseCopy8}": [
                 ["style", "top", '0px'],
                 ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
+                ["style", "border-width", '1px'],
                 ["style", "height", '24px'],
                 ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
+                ["style", "left", '0px'],
                 ["style", "width", '25px']
             ],
-            "${_Text14}": [
+            "${_Text8}": [
                 ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
+                ["style", "text-align", 'center'],
+                ["style", "width", '27px'],
+                ["style", "left", '0px'],
+                ["style", "font-size", '14px']
             ],
             "${_x}": [
                 ["style", "top", '-3px'],
-                ["style", "height", '33px'],
                 ["style", "display", 'none'],
+                ["style", "height", '33px'],
                 ["style", "left", '-8px'],
                 ["style", "width", '42px']
             ]
@@ -1227,9 +1215,9 @@ var symbols = {
                 { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
                 { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
                 { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
                 { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
+                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
+                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 }            ]
         }
     }
 },
@@ -1259,20 +1247,20 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text8',
                         text: 'E',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text14',
                         text: 'Answer E Text',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     }]
                 }
             ],
@@ -1281,23 +1269,21 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
             "${symbolSelector}": [
                 ["style", "height", '26px'],
                 ["style", "width", '101px']
+            ],
+            "${_Text14}": [
+                ["style", "top", '4px'],
+                ["style", "left", '36px'],
+                ["style", "width", '101px']
+            ],
+            "${_check}": [
+                ["style", "top", '-16px'],
+                ["style", "height", '42px'],
+                ["style", "display", 'none'],
+                ["style", "left", '-8px'],
+                ["style", "width", '65px']
             ],
             "${_E_Button}": [
                 ["style", "top", '0px'],
@@ -1306,21 +1292,23 @@ var symbols = {
             "${_EllipseCopy8}": [
                 ["style", "top", '0px'],
                 ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
+                ["style", "border-width", '1px'],
                 ["style", "height", '24px'],
                 ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
+                ["style", "left", '0px'],
                 ["style", "width", '25px']
             ],
-            "${_Text14}": [
+            "${_Text8}": [
                 ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
+                ["style", "text-align", 'center'],
+                ["style", "width", '27px'],
+                ["style", "left", '0px'],
+                ["style", "font-size", '14px']
             ],
             "${_x}": [
                 ["style", "top", '-3px'],
-                ["style", "height", '33px'],
                 ["style", "display", 'none'],
+                ["style", "height", '33px'],
                 ["style", "left", '-8px'],
                 ["style", "width", '42px']
             ]
@@ -1340,9 +1328,9 @@ var symbols = {
                 { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
                 { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
                 { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
                 { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
+                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
+                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 }            ]
         }
     }
 },
@@ -1372,25 +1360,25 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
                         font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                        type: 'text',
                         id: 'Text7',
                         text: 'D<br>',
                         align: 'center',
-                        type: 'text'
+                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
                     },
                     {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
+                        id: 'x',
                         fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                     },
                     {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
+                        id: 'check',
                         fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                     }]
                 }
@@ -1403,40 +1391,40 @@ var symbols = {
             "${_Text7}": [
                 ["style", "top", '4px'],
                 ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
+                ["style", "width", '27px'],
                 ["style", "left", '0px'],
-                ["style", "width", '27px']
+                ["style", "font-size", '14px']
             ],
             "${symbolSelector}": [
                 ["style", "height", '26px'],
                 ["style", "width", '101px']
             ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
+            "${_D_Button}": [
+                ["style", "left", '0px'],
+                ["style", "top", '0px']
             ],
             "${_check}": [
                 ["style", "top", '-16px'],
-                ["style", "display", 'none'],
                 ["style", "height", '42px'],
+                ["style", "display", 'none'],
                 ["style", "left", '-8px'],
                 ["style", "width", '65px']
             ],
             "${_EllipseCopy7}": [
                 ["style", "top", '0px'],
                 ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
+                ["style", "border-width", '1px'],
                 ["style", "height", '24px'],
                 ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
+                ["style", "left", '0px'],
                 ["style", "width", '25px']
             ],
-            "${_D_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
+            "${_x}": [
+                ["style", "top", '-4px'],
+                ["style", "display", 'none'],
+                ["style", "height", '33px'],
+                ["style", "left", '-8px'],
+                ["style", "width", '42px']
             ]
         }
     },
@@ -1489,33 +1477,33 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text7',
                         text: 'D<br>',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text13',
                         text: 'Answer D Text',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'image',
-                        display: 'none',
                         rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
                         id: 'x',
+                        type: 'image',
+                        display: 'none',
                         fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                     },
                     {
-                        type: 'image',
-                        display: 'none',
                         rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
                         id: 'check',
+                        type: 'image',
+                        display: 'none',
                         fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                     }]
                 }
@@ -1525,24 +1513,22 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
+            "${_Text13}": [
+                ["style", "top", '4px'],
+                ["style", "left", '36px'],
+                ["style", "width", '101px']
             ],
             "${_Text7}": [
                 ["style", "top", '4px'],
                 ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
+                ["style", "width", '27px'],
                 ["style", "left", '0px'],
-                ["style", "width", '27px']
+                ["style", "font-size", '14px']
             ],
             "${_check}": [
                 ["style", "top", '-16px'],
-                ["style", "display", 'none'],
                 ["style", "height", '42px'],
+                ["style", "display", 'none'],
                 ["style", "left", '-8px'],
                 ["style", "width", '65px']
             ],
@@ -1557,16 +1543,18 @@ var symbols = {
             "${_EllipseCopy7}": [
                 ["style", "top", '0px'],
                 ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
+                ["style", "border-width", '1px'],
                 ["style", "height", '24px'],
                 ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
+                ["style", "left", '0px'],
                 ["style", "width", '25px']
             ],
-            "${_Text13}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
+            "${_x}": [
+                ["style", "top", '-4px'],
+                ["style", "display", 'none'],
+                ["style", "height", '33px'],
+                ["style", "left", '-8px'],
+                ["style", "width", '42px']
             ]
         }
     },
@@ -1616,20 +1604,20 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text7',
                         text: 'D<br>',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text13',
                         text: 'Answer D Text',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     }]
                 }
             ],
@@ -1638,24 +1626,22 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
+            "${_Text13}": [
+                ["style", "top", '4px'],
+                ["style", "left", '36px'],
+                ["style", "width", '101px']
             ],
             "${_Text7}": [
                 ["style", "top", '4px'],
                 ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
+                ["style", "width", '27px'],
                 ["style", "left", '0px'],
-                ["style", "width", '27px']
+                ["style", "font-size", '14px']
             ],
             "${_check}": [
                 ["style", "top", '-16px'],
-                ["style", "display", 'none'],
                 ["style", "height", '42px'],
+                ["style", "display", 'none'],
                 ["style", "left", '-8px'],
                 ["style", "width", '65px']
             ],
@@ -1670,16 +1656,18 @@ var symbols = {
             "${_EllipseCopy7}": [
                 ["style", "top", '0px'],
                 ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
+                ["style", "border-width", '1px'],
                 ["style", "height", '24px'],
                 ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
+                ["style", "left", '0px'],
                 ["style", "width", '25px']
             ],
-            "${_Text13}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
+            "${_x}": [
+                ["style", "top", '-4px'],
+                ["style", "display", 'none'],
+                ["style", "height", '33px'],
+                ["style", "left", '-8px'],
+                ["style", "width", '42px']
             ]
         }
     },
@@ -1729,20 +1717,20 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text7',
                         text: 'D<br>',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '94px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text13',
                         text: 'Answer Text D',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     }]
                 }
             ],
@@ -1751,24 +1739,22 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
+            "${_Text13}": [
+                ["style", "top", '4px'],
+                ["style", "left", '36px'],
+                ["style", "width", '94px']
             ],
             "${_Text7}": [
                 ["style", "top", '4px'],
                 ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
+                ["style", "width", '27px'],
                 ["style", "left", '0px'],
-                ["style", "width", '27px']
+                ["style", "font-size", '14px']
             ],
             "${_check}": [
                 ["style", "top", '-16px'],
-                ["style", "display", 'none'],
                 ["style", "height", '42px'],
+                ["style", "display", 'none'],
                 ["style", "left", '-8px'],
                 ["style", "width", '65px']
             ],
@@ -1783,16 +1769,18 @@ var symbols = {
             "${_EllipseCopy7}": [
                 ["style", "top", '0px'],
                 ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
+                ["style", "border-width", '1px'],
                 ["style", "height", '24px'],
                 ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
+                ["style", "left", '0px'],
                 ["style", "width", '25px']
             ],
-            "${_Text13}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '94px']
+            "${_x}": [
+                ["style", "top", '-4px'],
+                ["style", "display", 'none'],
+                ["style", "height", '33px'],
+                ["style", "left", '-8px'],
+                ["style", "width", '42px']
             ]
         }
     },
@@ -1842,25 +1830,25 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
                         font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                        type: 'text',
                         id: 'Text5',
                         text: 'C',
                         align: 'center',
-                        type: 'text'
+                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
                     },
                     {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
+                        id: 'x',
                         fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                     },
                     {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
+                        id: 'check',
                         fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                     }]
                 }
@@ -1870,41 +1858,41 @@ var symbols = {
         },
     states: {
         "Base State": {
+            "${_check}": [
+                ["style", "top", '-16px'],
+                ["style", "height", '42px'],
+                ["style", "display", 'none'],
+                ["style", "left", '-8px'],
+                ["style", "width", '65px']
+            ],
             "${symbolSelector}": [
                 ["style", "height", '26px'],
                 ["style", "width", '101px']
             ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_EllipseCopy6}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
+            "${_Text5}": [
+                ["style", "top", '4px'],
+                ["style", "text-align", 'center'],
+                ["style", "width", '27px'],
                 ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
+                ["style", "font-size", '14px']
             ],
             "${_C_Button}": [
                 ["style", "left", '0px'],
                 ["style", "top", '0px']
             ],
-            "${_Text5}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
+            "${_EllipseCopy6}": [
+                ["style", "top", '0px'],
+                ["color", "background-color", 'rgba(232,241,160,1.00)'],
+                ["style", "border-width", '1px'],
+                ["style", "height", '24px'],
+                ["style", "border-style", 'solid'],
                 ["style", "left", '0px'],
-                ["style", "width", '27px']
+                ["style", "width", '25px']
             ],
             "${_x}": [
                 ["style", "top", '-4px'],
-                ["style", "height", '33px'],
                 ["style", "display", 'none'],
+                ["style", "height", '33px'],
                 ["style", "left", '-8px'],
                 ["style", "width", '42px']
             ]
@@ -1926,10 +1914,10 @@ var symbols = {
                 { id: "eid224", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
                 { id: "eid225", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
                 { id: "eid265", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
+                { id: "eid5", tween: [ "color", "${_EllipseCopy6}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
                 { id: "eid253", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
                 { id: "eid254", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid264", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 },
-                { id: "eid5", tween: [ "color", "${_EllipseCopy6}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 }            ]
+                { id: "eid264", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 }            ]
         }
     }
 },
@@ -1959,25 +1947,25 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        rect: ['0px', '5px', '27px', '19px', 'auto', 'auto'],
                         font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                        type: 'text',
                         id: 'Text4',
                         text: 'B',
                         align: 'center',
-                        type: 'text'
+                        rect: ['0px', '5px', '27px', '19px', 'auto', 'auto']
                     },
                     {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
+                        id: 'x',
                         fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                     },
                     {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
+                        id: 'check',
                         fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                     }]
                 }
@@ -1995,36 +1983,36 @@ var symbols = {
                 ["style", "height", '26px'],
                 ["style", "width", '125px']
             ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ],
-            "${_EllipseCopy5}": [
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
             "${_Text4}": [
                 ["style", "top", '5px'],
                 ["style", "text-align", 'center'],
                 ["style", "height", '19px'],
-                ["style", "font-size", '14px'],
+                ["style", "width", '27px'],
                 ["style", "left", '0px'],
-                ["style", "width", '27px']
+                ["style", "font-size", '14px']
+            ],
+            "${_EllipseCopy5}": [
+                ["color", "background-color", 'rgba(232,241,160,1.00)'],
+                ["style", "top", '0px'],
+                ["style", "border-width", '1px'],
+                ["style", "height", '24px'],
+                ["style", "border-style", 'solid'],
+                ["style", "left", '0px'],
+                ["style", "width", '25px']
+            ],
+            "${_check}": [
+                ["style", "top", '-16px'],
+                ["style", "height", '42px'],
+                ["style", "display", 'none'],
+                ["style", "left", '-8px'],
+                ["style", "width", '65px']
+            ],
+            "${_x}": [
+                ["style", "top", '-4px'],
+                ["style", "display", 'none'],
+                ["style", "height", '33px'],
+                ["style", "left", '-8px'],
+                ["style", "width", '42px']
             ]
         }
     },
@@ -2044,10 +2032,10 @@ var symbols = {
                 { id: "eid222", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
                 { id: "eid223", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
                 { id: "eid262", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
+                { id: "eid12", tween: [ "style", "${_EllipseCopy5}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
                 { id: "eid251", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
                 { id: "eid252", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid263", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 },
-                { id: "eid12", tween: [ "style", "${_EllipseCopy5}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 }            ]
+                { id: "eid263", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 }            ]
         }
     }
 },
@@ -2077,25 +2065,25 @@ var symbols = {
                         fill: ['rgba(232,241,160,1.00)']
                     },
                     {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         type: 'text',
+                        rect: ['0px', '3px', '27px', '19px', 'auto', 'auto'],
                         id: 'A',
                         text: 'A<br><br><br>',
                         align: 'center',
-                        rect: ['0px', '3px', '27px', '19px', 'auto', 'auto']
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                     },
                     {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
+                        id: 'check',
                         fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                     },
                     {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
                         type: 'image',
                         display: 'none',
+                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
+                        id: 'x',
                         fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                     }]
                 }
@@ -2113,23 +2101,23 @@ var symbols = {
                 ["style", "top", '3px'],
                 ["style", "text-align", 'center'],
                 ["style", "height", '19px'],
-                ["style", "width", '27px'],
+                ["style", "font-size", '14px'],
                 ["style", "left", '0px'],
-                ["style", "font-size", '14px']
+                ["style", "width", '27px']
             ],
             "${_Ellipse}": [
                 ["style", "top", '0px'],
                 ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
+                ["style", "border-width", '1px'],
                 ["style", "height", '24px'],
                 ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
+                ["style", "left", '0px'],
                 ["style", "width", '25px']
             ],
             "${_check}": [
                 ["style", "top", '-16px'],
-                ["style", "height", '42px'],
                 ["style", "display", 'none'],
+                ["style", "height", '42px'],
                 ["style", "left", '-8px'],
                 ["style", "width", '65px']
             ],
@@ -2139,8 +2127,8 @@ var symbols = {
             ],
             "${_x}": [
                 ["style", "top", '-4px'],
-                ["style", "display", 'none'],
                 ["style", "height", '33px'],
+                ["style", "display", 'none'],
                 ["style", "left", '-8px'],
                 ["style", "width", '42px']
             ]
@@ -2193,20 +2181,20 @@ var symbols = {
                         fill: ['rgba(232,241,160,1.00)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '3px', '27px', '19px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text3',
                         text: 'A<br><br><br>',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '3px', '109px', '19px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text9',
                         text: 'Answer Text A',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     }]
                 }
             ],
@@ -2222,10 +2210,10 @@ var symbols = {
             "${_Ellipse}": [
                 ["style", "top", '0px'],
                 ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
+                ["style", "border-width", '1px'],
                 ["style", "height", '24px'],
                 ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
+                ["style", "left", '0px'],
                 ["style", "width", '25px']
             ],
             "${symbolSelector}": [
@@ -2236,28 +2224,28 @@ var symbols = {
                 ["style", "top", '3px'],
                 ["style", "text-align", 'center'],
                 ["style", "height", '19px'],
-                ["style", "width", '27px'],
+                ["style", "font-size", '14px'],
                 ["style", "left", '0px'],
-                ["style", "font-size", '14px']
+                ["style", "width", '27px']
             ],
             "${_Text9}": [
                 ["style", "top", '3px'],
                 ["style", "text-align", 'left'],
-                ["style", "font-size", '12px'],
+                ["style", "width", '109px'],
                 ["style", "left", '36px'],
-                ["style", "width", '109px']
+                ["style", "font-size", '12px']
             ],
             "${_check}": [
                 ["style", "top", '-16px'],
-                ["style", "height", '42px'],
                 ["style", "display", 'none'],
+                ["style", "height", '42px'],
                 ["style", "left", '-8px'],
                 ["style", "width", '65px']
             ],
             "${_x}": [
                 ["style", "top", '-4px'],
-                ["style", "display", 'none'],
                 ["style", "height", '33px'],
+                ["style", "display", 'none'],
                 ["style", "left", '-8px'],
                 ["style", "width", '42px']
             ]
@@ -2355,9 +2343,9 @@ var symbols = {
             ],
             "${_AnswerText}": [
                 ["style", "top", '3px'],
-                ["style", "width", '109px'],
+                ["style", "font-size", '12px'],
                 ["style", "left", '36px'],
-                ["style", "font-size", '12px']
+                ["style", "width", '109px']
             ],
             "${_DButton}": [
                 ["style", "left", '8px'],
@@ -2371,17 +2359,17 @@ var symbols = {
                 ["style", "left", '8px'],
                 ["style", "top", '50px']
             ],
-            "${_EButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '157px']
+            "${_AButton}": [
+                ["style", "left", '0px'],
+                ["style", "top", '0px']
             ],
             "${_CButton}": [
                 ["style", "left", '8px'],
                 ["style", "top", '86px']
             ],
-            "${_AButton}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
+            "${_EButton}": [
+                ["style", "left", '8px'],
+                ["style", "top", '157px']
             ]
         }
     },

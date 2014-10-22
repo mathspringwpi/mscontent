@@ -82,11 +82,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 64000, function(sym, e) {
-         playSound(sym,"hint1e.ogg");
-
-      });
-      //Edge binding end
+      
 
       
 
