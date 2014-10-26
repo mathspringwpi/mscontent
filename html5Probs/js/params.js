@@ -12,6 +12,25 @@ function isArray(parsedItem) {
 // sym.setVariable("myScore", plusScore);
 // sym.$("Score").html(plusScore);
 
+function getTextNodesIn(node, includeWhitespaceNodes) {
+    var textNodes = [], nonWhitespaceMatcher = /\S/;
+
+    function getTextNodes(node) {
+        if (node.nodeType == 3) {
+            if (includeWhitespaceNodes || nonWhitespaceMatcher.test(node.nodeValue)) {
+                textNodes.push(node);
+            }
+        } else {
+            for (var i = 0, len = node.childNodes.length; i < len; ++i) {
+                getTextNodes(node.childNodes[i]);
+            }
+        }
+    }
+
+    getTextNodes(node);
+    return textNodes;
+}
+
 function getConstraintJSon() {
     var bindings = window.parent.getProblemParams();
     return bindings;
@@ -42,11 +61,11 @@ function replaceVars(sym) {
 
 
     var constraints = getConstraints();
-    var collection = sym.$("Stage").children();
+    var collection = getTextNodesIn(sym.$("Stage").get(0));
     $.each(collection,function(){
         for (var key in constraints) {
             var regex = new RegExp("(\\W|^)\\"+key+"(\\W|$)", "gi");
-            $(this).html($(this).html().replace(regex, "$1"+constraints[key]+"$2"));
+            this.nodeValue=this.nodeValue.replace(regex, "$1"+constraints[key]+"$2");
         }
     })
 }
