@@ -1,6 +1,7 @@
 var hintStop=true;
 var debug=false;
 var readAloud = false;
+var isShortAnswer=false;
 var constraintJSon="";
 //var constraintJSon="{\"$a\": [\"40\", \"40\"],\"$b\": [\"30\", \"30\"],\"$c\": [\"x\", \"45\"],\"$d\": [\"25\", \"x\"],\"$ans_A\": [\"65\", \"65\"],\"$ans_B\": [\"45\", \"45\"],\"$ans_C\": [\"50\", \"50\"],\"$ans_D\": [\"35\", \"35\"],\"$ans_E\": [\"45\", \"25\"]}";
 
@@ -14,7 +15,9 @@ function getEdgeCompositionId () {
     return "EdgeProblem";    // hardwired for now
 }
 
-function probUtilsInit(sym) {
+function probUtilsInit(sym, shortAnswer) {
+    if (shortAnswer)
+        isShortAnswer = shortAnswer;
     maybeStop(sym);
 }
 
@@ -57,23 +60,35 @@ function prob_readProblem() {
 // sym is the selected button, buttonName is the letter of the multiple choice answer selected
 function prob_gradeAnswer (sym, buttonName, isCorrect, showHint) {
     debugAlert("gradeAnswer got " + isCorrect);
-    if (isCorrect)
-    {
-        sym.stop("Answer Correct");
-        if (buttonName != "A")
-            sym.getComposition().getStage().getSymbol("Answers").getSymbol("AButton").stop("Nothing Selected");
-        if (buttonName != "B")
-            sym.getComposition().getStage().getSymbol("Answers").getSymbol("BButton").stop("Nothing Selected");
-        if (buttonName != "C")
-            sym.getComposition().getStage().getSymbol("Answers").getSymbol("CButton").stop("Nothing Selected");
-        if (buttonName != "D")
-            sym.getComposition().getStage().getSymbol("Answers").getSymbol("DButton").stop("Nothing Selected");
-        if (buttonName != "E")
-            sym.getComposition().getStage().getSymbol("Answers").getSymbol("EButton").stop("Nothing Selected");
+    if (!isShortAnswer) {
+        if (isCorrect)
+        {
+            sym.stop("Answer Correct");
+            if (buttonName != "A")
+                sym.getComposition().getStage().getSymbol("Answers").getSymbol("AButton").stop("Nothing Selected");
+            if (buttonName != "B")
+                sym.getComposition().getStage().getSymbol("Answers").getSymbol("BButton").stop("Nothing Selected");
+            if (buttonName != "C")
+                sym.getComposition().getStage().getSymbol("Answers").getSymbol("CButton").stop("Nothing Selected");
+            if (buttonName != "D")
+                sym.getComposition().getStage().getSymbol("Answers").getSymbol("DButton").stop("Nothing Selected");
+            if (buttonName != "E")
+                sym.getComposition().getStage().getSymbol("Answers").getSymbol("EButton").stop("Nothing Selected");
+        }
+        else
+        {
+            sym.stop("Answer Incorrect");
+        }
     }
-    else
-    {
-        sym.stop("Answer Incorrect");
+    else {
+        if (isCorrect) {
+            sym.getComposition().getStage().$("#x").hide();
+            sym.getComposition().getStage().$("#check").show();
+        }
+        else {
+            sym.getComposition().getStage().$("#check").hide();
+            sym.getComposition().getStage().$("#x").show();
+        }
     }
 
 }
@@ -88,6 +103,10 @@ function embedSound (soundFile) {
     parent.document.getElementById("questionmp3").setAttribute("src", "../problem_"+window.parent.globals.resource+"/"+soundFile+".mp3");
     parent.document.getElementById("questionaudio").load();
     parent.document.getElementById("questionaudio").play();
+}
+
+function processShortAnswer(ans) {
+    // Do something to process the value submitted
 }
 
 function playSound (sym, soundFile) {
