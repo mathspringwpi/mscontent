@@ -82,12 +82,16 @@ function prob_gradeAnswer (sym, buttonName, isCorrect, showHint) {
     }
     else {
         if (isCorrect) {
-            sym.getComposition().getStage().$("#x").hide();
-            sym.getComposition().getStage().$("#check").show();
+//            sym.getComposition().getStage().getElementById("x").style.display = 'none'; // hide it
+            sym.getComposition().getStage().$("#Grade_X").hide();
+            sym.getComposition().getStage().$("#Grade_Check").show();
+//            sym.getComposition().getStage().getElementById("check").show();
         }
         else {
-            sym.getComposition().getStage().$("#check").hide();
-            sym.getComposition().getStage().$("#x").show();
+            sym.getComposition().getStage().$("#Grade_Check").style.display = 'none'; // hide it
+            sym.getComposition().getStage().$("#Grade_X").show();
+//            sym.getComposition().getStage().$("#x").show();
+//            sym.getComposition().getStage().$("#check").hide();
         }
     }
 
@@ -105,8 +109,8 @@ function embedSound (soundFile) {
     parent.document.getElementById("questionaudio").play();
 }
 
-function processShortAnswer(ans) {
-    // Do something to process the value submitted
+function processShortAnswer(sym, ans) {
+    window.parent.tutorhut_shortAnswerSubmitted(sym,ans);
 }
 
 function playSound (sym, soundFile) {

@@ -1,0 +1,2 @@
+[1031/143525:ERROR:ipc_channel_win.cc(132)] pipe error: 109
+[1031/160720:ERROR:gles2_cmd_decoder.cc(5484)] .SharedGraphicsContext: GL ERROR :GL_INVALID_VALUE : glTexParameteri: unknown texture
