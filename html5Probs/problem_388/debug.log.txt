@@ -1,0 +1,62 @@
+[0620/170124:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/170124:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/170134:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/170134:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/170619:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/170619:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/171051:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/171051:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/185737:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/185737:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/185747:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/185747:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/190028:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/190028:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/190323:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/190323:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/191954:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/191954:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192005:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192005:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192104:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192104:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192231:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192231:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192242:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192242:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192526:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192526:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192726:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/192726:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/194143:INFO:CONSOLE(0)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: about:blank (0)
+[0620/202434:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/202434:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/202445:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/202445:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/204152:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/204152:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/204203:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/204203:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/204225:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/204225:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/204235:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/204235:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0620/204249:ERROR:ipc_channel_win.cc(132)] pipe error: 109

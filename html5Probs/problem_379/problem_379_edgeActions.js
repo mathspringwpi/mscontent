@@ -19,7 +19,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 35000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 32000, function(sym, e) {
          // Wherever hint 1 ends, that is where you need to put this code.
          
          maybeStop (sym)
@@ -58,25 +58,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          );
          
          function init() {
-	   probUtilsInit(sym);
          	console.log("Loaded libraries successfully");
          }
-
-      });
-      //Edge binding end
-
-      
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 109000, function(sym, e) {
-         maybeStop (sym)
-
-      });
-      //Edge binding end
-
-      
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 66000, function(sym, e) {
-         maybeStop (sym)
 
       });
       //Edge binding end
@@ -91,7 +74,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 103000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 50000, function(sym, e) {
          maybeStop (sym)
 
       });
@@ -99,7 +82,23 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 18500, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 63000, function(sym, e) {
+         maybeStop (sym)
+
+      });
+      //Edge binding end
+
+      
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 79000, function(sym, e) {
+         maybeStop (sym)
+
+      });
+      //Edge binding end
+
+      
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 15500, function(sym, e) {
          
          maybeStop (sym)
 

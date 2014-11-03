@@ -1,0 +1,20 @@
+[0617/144654:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/144705:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/144952:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/145644:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/145932:ERROR:ipc_channel_win.cc(401)] pipe error: 232
+[0617/154807:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/154818:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/154854:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/201821:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/210759:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/210809:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/210842:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/211310:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/212821:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/212831:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/213545:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/213803:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0617/213812:INFO:CONSOLE(121)] "Uncaught Error: InvalidStateError: DOM Exception 11", source: http://localhost:54321/_DRIVE_C_EVIRD_/Users/Kevin/Documents/CURRENT%20EDGE%20TEMPLATE/problem_381/edge_includes/edge.authoring.3.0.0.min.js (121)
+[0617/213812:INFO:CONSOLE(121)] "Uncaught Error: InvalidStateError: DOM Exception 11", source: http://localhost:54321/_DRIVE_C_EVIRD_/Users/Kevin/Documents/CURRENT%20EDGE%20TEMPLATE/problem_381/edge_includes/edge.authoring.3.0.0.min.js (121)
+[0617/213814:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
