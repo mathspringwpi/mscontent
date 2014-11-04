@@ -43,7 +43,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.$('Answer_Container').html(input_answer.concat(input_button));
          
          $("#submit_answer").on("click", function() {
-         	processShortAnswer($("#answer_field").val());
+         	processShortAnswer(sym, $("#answer_field").val());
          });
          
 
