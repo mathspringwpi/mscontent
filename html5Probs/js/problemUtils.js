@@ -82,16 +82,12 @@ function prob_gradeAnswer (sym, buttonName, isCorrect, showHint) {
     }
     else {
         if (isCorrect) {
-//            sym.getComposition().getStage().getElementById("x").style.display = 'none'; // hide it
-            sym.getComposition().getStage().$("#Grade_X").hide();
-            sym.getComposition().getStage().$("#Grade_Check").show();
-//            sym.getComposition().getStage().getElementById("check").show();
+            $(sym.lookupSelector("Grade_X")).hide(); // hide it
+            $(sym.lookupSelector("Grade_Check")).show();
         }
         else {
-            sym.getComposition().getStage().$("#Grade_Check").style.display = 'none'; // hide it
-            sym.getComposition().getStage().$("#Grade_X").show();
-//            sym.getComposition().getStage().$("#x").show();
-//            sym.getComposition().getStage().$("#check").hide();
+            $(sym.lookupSelector("Grade_Check")).hide(); // hide it
+            $(sym.lookupSelector("Grade_X")).show();
         }
     }
 

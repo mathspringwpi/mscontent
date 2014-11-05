@@ -16,27 +16,27 @@
 			"animationEnabled":"true",
 			"timelineColor3":"0x2a605c",
 			"timelineColor":"0x00a096"},
-		"element_${_Grade_X}":{
-			"timelineColor2":"0xcbbd71",
-			"animationEnabled":"true",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79"},
 		"element_${_Answer_Container}":{
 			"timelineColor2":"0x4fa275",
 			"animationEnabled":"true",
 			"timelineColor3":"0x456a55",
 			"timelineColor":"0x50bd82"},
-		"element_${_question}":{
-			"animationEnabled":"false"},
+		"element_${_Grade_X}":{
+			"timelineColor2":"0xcbbd71",
+			"animationEnabled":"true",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79"},
 		"element_${_Grade_Check}":{
 			"timelineColor2":"0x81aa62",
 			"animationEnabled":"true",
 			"timelineColor3":"0x5b6c4d",
 			"timelineColor":"0x91c767"},
 		"defaultStageParentHeight":"600px",
+		"element_${_question}":{
+			"animationEnabled":"false"},
 		"dummyStageParentHeight":"600px",
-		"dummyStageParentWidth":"600px",
 		"defaultStageParentWidth":"600px",
+		"dummyStageParentWidth":"600px",
 		"element_${_question2}":{
 			"animationEnabled":"false"},
 		"element_${_Hint_Text}":{
@@ -50,7 +50,6 @@
 	"usedBOM":"false",
 	"nextElementColorIndex":"7",
 	"stage-Default Timeline_playhead_ms":"0",
-	"viewStartY":"0",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -130,4 +129,5 @@
    \"timelines\": {\
 \
    }}\
-}"}
+}",
+	"viewStartY":"0"}
