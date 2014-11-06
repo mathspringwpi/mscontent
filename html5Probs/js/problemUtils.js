@@ -67,8 +67,10 @@ function probUtilsInit(sym, shortAnswer) {
 
 function answerClicked (sym, buttonName) {
     if (couldNotShuffle) {
-        if (buttonName.toUpperCase() === window.parent.getAnswer().toUpperCase()) {
-            buttonName = window.parent.getNewAnswer().toUpperCase(); // TODO: This logic should maybe be in the server
+        oldAnswer = window.parent.getAnswer();
+        newAnswer = window.parent.getNewAnswer();
+        if (oldAnswer && newAnswer && buttonName.toUpperCase() === oldAnswer.toUpperCase()) {
+            buttonName = newAnswer.toUpperCase(); // TODO: This logic should maybe be in the server
         }
     }
     debugAlert(buttonName + " was clicked. Calling parent.answerChosen.");
@@ -111,8 +113,10 @@ function prob_gradeAnswer (sym, buttonName, isCorrect, showHint) {
     debugAlert("gradeAnswer got " + isCorrect);
     if (!isShortAnswer) {
         if (couldNotShuffle) {
-            if (buttonName.toUpperCase() === window.parent.getAnswer().toUpperCase()) {
-                buttonName = window.parent.getNewAnswer().toUpperCase(); // TODO: This logic should maybe be in the server
+            oldAnswer = window.parent.getAnswer();
+            newAnswer = window.parent.getNewAnswer();
+            if (oldAnswer && newAnswer && buttonName.toUpperCase() === oldAnswer.toUpperCase()) {
+                buttonName = newAnswer.toUpperCase(); // TODO: This logic should maybe be in the server
             }
         }
         if (isCorrect)
