@@ -1,5 +1,3 @@
-var couldNotShuffle = false;
-
 function randomIntFromInterval(min,max)
 {
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -72,66 +70,8 @@ function replaceVars(sym) {
     })
 }
 
-function getElementCorrespondingToAns(ans) {
-    switch (ans) {
-        case "a":
-            return "AnswerAText";
-        case "b":
-            return "AnswerBText";
-        case "c":
-            return "AnswerCText";
-        case "d":
-            return "AnswerDText";
-        case "e":
-            return "AnswerEText";
-        default:
-            return "";
-    }
-}
-
-function shuffleAnswers(sym) {
-    var oldAnswer = window.parent.getAnswer();
-    var newAnswer = window.parent.getNewAnswer();
-
-    var oldAnsText = getElementCorrespondingToAns(oldAnswer);
-    var newAnsText = getElementCorrespondingToAns(newAnswer);
-
-    if (oldAnsText === "" || newAnsText === "" ) {
-        couldNotShuffle = true;
-        return;
-    }
-    var ansSel = sym.$("#"+oldAnsText);
-    var newAnsSel = sym.$("#"+newAnsText);
-//    if (!ansSel.length || !newAnsSel.length) {
-//        couldNotShuffle = true;
-//        return;
-//    }
-    var ansContent = ansSel.html();
-    var otherContent = newAnsSel.html();
-    var temp = ansContent;
-    ansSel.html(otherContent);
-    newAnsSel.html(temp);
-
-}
-
 function parametrize(sym) {
     replaceVars(sym);
-    //shuffleAnswers(sym);
-    // var rand = -1
-    // $.getJSON("params.json", function( data ) {
-    // 	$.each( data, function(key, val) {
-    // 		if (isArray(val)) {
-    // 			if (rand == -1) {
-    // 				rand = randomIntFromInterval(0, val.length-1);
-    // 			}
-    // 			sym.$(key).html(val[rand]);
-    // 		}
-    // 		else {
-    // 			sym.$(key).html(val);
-    // 		}
-    // 	});
-    // });
-
 }
 
 // insert code to be run when the symbol is created here

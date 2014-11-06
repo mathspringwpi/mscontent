@@ -2,8 +2,8 @@ var hintStop=true;
 var debug=false;
 var readAloud = false;
 var isShortAnswer=false;
-var constraintJSon="";
-//var constraintJSon="{\"$a\": [\"40\", \"40\"],\"$b\": [\"30\", \"30\"],\"$c\": [\"x\", \"45\"],\"$d\": [\"25\", \"x\"],\"$ans_A\": [\"65\", \"65\"],\"$ans_B\": [\"45\", \"45\"],\"$ans_C\": [\"50\", \"50\"],\"$ans_D\": [\"35\", \"35\"],\"$ans_E\": [\"45\", \"25\"]}";
+var couldNotShuffle = false;
+
 
 function debugAlert(msg) {
     if (debug ) {
@@ -15,15 +15,64 @@ function getEdgeCompositionId () {
     return "EdgeProblem";    // hardwired for now
 }
 
+function getElementCorrespondingToAns(ans) {
+    switch (ans) {
+        case "a":
+            return "AnswerAText";
+        case "b":
+            return "AnswerBText";
+        case "c":
+            return "AnswerCText";
+        case "d":
+            return "AnswerDText";
+        case "e":
+            return "AnswerEText";
+        default:
+            return "";
+    }
+}
+
+function shuffleAnswers(sym) {
+    var oldAnswer = window.parent.getAnswer();
+    var newAnswer = window.parent.getNewAnswer();
+
+    var oldAnsText = getElementCorrespondingToAns(oldAnswer);
+    var newAnsText = getElementCorrespondingToAns(newAnswer);
+
+    if (oldAnsText === "" || newAnsText === "" ) {
+        couldNotShuffle = true;
+        return;
+    }
+    var ansSel = sym.lookupSelector(oldAnsText);
+    var newAnsSel = sym.lookupSelector(newAnsText);
+    if (!$(ansSel).length || !$(newAnsSel).length) {
+        couldNotShuffle = true;
+        return;
+    }
+    var ansContent = $(ansSel).html();
+    var otherContent = $(newAnsSel).html();
+    var temp = ansContent;
+    $(ansSel).html(otherContent);
+    $(newAnsSel).html(temp);
+
+}
+
 function probUtilsInit(sym, shortAnswer) {
     if (shortAnswer)
         isShortAnswer = shortAnswer;
+    else
+        shuffleAnswers(sym);
     maybeStop(sym);
 }
 
 function answerClicked (sym, buttonName) {
+    if (couldNotShuffle) {
+        if (buttonName.toUpperCase() === window.parent.getAnswer().toUpperCase()) {
+            buttonName = window.parent.getNewAnswer().toUpperCase(); // TODO: This logic should maybe be in the server
+        }
+    }
     debugAlert(buttonName + " was clicked. Calling parent.answerChosen.");
-    window.parent.tutorhut_answerChosen(sym,buttonName);               // TODO this is failing on macs because of security from tutor.mathspring.org to rose.cs.umass.edu
+    window.parent.tutorhut_answerChosen(sym,buttonName);
 }
 
 
@@ -61,6 +110,11 @@ function prob_readProblem() {
 function prob_gradeAnswer (sym, buttonName, isCorrect, showHint) {
     debugAlert("gradeAnswer got " + isCorrect);
     if (!isShortAnswer) {
+        if (couldNotShuffle) {
+            if (buttonName.toUpperCase() === window.parent.getAnswer().toUpperCase()) {
+                buttonName = window.parent.getNewAnswer().toUpperCase(); // TODO: This logic should maybe be in the server
+            }
+        }
         if (isCorrect)
         {
             sym.stop("Answer Correct");
