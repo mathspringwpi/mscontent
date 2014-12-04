@@ -74,6 +74,10 @@ function parametrize(sym) {
     replaceVars(sym);
 }
 
+function plug(sym) {
+
+}
+
 // insert code to be run when the symbol is created here
 
 // $.get("dynamic.html", {}, function(res, code) {
