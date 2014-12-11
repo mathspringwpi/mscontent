@@ -16,19 +16,37 @@ function getEdgeCompositionId () {
 }
 
 function getElementCorrespondingToAns(ans) {
-    switch (ans) {
-        case "a":
-            return "AnswerAText";
-        case "b":
-            return "AnswerBText";
-        case "c":
-            return "AnswerCText";
-        case "d":
-            return "AnswerDText";
-        case "e":
-            return "AnswerEText";
-        default:
-            return "";
+    if (window.parent.getForm() === "quickAuth") {
+        switch (ans) {
+            case "a":
+                return "AnswerA";
+            case "b":
+                return "AnswerB";
+            case "c":
+                return "AnswerC";
+            case "d":
+                return "AnswerD";
+            case "e":
+                return "AnswerE";
+            default:
+                return "";
+        }
+    }
+    else {
+        switch (ans) {
+            case "a":
+                return "AnswerAText";
+            case "b":
+                return "AnswerBText";
+            case "c":
+                return "AnswerCText";
+            case "d":
+                return "AnswerDText";
+            case "e":
+                return "AnswerEText";
+            default:
+                return "";
+        }
     }
 }
 

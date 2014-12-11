@@ -126,7 +126,7 @@
 	"CompZoomFactor":"100",
 	"expanded:hint6/":"true",
 	"nextElementColorIndex":"3",
-	"stage-Default Timeline_playhead_ms":"109750",
+	"stage-Default Timeline_playhead_ms":"85000",
 	"symbol_DButton_3":{
 		"element_${_EllipseCopy7}":{
 			"timelineColor2":"0x107faa",
@@ -1620,7 +1620,7 @@
 			"animationEnabled":"false",
 			"timelineColor":"0xffd46d"}},
 	"AButton_2-Default Timeline_playhead_ms":"0",
-	"viewStartMs":"91505.90625",
+	"viewStartMs":"139516.28125",
 	"AButton-Default Timeline_playhead_ms":"0",
 	"Answers-Default Timeline_playhead_ms":"0",
 	"symbol_CButton_3":{
@@ -1654,7 +1654,7 @@
 			"timelineColor":"0xffd46d"}},
 	"TransitionIdCounter":"608",
 	"expanded:hint7/":"true",
-	"viewStartY":"0",
+	"viewStartY":"930",
 	"ShowGuides":"true",
 	"Answers_1-Default Timeline_playhead_ms":"0",
 	"pref__general__GenerateSmoothTransitions":"true",

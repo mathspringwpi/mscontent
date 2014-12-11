@@ -17,9 +17,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 17000, function(sym, e) {
          //Wherever the question audio ends, that is where you need to put this code.
-         
-         sym.$("QuestionSound")[0].pause();
-         
          maybeStop (sym)
 
       });
@@ -47,30 +44,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // insert code to be run when the composition is fully loaded here
          // insert code to be run when the symbol is created here
          // insert code to be run when the composition is fully loaded here
-         numHints = 7;
-         maxHints = 10;
-         var summaryText = []
-         var isMultiChoice = Boolean(true);
-         var numAnswers = 5;
-         var currentHint = "Question"
-         shown = {};
-         for (i = 1; i <= numHints; ++i) {
-         		shown["Hint"+i.toString()] = Boolean(false);
-         		summaryText[i] = "Lorem ipsum";
-         		sym.$("Hint"+i.toString()+"Thumb").attr("title", summaryText[i]);
-         
-         }
-         for (i = 1; i < maxHints; ++i) {
-         	sym.$("Hint"+i.toString()+"Thumb").hide();
-         }
          yepnope(
          
          {
          
          nope:[
          
-         //'../js/problemUtils.js',
-         'params.js'//,
+         '../js/problemUtils.js',
+         '../js/params.js'//,
          //'example2.js',
          
          ],
@@ -82,75 +63,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          );
          
          function init() {
+         	prepareForData(sym);
+         	probUtilsInit(sym);
          	plug(sym);
-         	//probUtilsInit(sym);
          	console.log("Loaded libraries successfully");
-         }
-         
-         if (isMultiChoice == false) {
-         	sym.$('Answers').hide();
-         	sym.$('AnswerA').hide();
-         	sym.$('AnswerB').hide();
-         	sym.$('AnswerC').hide();
-         	sym.$('AnswerD').hide();
-         	sym.$('AnswerE').hide();
-         	var input_answer = '<input id="answer_field" type="text"><br>';
-         	var input_button = '<br><button id="submit_answer" type="button">Submit Answer!</button>';
-         	sym.$('Answer_Container').html(input_answer.concat(input_button));
-         
-         	$("#submit_answer").on("click", function() {
-         		processShortAnswer(sym,$("#answer_field").val());
-         	});	
-         }
-         else {
-         	sym.$('ShortAnswerBox').hide();
-         	switch (numAnswers) {
-         		case 4:
-         			sym.getSymbol("Answers").$('EButton').hide();
-         			sym.$('AnswerE').hide();
-         			break;
-         		case 3:
-         			sym.getSymbol("Answers").$('DButton').hide();
-         			sym.$('AnswerD').hide();
-         			sym.getSymbol("Answers").$('EButton').hide();
-         			sym.$('AnswerE').hide();
-         			break;
-         		case 2:
-         			sym.getSymbol("Answers").$('CButton').hide();
-         			sym.$('AnswerC').hide();
-         			sym.getSymbol("Answers").$('DButton').hide();
-         			sym.$('AnswerD').hide();
-         			sym.getSymbol("Answers").$('EButton').hide();
-         			sym.$('AnswerE').hide();
-         			break;
-         	}
-         }
-         
-         sym.resetButtons = function(sym) {
-         		for (i = 1; i <= maxHints; ++i) {
-         			sym.$("Hint"+i.toString()+"ThumbImg").show();
-         	}
-         }
-         
-         sym.hintActive = function(sym, num) {
-         	sym.stop();
-         	sym.$(currentHint+"Sound")[0].currentTime = 0;
-         	sym.$(currentHint+"Sound")[0].pause();
-         	sym.resetButtons(sym);
-         	sym.$("Hint"+num.toString()+"ThumbImg").hide();
-         	if (num == 10) {
-         		currentHint = "Answer";
-         		sym.play("Show Answer");
-         		sym.$("AnswerSound")[0].play();
-         	}
-         	else {
-         		currentHint = "Hint"+num.toString();
-         		sym.play("Hint "+num.toString());
-         		// Play the audio track.
-         		sym.$("Hint"+num.toString()+"Sound")[0].play();
-         
-         
-         	}
          }
 
       });
@@ -167,26 +83,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 35000, function(sym, e) {
-         shown["Hint2"] = true;
-         sym.$("Hint2Thumb").show();
-         sym.hintActive(sym,2);
-         
+         markShown(sym, 2);
+         hintActive(sym,2);
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 50000, function(sym, e) {
-         shown["Hint3"] = true;
-         sym.$("Hint3Thumb").show();
-         sym.hintActive(sym,3);
+         markShown(sym, 3);
+         hintActive(sym,3);
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 65000, function(sym, e) {
-         shown["Hint4"] = true;
-         sym.$("Hint4Thumb").show();
-         sym.hintActive(sym,4);
+         markShown(sym, 4);
+         hintActive(sym,4);
 
       });
       //Edge binding end
@@ -204,9 +116,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 80000, function(sym, e) {
-         shown["Hint5"] = true;
-         sym.$("Hint5Thumb").show();
-         sym.hintActive(sym,5);
+         markShown(sym, 5);
+         hintActive(sym,5);
 
       });
       //Edge binding end
@@ -242,69 +153,68 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 20000, function(sym, e) {
-         shown["Hint1"] = true;
-         sym.$("Hint1Thumb").show();
-         sym.hintActive(sym,1);
+         markShown(sym, 1);
+         hintActive(sym,1);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint1Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,1);
+         hintActive(sym,1);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint2Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,2);
+         hintActive(sym,2);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint3Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,3);
+         hintActive(sym,3);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint4Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,4);
+         hintActive(sym,4);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint5Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,5);
+         hintActive(sym,5);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint6Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,6);
+         hintActive(sym,6);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint7Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,7);
+         hintActive(sym,7);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint8Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,8);
+         hintActive(sym,8);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint9Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,9);
+         hintActive(sym,9);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_Hint10Thumb}", "click", function(sym, e) {
-         sym.hintActive(sym,10);
+         hintActive(sym,10);
 
       });
       //Edge binding end
@@ -316,10 +226,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 95073, function(sym, e) {
-         shown["Hint6"] = true;
-         sym.$("Hint6Thumb").show();
-         sym.hintActive(sym,6);
-         
+         markShown(sym, 6);
+         hintActive(sym,6);
 
       });
       //Edge binding end
@@ -337,9 +245,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 110000, function(sym, e) {
-         shown["Hint7"] = true;
-         sym.$("Hint7Thumb").show();
-         sym.hintActive(sym,7);
+         markShown(sym, 7);
+         hintActive(sym,7);
 
       });
       //Edge binding end
@@ -351,9 +258,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 125000, function(sym, e) {
-         shown["Hint8"] = true;
-         sym.$("Hint8Thumb").show();
-         sym.hintActive(sym,8);
+         markShown(sym, 8);
+         hintActive(sym,8);
 
       });
       //Edge binding end
@@ -365,9 +271,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 140000, function(sym, e) {
-         shown["Hint9"] = true;
-         sym.$("Hint9Thumb").show();
-         sym.hintActive(sym,9);
+         markShown(sym, 9);
+         hintActive(sym,9);
 
       });
       //Edge binding end
@@ -379,9 +284,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 155000, function(sym, e) {
-         shown["Hint10"] = true;
-         sym.$("Hint10Thumb").show();
-         sym.hintActive(sym,10);
+         markShown(sym, 10);
+         hintActive(sym,10);
 
       });
       //Edge binding end
