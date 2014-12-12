@@ -1,0 +1,25 @@
+Open existing edge problem
+
+Take note of the correct answer
+
+delete answers (click anywhere on buttons to select, then click delete button)
+
+Select texts that are 4 divs with answers and delete
+
+Scrub video to reveal the last hint (label Answer Hint) which may say something like shows Choose D.  Replace text with something appropriate for the answer. (e.g. "She has $5.50")
+Will also need to replace answer.ogg with something appropriate
+
+Copy AnswerGroup element from template to somewhere in target problem
+
+Then right-click on stage and view code and view CompositionReady function.  Copy all code.
+Goto target problem and replace CompositionReady code with this.
+
+If we need a larger textbox,  the <input> element is in the COmposisionReady code 
+
+Database work:
+
+Use auth tool to create problem with the hints and Show Answer hints
+Use Db to change questType to multichoice
+
+create rows in problemShortAnswers table for every possible input
+
