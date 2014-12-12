@@ -64,7 +64,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          function init() {
          	prepareForData(sym);
-         	probUtilsInit(sym);
+         	probUtilsInit(sym, isMultiChoice());
          	plug(sym);
          	console.log("Loaded libraries successfully");
          }

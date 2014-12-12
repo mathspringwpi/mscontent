@@ -75,9 +75,9 @@ function shuffleAnswers(sym) {
 
 }
 
-function probUtilsInit(sym, shortAnswer) {
-    if (shortAnswer)
-        isShortAnswer = shortAnswer;
+function probUtilsInit(sym, multiChoice) {
+    if (multiChoice)
+        isShortAnswer = !multiChoice;
     else
         shuffleAnswers(sym);
     maybeStop(sym);
