@@ -96,7 +96,8 @@ function getProblemName() {
 }
 
 function isMultiChoice() {
-    if (window.parent.getAnswers() == null || window.parent.getAnswers() == undefined || window.parent.getAnswers() == "") {
+    var answers = window.parent.getAnswers();
+    if (answers == null || answers == undefined || answers.length == undefined) {
         return false;
     }
     return true;
@@ -220,8 +221,10 @@ function prepareForData(sym) {
 function plug(sym) {
     sym.$("ProblemStatement").html(format(getProblemStatement()));
     sym.$("ProblemFigure").html(format(getProblemFigure()));
-    sym.$("QuestionSound").attr("src", getURL(getProblemSound()+".ogg"));
-    sym.$("QuestionSound").attr("src", getURL(getProblemSound()+".mp3"));
+    if (getProblemSound() != undefined) {
+        sym.$("QuestionSound").attr("src", getURL(getProblemSound()+".ogg"));
+        sym.$("QuestionSound").attr("src", getURL(getProblemSound()+".mp3"));
+    }
     var hints = getHints();
     var hintID = "";
     if (hints != undefined && hints != null) {
@@ -265,8 +268,10 @@ function plug(sym) {
             else {
                 sym.$(hintID+"Thumb").attr("title", hints[i].hoverText);
             }
-            sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".ogg"));
-            sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".mp3"));
+            if (hints[i].audioResource != undefined)  {
+                sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".ogg"));
+                sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".mp3"));
+            }
         }
     }
 
