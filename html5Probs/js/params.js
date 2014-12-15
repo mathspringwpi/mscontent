@@ -79,10 +79,14 @@ function parametrize(sym) {
 }
 
 function getURL (filename) {
+    if (filename == null || filename == undefined)
+        return filename;
     return window.parent.getProblemContentPath() + "/html5Probs/" + window.parent.getResource().split()[0] + "/" + filename;
 }
 
 function format (rawText) {
+    if (rawText == null || rawText == undefined)
+        return rawText;
     var regex = new RegExp("\\{(.*?)\\}", "gi");
     return rawText.replace(regex, "<img src="+getURL("$1")+">");
 }
@@ -137,25 +141,28 @@ function showShortAnswerBox(sym) {
 
 function hideAnswersNotInUse(sym) {
     sym.$('ShortAnswerBox').hide();
-    switch (getAnswers().length) {
-        case 4:
-            sym.getSymbol("Answers").$('EButton').hide();
-            sym.$('AnswerE').hide();
-            break;
-        case 3:
-            sym.getSymbol("Answers").$('DButton').hide();
-            sym.$('AnswerD').hide();
-            sym.getSymbol("Answers").$('EButton').hide();
-            sym.$('AnswerE').hide();
-            break;
-        case 2:
-            sym.getSymbol("Answers").$('CButton').hide();
-            sym.$('AnswerC').hide();
-            sym.getSymbol("Answers").$('DButton').hide();
-            sym.$('AnswerD').hide();
-            sym.getSymbol("Answers").$('EButton').hide();
-            sym.$('AnswerE').hide();
-            break;
+    var answers = getAnswers();
+    if (answers != null && answers != undefined) {
+        switch (getAnswers().length) {
+            case 4:
+                sym.getSymbol("Answers").$('EButton').hide();
+                sym.$('AnswerE').hide();
+                break;
+            case 3:
+                sym.getSymbol("Answers").$('DButton').hide();
+                sym.$('AnswerD').hide();
+                sym.getSymbol("Answers").$('EButton').hide();
+                sym.$('AnswerE').hide();
+                break;
+            case 2:
+                sym.getSymbol("Answers").$('CButton').hide();
+                sym.$('AnswerC').hide();
+                sym.getSymbol("Answers").$('DButton').hide();
+                sym.$('AnswerD').hide();
+                sym.getSymbol("Answers").$('EButton').hide();
+                sym.$('AnswerE').hide();
+                break;
+        }
     }
 }
 
@@ -192,8 +199,11 @@ function hintActive(sym, num) {
 }
 
 function prepareForData(sym) {
-    for (i = 1; i <= getHints().length; ++i) {
-        shown["Hint"+i.toString()] = Boolean(false);
+    var hints = getHints();
+    if (hints != null && hints != undefined) {
+        for (i = 1; i <= getHints().length; ++i) {
+            shown["Hint"+i.toString()] = Boolean(false);
+        }
     }
     for (i = 1; i <= maxHints; ++i) {
         sym.$("Hint"+i.toString()+"Thumb").hide();
@@ -214,67 +224,71 @@ function plug(sym) {
     sym.$("QuestionSound").attr("src", getURL(getProblemSound()+".mp3"));
     var hints = getHints();
     var hintID = "";
-    for (i=0; i<hints.length;++i)  {
-        switch (hints[i].label) {
-          case "Hint 1":
-             hintID = "Hint1";
-             break;
-          case "Hint 2":
-              hintID = "Hint2";
-              break;
-          case "Hint 3":
-              hintID = "Hint3";
-              break;
-          case "Hint 4":
-              hintID = "Hint4";
-              break;
-          case "Hint 5":
-              hintID = "Hint5";
-              break;
-          case "Hint 6":
-              hintID = "Hint6";
-              break;
-          case "Hint 7":
-              hintID = "Hint7";
-              break;
-          case "Hint 8":
-              hintID = "Hint8";
-              break;
-          case "Hint 9":
-              hintID = "Hint9";
-              break;
-          case "Show Answer":
-              hintID = "Answer";
-              break;
+    if (hints != undefined && hints != null) {
+        for (i=0; i<hints.length;++i)  {
+            switch (hints[i].label) {
+              case "Hint 1":
+                 hintID = "Hint1";
+                 break;
+              case "Hint 2":
+                  hintID = "Hint2";
+                  break;
+              case "Hint 3":
+                  hintID = "Hint3";
+                  break;
+              case "Hint 4":
+                  hintID = "Hint4";
+                  break;
+              case "Hint 5":
+                  hintID = "Hint5";
+                  break;
+              case "Hint 6":
+                  hintID = "Hint6";
+                  break;
+              case "Hint 7":
+                  hintID = "Hint7";
+                  break;
+              case "Hint 8":
+                  hintID = "Hint8";
+                  break;
+              case "Hint 9":
+                  hintID = "Hint9";
+                  break;
+              case "Show Answer":
+                  hintID = "Answer";
+                  break;
+            }
+            sym.$(hintID).html(format(hints[i].statementHTML));
+            if (hintID==="Answer") {
+                sym.$("Hint10Thumb").attr("title", hints[i].hoverText);
+            }
+            else {
+                sym.$(hintID+"Thumb").attr("title", hints[i].hoverText);
+            }
+            sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".ogg"));
+            sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".mp3"));
         }
-        sym.$(hintID).html(format(hints[i].statementHTML));
-        if (hintID==="Answer") {
-            sym.$("Hint10Thumb").attr("title", hints[i].hoverText);
-        }
-        else {
-            sym.$(hintID+"Thumb").attr("title", hints[i].hoverText);
-        }
-        sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".ogg"));
-        sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".mp3"));
     }
 
     if (isMultiChoice()) {
         var answers = getAnswers();
-        for(i=0;i<answers.length;++i) {
-            if (answers[i].a != null && answers[i].a != undefined) {
-                sym.$("AnswerA").html(format(answers[i].a));
-            }
-            if (answers[i].b != null && answers[i].b != undefined) {
-                sym.$("AnswerB").html(format(answers[i].b));
-            }
-            if (answers[i].c != null && answers[i].c != undefined) {
-                sym.$("AnswerC").html(format(answers[i].c));
-            }
-            if (answers[i].d != null && answers[i].d != undefined) {
-                sym.$("AnswerD").html(format(answers[i].d));
-            }
-            if (answers[i].e != null && answers[i].e != undefined) {
-                sym.$("AnswerE").html(format(answers[i].e));
+        if (answers != null && answers != undefined) {
+            for(i=0;i<answers.length;++i) {
+                if (answers[i].a != null && answers[i].a != undefined) {
+                    sym.$("AnswerA").html(format(answers[i].a));
+                }
+                if (answers[i].b != null && answers[i].b != undefined) {
+                    sym.$("AnswerB").html(format(answers[i].b));
+                }
+                if (answers[i].c != null && answers[i].c != undefined) {
+                    sym.$("AnswerC").html(format(answers[i].c));
+                }
+                if (answers[i].d != null && answers[i].d != undefined) {
+                    sym.$("AnswerD").html(format(answers[i].d));
+                }
+                if (answers[i].e != null && answers[i].e != undefined) {
+                    sym.$("AnswerE").html(format(answers[i].e));
+                }
             }
         }
     }
