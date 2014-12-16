@@ -20,7 +20,8 @@ function getTextNodesIn(node, includeWhitespaceNodes) {
     var textNodes = [], nonWhitespaceMatcher = /\S/;
 
     function getTextNodes(node) {
-        if (node.nodeType == 3) {
+        // 1 = element, 2 = attr, 3 = text
+        if (node.nodeType == 1 || node.nodeType == 2 || node.nodeType == 3) {
             if (includeWhitespaceNodes || nonWhitespaceMatcher.test(node.nodeValue)) {
                 textNodes.push(node);
             }
@@ -124,6 +125,10 @@ function getHints() {
     return window.parent.getHints();
 }
 
+function isParameterized() {
+    return window.parent.isParameterized();
+}
+
 function showShortAnswerBox(sym) {
     sym.$('Answers').hide();
     sym.$('AnswerA').hide();
@@ -216,6 +221,10 @@ function prepareForData(sym) {
     else {
         hideAnswersNotInUse(sym);
     }
+    if (isParameterized()) {
+        parametrize(sym);
+    }
+
 }
 
 function plug(sym) {
