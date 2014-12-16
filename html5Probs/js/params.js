@@ -96,6 +96,10 @@ function getProblemName() {
     return window.parent.getResource();
 }
 
+function isDemo() {
+    return window.parent.isDemoMode();
+}
+
 function isMultiChoice() {
     var answers = window.parent.getAnswers();
     if (answers == null || answers == undefined || answers.length == undefined) {
@@ -145,30 +149,49 @@ function showShortAnswerBox(sym) {
     });
 }
 
-function hideAnswersNotInUse(sym) {
+function hideAnswers(sym, numAnswers) {
     sym.$('ShortAnswerBox').hide();
-    var answers = getAnswers();
-    if (answers != null && answers != undefined) {
-        switch (getAnswers().length) {
-            case 4:
-                sym.getSymbol("Answers").$('EButton').hide();
-                sym.$('AnswerE').hide();
-                break;
-            case 3:
-                sym.getSymbol("Answers").$('DButton').hide();
-                sym.$('AnswerD').hide();
-                sym.getSymbol("Answers").$('EButton').hide();
-                sym.$('AnswerE').hide();
-                break;
-            case 2:
-                sym.getSymbol("Answers").$('CButton').hide();
-                sym.$('AnswerC').hide();
-                sym.getSymbol("Answers").$('DButton').hide();
-                sym.$('AnswerD').hide();
-                sym.getSymbol("Answers").$('EButton').hide();
-                sym.$('AnswerE').hide();
-                break;
-        }
+    switch (numAnswers) {
+        case 4:
+            sym.getSymbol("Answers").$('EButton').hide();
+            sym.$('AnswerE').hide();
+            break;
+        case 3:
+            sym.getSymbol("Answers").$('DButton').hide();
+            sym.$('AnswerD').hide();
+            sym.getSymbol("Answers").$('EButton').hide();
+            sym.$('AnswerE').hide();
+            break;
+        case 2:
+            sym.getSymbol("Answers").$('CButton').hide();
+            sym.$('AnswerC').hide();
+            sym.getSymbol("Answers").$('DButton').hide();
+            sym.$('AnswerD').hide();
+            sym.getSymbol("Answers").$('EButton').hide();
+            sym.$('AnswerE').hide();
+            break;
+        case 1:
+            sym.getSymbol("Answers").$('BButton').hide();
+            sym.$('AnswerB').hide();
+            sym.getSymbol("Answers").$('CButton').hide();
+            sym.$('AnswerC').hide();
+            sym.getSymbol("Answers").$('DButton').hide();
+            sym.$('AnswerD').hide();
+            sym.getSymbol("Answers").$('EButton').hide();
+            sym.$('AnswerE').hide();
+            break;
+        case 0:
+            sym.getSymbol("Answers").$('AButton').hide();
+            sym.$('AnswerA').hide();
+            sym.getSymbol("Answers").$('BButton').hide();
+            sym.$('AnswerB').hide();
+            sym.getSymbol("Answers").$('CButton').hide();
+            sym.$('AnswerC').hide();
+            sym.getSymbol("Answers").$('DButton').hide();
+            sym.$('AnswerD').hide();
+            sym.getSymbol("Answers").$('EButton').hide();
+            sym.$('AnswerE').hide();
+            break;
     }
 }
 
@@ -214,12 +237,16 @@ function prepareForData(sym) {
     for (i = 1; i <= maxHints; ++i) {
         sym.$("Hint"+i.toString()+"Thumb").hide();
     }
-
+    if (isDemo()) {
+        hideAnswers(sym, 0)
+    }
     if (isMultiChoice() == false) {
         showShortAnswerBox(sym);
     }
     else {
-        hideAnswersNotInUse(sym);
+        var answers = getAnswers();
+        if (answers != undefined && answers != null && answers.length != undefined)
+            hideAnswers(sym, answers.length);
     }
     if (isParameterized()) {
         parametrize(sym);
