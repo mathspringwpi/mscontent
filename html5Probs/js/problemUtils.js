@@ -4,6 +4,9 @@ var readAloud = false;
 var isShortAnswer=false;
 var couldNotShuffle = false;
 
+function isDemo() {
+    return window.parent.isDemoMode();
+}
 
 function debugAlert(msg) {
     if (debug ) {
