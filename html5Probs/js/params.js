@@ -70,7 +70,8 @@ function replaceVars(sym) {
     $.each(collection,function(){
         for (var key in constraints) {
             var regex = new RegExp("(\\W|^)\\"+key+"(\\W|$)", "gi");
-            this.nodeValue=this.nodeValue.replace(regex, "$1"+constraints[key]+"$2");
+            if (this.innerHTML != null && this.innerHTML != undefined)
+                this.innerHTML=this.innerHTML.replace(regex, "$1"+constraints[key]+"$2");
         }
     })
 }
@@ -248,9 +249,6 @@ function prepareForData(sym) {
         if (answers != undefined && answers != null && answers.length != undefined)
             hideAnswers(sym, answers.length);
     }
-    if (isParameterized()) {
-        parametrize(sym);
-    }
 
 }
 
@@ -332,6 +330,9 @@ function plug(sym) {
                 }
             }
         }
+    }
+    if (isParameterized()) {
+        parametrize(sym);
     }
 }
 
