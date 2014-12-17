@@ -21,7 +21,7 @@ function getTextNodesIn(node, includeWhitespaceNodes) {
 
     function getTextNodes(node) {
         // 1 = element, 2 = attr, 3 = text
-        if (node.nodeType == 1 || node.nodeType == 2 || node.nodeType == 3) {
+        if (node.nodeType == 3) {
             if (includeWhitespaceNodes || nonWhitespaceMatcher.test(node.nodeValue)) {
                 textNodes.push(node);
             }
@@ -45,7 +45,13 @@ function getConstraints() {
     var rand = -1;
     var constraints = {};
     var constraints = getConstraintJSon();
+    if (getConstraintJSon() == null || getConstraintJSon() == undefined) {
+        return null;
+    }
     data = constraints;
+    if (data == null) {
+        return null;
+    }
     $.each( data, function(key, val) {
         if (isArray(val)) {
             if (rand == -1) {
@@ -70,10 +76,25 @@ function replaceVars(sym) {
     $.each(collection,function(){
         for (var key in constraints) {
             var regex = new RegExp("(\\W|^)\\"+key+"(\\W|$)", "gi");
-            if (this.innerHTML != null && this.innerHTML != undefined)
-                this.innerHTML=this.innerHTML.replace(regex, "$1"+constraints[key]+"$2");
+            if (this.nodeValue != null && this.nodeValue != undefined)
+                this.nodeValue=this.nodeValue.replace(regex, "$1"+constraints[key]+"$2");
         }
     })
+}
+
+function parametrizeText(rawText) {
+    if (rawText == null || rawText == undefined)
+        return rawText;
+    var constraints = getConstraints();
+    if (constraints == null) {
+        return rawText;
+    }
+    var parametrizedText = rawText;
+    for (var key in constraints) {
+        var regex = new RegExp("(\\W|^)\\"+key+"(\\W|$)", "gi");
+        parametrizedText = parametrizedText.replace(regex, "$1"+constraints[key]+"$2");
+    }
+    return parametrizedText;
 }
 
 function parametrize(sym) {
@@ -253,8 +274,8 @@ function prepareForData(sym) {
 }
 
 function plug(sym) {
-    sym.$("ProblemStatement").html(format(getProblemStatement()));
-    sym.$("ProblemFigure").html(format(getProblemFigure()));
+    sym.$("ProblemStatement").html(parametrizeText(format(getProblemStatement())));
+    sym.$("ProblemFigure").html(parametrizeText(format(getProblemFigure())));
     if (getProblemSound() != undefined) {
         sym.$("QuestionSound").attr("src", getURL(getProblemSound()+".ogg"));
         sym.$("QuestionSound").attr("src", getURL(getProblemSound()+".mp3"));
@@ -295,12 +316,12 @@ function plug(sym) {
                   hintID = "Answer";
                   break;
             }
-            sym.$(hintID).html(format(hints[i].statementHTML));
+            sym.$(hintID).html(parametrizeText(format(hints[i].statementHTML)));
             if (hintID==="Answer") {
-                sym.$("Hint10Thumb").attr("title", hints[i].hoverText);
+                sym.$("Hint10Thumb").attr("title", parametrizeText(hints[i].hoverText));
             }
             else {
-                sym.$(hintID+"Thumb").attr("title", hints[i].hoverText);
+                sym.$(hintID+"Thumb").attr("title", parametrizeText(hints[i].hoverText));
             }
             if (hints[i].audioResource != undefined)  {
                 sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".ogg"));
@@ -314,25 +335,22 @@ function plug(sym) {
         if (answers != null && answers != undefined) {
             for(i=0;i<answers.length;++i) {
                 if (answers[i].a != null && answers[i].a != undefined) {
-                    sym.$("AnswerA").html(format(answers[i].a));
+                    sym.$("AnswerA").html(parametrizeText(format(answers[i].a)));
                 }
                 if (answers[i].b != null && answers[i].b != undefined) {
-                    sym.$("AnswerB").html(format(answers[i].b));
+                    sym.$("AnswerB").html(parametrizeText(format(answers[i].b)));
                 }
                 if (answers[i].c != null && answers[i].c != undefined) {
-                    sym.$("AnswerC").html(format(answers[i].c));
+                    sym.$("AnswerC").html(parametrizeText(format(answers[i].c)));
                 }
                 if (answers[i].d != null && answers[i].d != undefined) {
-                    sym.$("AnswerD").html(format(answers[i].d));
+                    sym.$("AnswerD").html(parametrizeText(format(answers[i].d)));
                 }
                 if (answers[i].e != null && answers[i].e != undefined) {
-                    sym.$("AnswerE").html(format(answers[i].e));
+                    sym.$("AnswerE").html(parametrizeText(format(answers[i].e)));
                 }
             }
         }
-    }
-    if (isParameterized()) {
-        parametrize(sym);
     }
 }
 
