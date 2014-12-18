@@ -281,7 +281,7 @@ function prepareForData(sym) {
 function plug(sym) {
     sym.$("ProblemStatement").html(parametrizeText(format(getProblemStatement())));
     sym.$("ProblemFigure").html(parametrizeText(format(getProblemFigure())));
-    if (getProblemSound() != undefined) {
+    if (getProblemSound() != undefined && getProblemSound() != "") {
         sym.$("QuestionSound").attr("src", getURL(getProblemSound()+".ogg"));
         sym.$("QuestionSound").attr("src", getURL(getProblemSound()+".mp3"));
     }
@@ -328,7 +328,7 @@ function plug(sym) {
             else {
                 sym.$(hintID+"Thumb").attr("title", parametrizeText(hints[i].hoverText));
             }
-            if (hints[i].audioResource != undefined)  {
+            if (hints[i].audioResource != undefined && hints[i].audioResource != "")  {
                 sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".ogg"));
                 sym.$(hintID+"Sound").attr("src", getURL(hints[i].audioResource+".mp3"));
             }
