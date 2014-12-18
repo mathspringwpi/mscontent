@@ -124,7 +124,7 @@ function isDemo() {
 
 function isMultiChoice() {
     var answers = window.parent.getAnswers();
-    if (answers == null || answers == undefined || answers.length == undefined) {
+    if (answers == null || answers == undefined) {
         return false;
     }
     return true;
@@ -144,11 +144,25 @@ function getProblemSound() {
 }
 
 function getAnswers () {
-    return window.parent.getAnswers();
+    var answers = window.parent.getAnswers();
+    if (answers == null || answers == undefined) {
+        return null;
+    }
+    if (answers.length == undefined) {
+        return [answers];
+    }
+    return answers;
 }
 
 function getHints() {
-    return window.parent.getHints();
+    var hints = window.parent.getHints();
+    if (hints == null || hints == undefined) {
+        return null;
+    }
+    if (hints.length == undefined) {
+        return [hints];
+    }
+    return hints;
 }
 
 function isParameterized() {
@@ -167,10 +181,14 @@ function showShortAnswerBox(sym) {
     sym.$('AnswerD').hide();
     sym.$('AnswerE').hide();
     var input_answer = '<input id="answer_field" type="text">';
-    var units_div = '<span id="Units">' + format(getUnits()) + '</span><br>';
-    var input_button = '<br><button id="submit_answer" type="button">Submit Answer!</button>';
-    sym.$('Answer_Container').html(input_answer.concat(units_div).concat(input_button));
-
+    var input_button = '<br><br><button id="submit_answer" type="button">Submit Answer!</button>';
+    if (getUnits() != null) {
+        var units_div = '<span id="Units">' + parametrizeText(format(getUnits())) + '</span><br>';
+        sym.$('Answer_Container').html(input_answer.concat(units_div).concat(input_button));
+    }
+    else {
+        sym.$('Answer_Container').html(input_answer.concat(input_button));
+    }
     $("#submit_answer").on("click", function() {
         processShortAnswer(sym,$("#answer_field").val());
     });
@@ -272,7 +290,7 @@ function prepareForData(sym) {
     }
     else {
         var answers = getAnswers();
-        if (answers != undefined && answers != null && answers.length != undefined)
+        if (answers != undefined && answers != null)
             hideAnswers(sym, answers.length);
     }
 

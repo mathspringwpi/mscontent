@@ -79,7 +79,7 @@ function shuffleAnswers(sym) {
 }
 
 function probUtilsInit(sym, multiChoice) {
-    if (typeof multichoice !== 'undefined')
+    if (typeof multiChoice !== 'undefined')
         isShortAnswer = !multiChoice;
     if (!isShortAnswer)
         shuffleAnswers(sym);
