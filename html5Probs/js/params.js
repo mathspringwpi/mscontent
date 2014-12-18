@@ -155,6 +155,10 @@ function isParameterized() {
     return window.parent.isParameterized();
 }
 
+function getUnits() {
+    return window.parent.getUnits();
+}
+
 function showShortAnswerBox(sym) {
     sym.$('Answers').hide();
     sym.$('AnswerA').hide();
@@ -162,9 +166,10 @@ function showShortAnswerBox(sym) {
     sym.$('AnswerC').hide();
     sym.$('AnswerD').hide();
     sym.$('AnswerE').hide();
-    var input_answer = '<input id="answer_field" type="text"><br>';
+    var input_answer = '<input id="answer_field" type="text">';
+    var units_div = '<span id="Units">' + format(getUnits()) + '</span><br>';
     var input_button = '<br><button id="submit_answer" type="button">Submit Answer!</button>';
-    sym.$('Answer_Container').html(input_answer.concat(input_button));
+    sym.$('Answer_Container').html(input_answer.concat(units_div).concat(input_button));
 
     $("#submit_answer").on("click", function() {
         processShortAnswer(sym,$("#answer_field").val());
