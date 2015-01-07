@@ -56,7 +56,7 @@ yepnope(
 
 nope:[
 
-'../js/problemUtils.js'//,
+'../../../../js/problemUtils.js', '../../../../js/params.js'
 //'example.js',
 //'example2.js',
 
