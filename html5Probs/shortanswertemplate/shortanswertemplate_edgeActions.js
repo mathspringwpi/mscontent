@@ -48,7 +48,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          nope:[
          
-         '../../../../js/problemUtils.js', '../../../../js/params.js'
+         '../js/edgeProblemUtils.js'
          //'example.js',
          //'example2.js',
          
