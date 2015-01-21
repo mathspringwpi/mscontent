@@ -15,23 +15,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
-         // This is the sound code for reading the question. Make sure
-         // you have a sound file called question.ogg in this directory,
-         // otherwise this code will not work.
-         playSound(sym,"question.ogg");
-         maybeStop (sym)
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 24000, function(sym, e) {
-         //Hint 1
-         //There is no sound for this hint
-         
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 31198, function(sym, e) {
          // Wherever hint 1 ends, that is where you need to put this code.
@@ -59,7 +45,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          nope:[
          
-         '../js/edgeProblemUtils.js'
+         '../js/problemUtils.js'//,
          //'example.js',
          //'example2.js',
          
@@ -71,23 +57,23 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          );
          
-         function init() {
-	   probUtilsInit(sym);
+         function init() {  probUtilsInit(sym);
          	console.log("Loaded libraries successfully");
          }
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 36184, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 38196, function(sym, e) {
          maybeStop (sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 32000, function(sym, e) {
-         playSound(sym,"answer.ogg");
-         
+      
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 23017, function(sym, e) {
+         maybeStop (sym)
 
       });
       //Edge binding end

@@ -15,27 +15,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
-         // This is the sound code for reading the question. Make sure
-         // you have a sound file called question.ogg in this directory,
-         // otherwise this code will not work.
-         playSound(sym,"question.ogg");
-         maybeStop (sym)
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 13000, function(sym, e) {
-         // This is where your sound code goes. I have provided an example, so
-         // you should not need to change anything, unless you want to move the hint
-         // to a different place on the timeline. Then, just copy what I have in here.
-         // You will need a file called hint1.ogg. If this hint does not have any
-         // sounds, delete this code.
-         
-         playSound(sym,"hint1.ogg");
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 24085, function(sym, e) {
          // Wherever hint 1 ends, that is where you need to put this code.
@@ -63,7 +45,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          nope:[
          
-         '../js/edgeProblemUtils.js'
+         '../js/problemUtils.js'//,
          //'example.js',
          //'example2.js',
          
@@ -75,8 +57,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          );
          
-         function init() {
-	   probUtilsInit(sym);
+         function init() {  probUtilsInit(sym);
          	console.log("Loaded libraries successfully");
          }
 
@@ -85,13 +66,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 24992, function(sym, e) {
-         playSound(sym,"answer.ogg");
+      
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 31014, function(sym, e) {
+         maybeStop (sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 30004, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 12516, function(sym, e) {
          maybeStop (sym)
 
       });
