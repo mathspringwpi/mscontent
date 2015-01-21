@@ -15,23 +15,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
-         // This is the sound code for reading the question. Make sure
-         // you have a sound file called question.ogg in this directory,
-         // otherwise this code will not work.
-         playSound(sym,"question.ogg");
-         maybeStop (sym)
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 16000, function(sym, e) {
-         //Hint 1
-         //This hint has no sound
-         
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 22804, function(sym, e) {
          // Wherever hint 1 ends, that is where you need to put this code.
@@ -59,7 +45,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          nope:[
          
-         '../js/edgeProblemUtils.js'
+         '../js/problemUtils.js'//,
          //'example.js',
          //'example2.js',
          
@@ -71,8 +57,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          );
          
-         function init() {
-	   probUtilsInit(sym);
+         function init() {  probUtilsInit(sym);
          	console.log("Loaded libraries successfully");
          }
 
@@ -87,14 +72,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 24196, function(sym, e) {
-         playSound(sym,"answer.ogg");
-         
+      
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 30000, function(sym, e) {
+         maybeStop (sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 30000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 15827, function(sym, e) {
          maybeStop (sym)
 
       });

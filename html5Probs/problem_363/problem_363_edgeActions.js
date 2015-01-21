@@ -49,7 +49,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          nope:[
          
-         '../js/edgeProblemUtils.js'
+         '../js/problemUtils.js'//,
          //'example.js',
          //'example2.js',
          
@@ -61,8 +61,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          );
          
-         function init() {
-	   probUtilsInit(sym);
+         function init() {  probUtilsInit(sym);
          	console.log("Loaded libraries successfully");
          }
 

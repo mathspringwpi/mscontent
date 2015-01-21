@@ -15,23 +15,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
-         // This is the sound code for reading the question. Make sure
-         // you have a sound file called question.ogg in this directory,
-         // otherwise this code will not work.
-         playSound(sym,"question.ogg");
-         maybeStop (sym)
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 13000, function(sym, e) {
-         //Hint 1
-         //This hint has no sound
-         
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 20000, function(sym, e) {
          // Wherever hint 1 ends, that is where you need to put this code.
@@ -59,7 +45,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          nope:[
          
-         '../js/edgeProblemUtils.js'
+         '../js/problemUtils.js'//,
          //'example.js',
          //'example2.js',
          
@@ -71,23 +57,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          );
          
-         function init() {
-	   probUtilsInit(sym);
+         function init() {  probUtilsInit(sym);
          	console.log("Loaded libraries successfully");
          }
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 20920, function(sym, e) {
-         playSound(sym,"answer.ogg");
-         
-         
+      
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 25331, function(sym, e) {
+         maybeStop (sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 25331, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 12626, function(sym, e) {
          maybeStop (sym)
 
       });
