@@ -22,7 +22,7 @@ yepnope(
 nope:[
 
 //'http://localhost/mathspring/js/problemUtils.js'
-'../js/edgeProblemUtils.js'
+'../js/problemUtils.js'
 //'example.js',
 //'example2.js',
 
