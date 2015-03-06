@@ -104,7 +104,7 @@ function parametrize(sym) {
 function getURL (filename) {
     if (filename == null || filename == undefined)
         return filename;
-    return window.parent.getProblemContentPath() + "/html5Probs/" + window.parent.getResource().split()[0] + "/" + filename;
+    return window.parent.getProblemContentPath() + "/html5Probs/" + window.parent.getResource().split(".")[0] + "/" + filename;
 }
 
 function format (rawText) {
