@@ -15,11 +15,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 
-      
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 7692, function(sym, e) {
+         //Wherever the question audio ends, that is where you need to put this code.
+         
+         maybeStop (sym)
+
+      });
+      //Edge binding end
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 61000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 15706, function(sym, e) {
          // Wherever hint 1 ends, that is where you need to put this code.
          
          maybeStop (sym)
@@ -57,22 +63,42 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          );
          
-         function init() { probUtilsInit(sym);
+         function init() {
          	console.log("Loaded libraries successfully");
          }
 
       });
       //Edge binding end
 
-      
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 67000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 23096, function(sym, e) {
+         // Wherever hint 2 ends, that is where you need to put this code.
+         
          maybeStop (sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 23750, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 35449, function(sym, e) {
+         // Wherever Answer Hint ends, that is where you need to put this code.
+         
+         maybeStop (sym)
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 43367, function(sym, e) {
+         maybeStop (sym)
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 51147, function(sym, e) {
+         maybeStop (sym)
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 57960, function(sym, e) {
          maybeStop (sym)
 
       });
@@ -116,7 +142,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      
+      Symbol.bindElementAction(compId, symbolName, "${_E_Button}", "click", function(sym, e) {
+         answerClicked(sym, "E");
+
+      });
+      //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 10000, function(sym, e) {
          // insert code here

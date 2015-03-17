@@ -15,17 +15,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 
-      
-
-      
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 61000, function(sym, e) {
-         // Wherever hint 1 ends, that is where you need to put this code.
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 18500, function(sym, e) {
+         //Wherever the question audio ends, that is where you need to put this code.
          
          maybeStop (sym)
 
       });
       //Edge binding end
+
+      
+
+      
 
       
 
@@ -57,7 +57,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          );
          
-         function init() { probUtilsInit(sym);
+         function init() {
          	console.log("Loaded libraries successfully");
          }
 
@@ -66,13 +66,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 67000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 51250, function(sym, e) {
+         // Wherever Answer Hint ends, that is where you need to put this code.
+         
          maybeStop (sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 23750, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 41750, function(sym, e) {
+         // Wherever hint 2 ends, that is where you need to put this code.
+         
          maybeStop (sym)
 
       });
