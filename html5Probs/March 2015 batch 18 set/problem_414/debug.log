@@ -1,0 +1,61 @@
+[1205/233612:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/233612:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/233612:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/233618:INFO:CONSOLE(24)] "Uncaught TypeError: Object #<Object> has no method 'callbackTunnelAsync'", source: http://download.macromedia.com/pub/edgetools/animate/3/currentversion.js?t=962 (24)
+[1205/233619:ERROR:gles2_cmd_decoder.cc(5484)] .SharedGraphicsContext: GL ERROR :GL_INVALID_VALUE : glTexParameteri: unknown texture
+[1205/233622:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/233622:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/233622:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/234213:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/234213:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/234213:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/234626:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/234626:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/234626:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235420:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235420:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235420:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235424:INFO:CONSOLE(0)] "ReferenceError: AdobeEdge is not defined
+    at about:blank:0:10", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(1)] "ReferenceError: EdgeDOM is not defined
+    at eval (eval at <anonymous> (about:blank:0:45), <anonymous>:1:7)
+    at about:blank:0:45", source:  (1)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'resetRecentFiles'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'resetRecentFiles'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235424:INFO:CONSOLE(0)] "Uncaught TypeError: Object [object global] has no method 'addRecentFile'", source: about:blank (0)
+[1205/235426:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235426:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235426:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235431:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235431:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235431:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235441:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235441:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235441:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235457:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235457:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235457:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235502:INFO:CONSOLE(24)] "Uncaught TypeError: Object #<Object> has no method 'callbackTunnelAsync'", source: http://download.macromedia.com/pub/edgetools/animate/3/currentversion.js?t=30 (24)
+[1205/235503:ERROR:gles2_cmd_decoder.cc(5484)] .SharedGraphicsContext: GL ERROR :GL_INVALID_VALUE : glTexParameteri: unknown texture
+[1205/235507:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235507:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[1205/235507:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
