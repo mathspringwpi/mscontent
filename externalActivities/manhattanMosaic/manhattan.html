@@ -1,0 +1,986 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+<script src="js/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" href="css/mosaic.css" />
+<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|Acme|Asul' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre|Overlock|Cabin+Sketch|Josefin+Sans|Port+Lligat+Sans|Comfortaa|Signika|Love+Ya+Like+A+Sister|Delius' rel='stylesheet' type='text/css'>
+
+<script language="javascript" type="text/javascript" src="js/manhattan.js"> </script>
+ <script type="text/javascript" src="js/jquery.pietimer.js"></script>   
+  </head>
+  <body>
+
+<div id="inner">
+<div id="heading">
+<div id="pie_timer_div"><span id="pie_timer" ></span><span class="paddingbottom">5 minutes</span></div>
+<subheader>Area and Perimeter</subheader>
+<div id="pointsMisses">Points: <span id="point_count">0</span> &nbsp;&nbsp;&nbsp; Misses: <span id="misses_count">0</span></div>
+ </div>
+
+<canvas id="manhattan_canvas" width="1050" height="520" style=" position:absolute">
+ </canvas>
+<div id="intro_div">You need to solve area and perimeter problems to fill this Manhattan Mosaic.<br/>
+<input type="submit" class="submit_button" id="start_button" value="Let's Start"></intro>
+ </div>
+
+<div id="instruction_div" ><span class="instruction_text"></span></div>
+<div id="base_div" >
+<span class="length_span"></span>
+<span class="height_span"></span>
+
+<div id="active_window" > </div>
+<form >
+  <div id="form_div" >
+<span id="areaperimeter_span">Area:</span>
+    <input type="text" id="userAnswerBox" autofocus> <br/>
+
+<input type="submit" class="submit_button" value="Submit">
+<div id="pointsFadeOutUp">+10</div>
+    
+<br/>
+<span class="feedback_span"></span>
+
+</form>
+
+
+
+</div>
+
+
+
+</div> 
+
+<script>
+
+
+$('#pie_timer').pietimer('start');
+
+
+var length_array = [2,2,2,2,4,4,4,4,3,3,3,3];
+var height_array = [1,2,3,4,1,2,3,4,1,2,3,4];
+
+var perimeter_length_array = [1,2,1,2,3,3,3,4,3,3,3,3];
+var perimeter_height_array = [1,2,2,1,1,2,3,4,1,2,3,4];
+
+var new_length_array = [3,3,3,5,5,5,1,1,1];
+var new_height_array = [1,2,3,2,3,4,1,2,3];
+
+var new_perimeter_length_array = [1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+var new_perimeter_height_array = [1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+
+//points and misses
+
+var point_count=0;
+var misses_count=0;
+var lastWrongInput="";
+//mode parameters
+
+var painting_series =["paintWalls","paintWindows","buildNewWalls","buildNewWindows"];
+painting_round=painting_series[0];
+
+
+//building parameters: x_distance, width, height
+
+var building_base_arr = [[20,90,300], [25,100,200], [70,90,300], [25,130,200],[20,90,400], [90,100,330], [10,90,300],[10,80,100]];
+var building_wall_color=["#65caf0","#94dbb4","#65caf0","#65caf0"];
+
+var new_building_array = [[50,100,200], [435,150,250], [500,200,350]];
+var new_building_wall_color=["#8c93d4","#f9e041","#65caf0","#65caf0"];
+
+//wall paramters: height,width
+
+var wall_array = [[60,70,80,90],[50,70,80]];
+
+//house[width]
+var new_wall_array = [[40,60,100],[50,100,100]];
+
+//window paramters: x,y,width,height
+
+var window_array = [[[0,0,70,50],[0,0,70,50],[0,0,70,50],[0,0,70,50]],[[0,0,80,50],[0,0,80,50],[0,0,80,50]]];
+
+var window_color_array = [['#d7c3ed', '#d7c3ed'],['#c2fee5']];
+var window_borderColor_array = [['#cee7f9', '#cee7f9','#cee7f9','#cee7f9'],['#e8cc45','#e8cc45','#e8cc45']];
+
+var new_window_array = [[[0,0,80,50],[0,0,80,50],[0,0,80,50]],[[0,0,130,50]]];
+
+var new_window_color_array = [['#eff48e', '#eff48e','#eff48e'],['#ffa25e']];
+var new_window_borderColor_array = [['#e6e8ff', '#e6e8ff','#e6e8ff'],['#bee6ff']];
+
+var canvas = document.getElementById('manhattan_canvas');
+var context = canvas.getContext('2d');
+
+
+
+var canvas_h=520;
+var platform_h=40;
+var building_h=450;
+var building_w=0;
+var building_x=0;
+var building_y=0;
+
+var building_count=0;
+var window_h_space=10;
+var window_v_space=10;
+var window_x=0;
+var window_y;
+var wall_x, wall_y, wall_height, wall_width;
+
+////build outline for buildings
+for (j=0; j<building_base_arr.length; j++){
+building_x=building_x+building_w+building_base_arr[j][0];
+building_w=building_base_arr[j][1];
+building_h=building_base_arr[j][2];
+building_y=canvas_h-building_h-platform_h;
+createBaseRect(building_x,building_y,building_w,building_h,"#86b2c4");
+}
+
+var house_count = 0;
+var window_count = 0;
+var wall_count=0;
+var new_building_count=0;
+
+var question_sequence=0;
+var mistakes_count=0;
+var question_base_margin_top=25;
+var question_base_margin_left=5;
+var question_base_margin_bottom=10;
+var question_base_width_margin=180;
+var height_parameter_margin_left=10;
+var form_div_margin_left=15;
+
+
+var question_base_height;
+var question_base_min_height=120;
+var question_base_width;
+var question_base_x;
+var question_base_y;
+var min_question_base_height;
+
+var length_parameter_x;
+var length_parameter_y=0;
+var height_parameter_x;
+var height_parameter_y;
+var form_div_x;
+
+var wallPainting_done=false;
+var windowPainting_done=false;
+
+//set base
+
+
+// generate question
+$( ".length_span" ).html(length_array[question_sequence]);
+$( ".height_span" ).html(height_array[question_sequence]);
+
+//generate points and misses
+
+$("#point_count").html(point_count);
+$("#misses_count").html(misses_count);
+
+//initialize painting walls
+giveIntro();
+
+function startMosaic(){
+
+if (painting_round=="paintWalls") initializePaintingWalls();
+
+$("#base_div").css({ "position": "relative",  "top": question_base_y, "left":question_base_x, "width":question_base_width, "height":question_base_height });
+$("#base_div").fadeIn("medium");
+
+form_div_x= height_parameter_x+form_div_margin_left;
+$( ".length_span" ).css({ "position": "absolute", "left": length_parameter_x, "top": length_parameter_y });
+$( ".height_span" ).css({ "position": "absolute",  "left": height_parameter_x, "top": height_parameter_y });
+$( "#form_div" ).css({ "position": "absolute",  "left": form_div_x, "top": length_parameter_y });
+}
+
+ 
+
+$( "form" ).submit(function( event ) {
+
+
+	if (painting_round=="paintWalls"){
+
+	if ( $( "#userAnswerBox" ).val() == computeArea(length_array[question_sequence],height_array[question_sequence]).toString()) {
+
+		
+		animatePoint(runPaintingWalls);
+		
+	  }
+		else dealWithMisses();
+
+	}
+
+	else if (painting_round=="paintWindows"){
+
+	
+	if ( $( "#userAnswerBox" ).val() == computeperimeter(perimeter_length_array[question_sequence],perimeter_height_array[question_sequence]).toString()) {
+
+		animatePoint(runPaintingWindows);
+		
+	  }
+		else dealWithMisses();
+	}
+
+	else if (painting_round=="buildNewWalls"){
+	
+
+	if ( $( "#userAnswerBox" ).val() == computeArea(new_length_array[question_sequence],new_height_array[question_sequence]).toString()) {
+
+		
+		animatePoint(runPaintingNewWalls);
+
+
+	  }
+		else dealWithMisses();
+
+	}
+
+	else if (painting_round=="buildNewWindows"){
+		if ( $( "#userAnswerBox" ).val() == computeperimeter(new_perimeter_length_array[question_sequence],new_perimeter_height_array[question_sequence]).toString()) {
+		
+		animatePoint(runPaintingNewWindows);
+
+
+	  }
+		else dealWithMisses();
+
+	}
+
+
+
+event.preventDefault();
+});
+
+
+
+function computeArea(length,height)
+{
+return length*height;
+}
+
+function computeperimeter(length,height)
+{
+return 2*(length+height);
+}
+
+function paintWindow(xpos,ypos,width,height,windowcolor,windowbordercolor){
+	
+      context.beginPath();
+	
+      context.rect(xpos,ypos,width,height);
+      context.fillStyle = windowcolor;
+      context.fill();
+      context.lineWidth = 2;
+      context.strokeStyle = windowbordercolor;
+      context.stroke();
+
+}
+
+
+
+
+function paintWalls(xpos,ypos,width,height,wallColor){ 
+      context.beginPath();
+      context.rect(xpos,ypos,width,height);
+      context.fillStyle=wallColor;
+      context.fill();
+     
+}
+
+function createBaseRect(xpos,ypos,width,height,border_color){ 
+      context.beginPath();
+      context.rect(xpos,ypos,width,height);
+      context.fillStyle = "rgba(255, 255, 255, 0.3)";
+      context.fill();
+      context.lineWidth = 2;
+      context.strokeStyle = border_color;
+      context.stroke();
+	context.globalAlpha = 1;
+}
+///////////////////////////----------functions------------
+
+
+function displayNewInformation(){
+$("#base_div").hide();
+
+$( ".instruction_text" ).html("Congratulations!!<br/>You have completed painting walls. <br/>Let's build windows now by solving perimeter problems.<br/><br/>");
+	$("#instruction_div").fadeIn("slow");
+
+	var r= $('<input type="button" id ="OK_button" value="OK">');
+	if ($("#instruction_div").children("#OK_button").length == 0) {
+	$("#instruction_div").append(r);	
+	}
+
+
+	$(function(){
+	    $('#OK_button').on('click',function(){
+	       $("#instruction_div").fadeOut("slow");
+		initializePaintingWindows();
+		
+	    });
+	});
+}
+
+
+
+
+function displayInformationForNewBuildings(){
+$("#base_div").hide();
+$( ".instruction_text" ).html("You have completed painting windows as well.<br/> Your next challenge will be against time. <br/>You will be creating new buildings.<br/><br/>");
+	$("#instruction_div").fadeIn("slow");
+
+		$("#OK_button").unbind();
+	    $( "#OK_button" ).click(function() {
+		
+	       $("#instruction_div").fadeOut("slow");
+		
+		displayTimerInformation();
+		
+	   });
+
+}
+
+function displayTimerInformation(){
+
+$("#instruction_div").css({ "left": 160, "top":70, "width":400, "height":200});
+
+$( ".instruction_text" ).html("You have 5 minutes to build new building. <br/>After the 5 minutes is over, your mosaic will be complete.<br/><br/>");
+	$("#instruction_div").fadeIn("slow");
+	$("#pie_timer_div").show();
+	$("#OK_button").unbind();
+	
+	
+	$( "#OK_button" ).click(function() {
+	       $("#instruction_div").fadeOut("slow");
+		
+		$('#pie_timer').pietimer('start');
+		house_count=0; question_sequence=0; platform_h=10;
+		initializeBuildingNewBuildings();
+		
+	    });
+	
+}
+
+function timeOverInformation(){
+$("#base_div").hide();
+
+$("#instruction_div").css({ "left": 280, "top":80, "width":400, "height":200});
+$("#OK_button").unbind();
+$( ".instruction_text" ).html("Your time is over ! <br/><br/>");
+	$("#instruction_div").fadeIn("slow");
+
+	
+	$( "#OK_button" ).click(function() {
+	       $("#instruction_div").fadeOut("slow");
+		
+	    });
+	
+}
+
+function displayInformationForCompletion(){
+$("#base_div").hide();
+
+$("#instruction_div").css({ "left": 280, "top":80, "width":400, "height":200});
+$("#OK_button").unbind();
+$( ".instruction_text" ).html("You have complete this Mosaic. <br/> Congratulations !!! <br/><br/>");
+	$("#instruction_div").fadeIn("slow");
+
+	
+	$( "#OK_button" ).click(function() {
+	       $("#instruction_div").fadeOut("slow");
+		
+	    });
+	
+}
+
+///initialize building new buildings
+function initializeBuildingNewBuildings(){
+	
+	building_x=new_building_array[house_count][0];
+	building_w=new_building_array [house_count][1];
+	building_h=new_building_array [house_count][2];
+	building_y=canvas_h-building_h-platform_h;
+	createBaseRect(building_x,building_y,building_w,building_h);
+
+	initializePaintingNewWalls();
+	
+	
+
+}
+
+///initialize painting walls
+function initializePaintingWalls(){
+	
+	
+	wall_x=building_base_arr[house_count][0];
+	wall_y=canvas_h-building_base_arr[0][2]-platform_h;
+	wall_width=building_base_arr[house_count][1];
+	wall_height=wall_array[house_count][wall_count];
+
+	question_base_x=wall_x-question_base_margin_left;
+	question_base_y=wall_y-question_base_margin_top;
+
+
+	question_base_height=wall_height+question_base_margin_top+question_base_margin_bottom;
+	if (question_base_height<question_base_min_height) question_base_height=question_base_min_height;
+	question_base_width=wall_width+ question_base_width_margin;
+	
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":wall_width-3, "height":wall_height});
+
+	length_parameter_x=wall_width/2;
+	
+
+	height_parameter_x=wall_width+height_parameter_margin_left;
+	height_parameter_y=wall_height/2+question_base_margin_top/2;
+	
+
+}
+
+///initialize painting new_walls
+function initializePaintingNewWalls(){
+	
+	wall_count=0;
+	$("#userAnswerBox").val("");
+	$("#userAnswerBox").focus();
+	$("#areaperimeter_span").html("Area:");
+
+	wall_x=new_building_array[house_count][0];
+	wall_y=canvas_h-new_building_array[house_count][2]-platform_h;
+	wall_width=new_building_array[house_count][1];
+
+	wall_height=new_wall_array[house_count][wall_count];
+
+	question_base_x=wall_x-question_base_margin_left;
+	question_base_y=wall_y-question_base_margin_top;
+
+
+	question_base_height=wall_height+question_base_margin_top+question_base_margin_bottom;
+	if (question_base_height<question_base_min_height) question_base_height=question_base_min_height;
+	question_base_width=wall_width+ question_base_width_margin;
+
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":wall_width, "height":wall_height});
+
+	length_parameter_x=wall_width/2;
+	
+
+	height_parameter_x=wall_width+height_parameter_margin_left;
+	height_parameter_y=wall_height/2+question_base_margin_top/2;
+
+	$( ".length_span" ).html(new_length_array[question_sequence]);
+	$( ".height_span" ).html(new_height_array[question_sequence]);
+	
+	$("#base_div").css({ "position": "relative",  "top": question_base_y, "left":question_base_x, "width":question_base_width, "height":question_base_height });
+	
+
+	form_div_x= height_parameter_x+form_div_margin_left;
+
+	$( ".length_span" ).css({ "position": "absolute", "left": length_parameter_x, "top": length_parameter_y });
+	$( ".height_span" ).css({ "position": "absolute",  "left": height_parameter_x, "top": height_parameter_y });
+	$( "#form_div" ).css({ "position": "absolute",  "left": form_div_x, "top": length_parameter_y });
+	$("#base_div").fadeIn("medium");
+	$("#userAnswerBox").focus();
+	
+	
+
+}
+
+
+/////*********************run painting walls******************
+function runPaintingWalls(){
+	$("#base_div").hide();
+	$("#areaperimeter_span").html("Area:");
+	
+	
+	paintWalls(wall_x,wall_y,wall_width,wall_height,building_wall_color[house_count]);
+
+	wall_y+=wall_array[house_count][wall_count];
+	
+
+	wall_count++;
+	
+		//check if we reach to the end of house
+		if (wall_count>=wall_array[house_count].length) {
+		//alert(house_count);
+		wall_x+=building_base_arr[house_count][1];
+
+		house_count++;
+
+		//*******check if we finished all houses *******
+		if (house_count>=wall_array.length) {
+		displayNewInformation();
+
+		painting_round="paintWindows";
+		
+		wallPainting_done=true;
+		
+		} 
+
+		else {
+
+		wall_count=0;
+		wall_x+=building_base_arr[house_count][0];
+		wall_y=canvas_h-building_base_arr[house_count][2]-platform_h; }
+		
+		}
+	if (wallPainting_done==false){
+	wall_width=building_base_arr[house_count][1];
+	wall_height=wall_array[house_count][wall_count];
+
+
+	question_base_x=wall_x-question_base_margin_left;
+	question_base_y=wall_y-question_base_margin_top;
+
+
+	question_base_height=wall_height+question_base_margin_top+question_base_margin_bottom;
+	if (question_base_height<question_base_min_height) question_base_height=question_base_min_height;
+	question_base_width=wall_width+ question_base_width_margin;
+	
+
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":wall_width-3, "height":wall_height});
+
+	length_parameter_x=wall_width/2;
+	
+
+	height_parameter_x=wall_width+height_parameter_margin_left;
+	height_parameter_y=wall_height/2+question_base_margin_top/2;
+	question_sequence++;
+	generateQuestion(length_array[question_sequence],height_array[question_sequence]);
+	}
+
+	
+	}
+
+/////*********************run painting NEW walls******************
+function runPaintingNewWalls(){
+	
+	
+	paintWalls(wall_x,wall_y,wall_width,wall_height,new_building_wall_color[house_count]);
+
+	
+	
+	wall_y+=new_wall_array[house_count][wall_count];
+	
+	
+	wall_count++;
+	
+		//check if we reach to the end of house
+		if (wall_count>=new_wall_array[house_count].length) {
+		//alert(house_count);
+		painting_round="buildNewWindows";
+		initializePaintingNewWindows();
+		
+		} else{
+
+	//wall_width=new_building_array[house_count][1];
+	
+	wall_height=new_wall_array[house_count][wall_count];
+
+	
+	question_base_x=wall_x-question_base_margin_left;
+	question_base_y=wall_y-question_base_margin_top;
+
+
+	question_base_height=wall_height+question_base_margin_top+question_base_margin_bottom;
+	if (question_base_height<question_base_min_height) question_base_height=question_base_min_height;
+	question_base_width=wall_width+ question_base_width_margin;
+	
+
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":wall_width, "height":wall_height});
+
+	length_parameter_x=wall_width/2;
+	
+
+	height_parameter_x=wall_width+height_parameter_margin_left;
+	height_parameter_y=wall_height/2+question_base_margin_top/2;
+	
+	question_sequence++;
+	generateQuestion(new_length_array[question_sequence],new_height_array[question_sequence]);
+	
+	}
+	
+	}
+
+//initialize painting windows
+function initializePaintingWindows(){
+	//alert("it is turn for painting windows");
+	house_count=0;wall_count=0;question_sequence=0;
+	$("#userAnswerBox").val("");
+	$("#userAnswerBox").focus();
+	$("#areaperimeter_span").html("perimeter:");
+	window_y=canvas_h-building_base_arr[0][2]-platform_h+window_v_space;
+	window_x=building_base_arr[house_count][0]+window_h_space+window_array[house_count][window_count][0]; 
+	window_y=window_y+window_v_space+window_array[house_count][window_count][1];
+
+	question_base_y=window_y-question_base_margin_top;
+	question_base_x=window_x-question_base_margin_left;
+
+	question_base_height=window_array[house_count][window_count][3]+question_base_margin_top+question_base_margin_bottom;
+	if (question_base_height<question_base_min_height) question_base_height=question_base_min_height;
+	
+	question_base_width=window_array[house_count][window_count][2]+ question_base_width_margin;
+
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":window_array[house_count][window_count][2], "height":window_array[house_count][window_count][3], "background": "#f1ebff", "border":"3px solid #7355cb"});
+
+	length_parameter_x=window_array[house_count][window_count][2]/2;
+	
+
+	height_parameter_x=window_array[house_count][window_count][2]+height_parameter_margin_left;
+	height_parameter_y=window_array[house_count][window_count][3]/2+question_base_margin_top/2;
+	
+	$( ".length_span" ).html(perimeter_length_array[question_sequence]);
+	$( ".height_span" ).html(perimeter_height_array[question_sequence]);
+
+	$("#base_div").css({ "position": "relative",  "top": question_base_y, "left":question_base_x, "width":question_base_width, "height":question_base_height });
+	$("#base_div").fadeIn("medium");
+
+	form_div_x= height_parameter_x+form_div_margin_left;
+
+	$( ".length_span" ).css({ "position": "absolute", "left": length_parameter_x, "top": length_parameter_y });
+	$( ".height_span" ).css({ "position": "absolute",  "left": height_parameter_x, "top": height_parameter_y });
+	$( "#form_div" ).css({ "position": "absolute",  "left": form_div_x, "top": length_parameter_y });
+
+	$("#userAnswerBox").focus();
+	}
+
+//initialize painting New windows
+
+function initializePaintingNewWindows(){
+	windowPainting_done=false;
+	window_count=0; question_sequence=0;
+	$("#userAnswerBox").val("");
+	$("#userAnswerBox").focus();
+	$("#areaperimeter_span").html("perimeter:");
+	
+	window_y=canvas_h-new_building_array[house_count][2]-platform_h+window_v_space;
+	
+	window_x=new_building_array[house_count][0]+window_h_space+new_window_array[house_count][window_count][0]; 
+	window_y=window_y+window_v_space+new_window_array[house_count][window_count][1];
+
+	question_base_y=window_y-question_base_margin_top;
+	question_base_x=window_x-question_base_margin_left;
+
+	question_base_height=window_array[house_count][window_count][3]+question_base_margin_top+question_base_margin_bottom;
+	if (question_base_height<question_base_min_height) question_base_height=question_base_min_height;
+	question_base_width=window_array[house_count][window_count][2]+ question_base_width_margin;
+
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":window_array[house_count][window_count][2], "height":window_array[house_count][window_count][3]});
+
+	length_parameter_x=new_window_array[house_count][window_count][2]/2;
+	
+
+	height_parameter_x=new_window_array[house_count][window_count][2]+height_parameter_margin_left;
+	height_parameter_y=new_window_array[house_count][window_count][3]/2+question_base_margin_top/2;
+	
+	$( ".length_span" ).html(new_perimeter_length_array[question_sequence]);
+	$( ".height_span" ).html(new_perimeter_height_array[question_sequence]);
+
+	$("#base_div").css({ "position": "relative",  "top": question_base_y, "left":question_base_x, "width":question_base_width, "height":question_base_height });
+	$("#base_div").fadeIn("medium");
+
+	form_div_x= height_parameter_x+form_div_margin_left;
+
+	$( ".length_span" ).css({ "position": "absolute", "left": length_parameter_x, "top": length_parameter_y });
+	$( ".height_span" ).css({ "position": "absolute",  "left": height_parameter_x, "top": height_parameter_y });
+	$( "#form_div" ).css({ "position": "absolute",  "left": form_div_x, "top": length_parameter_y });
+
+	$("#userAnswerBox").focus();
+	
+	
+	}
+
+////run painting windows
+	function runPaintingWindows(){
+
+	paintWindow(window_x,window_y,window_array[house_count][window_count][2],window_array[house_count][window_count][3],window_color_array[house_count][window_count], window_borderColor_array[house_count][window_count]);
+	window_y+=window_array[house_count][window_count][3]+window_v_space+window_array[house_count][window_count][1];
+	window_count++;
+	
+
+	//check if we reach to the last window of the house
+	if (window_count>=window_array[house_count].length) {
+
+	window_x+=building_base_arr[house_count][1]; 
+
+	house_count++;
+
+
+	//*******check if we finished all houses *******
+		if (house_count>=wall_array.length) {
+		displayInformationForNewBuildings();
+
+		painting_round="buildNewWalls";
+		
+		windowPainting_done=true;
+		
+		} 
+
+		else {
+
+	window_count=0;
+	window_x+=building_base_arr[house_count][0]+window_array[house_count][window_count][0];
+	window_y=canvas_h-building_base_arr[house_count][2]-platform_h+window_v_space; }
+		
+
+	 }
+		
+	if (windowPainting_done==false){
+	question_base_y=window_y-question_base_margin_top;
+	question_base_x=window_x-5;
+	
+	question_base_height=window_array[house_count][window_count][3]+question_base_margin_top+question_base_margin_bottom;
+	if (question_base_height<question_base_min_height) question_base_height=question_base_min_height;
+
+	question_base_width=window_array[house_count][window_count][2]+ question_base_width_margin;
+
+	min_question_base_height= window_array[house_count][window_count][3] +question_base_margin_top+question_base_margin_bottom;
+	
+	
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":window_array[house_count][window_count][2], "height":window_array[house_count][window_count][3]});
+
+
+	length_parameter_x=window_array[house_count][window_count][2]/2;
+	
+
+	height_parameter_x=window_array[house_count][window_count][2]+height_parameter_margin_left;
+	height_parameter_y=window_array[house_count][window_count][3]/2+question_base_margin_top/2;
+
+	question_sequence++;
+	generateQuestion(perimeter_length_array[question_sequence],perimeter_height_array[question_sequence]);
+	}
+
+	}
+
+
+////run painting new windows
+
+function runPaintingNewWindows(){
+	
+	
+	paintWindow(window_x,window_y,new_window_array[house_count][window_count][2],new_window_array[house_count][window_count][3],new_window_color_array[house_count][window_count], new_window_borderColor_array[house_count][window_count]);
+
+	
+	window_y+=new_window_array[house_count][window_count][3]+window_v_space+new_window_array[house_count][window_count][1];
+	window_count++;
+	
+	//check if we reach to the last window of the house
+	if (window_count>=new_window_array[house_count].length) {
+	
+	window_x+=new_building_array[house_count][1]; 
+
+	house_count++;
+	
+
+	//*******check if we finished all houses *******
+		if (house_count>=new_wall_array.length) {
+		displayInformationForCompletion();
+
+		windowPainting_done=true;
+		
+		} 
+
+		else {
+	
+	question_sequence++;
+	painting_round="buildNewWalls";
+	initializeBuildingNewBuildings();
+	}
+		
+
+	 }
+	
+		
+	else {
+	
+	question_base_y=window_y-question_base_margin_top;
+	question_base_x=window_x-5;
+	
+	question_base_height=new_window_array[house_count][window_count][3]+question_base_margin_top+question_base_margin_bottom;
+	if (question_base_height<question_base_min_height) question_base_height=question_base_min_height;
+	question_base_width=new_window_array[house_count][window_count][2]+ question_base_width_margin;
+	
+	min_question_base_height= new_window_array[house_count][window_count][3] +question_base_margin_top+question_base_margin_bottom;
+	
+	
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":new_window_array[house_count][window_count][2], "height":new_window_array[house_count][window_count][3]});
+	
+	
+
+	length_parameter_x=new_window_array[house_count][window_count][2]/2;
+	
+	
+	height_parameter_x=new_window_array[house_count][window_count][2]+height_parameter_margin_left;
+	
+	height_parameter_y=new_window_array[house_count][window_count][3]/2+question_base_margin_top/2;
+	
+	question_sequence++;
+	generateQuestion(new_perimeter_length_array[question_sequence],new_perimeter_height_array[question_sequence]);
+	}
+
+	}
+
+/////**********generate new question****************
+	function generateQuestion(length_holder,height_holder){
+	
+	//alert(question_sequence);
+	$( ".length_span" ).html(length_holder);
+	$( ".height_span" ).html(height_holder);
+
+	$("#base_div").css({ "position": "relative",  "top": question_base_y, "left":question_base_x, "width":question_base_width, "height":question_base_height });
+	
+	
+	form_div_x= height_parameter_x+form_div_margin_left;
+
+	$( ".length_span" ).css({  "left": length_parameter_x, "top": length_parameter_y });
+	$( ".height_span" ).css({   "left": height_parameter_x, "top": height_parameter_y });
+
+	$( "#form_div" ).css({ "position": "absolute",  "left": form_div_x, "top": length_parameter_y });
+	$("#base_div").fadeIn("slow");
+	
+    	$("#userAnswerBox").val("");
+	$("#userAnswerBox").focus();
+}
+
+$(function(){
+	
+		$('.boom').hide();
+	
+		$('#pie_timer').pietimer({
+			seconds: 300,
+			color: 'rgba(0, 155, 223, 0.5)',
+			height: 58,
+			width: 58,
+			is_reversed: true
+		},
+		function(){
+			timeOverInformation();
+		});
+		
+		$('a#start').click(function(){
+			$('.boom').hide();
+			$('#pie_timer').pietimer('start');
+			return false;
+		});
+		
+		
+	});
+
+function animatePoint(func){
+
+
+$( "#pointsFadeOutUp" ).animate({opacity: .5 }, 100 )
+.animate({opacity: .6,"top": "-=70px" }, 200 )
+.animate({opacity: 0,"top": "-=40px" }, 100 )
+ .animate({
+     
+	"top": "+=110px"
+    
+  }, 10, function() {
+    	point_count+=10;
+	$("#point_count").html(point_count);
+	func();
+  });
+
+}
+
+function dealWithMisses(){
+  
+			$("#base_div").shake();
+			if ($( "#userAnswerBox" ).val() !=lastWrongInput && $( "#userAnswerBox" ).val()!=""){
+			misses_count++;
+			$("#misses_count").html(misses_count);
+			lastWrongInput=$( "#userAnswerBox" ).val();}
+
+		if (misses_count>=5) {
+		
+
+	var r= $('<input type="button" id ="OK_button" value="OK">');
+	if ($("#instruction_div").children("#OK_button").length == 0) {
+	$("#instruction_div").append(r);	
+	}
+
+		$( ".instruction_text" ).html("You have made five mistakes. <br/> Now, you need to go back to the tutor to work on the problems.<br/>You can come back to Mosaic after you have worked on the tutor.<br/><br/>");
+	$("#instruction_div").fadeIn("slow");
+
+		$("#OK_button").unbind();
+	    $( "#OK_button" ).click(function() {
+		
+	       $("#instruction_div").fadeOut("slow");
+		
+		
+		
+	   });}
+		
+}
+
+(function ($) {
+    $.fn.shake = function (options) {
+	
+        // defaults
+        var settings = {
+            'shakes': 2,
+            'distance': 10,
+            'duration': 400
+        };
+        // merge options
+        if (options) {
+            $.extend(settings, options);
+        }
+        // make it so
+        var pos, leftpos, leftshake, rightshake;
+
+        return this.each(function () {
+            $this = $(this);
+            // position if necessary
+            pos = $this.css('position');
+		leftpos=$this.position().left;
+
+		
+		leftshake=leftpos+settings.distance * -1;
+		rightshake=leftpos+settings.distance;
+		
+		
+		
+            if (!pos || pos === 'static') {
+                $this.css('position', 'relative');
+            }
+            // shake it
+            for (var x = 1; x <= settings.shakes; x++) {
+		
+                $this.animate({ left: leftshake }, (settings.duration / settings.shakes) / 4)
+                    .animate({ left: rightshake}, (settings.duration / settings.shakes) / 2)
+                    .animate({ left: leftpos  }, (settings.duration / settings.shakes) / 4);
+            }
+        });
+    };
+}(jQuery));
+
+function giveIntro(){
+
+var img = new Image();
+img.onload = function () {
+    context.drawImage(img, 240, canvas_h-img.height-platform_h);
+}
+img.src = "img/chryslar.png";
+
+var img2 = new Image();
+img2.onload = function () {
+    context.drawImage(img2, 650, canvas_h-img2.height-platform_h);
+}
+img2.src = "img/empire.png";
+
+
+	$(function(){
+	    $('#start_button').on('click',function(){
+	      $("#intro_div").fadeOut("medium");
+		startMosaic();
+	    });
+	});
+
+
+}
+
+</script>
+  </body>
+</html>      
