@@ -1,0 +1,55 @@
+[0914/203514:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/203514:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/203514:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/203520:ERROR:gles2_cmd_decoder.cc(5484)] .SharedGraphicsContext: GL ERROR :GL_INVALID_VALUE : glTexParameteri: unknown texture
+[0914/203524:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/203524:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/203524:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/203915:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/203915:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/203915:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/204430:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/204430:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/204430:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205352:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205352:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205352:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205402:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205402:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205402:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205546:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205546:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205546:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205827:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205827:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/205827:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211041:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211041:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211041:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211047:ERROR:gles2_cmd_decoder.cc(5484)] .SharedGraphicsContext: GL ERROR :GL_INVALID_VALUE : glTexParameteri: unknown texture
+[0914/211052:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211052:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211052:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211248:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211248:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211248:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211250:FATAL:url_request_context.cc(121)] Check failed: false. Leaked 1 URLRequest(s). First URL: http://wpad/wpad.dat.
+[0914/211437:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211437:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211437:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211442:ERROR:gles2_cmd_decoder.cc(5484)] .SharedGraphicsContext: GL ERROR :GL_INVALID_VALUE : glTexParameteri: unknown texture
+[0914/211447:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211447:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211447:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211749:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211749:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/211749:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/212009:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/212009:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/212009:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/213508:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/213508:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/213508:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/213518:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/213518:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2
+[0914/213518:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(267)] Error fetching PAC URL from DHCP: 2

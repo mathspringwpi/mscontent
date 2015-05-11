@@ -25,71 +25,47 @@ var symbols = {
             {
                 id: 'Question_Text',
                 type: 'text',
-                rect: ['15px', '30px','169px','124px','auto', 'auto'],
-                text: "What is the value of the expression below?",
+                rect: ['19px', '30px','298px','44px','auto', 'auto'],
+                text: "Simplify the following expression:<br>7x - ( 11x + 4 )",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Question_Expression',
-                type: 'text',
-                rect: ['34px', '92px','109px','33px','auto', 'auto'],
-                text: "3",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Question_ExpressionCopy',
-                type: 'text',
-                rect: ['48px', '92px','23px','33px','auto', 'auto'],
-                text: "  x ",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Question_ExpressionCopy2',
-                type: 'text',
-                rect: ['61px', '92px','109px','33px','auto', 'auto'],
-                text: "    ( 11 - 2 ) + 5",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, Times New Roman, Times, serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'Answers',
                 type: 'rect',
-                rect: ['25px', '333px','auto','auto','auto', 'auto']
+                rect: ['12px', '105px','auto','auto','auto', 'auto']
             },
             {
                 id: 'AnswerDText',
                 type: 'text',
-                rect: ['72px', '458px','101px','20px','auto', 'auto'],
-                text: "26",
+                rect: ['56px', '225px','101px','20px','auto', 'auto'],
+                text: "4x+4",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerCText',
                 type: 'text',
-                rect: ['72px', '422px','101px','19px','auto', 'auto'],
-                text: "32",
+                rect: ['56px', '189px','101px','19px','auto', 'auto'],
+                text: "4x-4",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerBText',
                 type: 'text',
-                rect: ['72px', '390px','112px','19px','auto', 'auto'],
-                text: "36",
+                rect: ['56px', '157px','112px','19px','auto', 'auto'],
+                text: "-4x+4",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerAText',
                 type: 'text',
-                rect: ['72px', '355px','109px','19px','auto', 'auto'],
-                text: "42",
+                rect: ['56px', '122px','109px','19px','auto', 'auto'],
+                text: "-4x - 4",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'QuestionSound_Container',
@@ -108,171 +84,208 @@ var symbols = {
                 stroke: [1,"rgb(4, 4, 4)","solid"]
             },
             {
-                id: 'TutorialText',
-                display: 'none',
-                type: 'text',
-                rect: ['260px', '49px','237px','187px','auto', 'auto'],
-                text: "Let's pretend your hint starts here at 0:10. It does not really matter where the hints start and end, as long as they don't overlap. Don't worry that the X and Checks are showing up either - it's just because I set their timeline to 5 seconds in the symbol. They won't appear in the final animation.<br><br>This rectangle is a space for you to draw your animation. An example will follow in hint 2.",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
                 id: 'AnswerEText',
                 type: 'text',
-                rect: ['72px', '494px','101px','20px','auto', 'auto'],
-                text: "12",
+                rect: ['56px', '263px','101px','20px','auto', 'auto'],
+                text: "18x-4",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
-                id: 'Order_of_Operations',
-                type: 'group',
-                rect: ['211', '58','33','86','auto', 'auto'],
-                c: [
-                {
-                    id: 'arrow',
-                    type: 'image',
-                    rect: ['-168px', '-46px','600px','456px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"arrow.png",'0px','0px']
-                },
-                {
-                    id: 'Parentheses',
-                    type: 'text',
-                    rect: ['51px', '3px','120px','19px','auto', 'auto'],
-                    text: "Parentheses",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(3,90,143,1.00)", "400", "none", "normal"]
-                },
-                {
-                    id: 'Addition_or_subtraction',
-                    type: 'text',
-                    rect: ['101px', '122px','197px','19px','auto', 'auto'],
-                    text: "Addition OR Subtraction",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(3,90,143,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: 'order_of_operations',
-                    type: 'text',
-                    rect: ['27px', '-27px','156px','20px','auto', 'auto'],
-                    text: "Order of Operations",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,0,0,1)", "700", "none", "normal"]
-                },
-                {
-                    id: 'Multiplication_or_division',
-                    type: 'text',
-                    rect: ['51px', '47px','197px','19px','auto', 'auto'],
-                    text: "Multiplication OR Division",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(3,90,143,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: 'Exponents',
-                    type: 'text',
-                    rect: ['51px', '25px','120px','19px','auto', 'auto'],
-                    text: "Exponents",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(3,90,143,1)", "normal", "none", "normal"]
-                }]
-            },
-            {
-                id: 'Hint_2_text_1',
-                type: 'group',
-                rect: ['250', '207px','109','19','auto', 'auto'],
-                c: [
-                {
-                    id: '_11_minus_2_red',
-                    type: 'text',
-                    rect: ['-5px', '0px','109px','19px','auto', 'auto'],
-                    text: " ( 11 - 2 )",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(236,2,2,1.00)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_plus_5_equals',
-                    type: 'text',
-                    rect: ['60px', '1px','101px','20px','auto', 'auto'],
-                    text: "+ 5 =",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_3_x_blue',
-                    type: 'text',
-                    rect: ['-31px', '0px','86px','20px','auto', 'auto'],
-                    text: "3 x ",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                }]
-            },
-            {
-                id: 'Hint_3_text_2',
-                type: 'group',
-                rect: ['268px', '244px','71','19','auto', 'auto'],
-                c: [
-                {
-                    id: 'plus_5_equals_copy',
-                    type: 'text',
-                    rect: ['-6px', '0px','71px','19px','auto', 'auto'],
-                    text: "+ 5 =",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_9_red',
-                    type: 'text',
-                    rect: ['-22px', '0px','33px','20px','auto', 'auto'],
-                    text: "9",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(236,2,2,1.00)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_3_x_copy',
-                    type: 'text',
-                    rect: ['-48px', '0px','47px','19px','auto', 'auto'],
-                    text: "3 x",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                }]
-            },
-            {
-                id: 'Hint_4_text_2',
-                type: 'group',
-                rect: ['249px', '283px','71','33','auto', 'auto'],
-                c: [
-                {
-                    id: '_plus_5_blue',
-                    type: 'text',
-                    rect: ['0px', '-3px','71px','33px','auto', 'auto'],
-                    text: "+ 5 =",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_27_red',
-                    type: 'text',
-                    rect: ['-27px', '-3px','25px','19px','auto', 'auto'],
-                    text: "27",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(236,2,2,1.00)", "normal", "none", "normal"]
-                }]
-            },
-            {
-                id: 'Answer_hint_32',
+                id: 'Text',
+                display: 'none',
                 type: 'text',
-                rect: ['297px', '280px','71px','33px','auto', 'auto'],
-                text: "32",
+                rect: ['203px', '70px','137px','20px','auto', 'auto'],
+                text: "Order of operations:",
                 align: "left",
-                font: ['Arial, Helvetica, sans-serif', 16, "rgba(236,2,2,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
             },
             {
-                id: 'Choose_C',
+                id: 'Text2',
+                display: 'none',
                 type: 'text',
-                rect: ['303px', '331px','137px','20px','auto', 'auto'],
-                text: "Choose (C)",
+                rect: ['347px', '70px','182px','19px','auto', 'auto'],
+                text: "Parentheses<br>Exponents<br>Multiplication and Division<br>Addition and Subtraction",
                 align: "left",
-                font: ['Arial, Helvetica, sans-serif', 16, "rgba(1,140,1,1.00)", "700", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text2Copy4',
+                display: 'none',
+                type: 'text',
+                rect: ['347px', '70px','182px','19px','auto', 'auto'],
+                text: "Addition and Subtraction",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text2Copy3',
+                display: 'none',
+                type: 'text',
+                rect: ['347px', '70px','182px','19px','auto', 'auto'],
+                text: "Multiplication",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text2Copy2',
+                display: 'none',
+                type: 'text',
+                rect: ['347px', '70px','182px','19px','auto', 'auto'],
+                text: "Exponents",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text2Copy',
+                display: 'none',
+                type: 'text',
+                rect: ['347px', '70px','182px','19px','auto', 'auto'],
+                text: "Parentheses",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text14',
+                display: 'none',
+                type: 'text',
+                rect: ['465px', '103px','88px','20px','auto', 'auto'],
+                text: "Division",
+                align: "left",
+                font: ['Times New Roman, Times, serif', 14, "rgba(182,8,27,1.00)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text3',
+                display: 'none',
+                type: 'text',
+                rect: ['201px', '199px','116px','19px','auto', 'auto'],
+                text: "7x - (11x+4) =",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text3Copy',
+                display: 'none',
+                type: 'text',
+                rect: ['315px', '199px','137px','19px','auto', 'auto'],
+                text: "7x - 1 (11x+4) =",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text3Copy3',
+                display: 'none',
+                type: 'text',
+                rect: ['315px', '199px','137px','19px','auto', 'auto'],
+                text: "- 1",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text3Copy2',
+                display: 'none',
+                type: 'text',
+                rect: ['441px', '199px','137px','19px','auto', 'auto'],
+                text: "7x + -1 (11x+4) =",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text4',
+                display: 'none',
+                type: 'text',
+                rect: ['201px', '235px','101px','20px','auto', 'auto'],
+                text: "7x - 11x - 4 =",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text4Copy',
+                display: 'none',
+                type: 'text',
+                rect: ['201px', '235px','101px','20px','auto', 'auto'],
+                text: "7x - 11x - 4 =",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Rectangle',
+                display: 'none',
+                type: 'rect',
+                rect: ['490px', '188px','24px','3px','auto', 'auto'],
+                fill: ["rgba(0,0,0,1.00)"],
+                stroke: [0,"rgb(0, 0, 0)","none"],
+                transform: [[],['-53']]
+            },
+            {
+                id: 'RectangleCopy2',
+                display: 'none',
+                type: 'rect',
+                rect: ['505px', '188px','24px','3px','auto', 'auto'],
+                fill: ["rgba(0,0,0,1.00)"],
+                stroke: [0,"rgb(0, 0, 0)","none"],
+                transform: [[],['53']]
+            },
+            {
+                id: 'RectangleCopy',
+                display: 'none',
+                type: 'rect',
+                rect: ['474px', '172px','56px','3px','auto', 'auto'],
+                fill: ["rgba(0,0,0,1.00)"],
+                stroke: [0,"rgb(0, 0, 0)","none"],
+                transform: [[],['-60']]
+            },
+            {
+                id: 'RectangleCopy3',
+                display: 'none',
+                type: 'rect',
+                rect: ['504px', '172px','56px','3px','auto', 'auto'],
+                fill: ["rgba(0,0,0,1.00)"],
+                stroke: [0,"rgb(0, 0, 0)","none"],
+                transform: [[],['60']]
+            },
+            {
+                id: 'Text5',
+                display: 'none',
+                type: 'text',
+                rect: ['310px', '235px','112px','19px','auto', 'auto'],
+                text: "-4x - 4",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text7',
+                display: 'none',
+                type: 'text',
+                rect: ['201px', '273px','336px','30px','auto', 'auto'],
+                text: "Now let's combine like terms to get the final answer.",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text7Copy',
+                display: 'none',
+                type: 'text',
+                rect: ['201px', '273px','336px','30px','auto', 'auto'],
+                text: "like terms",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text8',
+                display: 'none',
+                type: 'text',
+                rect: ['204px', '316px','182px','30px','auto', 'auto'],
+                text: "Choose (A)",
+                align: "left",
+                font: ['Arial, Helvetica, sans-serif', 18, "rgba(255,0,0,1.00)", "400", "none", "normal"]
+            },
+            {
+                id: 'hint3',
+                type: 'audio',
+                tag: 'audio',
+                rect: ['0', '0','320px','45px','auto', 'auto'],
+                source: ['media/hint3.ogg','media/hint3.mp3']
             },
             {
                 id: 'question',
@@ -282,81 +295,75 @@ var symbols = {
                 source: ['media/question.mp3','media/question.ogg']
             },
             {
-                id: 'hint1a',
+                id: 'hint1',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint1a.mp3','media/hint1a.ogg']
+                source: ['media/hint1.ogg','media/hint1.mp3']
             },
             {
-                id: 'hint1b',
+                id: 'answer',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint1b.mp3','media/hint1b.ogg']
+                source: ['media/answer.mp3','media/answer.ogg']
+            },
+            {
+                id: 'Text6',
+                display: 'none',
+                type: 'text',
+                rect: ['204px', '157px','248px','20px','auto', 'auto'],
+                text: "We need to multiply 11x and 4 by -1",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
             },
             {
                 id: 'hint2',
                 type: 'audio',
                 tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
+                rect: ['0px', '0px','320px','45px','auto', 'auto'],
                 source: ['media/hint2.mp3','media/hint2.ogg']
             },
             {
-                id: 'hint3a',
+                id: 'hint4',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint3a.mp3','media/hint3a.ogg']
+                source: ['media/hint4.ogg','media/hint4.mp3']
             },
             {
-                id: 'hint3b',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint3b.ogg','media/hint3b.mp3']
+                id: 'Text12',
+                display: 'none',
+                type: 'text',
+                rect: ['332px', '159px','112px','29px','auto', 'auto'],
+                text: "11x and 4",
+                align: "left",
+                font: ['Times New Roman, Times, serif', 14, "rgba(209,4,35,1.00)", "400", "none", "normal"]
             },
             {
-                id: 'hint3c',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint3c.ogg','media/hint3c.mp3']
+                id: 'Text13',
+                display: 'none',
+                type: 'text',
+                rect: ['410px', '158px','34px','20px','auto', 'auto'],
+                text: "-1",
+                align: "left",
+                font: ['\'Times New Roman\', Times, serif', 14, "rgba(214,2,34,1.00)", "400", "none", "normal"]
             },
             {
-                id: 'hint4a',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint4a.mp3','media/hint4a.ogg']
+                id: 'Question_TextCopy',
+                type: 'text',
+                rect: ['39px', '49px','298px','44px','auto', 'auto'],
+                text: " - (",
+                align: "left",
+                font: ['Georgia, Times New Roman, Times, serif', 16, "rgba(251,0,19,1.00)", "normal", "none", "normal"]
             },
             {
-                id: 'hint4b',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint4b.ogg','media/hint4b.mp3']
-            },
-            {
-                id: 'hint4c',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint4c.ogg','media/hint4c.mp3']
-            },
-            {
-                id: 'answer1',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/answer1.mp3','media/answer1.ogg']
-            },
-            {
-                id: 'answer2',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/answer2.ogg','media/answer2.mp3']
+                id: 'Question_TextCopy2',
+                type: 'text',
+                rect: ['112px', '49px','298px','44px','auto', 'auto'],
+                text: ")",
+                align: "left",
+                font: ['Georgia, Times New Roman, Times, serif', 16, "rgba(251,0,19,1.00)", "normal", "none", "normal"]
             }],
             symbolInstances: [
             {
@@ -370,18 +377,34 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_Answer_hint_32}": [
-                ["style", "top", '280px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '297px'],
-                ["color", "color", 'rgba(236,2,2,1)']
+            "${_Text2Copy}": [
+                ["style", "top", '70px'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "display", 'none'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
             ],
-            "${_Choose_C}": [
-                ["style", "top", '331px'],
-                ["color", "color", 'rgba(1,140,1,1.00)'],
-                ["style", "font-weight", '700'],
-                ["style", "left", '303px'],
-                ["style", "opacity", '0']
+            "${_Text14Copy}": [
+                ["style", "top", '101px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(218,10,33,1.00)'],
+                ["style", "font-family", 'Times New Roman, Times, serif'],
+                ["style", "left", '462px'],
+                ["style", "font-size", '16px']
+            ],
+            "${_Text2}": [
+                ["style", "top", '70px'],
+                ["style", "display", 'none'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
+            ],
+            "${_Text3Copy3}": [
+                ["style", "top", '199px'],
+                ["style", "font-size", '18px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "left", '337px'],
+                ["style", "width", '24px']
             ],
             "${_QuestionSound_Container}": [
                 ["style", "height", '8px'],
@@ -389,141 +412,253 @@ var symbols = {
                 ["color", "background-color", 'rgba(248,250,248,0.00)'],
                 ["style", "width", '17px']
             ],
-            "${__3_x_blue}": [
-                ["style", "left", '-31px'],
-                ["style", "top", '0px']
-            ],
-            "${_plus_5_equals_copy}": [
-                ["style", "left", '-6px'],
-                ["style", "top", '0px']
-            ],
-            "${_AnswerDText}": [
-                ["style", "top", '458px'],
-                ["style", "font-size", '14px'],
+            "${_Text9Copy}": [
+                ["style", "top", '69px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(182,7,41,1.00)'],
                 ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
+                ["style", "left", '348px'],
+                ["style", "font-size", '16px']
+            ],
+            "${_Text7Copy}": [
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "display", 'none'],
+                ["style", "left", '317px'],
+                ["style", "width", '67px']
+            ],
+            "${_Text4Copy}": [
+                ["style", "display", 'none'],
+                ["style", "top", '235px'],
+                ["style", "left", '201px'],
                 ["style", "width", '101px']
             ],
-            "${_Addition_or_subtraction}": [
-                ["style", "top", '70px'],
-                ["style", "left", '50px'],
-                ["color", "color", 'rgba(3,90,143,1)']
+            "${_AnswerDText}": [
+                ["style", "top", '225px'],
+                ["style", "font-size", '14px'],
+                ["style", "left", '56px'],
+                ["style", "width", '101px']
             ],
             "${_Question_Text}": [
                 ["style", "top", '30px'],
                 ["style", "font-size", '16px'],
-                ["style", "height", '124px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '15px'],
-                ["style", "width", '169px']
+                ["style", "height", '44px'],
+                ["style", "font-family", 'Georgia, \'Times New Roman\', Times, serif'],
+                ["style", "left", '19px'],
+                ["style", "width", '298px']
             ],
-            "${_order_of_operations}": [
-                ["style", "top", '-27px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "height", '20px'],
-                ["style", "font-weight", '700'],
-                ["style", "left", '27px'],
-                ["color", "color", 'rgba(0,0,0,1)']
+            "${_Text3Copy6}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "font-size", '18px'],
+                ["style", "left", '315px'],
+                ["style", "width", '137px']
             ],
-            "${_Exponents}": [
-                ["style", "top", '25px'],
-                ["style", "left", '51px'],
-                ["color", "color", 'rgba(3,90,143,1)']
+            "${_Text3Copy7}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "width", '116px'],
+                ["style", "left", '201px'],
+                ["style", "font-size", '18px']
             ],
-            "${_Question_ExpressionCopy2}": [
-                ["style", "top", '92px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '61px']
+            "${_Text3Copy5}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "font-size", '18px'],
+                ["style", "left", '315px'],
+                ["style", "width", '137px']
+            ],
+            "${_Text3Copy8}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "width", '137px'],
+                ["style", "left", '441px'],
+                ["style", "font-size", '18px']
             ],
             "${_AnswerEText}": [
-                ["style", "top", '494px'],
+                ["style", "top", '263px'],
                 ["style", "font-size", '14px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
+                ["style", "left", '56px'],
                 ["style", "width", '101px']
             ],
-            "${_Multiplication_or_division}": [
-                ["color", "color", 'rgba(3,90,143,1)'],
-                ["style", "top", '47px'],
-                ["style", "left", '51px'],
-                ["style", "width", '197px']
+            "${_Text7}": [
+                ["style", "display", 'none'],
+                ["style", "width", '336px']
+            ],
+            "${_Text4}": [
+                ["style", "top", '235px'],
+                ["style", "display", 'none'],
+                ["style", "left", '201px'],
+                ["style", "width", '101px']
             ],
             "${_AnswerBText}": [
-                ["style", "top", '390px'],
+                ["style", "top", '157px'],
                 ["style", "font-size", '14px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
+                ["style", "left", '56px'],
                 ["style", "width", '112px']
             ],
-            "${__9_red}": [
-                ["color", "color", 'rgba(236,2,2,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "left", '-22px'],
-                ["style", "width", '33px']
-            ],
-            "${_AnswerCText}": [
-                ["style", "top", '422px'],
-                ["style", "font-size", '14px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
-                ["style", "width", '101px']
-            ],
-            "${_Hint_3_text_2}": [
-                ["style", "top", '244px'],
+            "${_Question_TextCopy}": [
+                ["style", "top", '49px'],
+                ["style", "width", '24px'],
+                ["color", "color", 'rgba(251,0,19,1.00)'],
                 ["style", "opacity", '0'],
-                ["style", "left", '268px']
+                ["style", "height", '44px'],
+                ["style", "font-family", 'Georgia, \'Times New Roman\', Times, serif'],
+                ["style", "left", '39px'],
+                ["style", "font-size", '16px']
             ],
-            "${_TutorialText}": [
-                ["style", "top", '51px'],
-                ["style", "height", '187px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '260px'],
+            "${_Text5}": [
+                ["style", "top", '235px'],
+                ["style", "left", '310px'],
                 ["style", "display", 'none']
+            ],
+            "${_RectangleCopy}": [
+                ["color", "background-color", 'rgba(0,0,0,1)'],
+                ["style", "display", 'none'],
+                ["transform", "rotateZ", '-60deg'],
+                ["style", "height", '3px'],
+                ["style", "top", '172px'],
+                ["style", "left", '474px'],
+                ["style", "width", '56px']
+            ],
+            "${_Text2Copy2}": [
+                ["style", "top", '86px'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "display", 'none'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
+            ],
+            "${_Text}": [
+                ["style", "top", '70px'],
+                ["style", "display", 'none'],
+                ["style", "left", '203px'],
+                ["style", "width", '137px']
+            ],
+            "${_AnswerAText}": [
+                ["style", "top", '122px'],
+                ["style", "text-align", 'left'],
+                ["style", "height", '19px'],
+                ["style", "font-size", '14px'],
+                ["style", "left", '56px'],
+                ["style", "width", '109px']
+            ],
+            "${_RectangleCopy2}": [
+                ["color", "background-color", 'rgba(0,0,0,1)'],
+                ["style", "display", 'none'],
+                ["transform", "rotateZ", '53deg'],
+                ["style", "height", '3px'],
+                ["style", "top", '188px'],
+                ["style", "left", '505px'],
+                ["style", "width", '24px']
+            ],
+            "${_Answers}": [
+                ["style", "top", '105px'],
+                ["style", "left", '12px']
+            ],
+            "${_Rectangle}": [
+                ["style", "top", '188px'],
+                ["style", "display", 'none'],
+                ["transform", "rotateZ", '-53deg'],
+                ["style", "height", '3px'],
+                ["color", "background-color", 'rgba(0,0,0,1.00)'],
+                ["style", "left", '490px'],
+                ["style", "width", '24px']
             ],
             "${_Sound_Container}": [
                 ["style", "display", 'none'],
                 ["style", "overflow", 'hidden']
             ],
-            "${_Question_Expression}": [
-                ["style", "top", '92px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '34px']
+            "${_Question_TextCopy2}": [
+                ["style", "top", '49px'],
+                ["style", "font-size", '16px'],
+                ["color", "color", 'rgba(251,0,19,1)'],
+                ["style", "opacity", '0'],
+                ["style", "height", '44px'],
+                ["style", "font-family", 'Georgia, \'Times New Roman\', Times, serif'],
+                ["style", "left", '112px'],
+                ["style", "width", '24px']
             ],
-            "${__plus_5_equals}": [
-                ["style", "left", '60px'],
-                ["style", "top", '1px']
+            "${_Text3Copy10}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "width", '116px'],
+                ["style", "left", '201px'],
+                ["style", "font-size", '18px']
             ],
-            "${_Hint_2_text_1}": [
-                ["style", "top", '207px'],
-                ["style", "opacity", '0']
+            "${_Text3Copy4}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "font-size", '18px'],
+                ["style", "left", '315px'],
+                ["style", "width", '137px']
             ],
-            "${_Answers}": [
-                ["style", "top", '333px'],
-                ["style", "left", '25px']
+            "${_Text3Copy9}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "font-size", '18px'],
+                ["style", "left", '315px'],
+                ["style", "width", '137px']
             ],
-            "${__3_x_copy}": [
-                ["color", "color", 'rgba(0,95,255,1)'],
-                ["style", "top", '0px'],
-                ["style", "left", '-48px'],
-                ["style", "width", '47px']
+            "${_Text3Copy2}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "font-size", '18px'],
+                ["style", "left", '441px'],
+                ["style", "width", '137px']
             ],
-            "${__plus_5_blue}": [
-                ["style", "top", '-3px'],
-                ["style", "left", '0px'],
-                ["color", "color", 'rgba(0,95,255,1)']
+            "${_Text3}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "font-size", '18px'],
+                ["style", "left", '201px'],
+                ["style", "width", '116px']
             ],
-            "${_arrow}": [
-                ["style", "top", '30px'],
-                ["transform", "rotateZ", '90deg'],
-                ["style", "height", '33px'],
-                ["style", "left", '-26px'],
-                ["style", "width", '86px']
+            "${_RectangleCopy3}": [
+                ["style", "top", '172px'],
+                ["style", "display", 'none'],
+                ["transform", "rotateZ", '60deg'],
+                ["style", "height", '3px'],
+                ["color", "background-color", 'rgba(0,0,0,1)'],
+                ["style", "left", '504px'],
+                ["style", "width", '56px']
             ],
-            "${_Parentheses}": [
-                ["color", "color", 'rgba(3,90,143,1.00)'],
-                ["style", "font-weight", '400'],
-                ["style", "left", '51px'],
-                ["style", "top", '3px']
+            "${_Text3Copy}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "width", '137px'],
+                ["style", "left", '315px'],
+                ["style", "font-size", '18px']
+            ],
+            "${_Text13}": [
+                ["color", "color", 'rgba(214,2,34,1.00)'],
+                ["style", "display", 'none'],
+                ["style", "left", '410px'],
+                ["style", "top", '158px']
+            ],
+            "${_Text6}": [
+                ["style", "display", 'none'],
+                ["style", "width", '248px']
+            ],
+            "${_Text2Copy3}": [
+                ["style", "top", '102px'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "display", 'none'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
+            ],
+            "${_Text2Copy4}": [
+                ["style", "top", '118px'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "display", 'none'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
+            ],
+            "${_Text12}": [
+                ["style", "top", '159px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(209,4,35,1.00)'],
+                ["style", "font-family", 'Times New Roman, Times, serif'],
+                ["style", "left", '332px'],
+                ["style", "font-size", '14px']
             ],
             "${_Stage}": [
                 ["color", "background-color", 'rgba(255,255,255,0.00)'],
@@ -531,41 +666,27 @@ var symbols = {
                 ["style", "height", '600px'],
                 ["style", "overflow", 'hidden']
             ],
-            "${_Question_ExpressionCopy}": [
-                ["style", "top", '92px'],
-                ["style", "width", '23px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '48px'],
+            "${_Text14}": [
+                ["style", "top", '103px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(182,8,27,1.00)'],
+                ["style", "font-family", 'Times New Roman, Times, serif'],
+                ["style", "left", '465px'],
                 ["style", "font-size", '14px']
             ],
-            "${_Order_of_Operations}": [
-                ["style", "opacity", '0']
-            ],
-            "${__27_red}": [
-                ["style", "top", '-3px'],
-                ["color", "color", 'rgba(236,2,2,1.00)'],
-                ["style", "height", '19px'],
-                ["style", "left", '-27px'],
-                ["style", "width", '25px']
-            ],
-            "${_Hint_4_text_2}": [
-                ["style", "top", '283px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '249px']
-            ],
-            "${_AnswerAText}": [
-                ["style", "top", '355px'],
-                ["style", "text-align", 'left'],
+            "${_AnswerCText}": [
+                ["style", "top", '189px'],
                 ["style", "font-size", '14px'],
-                ["style", "height", '19px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
-                ["style", "width", '109px']
+                ["style", "left", '56px'],
+                ["style", "width", '101px']
             ],
-            "${__11_minus_2_red}": [
-                ["style", "top", '0px'],
-                ["style", "left", '-5px'],
-                ["color", "color", 'rgba(0,95,255,1.00)']
+            "${_Text8}": [
+                ["style", "top", '316px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
+                ["style", "left", '204px'],
+                ["style", "font-size", '18px']
             ]
         }
     },
@@ -573,63 +694,89 @@ var symbols = {
         "Default Timeline": {
             fromState: "Base State",
             toState: "",
-            duration: 102000,
+            duration: 83750,
             autoPlay: true,
             labels: {
                 "Read Question": 2000,
-                "Hint 1": 8000,
-                "Hint 2": 27000,
-                "Hint 3": 37000,
-                "Hint 4": 66000,
-                "Answer Hint": 86000
+                "Hint 1": 11500,
+                "Hint 2": 52250,
+                "Hint 3": 58500,
+                "Hint 4": 65500,
+                "Answer Hint": 77250
             },
             timeline: [
-                { id: "eid204", tween: [ "color", "${_order_of_operations}", "color", 'rgba(0,0,0,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 13000, duration: 0 },
-                { id: "eid237", tween: [ "color", "${__plus_5_blue}", "color", 'rgba(0,95,255,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 79000, duration: 0 },
-                { id: "eid244", tween: [ "color", "${__plus_5_blue}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 86000, duration: 1000 },
-                { id: "eid199", tween: [ "style", "${_arrow}", "top", '30px', { fromValue: '30px'}], position: 13000, duration: 0 },
-                { id: "eid238", tween: [ "color", "${__27_red}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(236,2,2,1.00)'}], position: 79000, duration: 0 },
-                { id: "eid190", tween: [ "style", "${_arrow}", "width", '86px', { fromValue: '86px'}], position: 13000, duration: 0 },
-                { id: "eid91", tween: [ "style", "${_TutorialText}", "display", 'block', { fromValue: 'none'}], position: 28000, duration: 0 },
-                { id: "eid250", tween: [ "color", "${_Choose_C}", "color", 'rgba(1,140,1,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(1,140,1,1.00)'}], position: 101000, duration: 0 },
-                { id: "eid198", tween: [ "style", "${_arrow}", "left", '-26px', { fromValue: '-26px'}], position: 13000, duration: 0 },
-                { id: "eid191", tween: [ "style", "${_arrow}", "height", '33px', { fromValue: '33px'}], position: 13000, duration: 0 },
-                { id: "eid201", tween: [ "style", "${_Addition_or_subtraction}", "top", '70px', { fromValue: '70px'}], position: 13000, duration: 0 },
-                { id: "eid203", tween: [ "color", "${_Multiplication_or_division}", "color", 'rgba(3,90,143,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,90,143,1)'}], position: 13000, duration: 0 },
-                { id: "eid278", tween: [ "color", "${__11_minus_2_red}", "color", 'rgba(0,95,255,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1.00)'}], position: 28000, duration: 0 },
-                { id: "eid281", tween: [ "color", "${__11_minus_2_red}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 42000, duration: 1000 },
-                { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid174", tween: [ "transform", "${_arrow}", "rotateZ", '90deg', { fromValue: '90deg'}], position: 13000, duration: 0 },
-                { id: "eid218", tween: [ "color", "${__9_red}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(236,2,2,1.00)'}], position: 51000, duration: 0 },
-                { id: "eid277", tween: [ "style", "${_Hint_2_text_1}", "opacity", '1', { fromValue: '0.000000'}], position: 27000, duration: 1000 },
-                { id: "eid202", tween: [ "color", "${_Exponents}", "color", 'rgba(3,90,143,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,90,143,1)'}], position: 13000, duration: 0 },
-                { id: "eid205", tween: [ "color", "${_Addition_or_subtraction}", "color", 'rgba(3,90,143,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,90,143,1)'}], position: 13000, duration: 0 },
-                { id: "eid245", tween: [ "color", "${_Answer_hint_32}", "color", 'rgba(236,2,2,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(236,2,2,1)'}], position: 95000, duration: 0 },
+                { id: "eid349", tween: [ "color", "${_Text2Copy}", "color", 'rgba(255,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(255,0,0,1.00)'}], position: 26000, duration: 0 },
+                { id: "eid357", tween: [ "style", "${_Text2Copy3}", "top", '102px', { fromValue: '102px'}], position: 39250, duration: 0 },
+                { id: "eid326", tween: [ "style", "${_Question_TextCopy}", "opacity", '1', { fromValue: '0'}], position: 50000, duration: 1000 },
+                { id: "eid364", tween: [ "color", "${_Text7Copy}", "color", 'rgba(255,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(255,0,0,1.00)'}], position: 73250, duration: 0 },
+                { id: "eid308", tween: [ "style", "${_Text13}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid309", tween: [ "style", "${_Text13}", "display", 'block', { fromValue: 'none'}], position: 57500, duration: 0 },
+                { id: "eid310", tween: [ "style", "${_Text13}", "display", 'none', { fromValue: 'block'}], position: 67000, duration: 0 },
+                { id: "eid353", tween: [ "style", "${_Text2Copy2}", "top", '86px', { fromValue: '86px'}], position: 34000, duration: 0 },
+                { id: "eid327", tween: [ "style", "${_Question_TextCopy2}", "opacity", '1', { fromValue: '0'}], position: 50000, duration: 1000 },
+                { id: "eid361", tween: [ "style", "${_Text2Copy4}", "top", '118px', { fromValue: '118px'}], position: 68000, duration: 0 },
+                { id: "eid366", tween: [ "style", "${_Text7Copy}", "left", '317px', { fromValue: '317px'}], position: 73250, duration: 0 },
+                { id: "eid278", tween: [ "style", "${_Text4}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid279", tween: [ "style", "${_Text4}", "display", 'block', { fromValue: 'none'}], position: 66500, duration: 0 },
+                { id: "eid283", tween: [ "style", "${_Text5}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid285", tween: [ "style", "${_Text5}", "display", 'block', { fromValue: 'none'}], position: 78750, duration: 0 },
+                { id: "eid359", tween: [ "style", "${_Text2Copy4}", "display", 'block', { fromValue: 'none'}], position: 68000, duration: 0 },
+                { id: "eid362", tween: [ "style", "${_Text2Copy4}", "display", 'none', { fromValue: 'block'}], position: 76750, duration: 0 },
+                { id: "eid339", tween: [ "color", "${_Text3Copy3}", "color", 'rgba(255,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(255,0,0,1.00)'}], position: 68250, duration: 0 },
+                { id: "eid335", tween: [ "style", "${_Question_TextCopy2}", "width", '24px', { fromValue: '24px'}], position: 68250, duration: 0 },
+                { id: "eid269", tween: [ "style", "${_RectangleCopy2}", "display", 'none', { fromValue: 'none'}], position: 1500, duration: 0 },
+                { id: "eid274", tween: [ "style", "${_RectangleCopy2}", "display", 'block', { fromValue: 'none'}], position: 60000, duration: 0 },
+                { id: "eid271", tween: [ "style", "${_RectangleCopy}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid276", tween: [ "style", "${_RectangleCopy}", "display", 'block', { fromValue: 'none'}], position: 63000, duration: 0 },
+                { id: "eid241", tween: [ "style", "${_Text2}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid243", tween: [ "style", "${_Text2}", "display", 'block', { fromValue: 'none'}], position: 25000, duration: 0 },
                 { id: "eid29", tween: [ "style", "${_QuestionSound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid241", tween: [ "style", "${_Hint_4_text_2}", "opacity", '1', { fromValue: '0.000000'}], position: 79000, duration: 1000 },
-                { id: "eid206", tween: [ "color", "${_Parentheses}", "color", 'rgba(3,90,143,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,90,143,1.00)'}], position: 13000, duration: 0 },
-                { id: "eid200", tween: [ "style", "${_Addition_or_subtraction}", "left", '50px', { fromValue: '50px'}], position: 13000, duration: 0 },
-                { id: "eid209", tween: [ "style", "${_Order_of_Operations}", "opacity", '1', { fromValue: '0.000000'}], position: 13000, duration: 1000 },
-                { id: "eid270", tween: [ "style", "${_Choose_C}", "opacity", '1', { fromValue: '0.000000'}], position: 101000, duration: 1000 },
-                { id: "eid249", tween: [ "style", "${_Answer_hint_32}", "opacity", '1', { fromValue: '0'}], position: 95000, duration: 1000 },
-                { id: "eid197", tween: [ "style", "${_Multiplication_or_division}", "top", '47px', { fromValue: '47px'}], position: 13000, duration: 0 },
-                { id: "eid229", tween: [ "style", "${_Hint_3_text_2}", "opacity", '1', { fromValue: '0.000000'}], position: 51000, duration: 1000 },
-                { id: "eid289", tween: [ "color", "${__3_x_copy}", "color", 'rgba(0,95,255,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 52000, duration: 0 },
-                { id: "eid292", tween: [ "color", "${__3_x_copy}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 71000, duration: 1000 },
-                { id: "eid53", tween: [ "style", "${_TutorialText}", "opacity", '0', { fromValue: '1'}], position: 20000, duration: 3000 },
-                { id: "eid196", tween: [ "style", "${_Exponents}", "top", '25px', { fromValue: '25px'}], position: 13000, duration: 0 },
-                { id: "eid293", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question}', [] ], ""], position: 2000 },
-                { id: "eid294", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1a}', [] ], ""], position: 8000 },
-                { id: "eid295", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1b}', [] ], ""], position: 15000 },
-                { id: "eid296", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2}', [] ], ""], position: 29000 },
-                { id: "eid297", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3a}', [] ], ""], position: 37000 },
-                { id: "eid298", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3b}', [] ], ""], position: 45000 },
-                { id: "eid299", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3c}', [] ], ""], position: 53000 },
-                { id: "eid300", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4a}', [] ], ""], position: 66000 },
-                { id: "eid301", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4b}', [] ], ""], position: 73000 },
-                { id: "eid302", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4c}', [] ], ""], position: 81000 },
-                { id: "eid303", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answer1}', [] ], ""], position: 87998 },
-                { id: "eid304", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answer2}', [] ], ""], position: 97000 }            ]
+                { id: "eid268", tween: [ "style", "${_Text3Copy2}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid273", tween: [ "style", "${_Text3Copy2}", "display", 'block', { fromValue: 'none'}], position: 58500, duration: 0 },
+                { id: "eid270", tween: [ "style", "${_Rectangle}", "display", 'none', { fromValue: 'none'}], position: 1500, duration: 0 },
+                { id: "eid275", tween: [ "style", "${_Rectangle}", "display", 'block', { fromValue: 'none'}], position: 60000, duration: 0 },
+                { id: "eid245", tween: [ "style", "${_Text6}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid246", tween: [ "style", "${_Text6}", "display", 'block', { fromValue: 'none'}], position: 52250, duration: 0 },
+                { id: "eid282", tween: [ "style", "${_Text8}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid284", tween: [ "style", "${_Text8}", "display", 'block', { fromValue: 'none'}], position: 81500, duration: 0 },
+                { id: "eid355", tween: [ "style", "${_Text2Copy3}", "display", 'block', { fromValue: 'none'}], position: 39250, duration: 0 },
+                { id: "eid358", tween: [ "style", "${_Text2Copy3}", "display", 'none', { fromValue: 'block'}], position: 65500, duration: 0 },
+                { id: "eid249", tween: [ "style", "${_Text3Copy}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid250", tween: [ "style", "${_Text3Copy}", "display", 'block', { fromValue: 'none'}], position: 56500, duration: 0 },
+                { id: "eid351", tween: [ "style", "${_Text2Copy2}", "display", 'block', { fromValue: 'none'}], position: 34000, duration: 0 },
+                { id: "eid354", tween: [ "style", "${_Text2Copy2}", "display", 'none', { fromValue: 'block'}], position: 37000, duration: 0 },
+                { id: "eid305", tween: [ "style", "${_Text12}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid306", tween: [ "style", "${_Text12}", "display", 'block', { fromValue: 'none'}], position: 55000, duration: 0 },
+                { id: "eid307", tween: [ "style", "${_Text12}", "display", 'none', { fromValue: 'block'}], position: 57500, duration: 0 },
+                { id: "eid336", tween: [ "style", "${_Question_TextCopy}", "width", '24px', { fromValue: '24px'}], position: 68250, duration: 0 },
+                { id: "eid352", tween: [ "color", "${_Text2Copy2}", "color", 'rgba(255,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(255,0,0,1.00)'}], position: 34000, duration: 0 },
+                { id: "eid242", tween: [ "style", "${_Text}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid244", tween: [ "style", "${_Text}", "display", 'block', { fromValue: 'none'}], position: 25000, duration: 0 },
+                { id: "eid247", tween: [ "style", "${_Text3}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid248", tween: [ "style", "${_Text3}", "display", 'block', { fromValue: 'none'}], position: 55000, duration: 0 },
+                { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid367", tween: [ "style", "${_Text7Copy}", "width", '67px', { fromValue: '67px'}], position: 73250, duration: 0 },
+                { id: "eid356", tween: [ "color", "${_Text2Copy3}", "color", 'rgba(255,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(255,0,0,1.00)'}], position: 39250, duration: 0 },
+                { id: "eid280", tween: [ "style", "${_Text7}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid281", tween: [ "style", "${_Text7}", "display", 'block', { fromValue: 'none'}], position: 71750, duration: 0 },
+                { id: "eid341", tween: [ "style", "${_Text3Copy3}", "width", '24px', { fromValue: '24px'}], position: 68250, duration: 0 },
+                { id: "eid272", tween: [ "style", "${_RectangleCopy3}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid277", tween: [ "style", "${_RectangleCopy3}", "display", 'block', { fromValue: 'none'}], position: 63000, duration: 0 },
+                { id: "eid347", tween: [ "style", "${_Text2Copy}", "display", 'block', { fromValue: 'none'}], position: 26000, duration: 0 },
+                { id: "eid350", tween: [ "style", "${_Text2Copy}", "display", 'none', { fromValue: 'block'}], position: 32000, duration: 0 },
+                { id: "eid363", tween: [ "style", "${_Text7Copy}", "display", 'block', { fromValue: 'none'}], position: 73250, duration: 0 },
+                { id: "eid342", tween: [ "style", "${_Text3Copy3}", "display", 'block', { fromValue: 'none'}], position: 56500, duration: 0 },
+                { id: "eid360", tween: [ "color", "${_Text2Copy4}", "color", 'rgba(255,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(255,0,0,1.00)'}], position: 68000, duration: 0 },
+                { id: "eid340", tween: [ "style", "${_Text3Copy3}", "left", '337px', { fromValue: '337px'}], position: 68250, duration: 0 },
+                { id: "eid311", tween: [ "style", "${_Text14}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid312", tween: [ "style", "${_Text14}", "display", 'block', { fromValue: 'none'}], position: 66269, duration: 0 },
+                { id: "eid313", tween: [ "style", "${_Text14}", "display", 'none', { fromValue: 'block'}], position: 67500, duration: 0 },
+                { id: "eid286", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question}', [] ], ""], position: 2000 },
+                { id: "eid287", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1}', [] ], ""], position: 11500 },
+                { id: "eid292", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2}', [] ], ""], position: 52250 },
+                { id: "eid288", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3}', [] ], ""], position: 58500 },
+                { id: "eid293", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4}', [] ], ""], position: 65500 },
+                { id: "eid289", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answer}', [] ], ""], position: 77250 }            ]
         }
     }
 },

@@ -25,71 +25,74 @@ var symbols = {
             {
                 id: 'Question_Text',
                 type: 'text',
-                rect: ['15px', '30px','169px','124px','auto', 'auto'],
-                text: "What is the value of the expression below?",
+                rect: ['19px', '30px','298px','30px','auto', 'auto'],
+                text: "Simplify the following expression:<br>15s - ( 6s - 3 )",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, Times New Roman, Times, serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
-                id: 'Question_Expression',
+                id: 'Question_TextCopy',
+                display: 'none',
                 type: 'text',
-                rect: ['34px', '92px','109px','33px','auto', 'auto'],
-                text: "3",
+                rect: ['55px', '49px','15px','30px','auto', 'auto'],
+                text: "(",
                 align: "left",
-                font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, Times New Roman, Times, serif', 16, "rgba(255,0,0,1.00)", "normal", "none", "normal"]
             },
             {
-                id: 'Question_ExpressionCopy',
+                id: 'Question_TextCopy3',
+                display: 'none',
                 type: 'text',
-                rect: ['48px', '92px','23px','33px','auto', 'auto'],
-                text: "  x ",
+                rect: ['45px', '49px','15px','30px','auto', 'auto'],
+                text: "-",
                 align: "left",
-                font: ['Arial, Helvetica, sans-serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, Times New Roman, Times, serif', 16, "rgba(255,0,0,1.00)", "normal", "none", "normal"]
             },
             {
-                id: 'Question_ExpressionCopy2',
+                id: 'Question_TextCopy2',
+                display: 'none',
                 type: 'text',
-                rect: ['61px', '92px','109px','33px','auto', 'auto'],
-                text: "    ( 11 - 2 ) + 5",
+                rect: ['108px', '49px','15px','30px','auto', 'auto'],
+                text: ")",
                 align: "left",
-                font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, Times New Roman, Times, serif', 16, "rgba(255,0,0,1.00)", "normal", "none", "normal"]
             },
             {
                 id: 'Answers',
                 type: 'rect',
-                rect: ['25px', '333px','auto','auto','auto', 'auto']
+                rect: ['48', '104px','auto','auto','auto', 'auto']
             },
             {
                 id: 'AnswerDText',
                 type: 'text',
-                rect: ['72px', '458px','101px','20px','auto', 'auto'],
-                text: "26",
+                rect: ['56px', '225px','82px','20px','auto', 'auto'],
+                text: "9s + 3",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerCText',
                 type: 'text',
-                rect: ['72px', '422px','101px','19px','auto', 'auto'],
-                text: "32",
+                rect: ['56px', '189px','101px','19px','auto', 'auto'],
+                text: "-9s + 3",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerBText',
                 type: 'text',
-                rect: ['72px', '390px','112px','19px','auto', 'auto'],
-                text: "36",
+                rect: ['56px', '157px','112px','19px','auto', 'auto'],
+                text: "-9s - 3",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'AnswerAText',
                 type: 'text',
-                rect: ['72px', '355px','109px','19px','auto', 'auto'],
-                text: "42",
+                rect: ['56px', '122px','109px','19px','auto', 'auto'],
+                text: "21s + 3",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
                 id: 'QuestionSound_Container',
@@ -108,192 +111,190 @@ var symbols = {
                 stroke: [1,"rgb(4, 4, 4)","solid"]
             },
             {
-                id: 'TutorialText',
-                display: 'none',
-                type: 'text',
-                rect: ['260px', '49px','237px','187px','auto', 'auto'],
-                text: "Let's pretend your hint starts here at 0:10. It does not really matter where the hints start and end, as long as they don't overlap. Don't worry that the X and Checks are showing up either - it's just because I set their timeline to 5 seconds in the symbol. They won't appear in the final animation.<br><br>This rectangle is a space for you to draw your animation. An example will follow in hint 2.",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
                 id: 'AnswerEText',
                 type: 'text',
-                rect: ['72px', '494px','101px','20px','auto', 'auto'],
-                text: "12",
+                rect: ['56px', '263px','101px','20px','auto', 'auto'],
+                text: "9s - 3",
                 align: "left",
-                font: ['Times New Roman, Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "normal", "none", "normal"]
             },
             {
-                id: 'Order_of_Operations',
-                type: 'group',
-                rect: ['211', '58','33','86','auto', 'auto'],
-                c: [
-                {
-                    id: 'arrow',
-                    type: 'image',
-                    rect: ['-168px', '-46px','600px','456px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"arrow.png",'0px','0px']
-                },
-                {
-                    id: 'Parentheses',
-                    type: 'text',
-                    rect: ['51px', '3px','120px','19px','auto', 'auto'],
-                    text: "Parentheses",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(3,90,143,1.00)", "400", "none", "normal"]
-                },
-                {
-                    id: 'Addition_or_subtraction',
-                    type: 'text',
-                    rect: ['101px', '122px','197px','19px','auto', 'auto'],
-                    text: "Addition OR Subtraction",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(3,90,143,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: 'order_of_operations',
-                    type: 'text',
-                    rect: ['27px', '-27px','156px','20px','auto', 'auto'],
-                    text: "Order of Operations",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,0,0,1)", "700", "none", "normal"]
-                },
-                {
-                    id: 'Multiplication_or_division',
-                    type: 'text',
-                    rect: ['51px', '47px','197px','19px','auto', 'auto'],
-                    text: "Multiplication OR Division",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(3,90,143,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: 'Exponents',
-                    type: 'text',
-                    rect: ['51px', '25px','120px','19px','auto', 'auto'],
-                    text: "Exponents",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(3,90,143,1)", "normal", "none", "normal"]
-                }]
-            },
-            {
-                id: 'Hint_2_text_1',
-                type: 'group',
-                rect: ['250', '207px','109','19','auto', 'auto'],
-                c: [
-                {
-                    id: '_11_minus_2_red',
-                    type: 'text',
-                    rect: ['-5px', '0px','109px','19px','auto', 'auto'],
-                    text: " ( 11 - 2 )",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(236,2,2,1.00)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_plus_5_equals',
-                    type: 'text',
-                    rect: ['60px', '1px','101px','20px','auto', 'auto'],
-                    text: "+ 5 =",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_3_x_blue',
-                    type: 'text',
-                    rect: ['-31px', '0px','86px','20px','auto', 'auto'],
-                    text: "3 x ",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                }]
-            },
-            {
-                id: 'Hint_3_text_2',
-                type: 'group',
-                rect: ['268px', '244px','71','19','auto', 'auto'],
-                c: [
-                {
-                    id: 'plus_5_equals_copy',
-                    type: 'text',
-                    rect: ['-6px', '0px','71px','19px','auto', 'auto'],
-                    text: "+ 5 =",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_9_red',
-                    type: 'text',
-                    rect: ['-22px', '0px','33px','20px','auto', 'auto'],
-                    text: "9",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(236,2,2,1.00)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_3_x_copy',
-                    type: 'text',
-                    rect: ['-48px', '0px','47px','19px','auto', 'auto'],
-                    text: "3 x",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                }]
-            },
-            {
-                id: 'Hint_4_text_2',
-                type: 'group',
-                rect: ['249px', '283px','71','33','auto', 'auto'],
-                c: [
-                {
-                    id: '_plus_5_blue',
-                    type: 'text',
-                    rect: ['0px', '-3px','71px','33px','auto', 'auto'],
-                    text: "+ 5 =",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(0,95,255,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_27_red',
-                    type: 'text',
-                    rect: ['-27px', '-3px','25px','19px','auto', 'auto'],
-                    text: "27",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 16, "rgba(236,2,2,1.00)", "normal", "none", "normal"]
-                }]
-            },
-            {
-                id: 'Answer_hint_32',
+                id: 'Text',
+                display: 'none',
                 type: 'text',
-                rect: ['297px', '280px','71px','33px','auto', 'auto'],
-                text: "32",
+                rect: ['203px', '70px','137px','20px','auto', 'auto'],
+                text: "Order of operations:",
                 align: "left",
-                font: ['Arial, Helvetica, sans-serif', 16, "rgba(236,2,2,1)", "normal", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
             },
             {
-                id: 'Choose_C',
+                id: 'Text2',
+                display: 'none',
                 type: 'text',
-                rect: ['303px', '331px','137px','20px','auto', 'auto'],
-                text: "Choose (C)",
+                rect: ['347px', '70px','182px','19px','auto', 'auto'],
+                text: "Parentheses<br>Exponents<br>Multiplication and Division<br>Addition and Subtraction",
                 align: "left",
-                font: ['Arial, Helvetica, sans-serif', 16, "rgba(1,140,1,1.00)", "700", "none", "normal"]
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
             },
             {
-                id: 'question',
+                id: 'Text2Copy4',
+                display: 'none',
+                type: 'text',
+                rect: ['347px', '118px','182px','19px','auto', 'auto'],
+                text: "Addition and Subtraction",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(255,0,0,1.00)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text2Copy3',
+                display: 'none',
+                type: 'text',
+                rect: ['347px', '102px','182px','19px','auto', 'auto'],
+                text: "Multiplication",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(255,0,0,1.00)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text2Copy2',
+                display: 'none',
+                type: 'text',
+                rect: ['347px', '86px','182px','19px','auto', 'auto'],
+                text: "Exponents",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(255,0,0,1.00)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text2Copy',
+                display: 'none',
+                type: 'text',
+                rect: ['347px', '70px','182px','19px','auto', 'auto'],
+                text: "Parentheses",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(255,0,0,1.00)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text3',
+                display: 'none',
+                type: 'text',
+                rect: ['194px', '199px','116px','19px','auto', 'auto'],
+                text: "15s - (6s - 3) =",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text3Copy',
+                display: 'none',
+                type: 'text',
+                rect: ['315px', '199px','137px','19px','auto', 'auto'],
+                text: "15s - 1(6s - 3) =",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text3Copy3',
+                display: 'none',
+                type: 'text',
+                rect: ['345px', '199px','32px','19px','auto', 'auto'],
+                text: "- 1",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(255,0,0,1.00)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text3Copy2',
+                display: 'none',
+                type: 'text',
+                rect: ['441px', '199px','156px','19px','auto', 'auto'],
+                text: "15s + -1(6s + -3) =",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text4',
+                display: 'none',
+                type: 'text',
+                rect: ['194px', '235px','114px','20px','auto', 'auto'],
+                text: "15s - 6s + 3 =",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Rectangle',
+                display: 'none',
+                type: 'rect',
+                rect: ['495px', '187px','24px','3px','auto', 'auto'],
+                fill: ["rgba(0,0,0,1.00)"],
+                stroke: [0,"rgb(0, 0, 0)","none"],
+                transform: [[],['-60']]
+            },
+            {
+                id: 'RectangleCopy2',
+                display: 'none',
+                type: 'rect',
+                rect: ['507px', '187px','24px','3px','auto', 'auto'],
+                fill: ["rgba(0,0,0,1.00)"],
+                stroke: [0,"rgb(0, 0, 0)","none"],
+                transform: [[],['60']]
+            },
+            {
+                id: 'RectangleCopy',
+                display: 'none',
+                type: 'rect',
+                rect: ['481px', '173px','56px','3px','auto', 'auto'],
+                fill: ["rgba(0,0,0,1.00)"],
+                stroke: [0,"rgb(0, 0, 0)","none"],
+                transform: [[],['-55']]
+            },
+            {
+                id: 'RectangleCopy3',
+                display: 'none',
+                type: 'rect',
+                rect: ['511px', '173px','56px','3px','auto', 'auto'],
+                fill: ["rgba(0,0,0,1.00)"],
+                stroke: [0,"rgb(0, 0, 0)","none"],
+                transform: [[],['55']]
+            },
+            {
+                id: 'Text5',
+                display: 'none',
+                type: 'text',
+                rect: ['307px', '235px','112px','19px','auto', 'auto'],
+                text: "9s + 3",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text7',
+                display: 'none',
+                type: 'text',
+                rect: ['195px', '273px','336px','30px','auto', 'auto'],
+                text: "Now let's combine like terms to get the final answer.",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
+            },
+            {
+                id: 'Text8',
+                display: 'none',
+                type: 'text',
+                rect: ['204px', '316px','182px','30px','auto', 'auto'],
+                text: "Choose (D)",
+                align: "left",
+                font: ['Arial, Helvetica, sans-serif', 18, "rgba(255,0,0,1.00)", "400", "none", "normal"]
+            },
+            {
+                id: 'hint3',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/question.mp3','media/question.ogg']
+                source: ['media/hint3.ogg','media/hint3.mp3']
             },
             {
-                id: 'hint1a',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint1a.mp3','media/hint1a.ogg']
-            },
-            {
-                id: 'hint1b',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint1b.mp3','media/hint1b.ogg']
+                id: 'Text6',
+                display: 'none',
+                type: 'text',
+                rect: ['204px', '157px','248px','20px','auto', 'auto'],
+                text: "We need to multiply 6s and -3 by -1",
+                align: "left",
+                font: ['Georgia, \'Times New Roman\', Times, serif', 14, "rgba(0,0,0,1)", "400", "none", "normal"]
             },
             {
                 id: 'hint2',
@@ -303,60 +304,39 @@ var symbols = {
                 source: ['media/hint2.mp3','media/hint2.ogg']
             },
             {
-                id: 'hint3a',
+                id: 'hint4',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint3a.mp3','media/hint3a.ogg']
+                source: ['media/hint4.ogg','media/hint4.mp3']
             },
             {
-                id: 'hint3b',
+                id: 'question2',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint3b.ogg','media/hint3b.mp3']
+                source: ['media/question.mp3','media/question.ogg']
             },
             {
-                id: 'hint3c',
+                id: 'answer',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint3c.ogg','media/hint3c.mp3']
+                source: ['media/answer.mp3','media/answer.ogg']
             },
             {
-                id: 'hint4a',
+                id: 'question',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint4a.mp3','media/hint4a.ogg']
+                source: ['media/question.mp3','media/question.ogg']
             },
             {
-                id: 'hint4b',
+                id: 'hint1',
                 type: 'audio',
                 tag: 'audio',
                 rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint4b.ogg','media/hint4b.mp3']
-            },
-            {
-                id: 'hint4c',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint4c.ogg','media/hint4c.mp3']
-            },
-            {
-                id: 'answer1',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/answer1.mp3','media/answer1.ogg']
-            },
-            {
-                id: 'answer2',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/answer2.ogg','media/answer2.mp3']
+                source: ['media/hint1.ogg','media/hint1.mp3']
             }],
             symbolInstances: [
             {
@@ -370,18 +350,60 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_Answer_hint_32}": [
-                ["style", "top", '280px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '297px'],
-                ["color", "color", 'rgba(236,2,2,1)']
+            "${_Text2Copy4}": [
+                ["style", "top", '118px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
             ],
-            "${_Choose_C}": [
-                ["style", "top", '331px'],
-                ["color", "color", 'rgba(1,140,1,1.00)'],
-                ["style", "font-weight", '700'],
-                ["style", "left", '303px'],
-                ["style", "opacity", '0']
+            "${_AnswerEText}": [
+                ["style", "top", '263px'],
+                ["style", "font-size", '14px'],
+                ["style", "left", '56px'],
+                ["style", "width", '101px']
+            ],
+            "${_Text7}": [
+                ["style", "display", 'none'],
+                ["style", "left", '195px'],
+                ["style", "width", '336px']
+            ],
+            "${_Text3Copy}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "width", '137px'],
+                ["style", "left", '315px'],
+                ["style", "font-size", '18px']
+            ],
+            "${_Text3}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "font-size", '18px'],
+                ["style", "left", '194px'],
+                ["style", "width", '116px']
+            ],
+            "${_Text2Copy3}": [
+                ["style", "top", '102px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
+            ],
+            "${_Text8}": [
+                ["style", "top", '316px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
+                ["style", "left", '204px'],
+                ["style", "font-size", '18px']
+            ],
+            "${_Text3Copy3}": [
+                ["style", "top", '199px'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "display", 'none'],
+                ["style", "font-size", '18px'],
+                ["style", "left", '345px'],
+                ["style", "width", '32px']
             ],
             "${_QuestionSound_Container}": [
                 ["style", "height", '8px'],
@@ -389,141 +411,142 @@ var symbols = {
                 ["color", "background-color", 'rgba(248,250,248,0.00)'],
                 ["style", "width", '17px']
             ],
-            "${__3_x_blue}": [
-                ["style", "left", '-31px'],
-                ["style", "top", '0px']
-            ],
-            "${_plus_5_equals_copy}": [
-                ["style", "left", '-6px'],
-                ["style", "top", '0px']
-            ],
-            "${_AnswerDText}": [
-                ["style", "top", '458px'],
-                ["style", "font-size", '14px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
-                ["style", "width", '101px']
-            ],
-            "${_Addition_or_subtraction}": [
-                ["style", "top", '70px'],
-                ["style", "left", '50px'],
-                ["color", "color", 'rgba(3,90,143,1)']
-            ],
-            "${_Question_Text}": [
-                ["style", "top", '30px'],
-                ["style", "font-size", '16px'],
-                ["style", "height", '124px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '15px'],
-                ["style", "width", '169px']
-            ],
-            "${_order_of_operations}": [
-                ["style", "top", '-27px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "height", '20px'],
-                ["style", "font-weight", '700'],
-                ["style", "left", '27px'],
-                ["color", "color", 'rgba(0,0,0,1)']
-            ],
-            "${_Exponents}": [
-                ["style", "top", '25px'],
-                ["style", "left", '51px'],
-                ["color", "color", 'rgba(3,90,143,1)']
-            ],
-            "${_Question_ExpressionCopy2}": [
-                ["style", "top", '92px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '61px']
-            ],
-            "${_AnswerEText}": [
-                ["style", "top", '494px'],
-                ["style", "font-size", '14px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
-                ["style", "width", '101px']
-            ],
-            "${_Multiplication_or_division}": [
-                ["color", "color", 'rgba(3,90,143,1)'],
-                ["style", "top", '47px'],
-                ["style", "left", '51px'],
-                ["style", "width", '197px']
-            ],
             "${_AnswerBText}": [
-                ["style", "top", '390px'],
+                ["style", "top", '157px'],
                 ["style", "font-size", '14px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
+                ["style", "left", '56px'],
                 ["style", "width", '112px']
             ],
-            "${__9_red}": [
-                ["color", "color", 'rgba(236,2,2,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "left", '-22px'],
-                ["style", "width", '33px']
+            "${_RectangleCopy}": [
+                ["color", "background-color", 'rgba(0,0,0,1)'],
+                ["style", "display", 'none'],
+                ["transform", "rotateZ", '-55deg'],
+                ["style", "height", '3px'],
+                ["style", "top", '173px'],
+                ["style", "left", '481px'],
+                ["style", "width", '56px']
             ],
-            "${_AnswerCText}": [
-                ["style", "top", '422px'],
-                ["style", "font-size", '14px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
-                ["style", "width", '101px']
+            "${_RectangleCopy2}": [
+                ["color", "background-color", 'rgba(0,0,0,1)'],
+                ["style", "display", 'none'],
+                ["transform", "rotateZ", '60deg'],
+                ["style", "height", '3px'],
+                ["style", "top", '187px'],
+                ["style", "left", '507px'],
+                ["style", "width", '24px']
             ],
-            "${_Hint_3_text_2}": [
-                ["style", "top", '244px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '268px']
+            "${_Answers}": [
+                ["style", "top", '104px'],
+                ["style", "left", '9px']
             ],
-            "${_TutorialText}": [
-                ["style", "top", '51px'],
-                ["style", "height", '187px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '260px'],
-                ["style", "display", 'none']
+            "${_Rectangle}": [
+                ["style", "top", '187px'],
+                ["style", "display", 'none'],
+                ["transform", "rotateZ", '-60deg'],
+                ["style", "height", '3px'],
+                ["color", "background-color", 'rgba(0,0,0,1.00)'],
+                ["style", "left", '495px'],
+                ["style", "width", '24px']
             ],
             "${_Sound_Container}": [
                 ["style", "display", 'none'],
                 ["style", "overflow", 'hidden']
             ],
-            "${_Question_Expression}": [
-                ["style", "top", '92px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '34px']
+            "${_Question_TextCopy2}": [
+                ["style", "top", '49px'],
+                ["style", "font-size", '16px'],
+                ["color", "color", 'rgba(255,0,0,1)'],
+                ["style", "height", '30px'],
+                ["style", "display", 'none'],
+                ["style", "font-family", 'Georgia, \'Times New Roman\', Times, serif'],
+                ["style", "left", '108px'],
+                ["style", "width", '15px']
             ],
-            "${__plus_5_equals}": [
-                ["style", "left", '60px'],
-                ["style", "top", '1px']
+            "${_AnswerDText}": [
+                ["style", "top", '225px'],
+                ["style", "font-size", '14px'],
+                ["style", "left", '56px'],
+                ["style", "width", '82px']
             ],
-            "${_Hint_2_text_1}": [
-                ["style", "top", '207px'],
-                ["style", "opacity", '0']
+            "${_Question_TextCopy3}": [
+                ["style", "top", '49px'],
+                ["style", "font-size", '16px'],
+                ["color", "color", 'rgba(255,0,0,1)'],
+                ["style", "height", '30px'],
+                ["style", "display", 'none'],
+                ["style", "font-family", 'Georgia, \'Times New Roman\', Times, serif'],
+                ["style", "left", '45px'],
+                ["style", "width", '15px']
             ],
-            "${_Answers}": [
-                ["style", "top", '333px'],
-                ["style", "left", '25px']
+            "${_Text2}": [
+                ["style", "top", '70px'],
+                ["style", "display", 'none'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
             ],
-            "${__3_x_copy}": [
-                ["color", "color", 'rgba(0,95,255,1)'],
-                ["style", "top", '0px'],
-                ["style", "left", '-48px'],
-                ["style", "width", '47px']
-            ],
-            "${__plus_5_blue}": [
-                ["style", "top", '-3px'],
-                ["style", "left", '0px'],
-                ["color", "color", 'rgba(0,95,255,1)']
-            ],
-            "${_arrow}": [
+            "${_Question_Text}": [
                 ["style", "top", '30px'],
-                ["transform", "rotateZ", '90deg'],
-                ["style", "height", '33px'],
-                ["style", "left", '-26px'],
-                ["style", "width", '86px']
+                ["style", "font-size", '16px'],
+                ["style", "height", '30px'],
+                ["style", "font-family", 'Georgia, \'Times New Roman\', Times, serif'],
+                ["style", "left", '19px'],
+                ["style", "width", '298px']
             ],
-            "${_Parentheses}": [
-                ["color", "color", 'rgba(3,90,143,1.00)'],
-                ["style", "font-weight", '400'],
-                ["style", "left", '51px'],
-                ["style", "top", '3px']
+            "${_AnswerCText}": [
+                ["style", "top", '189px'],
+                ["style", "font-size", '14px'],
+                ["style", "left", '56px'],
+                ["style", "width", '101px']
+            ],
+            "${_RectangleCopy3}": [
+                ["style", "top", '173px'],
+                ["style", "display", 'none'],
+                ["transform", "rotateZ", '55deg'],
+                ["style", "height", '3px'],
+                ["color", "background-color", 'rgba(0,0,0,1)'],
+                ["style", "left", '511px'],
+                ["style", "width", '56px']
+            ],
+            "${_Text2Copy2}": [
+                ["style", "top", '86px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
+            ],
+            "${_AnswerAText}": [
+                ["style", "top", '122px'],
+                ["style", "text-align", 'left'],
+                ["style", "height", '19px'],
+                ["style", "font-size", '14px'],
+                ["style", "left", '56px'],
+                ["style", "width", '109px']
+            ],
+            "${_Text6}": [
+                ["style", "display", 'none'],
+                ["style", "width", '248px']
+            ],
+            "${_Text4}": [
+                ["style", "top", '235px'],
+                ["style", "display", 'none'],
+                ["style", "left", '194px'],
+                ["style", "width", '114px']
+            ],
+            "${_Text}": [
+                ["style", "top", '70px'],
+                ["style", "display", 'none'],
+                ["style", "left", '203px'],
+                ["style", "width", '137px']
+            ],
+            "${_Question_TextCopy}": [
+                ["style", "top", '49px'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "display", 'none'],
+                ["style", "width", '15px'],
+                ["style", "height", '30px'],
+                ["style", "font-family", 'Georgia, \'Times New Roman\', Times, serif'],
+                ["style", "left", '55px'],
+                ["style", "font-size", '16px']
             ],
             "${_Stage}": [
                 ["color", "background-color", 'rgba(255,255,255,0.00)'],
@@ -531,41 +554,24 @@ var symbols = {
                 ["style", "height", '600px'],
                 ["style", "overflow", 'hidden']
             ],
-            "${_Question_ExpressionCopy}": [
-                ["style", "top", '92px'],
-                ["style", "width", '23px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '48px'],
-                ["style", "font-size", '14px']
+            "${_Text2Copy}": [
+                ["style", "top", '70px'],
+                ["style", "display", 'none'],
+                ["color", "color", 'rgba(255,0,0,1.00)'],
+                ["style", "left", '347px'],
+                ["style", "width", '182px']
             ],
-            "${_Order_of_Operations}": [
-                ["style", "opacity", '0']
+            "${_Text3Copy2}": [
+                ["style", "top", '199px'],
+                ["style", "display", 'none'],
+                ["style", "font-size", '18px'],
+                ["style", "left", '441px'],
+                ["style", "width", '156px']
             ],
-            "${__27_red}": [
-                ["style", "top", '-3px'],
-                ["color", "color", 'rgba(236,2,2,1.00)'],
-                ["style", "height", '19px'],
-                ["style", "left", '-27px'],
-                ["style", "width", '25px']
-            ],
-            "${_Hint_4_text_2}": [
-                ["style", "top", '283px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '249px']
-            ],
-            "${_AnswerAText}": [
-                ["style", "top", '355px'],
-                ["style", "text-align", 'left'],
-                ["style", "font-size", '14px'],
-                ["style", "height", '19px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '72px'],
-                ["style", "width", '109px']
-            ],
-            "${__11_minus_2_red}": [
-                ["style", "top", '0px'],
-                ["style", "left", '-5px'],
-                ["color", "color", 'rgba(0,95,255,1.00)']
+            "${_Text5}": [
+                ["style", "top", '235px'],
+                ["style", "left", '307px'],
+                ["style", "display", 'none']
             ]
         }
     },
@@ -573,63 +579,73 @@ var symbols = {
         "Default Timeline": {
             fromState: "Base State",
             toState: "",
-            duration: 102000,
+            duration: 84897,
             autoPlay: true,
             labels: {
                 "Read Question": 2000,
-                "Hint 1": 8000,
-                "Hint 2": 27000,
-                "Hint 3": 37000,
-                "Hint 4": 66000,
-                "Answer Hint": 86000
+                "Hint 1": 11000,
+                "Hint 2": 51750,
+                "Hint 3": 58250,
+                "Hint 4": 67750,
+                "Answer Hint": 79750
             },
             timeline: [
-                { id: "eid204", tween: [ "color", "${_order_of_operations}", "color", 'rgba(0,0,0,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1)'}], position: 13000, duration: 0 },
-                { id: "eid237", tween: [ "color", "${__plus_5_blue}", "color", 'rgba(0,95,255,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 79000, duration: 0 },
-                { id: "eid244", tween: [ "color", "${__plus_5_blue}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 86000, duration: 1000 },
-                { id: "eid199", tween: [ "style", "${_arrow}", "top", '30px', { fromValue: '30px'}], position: 13000, duration: 0 },
-                { id: "eid238", tween: [ "color", "${__27_red}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(236,2,2,1.00)'}], position: 79000, duration: 0 },
-                { id: "eid190", tween: [ "style", "${_arrow}", "width", '86px', { fromValue: '86px'}], position: 13000, duration: 0 },
-                { id: "eid91", tween: [ "style", "${_TutorialText}", "display", 'block', { fromValue: 'none'}], position: 28000, duration: 0 },
-                { id: "eid250", tween: [ "color", "${_Choose_C}", "color", 'rgba(1,140,1,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(1,140,1,1.00)'}], position: 101000, duration: 0 },
-                { id: "eid198", tween: [ "style", "${_arrow}", "left", '-26px', { fromValue: '-26px'}], position: 13000, duration: 0 },
-                { id: "eid191", tween: [ "style", "${_arrow}", "height", '33px', { fromValue: '33px'}], position: 13000, duration: 0 },
-                { id: "eid201", tween: [ "style", "${_Addition_or_subtraction}", "top", '70px', { fromValue: '70px'}], position: 13000, duration: 0 },
-                { id: "eid203", tween: [ "color", "${_Multiplication_or_division}", "color", 'rgba(3,90,143,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,90,143,1)'}], position: 13000, duration: 0 },
-                { id: "eid278", tween: [ "color", "${__11_minus_2_red}", "color", 'rgba(0,95,255,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1.00)'}], position: 28000, duration: 0 },
-                { id: "eid281", tween: [ "color", "${__11_minus_2_red}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 42000, duration: 1000 },
-                { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid174", tween: [ "transform", "${_arrow}", "rotateZ", '90deg', { fromValue: '90deg'}], position: 13000, duration: 0 },
-                { id: "eid218", tween: [ "color", "${__9_red}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(236,2,2,1.00)'}], position: 51000, duration: 0 },
-                { id: "eid277", tween: [ "style", "${_Hint_2_text_1}", "opacity", '1', { fromValue: '0.000000'}], position: 27000, duration: 1000 },
-                { id: "eid202", tween: [ "color", "${_Exponents}", "color", 'rgba(3,90,143,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,90,143,1)'}], position: 13000, duration: 0 },
-                { id: "eid205", tween: [ "color", "${_Addition_or_subtraction}", "color", 'rgba(3,90,143,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,90,143,1)'}], position: 13000, duration: 0 },
-                { id: "eid245", tween: [ "color", "${_Answer_hint_32}", "color", 'rgba(236,2,2,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(236,2,2,1)'}], position: 95000, duration: 0 },
+                { id: "eid271", tween: [ "style", "${_RectangleCopy}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid276", tween: [ "style", "${_RectangleCopy}", "display", 'block', { fromValue: 'none'}], position: 64250, duration: 0 },
+                { id: "eid241", tween: [ "style", "${_Text2}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid243", tween: [ "style", "${_Text2}", "display", 'block', { fromValue: 'none'}], position: 25000, duration: 0 },
+                { id: "eid245", tween: [ "style", "${_Text6}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid246", tween: [ "style", "${_Text6}", "display", 'block', { fromValue: 'none'}], position: 53000, duration: 0 },
+                { id: "eid282", tween: [ "style", "${_Text8}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid284", tween: [ "style", "${_Text8}", "display", 'block', { fromValue: 'none'}], position: 82750, duration: 0 },
+                { id: "eid300", tween: [ "style", "${_Text2Copy3}", "display", 'block', { fromValue: 'none'}], position: 38502, duration: 0 },
+                { id: "eid309", tween: [ "style", "${_Text2Copy3}", "display", 'none', { fromValue: 'block'}], position: 67189, duration: 0 },
+                { id: "eid249", tween: [ "style", "${_Text3Copy}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid250", tween: [ "style", "${_Text3Copy}", "display", 'block', { fromValue: 'none'}], position: 57500, duration: 0 },
+                { id: "eid268", tween: [ "style", "${_Text3Copy2}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid273", tween: [ "style", "${_Text3Copy2}", "display", 'block', { fromValue: 'none'}], position: 58750, duration: 0 },
+                { id: "eid294", tween: [ "style", "${_Question_TextCopy2}", "display", 'block', { fromValue: 'none'}], position: 27000, duration: 0 },
+                { id: "eid297", tween: [ "style", "${_Question_TextCopy2}", "display", 'none', { fromValue: 'block'}], position: 31717, duration: 0 },
+                { id: "eid302", tween: [ "style", "${_Question_TextCopy2}", "display", 'block', { fromValue: 'none'}], position: 48734, duration: 0 },
+                { id: "eid308", tween: [ "style", "${_Question_TextCopy2}", "display", 'none', { fromValue: 'block'}], position: 67500, duration: 0 },
+                { id: "eid311", tween: [ "style", "${_Text2Copy4}", "display", 'block', { fromValue: 'none'}], position: 72198, duration: 0 },
+                { id: "eid312", tween: [ "style", "${_Text2Copy4}", "display", 'none', { fromValue: 'block'}], position: 79500, duration: 0 },
+                { id: "eid272", tween: [ "style", "${_RectangleCopy3}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid277", tween: [ "style", "${_RectangleCopy3}", "display", 'block', { fromValue: 'none'}], position: 64250, duration: 0 },
+                { id: "eid247", tween: [ "style", "${_Text3}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid248", tween: [ "style", "${_Text3}", "display", 'block', { fromValue: 'none'}], position: 56250, duration: 0 },
+                { id: "eid283", tween: [ "style", "${_Text5}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid285", tween: [ "style", "${_Text5}", "display", 'block', { fromValue: 'none'}], position: 81002, duration: 0 },
                 { id: "eid29", tween: [ "style", "${_QuestionSound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid241", tween: [ "style", "${_Hint_4_text_2}", "opacity", '1', { fromValue: '0.000000'}], position: 79000, duration: 1000 },
-                { id: "eid206", tween: [ "color", "${_Parentheses}", "color", 'rgba(3,90,143,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(3,90,143,1.00)'}], position: 13000, duration: 0 },
-                { id: "eid200", tween: [ "style", "${_Addition_or_subtraction}", "left", '50px', { fromValue: '50px'}], position: 13000, duration: 0 },
-                { id: "eid209", tween: [ "style", "${_Order_of_Operations}", "opacity", '1', { fromValue: '0.000000'}], position: 13000, duration: 1000 },
-                { id: "eid270", tween: [ "style", "${_Choose_C}", "opacity", '1', { fromValue: '0.000000'}], position: 101000, duration: 1000 },
-                { id: "eid249", tween: [ "style", "${_Answer_hint_32}", "opacity", '1', { fromValue: '0'}], position: 95000, duration: 1000 },
-                { id: "eid197", tween: [ "style", "${_Multiplication_or_division}", "top", '47px', { fromValue: '47px'}], position: 13000, duration: 0 },
-                { id: "eid229", tween: [ "style", "${_Hint_3_text_2}", "opacity", '1', { fromValue: '0.000000'}], position: 51000, duration: 1000 },
-                { id: "eid289", tween: [ "color", "${__3_x_copy}", "color", 'rgba(0,95,255,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 52000, duration: 0 },
-                { id: "eid292", tween: [ "color", "${__3_x_copy}", "color", 'rgba(236,2,2,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,95,255,1)'}], position: 71000, duration: 1000 },
-                { id: "eid53", tween: [ "style", "${_TutorialText}", "opacity", '0', { fromValue: '1'}], position: 20000, duration: 3000 },
-                { id: "eid196", tween: [ "style", "${_Exponents}", "top", '25px', { fromValue: '25px'}], position: 13000, duration: 0 },
-                { id: "eid293", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question}', [] ], ""], position: 2000 },
-                { id: "eid294", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1a}', [] ], ""], position: 8000 },
-                { id: "eid295", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1b}', [] ], ""], position: 15000 },
-                { id: "eid296", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2}', [] ], ""], position: 29000 },
-                { id: "eid297", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3a}', [] ], ""], position: 37000 },
-                { id: "eid298", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3b}', [] ], ""], position: 45000 },
-                { id: "eid299", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3c}', [] ], ""], position: 53000 },
-                { id: "eid300", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4a}', [] ], ""], position: 66000 },
-                { id: "eid301", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4b}', [] ], ""], position: 73000 },
-                { id: "eid302", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4c}', [] ], ""], position: 81000 },
-                { id: "eid303", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answer1}', [] ], ""], position: 87998 },
-                { id: "eid304", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answer2}', [] ], ""], position: 97000 }            ]
+                { id: "eid293", tween: [ "style", "${_Question_TextCopy}", "display", 'block', { fromValue: 'none'}], position: 27000, duration: 0 },
+                { id: "eid296", tween: [ "style", "${_Question_TextCopy}", "display", 'none', { fromValue: 'block'}], position: 31717, duration: 0 },
+                { id: "eid301", tween: [ "style", "${_Question_TextCopy}", "display", 'block', { fromValue: 'none'}], position: 48734, duration: 0 },
+                { id: "eid307", tween: [ "style", "${_Question_TextCopy}", "display", 'none', { fromValue: 'block'}], position: 67500, duration: 0 },
+                { id: "eid280", tween: [ "style", "${_Text7}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid281", tween: [ "style", "${_Text7}", "display", 'block', { fromValue: 'none'}], position: 73000, duration: 0 },
+                { id: "eid298", tween: [ "style", "${_Text2Copy2}", "display", 'block', { fromValue: 'none'}], position: 33718, duration: 0 },
+                { id: "eid299", tween: [ "style", "${_Text2Copy2}", "display", 'none', { fromValue: 'block'}], position: 36436, duration: 0 },
+                { id: "eid303", tween: [ "style", "${_Question_TextCopy3}", "display", 'block', { fromValue: 'none'}], position: 48734, duration: 0 },
+                { id: "eid306", tween: [ "style", "${_Question_TextCopy3}", "display", 'none', { fromValue: 'block'}], position: 67500, duration: 0 },
+                { id: "eid292", tween: [ "style", "${_Text2Copy}", "display", 'block', { fromValue: 'none'}], position: 25830, duration: 0 },
+                { id: "eid295", tween: [ "style", "${_Text2Copy}", "display", 'none', { fromValue: 'block'}], position: 31717, duration: 0 },
+                { id: "eid270", tween: [ "style", "${_Rectangle}", "display", 'none', { fromValue: 'none'}], position: 1500, duration: 0 },
+                { id: "eid275", tween: [ "style", "${_Rectangle}", "display", 'block', { fromValue: 'none'}], position: 60250, duration: 0 },
+                { id: "eid278", tween: [ "style", "${_Text4}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid279", tween: [ "style", "${_Text4}", "display", 'block', { fromValue: 'none'}], position: 68500, duration: 0 },
+                { id: "eid304", tween: [ "style", "${_Text3Copy3}", "display", 'block', { fromValue: 'none'}], position: 57500, duration: 0 },
+                { id: "eid310", tween: [ "style", "${_Text3Copy3}", "display", 'none', { fromValue: 'block'}], position: 67500, duration: 0 },
+                { id: "eid269", tween: [ "style", "${_RectangleCopy2}", "display", 'none', { fromValue: 'none'}], position: 1500, duration: 0 },
+                { id: "eid274", tween: [ "style", "${_RectangleCopy2}", "display", 'block', { fromValue: 'none'}], position: 60250, duration: 0 },
+                { id: "eid242", tween: [ "style", "${_Text}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid244", tween: [ "style", "${_Text}", "display", 'block', { fromValue: 'none'}], position: 23077, duration: 0 },
+                { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
+                { id: "eid286", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question}', [] ], ""], position: 2000 },
+                { id: "eid287", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1}', [] ], ""], position: 11000 },
+                { id: "eid290", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2}', [] ], ""], position: 51750 },
+                { id: "eid288", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3}', [] ], ""], position: 58250 },
+                { id: "eid291", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4}', [] ], ""], position: 67750 },
+                { id: "eid289", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answer}', [] ], ""], position: 79750 }            ]
         }
     }
 },
@@ -659,12 +675,12 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         type: 'text',
+                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
                         id: 'Text8',
                         text: 'E',
                         align: 'center',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                     }]
                 }
             ],
@@ -759,12 +775,12 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
                         font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                        type: 'text',
                         id: 'Text8',
                         text: 'E',
                         align: 'center',
-                        type: 'text'
+                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
                     },
                     {
                         type: 'image',
@@ -876,20 +892,20 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text8',
                         text: 'E',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text14',
                         text: 'Answer E Text',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
                         rect: ['-8px', '-3px', '42px', '33px', 'auto', 'auto'],
@@ -1003,20 +1019,20 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text8',
                         text: 'E',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text14',
                         text: 'Answer E Text',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     }]
                 }
             ],
@@ -1116,12 +1132,12 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
                         font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                        type: 'text',
                         id: 'Text7',
                         text: 'D<br>',
                         align: 'center',
-                        type: 'text'
+                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
                     },
                     {
                         type: 'image',
@@ -1233,20 +1249,20 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text7',
                         text: 'D<br>',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text13',
                         text: 'Answer D Text',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
                         rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
@@ -1360,20 +1376,20 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text7',
                         text: 'D<br>',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text13',
                         text: 'Answer D Text',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     }]
                 }
             ],
@@ -1473,20 +1489,20 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text7',
                         text: 'D<br>',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '4px', '94px', '20px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text13',
                         text: 'Answer Text D',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     }]
                 }
             ],
@@ -1586,12 +1602,12 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
                         font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                        type: 'text',
                         id: 'Text5',
                         text: 'C',
                         align: 'center',
-                        type: 'text'
+                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
                     },
                     {
                         type: 'image',
@@ -1703,12 +1719,12 @@ var symbols = {
                         fill: ['rgba(192,192,192,1)']
                     },
                     {
-                        rect: ['0px', '5px', '27px', '19px', 'auto', 'auto'],
                         font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                        type: 'text',
                         id: 'Text4',
                         text: 'B',
                         align: 'center',
-                        type: 'text'
+                        rect: ['0px', '5px', '27px', '19px', 'auto', 'auto']
                     },
                     {
                         type: 'image',
@@ -1821,12 +1837,12 @@ var symbols = {
                         fill: ['rgba(232,241,160,1.00)']
                     },
                     {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         type: 'text',
+                        rect: ['0px', '3px', '27px', '19px', 'auto', 'auto'],
                         id: 'A',
                         text: 'A<br><br><br>',
                         align: 'center',
-                        rect: ['0px', '3px', '27px', '19px', 'auto', 'auto']
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                     },
                     {
                         type: 'image',
@@ -1937,20 +1953,20 @@ var symbols = {
                         fill: ['rgba(232,241,160,1.00)']
                     },
                     {
-                        type: 'text',
                         rect: ['0px', '3px', '27px', '19px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text3',
                         text: 'A<br><br><br>',
                         align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     },
                     {
-                        type: 'text',
                         rect: ['36px', '3px', '109px', '19px', 'auto', 'auto'],
+                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                         id: 'Text9',
                         text: 'Answer Text A',
                         align: 'left',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                        type: 'text'
                     }]
                 }
             ],
@@ -2072,23 +2088,38 @@ var symbols = {
             symbolInstances: [
             {
                 id: 'DButton',
-                symbolName: 'DButton_3'
+                symbolName: 'DButton_3',
+                autoPlay: {
+
+               }
             },
             {
                 id: 'EButton',
-                symbolName: 'EButton_3'
+                symbolName: 'EButton_3',
+                autoPlay: {
+
+               }
             },
             {
                 id: 'BButton',
-                symbolName: 'BButton_3'
+                symbolName: 'BButton_3',
+                autoPlay: {
+
+               }
             },
             {
                 id: 'CButton',
-                symbolName: 'CButton_3'
+                symbolName: 'CButton_3',
+                autoPlay: {
+
+               }
             },
             {
                 id: 'AButton',
-                symbolName: 'AButton_3'
+                symbolName: 'AButton_3',
+                autoPlay: {
+
+               }
             }            ]
         },
     states: {
@@ -2115,17 +2146,17 @@ var symbols = {
                 ["style", "left", '8px'],
                 ["style", "top", '50px']
             ],
-            "${_AButton}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
+            "${_EButton}": [
+                ["style", "left", '8px'],
+                ["style", "top", '157px']
             ],
             "${_CButton}": [
                 ["style", "left", '8px'],
                 ["style", "top", '86px']
             ],
-            "${_EButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '157px']
+            "${_AButton}": [
+                ["style", "left", '0px'],
+                ["style", "top", '0px']
             ]
         }
     },
@@ -2133,7 +2164,7 @@ var symbols = {
         "Default Timeline": {
             fromState: "Base State",
             toState: "",
-            duration: 0,
+            duration: 10000,
             autoPlay: true,
             timeline: [
             ]
