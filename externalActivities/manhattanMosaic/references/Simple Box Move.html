@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)http://googlesamples.github.io/web-fundamentals/samples/look-and-feel/animations/box-move-simple.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><title>Simple Box Move</title><style>html {
+	  		background: #f2f2f2;
+	  	}
+
+	  	p {
+	  		font-family: 'Helvetica', Arial, sans-serif;
+	  		text-align: center;
+	  	}
+
+	  	.box {
+			  width: 100px;
+			  height: 100px;
+
+			  background: #FFF;
+			  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+			  -webkit-transform: translate(0, 0);
+			  -webkit-transition: -webkit-transform 500ms;
+
+			  transform: translate(0, 0);
+			  transition: transform 500ms;
+
+			  will-change: transform;
+			}
+
+			.box.movebox {
+				-webkit-transform: translate(100px, 100px);
+			  transform: translate(100px, 100px);
+			}
+</style>
+
+
+</head><body data-pinterest-extension-installed="cr1.35"><p>Click on the box to animate it</p><div class="box"></div><script>var box = document.querySelector('.box');
+			box.addEventListener('click', function() {
+				box.classList.add('movebox');
+			});</script></body></html>
