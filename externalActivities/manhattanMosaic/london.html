@@ -1,0 +1,360 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.transform2d.js"></script>
+
+
+<link rel="stylesheet" href="css/mosaic.css" />
+<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|Acme|Asul' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre|Overlock|Cabin+Sketch|Josefin+Sans|Port+Lligat+Sans|Comfortaa|Signika|Love+Ya+Like+A+Sister|Delius' rel='stylesheet' type='text/css'>
+
+<script language="javascript" type="text/javascript" src="js/variables.js"> </script>
+<script language="javascript" type="text/javascript" src="js/main.js"> </script>
+<script language="javascript" type="text/javascript" src="js/london.js"> </script>
+
+
+
+ <script type="text/javascript" src="js/jquery.pietimer.js"></script>   
+  </head>
+  <body>
+
+<div id="inner">
+<div id="heading">
+
+<div id="pie_timer_div"><span id="pie_timer" ></span><span class="paddingbottom">5 minutes</span></div>
+<subheader>Fractions</subheader>
+
+<div id="pointsMisses">Points: <span id="point_count">0</span> &nbsp;&nbsp;&nbsp; Misses: <span id="misses_count">0</span></div>
+ </div>
+
+<canvas id="london_canvas" width="1050" height="520" style=" position:absolute">
+ </canvas>
+
+
+
+
+<div id="instruction_div" ><span class="instruction_text"></span></div>
+
+<div id="active_window" > </div>
+
+
+
+<div id="floating_canvas_div3" style=" zIndex: 1000; position:absolute; top:72px; left:0px; " >
+<canvas id="london_sketches_canvas" width="1050" height="520" >
+ </canvas>
+</div>
+
+<div id="floating_canvas_div" style=" zIndex: 2; position:absolute; left:250px;
+top:200px;">
+<canvas id="floating_canvas_1" height="300px" width="300px" > </canvas>
+</div>
+
+<div id="floating_canvas_div2" style=" zIndex: 2; position:absolute; left:50px;
+top:100px;">
+<canvas id="floating_canvas_2" height="300px" width="300px" > </canvas>
+</div>
+
+<div id="floating_canvas_div3" style=" zIndex: 2; position:absolute; left:740px;
+top:100px;">
+<canvas id="floating_canvas_3" height="400px" width="400px" > </canvas>
+</div>
+
+
+<div id="intro_div">You need to solve fractions problems to fill this London Mosaic.<br/>
+<input type="submit" class="submit_button" id="start_button" value="Let's Start"></div>
+
+
+
+<!-------Question div--------->
+<div id="base_div_london" >
+<form autocomplete="off">
+  <div id="form_div" > 
+<span id="Fraction_span">Fraction:</span>
+
+<div class="form_left">
+ <div class="num_left"></div>
+<div class="equals_middle">=</div>
+<div class="denum_left"></div>
+
+</div>
+
+<div class="form_right">
+   <div id="answerBox_div">
+    <input type="text" id="userAnswerBox_fraction" autofocus autocomplete="off"> </div>
+
+<div id="num_denum_div"></div>
+<div id="pointsFadeOutUp">+10</div>
+
+<span class="feedback_span"></span>
+</div> 
+
+<div class="form_bottom">
+<input type="submit" class="submit_button_london" value="Submit">
+</div>
+</div>
+</form>
+</div>
+
+
+
+<script>
+
+
+//*************CANVAS DECLARATIONS START *************//
+
+var canvas = document.getElementById('london_canvas');
+var context = canvas.getContext('2d');
+
+var canvas2 = document.getElementById('floating_canvas_1');
+var ctx = canvas2.getContext('2d');
+
+var canvas3 = document.getElementById('floating_canvas_2');
+var ctx2 = canvas3.getContext('2d');
+
+var canvas4 = document.getElementById('floating_canvas_3');
+var ctx3 = canvas4.getContext('2d');
+
+var sketch_canvas = document.getElementById('london_sketches_canvas');
+var context_sketch = sketch_canvas.getContext('2d');
+
+//************* CANVAS DECLARATIONS  END *********//
+
+
+$('#pie_timer').pietimer('start');
+
+var fraction_array = [1,2,3,4,5,4,4,4,3,3,3,3];
+
+
+var fraction_height;
+var x_pointer;
+//points and misses
+
+var point_count=0;
+var misses_count=0;
+var lastWrongInput="";
+//mode parameters
+
+var painting_series =["paintWalls","paintWindows","buildNewWalls","buildNewWindows"];
+painting_round=painting_series[0];
+
+
+//building parameters: x_distance, width, height
+
+var building_base_arr = [[120,81,300]];
+var building_wall_color=["#ceaf30"];
+
+
+fraction_height=building_base_arr[0][2]/5;
+
+//wall paramters: height,width
+
+var wall_array = [[60,70,80,90],[50,70,80]];
+
+//house[width]
+var new_wall_array = [[40,60,100],[50,100,100]];
+
+
+
+
+
+
+var canvas_h=520;
+var platform_h=40;
+var building_h=450;
+var building_w=0;
+var building_x=0;
+var building_y=0;
+
+var building_count=0;
+var window_h_space=10;
+var window_v_space=10;
+var window_x=0;
+var window_y;
+var wall_x, wall_y, wall_height, wall_width;
+
+
+////build outline for buildings
+
+
+var house_count = 0;
+var window_count = 0;
+var wall_count=0;
+var new_building_count=0;
+
+var question_sequence=0;
+var mistakes_count=0;
+var question_base_margin_top=10;
+var question_base_margin_left=20;
+var question_base_margin_bottom=60;
+var question_base_width_margin=180;
+var height_parameter_margin_left=10;
+var form_div_margin_left=15;
+
+
+var question_base_height;
+var question_base_min_height=120;
+var question_base_width;
+var question_base_x=200;
+var question_base_y;
+var min_question_base_height;
+
+var length_parameter_x;
+var length_parameter_y=0;
+var height_parameter_x;
+var height_parameter_y;
+var form_div_x;
+
+var wallPainting_done=false;
+var windowPainting_done=false;
+
+//set base
+
+
+// generate question
+$( "#num_denum_div" ).html(5);
+$( "#num_denum_div" ).addClass( "denominatorNow" )
+
+//generate points and misses
+
+$("#point_count").html(point_count);
+$("#misses_count").html(misses_count);
+
+//initialize painting walls
+giveIntro();
+
+
+
+function startMosaic(){
+
+if (painting_round="paintWalls") initializePaintingWalls();
+//painting_round="paintPies";
+if (painting_round=="paintPies") runPaintingPies();
+
+form_div_x= height_parameter_x+form_div_margin_left;
+$( "#form_div" ).css({ "position": "absolute",  "left": form_div_x, "top": length_parameter_y });
+}
+
+ 
+
+$( "form" ).submit(function( event ) {
+//alert("painting_round:"+ painting_round);
+
+	if (painting_round=="paintWalls"){
+
+	if ( $( "#userAnswerBox_fraction" ).val() == fraction_array[question_sequence]) {
+
+		
+		animatePoint(runPaintingWalls);
+		
+	  }
+		else dealWithMisses();
+
+	}
+
+	else if (painting_round=="paintPies"){
+	if (runPaintingPies_round==4) alert(pieAnswer);
+	
+	if ( $( "#userAnswerBox_fraction" ).val() == pieAnswer) {
+
+		animatePoint(runPaintingPies);
+		
+	  }
+		else dealWithMisses();
+	}
+	
+	else if (painting_round=="paintPies_2"){
+	
+	if ( $( "#userAnswerBox_fraction" ).val() == pieAnswer) {
+		
+
+		animatePoint(runPaintingPies_2);
+		
+	  }
+		else dealWithMisses();
+	}
+	
+	else if (painting_round=="paintPies_3"){
+	
+	if ( $( "#userAnswerBox_fraction" ).val() == pieAnswer) {
+		
+
+		animatePoint(runPaintingPies_3);
+		
+	  }
+		else dealWithMisses();
+	}
+
+	else if (painting_round=="paintThree_trianles"){
+	
+	if ( $( "#userAnswerBox_fraction" ).val() == pieAnswer) {
+		
+
+		animatePoint(runThree_triangles);
+		
+	  }
+		else dealWithMisses();
+	}
+	
+
+	else if (painting_round=="drawLondonBridge"){
+	
+	if ( $( "#userAnswerBox_fraction" ).val() == londonBridgeAnswer) {
+		
+
+		animatePoint(run_london_bridge);
+		
+	  }
+		else dealWithMisses();
+	}
+
+	else if (painting_round=="paintLondonEye"){
+	
+	if ( $( "#userAnswerBox_fraction" ).val() == londonBridgeAnswer) {
+		
+
+		animatePoint(run_london_Eye);
+		
+	  }
+		else dealWithMisses();
+	}
+	
+
+
+
+event.preventDefault();
+});
+
+
+
+function giveIntro(){
+
+//initialize_three_triangles();
+
+//startMosaic();
+//initialize_LondonBridge();
+
+//initialize_LondonEye();
+
+//generate_londonEyeSketch();
+
+
+
+$(function(){
+	    $('#start_button').on('click',function(){
+	      $("#intro_div").fadeOut("medium");
+		startMosaic();
+		
+	    });
+	});
+
+}
+
+
+
+
+
+</script>
+  </body>
+</html>      
