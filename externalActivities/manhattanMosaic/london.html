@@ -6,9 +6,7 @@
 
 
 <link rel="stylesheet" href="css/mosaic.css" />
-<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|Acme|Asul' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre|Overlock|Cabin+Sketch|Josefin+Sans|Port+Lligat+Sans|Comfortaa|Signika|Love+Ya+Like+A+Sister|Delius' rel='stylesheet' type='text/css'>
+
 
 <script language="javascript" type="text/javascript" src="js/variables.js"> </script>
 <script language="javascript" type="text/javascript" src="js/main.js"> </script>
@@ -47,16 +45,16 @@
 </div>
 
 <div id="floating_canvas_div" style=" zIndex: 2; position:absolute; left:250px;
-top:200px;">
+top:150px;">
 <canvas id="floating_canvas_1" height="300px" width="300px" > </canvas>
 </div>
 
 <div id="floating_canvas_div2" style=" zIndex: 2; position:absolute; left:50px;
-top:100px;">
+top:60px;">
 <canvas id="floating_canvas_2" height="300px" width="300px" > </canvas>
 </div>
 
-<div id="floating_canvas_div3" style=" zIndex: 2; position:absolute; left:740px;
+<div id="floating_canvas_div3" style=" zIndex: 2; position:absolute; left:680px;
 top:100px;">
 <canvas id="floating_canvas_3" height="400px" width="400px" > </canvas>
 </div>
@@ -161,7 +159,7 @@ var new_wall_array = [[40,60,100],[50,100,100]];
 
 
 var canvas_h=520;
-var platform_h=40;
+var platform_h=80;
 var building_h=450;
 var building_w=0;
 var building_x=0;
@@ -320,6 +318,17 @@ $( "form" ).submit(function( event ) {
 		else dealWithMisses();
 	}
 	
+	else if (painting_round=="ThamesNumberLine"){
+	
+	if ( $( "#userAnswerBox_fraction" ).val() == thamesRiverAnswer) {
+		
+
+		animatePoint(run_thamesRiver);
+		
+	  }
+		else dealWithMisses();
+	}
+	
 
 
 
@@ -329,6 +338,30 @@ event.preventDefault();
 
 
 function giveIntro(){
+
+
+var img = new Image();
+img.onload = function () {
+    context.drawImage(img, 580, canvas_h-img.height-platform_h);
+}
+img.src = "img/cathedral.png";
+
+var img2 = new Image();
+img2.onload = function () {
+    context.drawImage(img2, 940, canvas_h-img2.height-platform_h);
+}
+img2.src = "img/gherkin.png";
+
+
+ context.rect(0,canvas_h-platform_h,canvas.width,4);
+      context.fillStyle = "#77cff4";
+      context.fill();
+      
+
+
+setLondonStage();
+
+//displayInformationForThamesRiver();
 
 //initialize_three_triangles();
 
@@ -345,6 +378,8 @@ $(function(){
 	    $('#start_button').on('click',function(){
 	      $("#intro_div").fadeOut("medium");
 		startMosaic();
+
+	
 		
 	    });
 	});

@@ -179,6 +179,39 @@ function createBaseRect(xpos,ypos,width,height,border_color,context){
 	context.globalAlpha = 1;
 }
 
+function createBaseRect_alpha(xpos,ypos,width,height,context){ 
+	
+      context.beginPath();
+      context.rect(xpos,ypos,width,height);
+      context.fillStyle = "rgba(255, 255, 255, 0.3)";
+      context.fill();
+      context.lineWidth = 2;
+      context.strokeStyle = "rgba(106, 85, 156, 0.3)";
+      context.stroke();
+	
+}
+
+
+function drawCircle_base(centerx,centery,circleRadius, canvas_v){
+
+	canvas_v.beginPath();
+	canvas_v.fillStyle = "rgba(255, 255, 255, 0.3)";
+
+	
+    canvas_v.moveTo(centerx,centery);
+
+canvas_v.beginPath();
+canvas_v.arc(centerx,centery,circleRadius/2-4,0,2*Math.PI);
+
+   
+       canvas_v.strokeStyle = "rgba(106, 85, 156, 0.3)";
+canvas_v.lineWidth = 2;
+	canvas_v.stroke();
+    canvas_v.fill();
+    canvas_v.closePath();		
+   
+}
+
 function createFractionsBase(xpos,ypos,width,height,border_color,context){ 
 
       context.beginPath();

@@ -1,3 +1,38 @@
+function setLondonStage(){
+
+
+//Big Ben wireframe
+	building_x=Big_Ben[0];
+	building_w=Big_Ben[1];
+	building_h=Big_Ben[2];
+	building_y=canvas_h-building_h-platform_h;
+	createBaseRect_alpha(building_x,building_y,building_w,building_h,context);
+
+//Tower Bridge wireframe
+
+
+building_x=London_bridge_1[1];
+building_w=London_bridge_1[2];
+building_h=London_bridge_1[3];
+building_y=canvas_h-building_h-platform_h;
+
+createBaseRect_alpha(building_x,building_y,building_w,building_h,context);
+
+building_x=London_bridge_2[1];
+building_w=London_bridge_2[2];
+building_h=London_bridge_2[3];
+building_y=canvas_h-building_h-platform_h;
+
+createBaseRect_alpha(building_x,building_y,building_w,building_h,context);
+
+//London Eye wireframe
+
+drawCircle_base( LondonEyeRadius/2,LondonEyeRadius/2,LondonEyeRadius,ctx3);
+
+
+}
+
+
 //***********initialize painting walls *********//
 
 
@@ -84,9 +119,10 @@ function runPaintingWalls(){
 		//check if we reach to the end of house
 		if (wall_count>=5) {
 		
+		
 		wallPainting_done=true;
 		house_count++;
-		painting_round="paintPies"
+		painting_round="paintPies";
 		generate_bigben();
 		
 	
@@ -267,7 +303,7 @@ function runPaintingPies_3(){
 		
 	
 	$( "#floating_canvas_div" ).animate({
-    	transform: 'scale(.4,.4) translateX(-520px) translateY(-70px)'
+    	transform: 'scale(.4,.4) translateX(-520px) translateY(-50px)'
     	}, 1500 );
 	
 	drawPie(0,12, circleRadius,ctx);
@@ -280,7 +316,7 @@ function runPaintingPies_3(){
 function generatePieQuestion(){
 
 
-	$("#base_div_london").css({  "top": 80});
+	$("#base_div_london").css({  "top": 40});
 	$("#base_div_london").css({  "left": 260+circleRadius});
 
 	$("#base_div_london").fadeIn("medium");
@@ -382,7 +418,7 @@ function loop() {
          x = iteration * step_x[j],
         y = iteration * step_y[j];
 	  canvas_v.fillStyle=lineColor;
-    canvas_v.fillRect(centerx + x, centery + y, 2, 2);
+    canvas_v.fillRect(centerx + x, centery + y, 2,2);
     }
 
     iteration +=2;
@@ -423,7 +459,7 @@ function initialize_three_triangles(){
 	$("#base_div_london").css({  "left": 280});
 
 	drawThreeTriangles('yellow', 'white', 'white');
-	alert(runTriangles_counter);
+	
 	$( "#floating_canvas_div2" ).animate({
     	transform: 'scale(.8,.8) '
     	}, 1500 );
@@ -440,18 +476,18 @@ function initialize_three_triangles(){
 
 
 function drawThreeTriangles(color1, color2, color3){
-alert("drawThreeTriangles");
+
 ctx2.clearRect ( 0 , 0 , canvas3.width, canvas3.height );
 
 
+	 ctx2.beginPath();
 	var image = new Image();
 
 	image.src = "img/blueTile.jpg";
 
-	 ctx2.beginPath();
-   
-   
-   if (color1=='yellow'){
+
+    image.onload = function () {
+          if (color1=='yellow'){
 	ctx2.fillStyle = '#645886';
 
     ctx2.fillStyle = ctx2.createPattern(image, "repeat-y");
@@ -498,6 +534,12 @@ ctx2.moveTo(100,0);
     ctx2.fill();
 	ctx2.closePath();
 	ctx2.stroke();
+    };
+
+   
+//alert("drawThreeTriangles");
+
+
 }
 
 
@@ -536,7 +578,7 @@ function runThree_triangles(){
 
 	$("#base_div_london").fadeOut("slow");
 	
-	setTimeout(function() { drop_roof(); }, 2000);
+	setTimeout(function() { drop_roof(); }, 1500);
 
 	
 	}
@@ -591,6 +633,7 @@ function drop_roof(){
 
 function generate_bigben(){
 
+
 var clipping_height=0;
 var bigben_width, bigben_height;
 
@@ -600,21 +643,23 @@ var bigben_y=canvas_h-building_h-platform_h;
 var bigben_img = document.createElement("img");
 bigben_img.src = "img/bigben.png";
 bigben_img.id ="bigben";
-document.getElementById('floating_canvas_div').appendChild(bigben_img);
 
 
-bigben_img.onload=function(){
-	bigben_width = this.width;
+
+    bigben_img.onload = function () {
+	
+        bigben_width = this.width;
 	bigben_height=this.height;
 	
-	animate_bigben(); }
+	animate_bigben();
+    };
 
 
 
-$("#bigben").hide();
 
 
-function animate_bigben(){
+function animate_bigben(){ 
+
 	requestAnimationFrame(animate);}
 
 function draw_bigben(){
@@ -626,14 +671,17 @@ function draw_bigben(){
 	
     context_sketch.clip();
     context_sketch.drawImage(bigben_img,bigben_x,bigben_y);
+
     context_sketch.restore();
 }
 
 function animate(time){
+
 	
     if(clipping_height<=-bigben_height){ setTimeout(function() { 
-//runPaintingPies();
-initialize_three_triangles(); }, 1000);
+runPaintingPies();
+//initialize_three_triangles();
+ }, 1000);
 	return;}
     requestAnimationFrame(animate);
    
@@ -649,8 +697,10 @@ initialize_three_triangles(); }, 1000);
 var londonBridgeCounter=0;
 var londonBridgeAnswer;
 //london bridge array
-var London_bridge_1 = [1,310,50,180];
-var London_bridge_2 = [2,560,50,180];
+
+
+var London_bridge_1 = [1,260,50,180];
+var London_bridge_2 = [2,510,50,180];
 
 var lb_fraction_array_num_1=	[2,1,2,1,2,1,3,2,2,4,2];
 var lb_fraction_array_denum_1=	[4,2,6,2,3,3,4,3,3,4,2];
@@ -661,7 +711,8 @@ var lb_fraction_array_denum_2=	[2,4,3,8,9,9,8,15,12,2,1];
 function initialize_LondonBridge(){
 	painting_round="drawLondonBridge";
 
-	platform_h+=20; question_base_margin_left=10; question_base_margin_top=10; question_base_margin_bottom=10;
+	//platform_h+=10; 
+	question_base_margin_left=10; question_base_margin_top=10; question_base_margin_bottom=10;
 
 	
 
@@ -877,7 +928,7 @@ function initialize_LondonEye(){
 	
 	painting_round="paintLondonEye";
 	
-
+ctx3.clearRect ( 0 , 0 , canvas4.width, canvas4.height );
 
 $("#base_div_london").css({ "position": "absolute",  "top": '380px', "left":'740px', "width":'260px', "height":'200px' ,"padding-top": '0px',});
 
@@ -925,12 +976,13 @@ function run_london_Eye(){
 	generate_London_eye_question();
 	$("#base_div_london").fadeIn();
 	
-	} }, 2000);
+	} }, 1500);
 	
 }
 
 function generate_London_eye_question(){
 	
+	$("#userAnswerBox_fraction").focus();
 	$(".num_left").html(londonEye_num_1[londonEyeCounter]);
 	$(".denum_left").html(londonEye_denum_1[londonEyeCounter]);
 	$("#num_denum_div").html(londonEye_denum_2[londonEyeCounter]);
@@ -986,10 +1038,12 @@ function animate(time){
     if(clipping_height<=-londonEye_height){ 
 	
 	$("#floating_canvas_3" ).animate({
-    	transform: 'scale(.8,.8) translateX(0px) translateY(180px)'
+    	transform: 'scale(.8,.8) translateX(0px) translateY(192px)'
     	}, 1500 );
-	return;
+	
+	setTimeout(function() { displayInformationForThamesRiver(); }, 2000);
 
+	return;
 	}
 
     requestAnimationFrame(animate);
@@ -999,5 +1053,186 @@ function animate(time){
 }
 }
 
+
+//******************************* THAMES RIVER START *******************************//
+
+var thamesRiverCounter=0;
+var thamesRiverAnswer;
+//london bridge array
+
+
+var thamesRiver_fraction_array_num_1=	[1,1,1,1,2,2,2,1,1,2,2,2,3,3,3,3,3,1,1,1,2,2,2,2,4,4,4,4];
+var thamesRiver_fraction_array_denum_1=	[2,3,3,3,3,3,3,5,5,5,5,5,5,4,4,5,5,4,4,4,4,4,4,4,5,5,5,4];
+var thamesRiver_fraction_array_num_2=	[2,2,3,4, 4,6,10,2,3,4,6,8,6,9,12,9,12,4,2,3,4,1,3,5,16,12,8,5];
+var thamesRiver_fraction_array_denum_2=	[4,6,9,12,6,9,15,10,15,10,15,20,10,12,16,15,20,16,8,12,8,2,6,10,20,15,10,5];
+
+
+
+
+var clipping_width=20;
+
+var thamesRiver_img = document.createElement("img");
+
+function initialize_thamesRiver(){
+
+	
+	painting_round="ThamesNumberLine";
+	question_base_width=260; question_base_height =230;
+
+
+
+thamesRiver_img.src = "img/thames.png";
+thamesRiver_img.id ="thamesRiver";
+	thamesRiver_img.onload=function(){
+	
+		run_thamesRiver();
+	    };
+	$("#base_div_london").css({ "position": "relative",  "top": 150, "left":clipping_width, "width":question_base_width, "height":question_base_height ,"padding-left": '40px',});
+
+
+	$("#Fraction_span").html("Equivalent Fractions");
+
+
+	$(".form_left").css({  "position": "absolute","visibility":'visible',"top": '60px' });
+	$(".form_right").css({  "top": '40px' });
+
+	$(".form_bottom").css({ "position": "absolute", "top": '130px',  "left":'0px' });
+	$("#num_denum_div").addClass( "denominatorNow" );
+	//swapPositions();
+	
+
+	 
+
+
+}
+
+function generate_thamesRiver_question(){
+	
+	
+	$("#base_div_london").fadeIn("slow");
+	
+	if (clipping_width<=canvas.width-question_base_width){
+	$("#base_div_london").css({ "left":clipping_width});}
+	
+	$(".num_left").html(thamesRiver_fraction_array_num_1[thamesRiverCounter]);
+	$(".denum_left").html(thamesRiver_fraction_array_denum_1[thamesRiverCounter]);
+	$("#num_denum_div").html(thamesRiver_fraction_array_denum_2[thamesRiverCounter]);
+	thamesRiverAnswer=thamesRiver_fraction_array_num_2[thamesRiverCounter];
+	$("#userAnswerBox_fraction").val("");
+	$("#userAnswerBox_fraction").focus();
+
+	
+
+}
+
+function run_thamesRiver(){
+	
+	
+	if (thamesRiverCounter>=thamesRiver_fraction_array_num_1.length) {
+	
+	$("#base_div_london").fadeOut();
+	displayInformationCompletion();
+	}
+	else{
+	clipping_width+=40;
+    	draw_thamesRiver();
+	generate_thamesRiver_question();
+	thamesRiverCounter++;
+	}
+	
+}
+
+
+
+
+function draw_thamesRiver(){
+ context.save();
+   context.beginPath();
+    context.rect(0,canvas_h-platform_h,clipping_width,platform_h);
+	
+    context.clip();
+context.drawImage(thamesRiver_img,0,canvas_h-platform_h);
+context.restore();
+	
+}
+
+
+
+function displayInformationForThamesRiver(){
+$("#base_div").hide();
+$( ".instruction_text" ).html("You have completed drawing London landmarks.<br/> Your next challenge will be against time. <br/><br/>You will be uncovering Thames River.<br/><br/>You have 5 minutes <br/><br/><br/>");
+	$("#instruction_div").fadeIn("slow");
+
+var r= $('<input type="button" id ="OK_button" value="OK">');
+	if ($("#instruction_div").children("#OK_button").length == 0) {
+	$("#instruction_div").append(r);	
+	}
+
+
+	$(function(){
+	    $('#OK_button').on('click',function(){
+	      $("#instruction_div").fadeOut("slow");
+		$("#pie_timer_div").show();
+		$('#pie_timer').pietimer('start');
+		initialize_thamesRiver();
+		
+	    });
+	});
+
+		
+
+}
+
+function displayTimerInformation(){
+
+$("#instruction_div").css({ "left": 160, "top":70, "width":400, "height":200});
+
+$( ".instruction_text" ).html("You have 5 minutes to uncover Thames River. ");
+	$("#instruction_div").fadeIn("slow");
+	$("#pie_timer_div").show();
+	$("#OK_button").unbind();
+	
+	
+	$( "#OK_button" ).click(function() {
+	       $("#instruction_div").fadeOut("slow");
+		
+		
+		
+		
+	    });
+	
+}
+
+function timeOverInformation(){
+$("#base_div_london").hide();
+
+$("#instruction_div").css({ "left": 280, "top":80, "width":400, "height":200});
+$("#OK_button").unbind();
+$( ".instruction_text" ).html("Your time is over ! <br/><br/>");
+	$("#instruction_div").fadeIn("slow");
+
+	
+	$( "#OK_button" ).click(function() {
+	       $("#instruction_div").fadeOut("slow");
+		
+	    });
+	
+}
+
+function displayInformationCompletion(){
+$("#base_div_london").hide();
+
+$("#instruction_div").css({ "left": 280, "top":80, "width":400, "height":200});
+$("#OK_button").unbind();
+$( ".instruction_text" ).html("You have completed this London Mosaic. <br/> Congratulations !!! <br/><br/>");
+	$("#instruction_div").fadeIn("slow");
+
+	
+	$( "#OK_button" ).click(function() {
+	       $("#instruction_div").fadeOut("slow");
+		
+	    });
+	
+}
 
 
