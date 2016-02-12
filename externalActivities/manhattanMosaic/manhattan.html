@@ -3,9 +3,7 @@
   <head>
 <script src="js/jquery-1.11.2.min.js"></script>
 <link rel="stylesheet" href="css/mosaic.css" />
-<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|Acme|Asul' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre|Overlock|Cabin+Sketch|Josefin+Sans|Port+Lligat+Sans|Comfortaa|Signika|Love+Ya+Like+A+Sister|Delius' rel='stylesheet' type='text/css'>
+
 
 <script language="javascript" type="text/javascript" src="js/manhattan.js"> </script>
  <script type="text/javascript" src="js/jquery.pietimer.js"></script>   
@@ -58,17 +56,17 @@
 $('#pie_timer').pietimer('start');
 
 
-var length_array = [2,2,2,2,4,4,4,4,3,3,3,3];
-var height_array = [1,2,3,4,1,2,3,4,1,2,3,4];
+var length_array = [2,3,4,5,1,2,3,3,2,4,4,2,5,5,5,6,6,6,6,6,7,7,7,7,8,8,9,1,1,1,1,1];
+var height_array = [1,1,1,1,1,3,2,3,2,2,4,4,2,3,4,6,5,4,3,2,6,7,8,9,8,6,9,1,1,1,1,1];
 
-var perimeter_length_array = [1,2,1,2,3,3,3,4,3,3,3,3];
-var perimeter_height_array = [1,2,2,1,1,2,3,4,1,2,3,4];
+var perimeter_length_array = [1,2,1,3,1,1,2,3,4,5,5,6,6,5,10,10,1,5,10,20,40,80,60,50,4,3,1,1,1,1,1];
+var perimeter_height_array = [1,1,2,1,4,5,2,3,4,2,3,2,3,10,20,30,1,5,10,20,40,80,60,50,6,7,1,1,1,1,1];
 
-var new_length_array = [3,3,3,5,5,5,1,1,1];
-var new_height_array = [1,2,3,2,3,4,1,2,3];
+var new_length_array = [10,50,150,11,33,33,8,80,40,42,44,1,1,1,1,1,1,1,1];
+var new_height_array = [5,3,2,3,2,3,4,4,6,4,4,1,1,1,1,1,1,1];
 
-var new_perimeter_length_array = [1,1,1,1,1,1,1,1,1,1,1,1,1,1];
-var new_perimeter_height_array = [1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+var new_perimeter_length_array = [8,20,50,33,77,73,11,12,13,14,1,1,1,1];
+var new_perimeter_height_array = [2,5,10,7,11,7,11,12,13,14,1,1,1,1];
 
 //points and misses
 
@@ -83,30 +81,32 @@ painting_round=painting_series[0];
 
 //building parameters: x_distance, width, height
 
-var building_base_arr = [[20,90,300], [25,100,200], [70,90,300], [25,130,200],[20,90,400], [90,100,330], [10,90,300],[10,80,100]];
-var building_wall_color=["#65caf0","#94dbb4","#65caf0","#65caf0"];
+var building_base_arr = [[20,90,300], [25,100,200], [70,80,250], [15,130,200],[20,90,300], [130,80,280], [10,90,200],[0,80,100]];
 
-var new_building_array = [[50,100,200], [435,150,250], [500,200,350]];
-var new_building_wall_color=["#8c93d4","#f9e041","#65caf0","#65caf0"];
+var building_wall_color=["#65caf0","#94dbb4","#8280bf","#2e9faf","#8c93d4","#65caf0","#2e9faf","#ca4272"];
+
+var new_building_array = [[50,100,200], [470,110,250], [750,100,400]];
+var new_building_wall_color=["#8c93d4","#f36e3e","#24afe3"];
 
 //wall paramters: height,width
 
-var wall_array = [[60,70,80,90],[50,70,80]];
+var wall_array = [[65,60,55,50,70],[80,50,70],[60,40,70,80],[50,70,80],[90,70,60,50,30],[60,60,80,80],[100,100],[100]];
 
 //house[width]
-var new_wall_array = [[40,60,100],[50,100,100]];
+var new_wall_array = [[100,60,40],[100,50,100],[80,80,80,80,80]];
 
 //window paramters: x,y,width,height
 
-var window_array = [[[0,0,70,50],[0,0,70,50],[0,0,70,50],[0,0,70,50]],[[0,0,80,50],[0,0,80,50],[0,0,80,50]]];
+var window_array = [[[0,0,70,60],[0,0,70,60],[0,0,70,60],[0,0,70,60]],[[0,0,36,170],[4,0,36,170]],[[0,0,60,60],[0,0,60,60],[0,0,60,60]], [[0,0,110,20],[0,0,110,20],[0,0,110,20],[0,0,110,20]],[[0,0,70,260]],[[0,0,60,100],[0,0,60,150]],[[0,0,31,31],[5,0,31,31],[0,0,31,31],[5,0,31,31],[0,0,31,31],[5,0,31,31],[0,0,31,31],[5,0,31,31]],[[0,0,25,80],[4,0,25,80]]];
 
-var window_color_array = [['#d7c3ed', '#d7c3ed'],['#c2fee5']];
-var window_borderColor_array = [['#cee7f9', '#cee7f9','#cee7f9','#cee7f9'],['#e8cc45','#e8cc45','#e8cc45']];
+var window_color_array = [['#d7c3ed'],['#f9e041'],['#f04277'],['#74ffed'],['window'],['#f9e041'],['#f9e041'],['#f18661']];
+var window_borderColor_array = [['#cee7f9', '#cee7f9','#cee7f9','#cee7f9'],['#e8cc45','#e8cc45','#e8cc45'],['#e8cc45','#e8cc45','#e8cc45'],['#e8cc45','#e8cc45','#e8cc45'],['#e8cc45'],['#e8cc45'],['#e8cc45'],['#e8cc45'],['#e8cc45'],['#e8cc45']];
 
-var new_window_array = [[[0,0,80,50],[0,0,80,50],[0,0,80,50]],[[0,0,130,50]]];
+var new_window_array = [[[0,0,80,50],[0,0,80,50],[0,0,80,50]],[[0,0,90,50],[0,0,90,50],[0,0,90,50]] ,[[0,0,80,80],[0,0,80,80],[0,0,80,80],[0,0,80,80]]];
 
-var new_window_color_array = [['#eff48e', '#eff48e','#eff48e'],['#ffa25e']];
-var new_window_borderColor_array = [['#e6e8ff', '#e6e8ff','#e6e8ff'],['#bee6ff']];
+var new_window_color_array = [['window'],['window'],['window']];
+
+var new_window_borderColor_array = [['#e6e8ff', '#e6e8ff','#e6e8ff'],['#bee6ff'],['#ffa25e']];
 
 var canvas = document.getElementById('manhattan_canvas');
 var context = canvas.getContext('2d');
@@ -130,6 +130,7 @@ var wall_x, wall_y, wall_height, wall_width;
 ////build outline for buildings
 for (j=0; j<building_base_arr.length; j++){
 building_x=building_x+building_w+building_base_arr[j][0];
+
 building_w=building_base_arr[j][1];
 building_h=building_base_arr[j][2];
 building_y=canvas_h-building_h-platform_h;
@@ -142,12 +143,13 @@ var wall_count=0;
 var new_building_count=0;
 
 var question_sequence=0;
+var new_peremeter_question_sequence=0;
 var mistakes_count=0;
 var question_base_margin_top=25;
 var question_base_margin_left=5;
 var question_base_margin_bottom=10;
 var question_base_width_margin=180;
-var height_parameter_margin_left=10;
+var height_parameter_margin_left=12;
 var form_div_margin_left=15;
 
 
@@ -186,6 +188,11 @@ function startMosaic(){
 
 if (painting_round=="paintWalls") initializePaintingWalls();
 
+
+//if (painting_round=="paintWalls") initializePaintingWindows();
+
+
+
 $("#base_div").css({ "position": "relative",  "top": question_base_y, "left":question_base_x, "width":question_base_width, "height":question_base_height });
 $("#base_div").fadeIn("medium");
 
@@ -205,7 +212,8 @@ $( "form" ).submit(function( event ) {
 	if ( $( "#userAnswerBox" ).val() == computeArea(length_array[question_sequence],height_array[question_sequence]).toString()) {
 
 		
-		animatePoint(runPaintingWalls);
+	animatePoint(runPaintingWalls);
+
 		
 	  }
 		else dealWithMisses();
@@ -238,7 +246,7 @@ $( "form" ).submit(function( event ) {
 	}
 
 	else if (painting_round=="buildNewWindows"){
-		if ( $( "#userAnswerBox" ).val() == computeperimeter(new_perimeter_length_array[question_sequence],new_perimeter_height_array[question_sequence]).toString()) {
+		if ( $( "#userAnswerBox" ).val() == computeperimeter(new_perimeter_length_array[new_peremeter_question_sequence],new_perimeter_height_array[new_peremeter_question_sequence]).toString()) {
 		
 		animatePoint(runPaintingNewWindows);
 
@@ -266,15 +274,35 @@ return 2*(length+height);
 }
 
 function paintWindow(xpos,ypos,width,height,windowcolor,windowbordercolor){
+
+
 	
+
       context.beginPath();
 	
-      context.rect(xpos,ypos,width,height);
-      context.fillStyle = windowcolor;
+
+if (windowcolor=='window'){
+
+var image = new Image();
+	image.src = "img/window.png";
+
+
+ image.onload = function () { 
+context.fillStyle = context.createPattern(image, "repeat");
+context.translate(0,0);
+    context.fillRect(xpos,ypos,width,height);
+
+}
+    
+}
+else 
+      {context.rect(xpos,ypos,width,height);
+	context.fillStyle = windowcolor;
       context.fill();
       context.lineWidth = 2;
       context.strokeStyle = windowbordercolor;
       context.stroke();
+}
 
 }
 
@@ -402,7 +430,7 @@ function initializeBuildingNewBuildings(){
 	building_w=new_building_array [house_count][1];
 	building_h=new_building_array [house_count][2];
 	building_y=canvas_h-building_h-platform_h;
-	createBaseRect(building_x,building_y,building_w,building_h);
+	createBaseRect(building_x,building_y,building_w,building_h,'#65caf0');
 
 	initializePaintingNewWalls();
 	
@@ -564,6 +592,7 @@ function runPaintingNewWalls(){
 	
 	
 	wall_count++;
+	question_sequence++;
 	
 		//check if we reach to the end of house
 		if (wall_count>=new_wall_array[house_count].length) {
@@ -595,12 +624,14 @@ function runPaintingNewWalls(){
 	height_parameter_x=wall_width+height_parameter_margin_left;
 	height_parameter_y=wall_height/2+question_base_margin_top/2;
 	
-	question_sequence++;
+	
 	generateQuestion(new_length_array[question_sequence],new_height_array[question_sequence]);
 	
 	}
 	
 	}
+
+var house_x=0;
 
 //initialize painting windows
 function initializePaintingWindows(){
@@ -609,8 +640,9 @@ function initializePaintingWindows(){
 	$("#userAnswerBox").val("");
 	$("#userAnswerBox").focus();
 	$("#areaperimeter_span").html("perimeter:");
+	house_x=building_base_arr[0][0];
 	window_y=canvas_h-building_base_arr[0][2]-platform_h+window_v_space;
-	window_x=building_base_arr[house_count][0]+window_h_space+window_array[house_count][window_count][0]; 
+	window_x=building_base_arr[house_count][0]+window_h_space; 
 	window_y=window_y+window_v_space+window_array[house_count][window_count][1];
 
 	question_base_y=window_y-question_base_margin_top;
@@ -621,11 +653,9 @@ function initializePaintingWindows(){
 	
 	question_base_width=window_array[house_count][window_count][2]+ question_base_width_margin;
 
-	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":window_array[house_count][window_count][2], "height":window_array[house_count][window_count][3], "background": "#f1ebff", "border":"3px solid #7355cb"});
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left+window_array[house_count][window_count][0], "top":question_base_margin_top, "width":window_array[house_count][window_count][2], "height":window_array[house_count][window_count][3], "background": "#f1ebff", "border":"3px solid #7355cb"});
 
 	length_parameter_x=window_array[house_count][window_count][2]/2;
-	
-
 	height_parameter_x=window_array[house_count][window_count][2]+height_parameter_margin_left;
 	height_parameter_y=window_array[house_count][window_count][3]/2+question_base_margin_top/2;
 	
@@ -646,9 +676,11 @@ function initializePaintingWindows(){
 
 //initialize painting New windows
 
+
+
 function initializePaintingNewWindows(){
 	windowPainting_done=false;
-	window_count=0; question_sequence=0;
+	window_count=0; 
 	$("#userAnswerBox").val("");
 	$("#userAnswerBox").focus();
 	$("#areaperimeter_span").html("perimeter:");
@@ -665,7 +697,7 @@ function initializePaintingNewWindows(){
 	if (question_base_height<question_base_min_height) question_base_height=question_base_min_height;
 	question_base_width=window_array[house_count][window_count][2]+ question_base_width_margin;
 
-	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":window_array[house_count][window_count][2], "height":window_array[house_count][window_count][3]});
+	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":new_window_array[house_count][window_count][2], "height":new_window_array[house_count][window_count][3]});
 
 	length_parameter_x=new_window_array[house_count][window_count][2]/2;
 	
@@ -673,8 +705,8 @@ function initializePaintingNewWindows(){
 	height_parameter_x=new_window_array[house_count][window_count][2]+height_parameter_margin_left;
 	height_parameter_y=new_window_array[house_count][window_count][3]/2+question_base_margin_top/2;
 	
-	$( ".length_span" ).html(new_perimeter_length_array[question_sequence]);
-	$( ".height_span" ).html(new_perimeter_height_array[question_sequence]);
+	$( ".length_span" ).html(new_perimeter_length_array[new_peremeter_question_sequence]);
+	$( ".height_span" ).html(new_perimeter_height_array[new_peremeter_question_sequence]);
 
 	$("#base_div").css({ "position": "relative",  "top": question_base_y, "left":question_base_x, "width":question_base_width, "height":question_base_height });
 	$("#base_div").fadeIn("medium");
@@ -690,24 +722,50 @@ function initializePaintingNewWindows(){
 	
 	}
 
-////run painting windows
-	function runPaintingWindows(){
 
-	paintWindow(window_x,window_y,window_array[house_count][window_count][2],window_array[house_count][window_count][3],window_color_array[house_count][window_count], window_borderColor_array[house_count][window_count]);
-	window_y+=window_array[house_count][window_count][3]+window_v_space+window_array[house_count][window_count][1];
+
+
+var add_window_shift_x=0;
+var add_window_shift_y=0;
+
+
+//************************ run painting windows ************************//
+
+
+	function runPaintingWindows(){
+	
+
+
+paintWindow(window_x+window_array[house_count][window_count][0],window_y,window_array[house_count][window_count][2],window_array[house_count][window_count][3],window_color_array[house_count][window_count], window_borderColor_array[house_count][window_count]);
+
+
+
+add_window_shift_y=window_array[house_count][window_count][3]+window_v_space+window_array[house_count][window_count][1];
+
 	window_count++;
+	if (window_count<window_array[house_count].length){
+	add_window_shift_x=window_array[house_count][window_count][0];
+	
+	if (add_window_shift_x==0) {window_y+=add_window_shift_y; window_x=house_x+window_h_space; }
+	else {window_x+=add_window_shift_x+window_array[house_count][window_count-1][2]; }
+
+	}
 	
 
 	//check if we reach to the last window of the house
+	
 	if (window_count>=window_array[house_count].length) {
-
+	
 	window_x+=building_base_arr[house_count][1]; 
 
 	house_count++;
-
+	
+	
+	
 
 	//*******check if we finished all houses *******
-		if (house_count>=wall_array.length) {
+		if (house_count>=building_base_arr.length) {
+		
 		displayInformationForNewBuildings();
 
 		painting_round="buildNewWalls";
@@ -717,13 +775,18 @@ function initializePaintingNewWindows(){
 		} 
 
 		else {
-
-	window_count=0;
-	window_x+=building_base_arr[house_count][0]+window_array[house_count][window_count][0];
-	window_y=canvas_h-building_base_arr[house_count][2]-platform_h+window_v_space; }
+	
+			house_x+=building_base_arr[house_count-1][1]+building_base_arr[house_count][0];
+			window_count=0;
+	
+			window_x=house_x+window_h_space;
+			window_y=canvas_h-building_base_arr[house_count][2]-platform_h+window_v_space; }
 		
 
 	 }
+
+	
+	
 		
 	if (windowPainting_done==false){
 	question_base_y=window_y-question_base_margin_top;
@@ -757,8 +820,7 @@ function initializePaintingNewWindows(){
 
 function runPaintingNewWindows(){
 	
-	
-	paintWindow(window_x,window_y,new_window_array[house_count][window_count][2],new_window_array[house_count][window_count][3],new_window_color_array[house_count][window_count], new_window_borderColor_array[house_count][window_count]);
+	paintWindow(window_x,window_y,new_window_array[house_count][window_count][2],new_window_array[house_count][window_count][3],new_window_color_array[house_count][0], new_window_borderColor_array[house_count][window_count]);
 
 	
 	window_y+=new_window_array[house_count][window_count][3]+window_v_space+new_window_array[house_count][window_count][1];
@@ -774,6 +836,7 @@ function runPaintingNewWindows(){
 
 	//*******check if we finished all houses *******
 		if (house_count>=new_wall_array.length) {
+		
 		displayInformationForCompletion();
 
 		windowPainting_done=true;
@@ -782,7 +845,7 @@ function runPaintingNewWindows(){
 
 		else {
 	
-	question_sequence++;
+	new_peremeter_question_sequence++;
 	painting_round="buildNewWalls";
 	initializeBuildingNewBuildings();
 	}
@@ -803,6 +866,7 @@ function runPaintingNewWindows(){
 	min_question_base_height= new_window_array[house_count][window_count][3] +question_base_margin_top+question_base_margin_bottom;
 	
 	
+
 	$("#active_window").css({ "position": "absolute",  "left": question_base_margin_left, "top":question_base_margin_top, "width":new_window_array[house_count][window_count][2], "height":new_window_array[house_count][window_count][3]});
 	
 	
@@ -814,8 +878,8 @@ function runPaintingNewWindows(){
 	
 	height_parameter_y=new_window_array[house_count][window_count][3]/2+question_base_margin_top/2;
 	
-	question_sequence++;
-	generateQuestion(new_perimeter_length_array[question_sequence],new_perimeter_height_array[question_sequence]);
+	new_peremeter_question_sequence++;
+	generateQuestion(new_perimeter_length_array[new_peremeter_question_sequence],new_perimeter_height_array[new_peremeter_question_sequence]);
 	}
 
 	}
@@ -836,7 +900,7 @@ function runPaintingNewWindows(){
 	$( ".height_span" ).css({   "left": height_parameter_x, "top": height_parameter_y });
 
 	$( "#form_div" ).css({ "position": "absolute",  "left": form_div_x, "top": length_parameter_y });
-	$("#base_div").fadeIn("slow");
+	$("#base_div").fadeIn("medium");
 	
     	$("#userAnswerBox").val("");
 	$("#userAnswerBox").focus();
@@ -892,13 +956,14 @@ function dealWithMisses(){
 			$("#misses_count").html(misses_count);
 			lastWrongInput=$( "#userAnswerBox" ).val();}
 
+/*
 		if (misses_count>=5) {
-		
 
 	var r= $('<input type="button" id ="OK_button" value="OK">');
 	if ($("#instruction_div").children("#OK_button").length == 0) {
 	$("#instruction_div").append(r);	
 	}
+
 
 		$( ".instruction_text" ).html("You have made five mistakes. <br/> Now, you need to go back to the tutor to work on the problems.<br/>You can come back to Mosaic after you have worked on the tutor.<br/><br/>");
 	$("#instruction_div").fadeIn("slow");
@@ -911,6 +976,8 @@ function dealWithMisses(){
 		
 		
 	   });}
+
+*/     
 		
 }
 
