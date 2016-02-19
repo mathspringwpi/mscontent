@@ -1,4 +1,4 @@
-/***********************
+/*********************** 
 * Adobe Edge Animate Composition Actions
 *
 * Edit this file with caution, being careful to preserve 

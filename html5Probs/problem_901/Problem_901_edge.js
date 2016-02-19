@@ -1,4 +1,4 @@
-/*jslint */
+/*jslint */ 
 /*global AdobeEdge: false, window: false, document: false, console:false, alert: false */
 (function (compId) {
 
