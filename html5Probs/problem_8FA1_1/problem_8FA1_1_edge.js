@@ -881,10 +881,10 @@
                             id: 'AnswerText',
                             display: 'none',
                             type: 'text',
-                            rect: ['320px', '563px', '233', '30px', 'auto', 'auto'],
+                            rect: ['36', '3', '109', '0', 'auto', 'auto'],
                             text: "The answer is b.",
                             align: "left",
-                            font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(0,82,203,1)", "normal", "none", "normal", "break-word", ""]
+                            font: ['{', [, "{undefined"], ":", "}", "{", "u", "n", "d"]
                         },
                         {
                             id: 'question',
@@ -916,16 +916,6 @@
                     },
                     data: [
                         [
-                            "eid284",
-                            "display",
-                            56000,
-                            0,
-                            "linear",
-                            "${Question_TextRedNumberCopy5}",
-                            'none',
-                            'block'
-                        ],
-                        [
                             "eid286",
                             "display",
                             59025,
@@ -946,12 +936,12 @@
                             'block'
                         ],
                         [
-                            "eid283",
+                            "eid284",
                             "display",
-                            52750,
+                            56000,
                             0,
                             "linear",
-                            "${Hint2Equations}",
+                            "${Question_TextRedNumberCopy5}",
                             'none',
                             'block'
                         ],
@@ -966,24 +956,24 @@
                             'block'
                         ],
                         [
-                            "eid289",
+                            "eid283",
                             "display",
-                            59748,
+                            52750,
                             0,
                             "linear",
-                            "${AnswerText}",
+                            "${Hint2Equations}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid285",
+                            "eid28",
                             "display",
-                            57621,
+                            0,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy6}",
+                            "${Sound_Container}",
                             'none',
-                            'block'
+                            'none'
                         ],
                         [
                             "eid244",
@@ -1002,6 +992,16 @@
                             0,
                             "linear",
                             "${Hint_2_text}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid289",
+                            "display",
+                            59748,
+                            0,
+                            "linear",
+                            "${AnswerText}",
                             'none',
                             'block'
                         ],
@@ -1036,14 +1036,14 @@
                             'none'
                         ],
                         [
-                            "eid28",
+                            "eid285",
                             "display",
-                            0,
+                            57621,
                             0,
                             "linear",
-                            "${Sound_Container}",
+                            "${Question_TextRedNumberCopy6}",
                             'none',
-                            'none'
+                            'block'
                         ],
                         [
                             "eid268",
@@ -1072,9 +1072,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'E_Button',
                             type: 'group',
+                            id: 'E_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1085,12 +1085,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
@@ -1189,9 +1189,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'E_Button',
                             type: 'group',
+                            id: 'E_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1202,25 +1202,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
+                                type: 'text',
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1333,9 +1333,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'E_Button',
                             type: 'group',
+                            id: 'E_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1346,33 +1346,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'text',
                                 rect: [36, 4, 101, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -3, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1464,9 +1464,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'E_Button',
                             type: 'group',
+                            id: 'E_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1477,20 +1477,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'text',
                                 rect: [36, 4, 101, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -1589,9 +1589,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'D_Button',
                             type: 'group',
+                            id: 'D_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1602,25 +1602,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
+                                type: 'text',
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1671,14 +1671,14 @@
                             'block'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid226",
@@ -1711,14 +1711,14 @@
                             'none'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ]
                     ]
                 }
@@ -1733,9 +1733,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'D_Button',
                             type: 'group',
+                            id: 'D_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1746,33 +1746,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'text',
                                 rect: [36, 4, 101, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1812,14 +1812,14 @@
                             'none'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid226",
@@ -1842,14 +1842,14 @@
                             'block'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ]
                     ]
                 }
@@ -1864,9 +1864,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'D_Button',
                             type: 'group',
+                            id: 'D_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1877,20 +1877,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'text',
                                 rect: [36, 4, 101, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -1937,14 +1937,14 @@
                             'none'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid226",
@@ -1967,14 +1967,14 @@
                             'block'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ]
                     ]
                 }
@@ -1989,9 +1989,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'D_Button',
                             type: 'group',
+                            id: 'D_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2002,20 +2002,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'text',
                                 rect: [36, 4, 94, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text13',
                                 text: 'Answer Text D',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -2062,14 +2062,14 @@
                             'none'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid226",
@@ -2092,14 +2092,14 @@
                             'block'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ]
                     ]
                 }
@@ -2114,9 +2114,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'C_Button',
                             type: 'group',
+                            id: 'C_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2127,25 +2127,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
+                                type: 'text',
                                 id: 'Text5',
                                 text: 'C',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -2258,9 +2258,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '25', 'auto', 'auto'],
-                            id: 'B_Button',
                             type: 'group',
+                            id: 'B_Button',
+                            rect: [0, 0, '25', '25', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2271,25 +2271,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 5, 27, 19, 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
+                                type: 'text',
                                 id: 'Text4',
                                 text: 'B',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 5, 27, 19, 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -2309,16 +2309,6 @@
                         "Answer Correct": 10000
                     },
                     data: [
-                        [
-                            "eid7",
-                            "background-color",
-                            0,
-                            0,
-                            "linear",
-                            "${EllipseCopy5}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
-                        ],
                         [
                             "eid251",
                             "display",
@@ -2348,6 +2338,16 @@
                             "${check}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid7",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy5}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid12",
@@ -2402,9 +2402,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [8, 16, '25', '24', 'auto', 'auto'],
-                            id: 'A_Button',
                             type: 'group',
+                            id: 'A_Button',
+                            rect: [8, 16, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2415,25 +2415,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 type: 'text',
+                                rect: [0, 3, 27, 19, 'auto', 'auto'],
                                 id: 'A',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                rect: [0, 3, 27, 19, 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             }]
                         }
@@ -2526,9 +2526,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [8, 16, '25', '24', 'auto', 'auto'],
-                            id: 'A_Button',
                             type: 'group',
+                            id: 'A_Button',
+                            rect: [8, 16, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2539,20 +2539,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 3, 27, 19, 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text3',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'text',
                                 rect: [36, 3, 109, '19px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text9',
                                 text: 'Answer Text A',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -2631,49 +2631,49 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 2, '153', '183', 'auto', 'auto'],
-                            id: 'Group',
                             type: 'group',
+                            id: 'Group',
+                            rect: [0, 2, '153', '183', 'auto', 'auto'],
                             c: [
                             {
-                                rect: [8, 157, 101, 26, 'auto', 'auto'],
+                                type: 'rect',
                                 id: 'EButton',
                                 symbolName: 'EButton_3',
-                                type: 'rect'
+                                rect: [8, 157, 101, 26, 'auto', 'auto']
                             },
                             {
-                                rect: [8, 121, 101, 26, 'auto', 'auto'],
+                                type: 'rect',
                                 id: 'DButton',
                                 symbolName: 'DButton_3',
-                                type: 'rect'
+                                rect: [8, 121, 101, 26, 'auto', 'auto']
                             },
                             {
-                                rect: [8, 86, 101, 26, 'auto', 'auto'],
+                                type: 'rect',
                                 id: 'CButton',
                                 symbolName: 'CButton_3',
-                                type: 'rect'
+                                rect: [8, 86, 101, 26, 'auto', 'auto']
                             },
                             {
-                                rect: [8, 50, 125, 26, 'auto', 'auto'],
+                                type: 'rect',
                                 id: 'BButton',
                                 symbolName: 'BButton_3',
-                                type: 'rect'
+                                rect: [8, 50, 125, 26, 'auto', 'auto']
                             },
                             {
-                                rect: [0, 0, 153, 42, 'auto', 'auto'],
+                                type: 'rect',
                                 id: 'AButton',
                                 symbolName: 'AButton_3',
-                                type: 'rect'
+                                rect: [0, 0, 153, 42, 'auto', 'auto']
                             }]
                         }
                     ],
                     style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 156, 187]
+                        },
                         '${AnswerText}': {
                             font: '{{:}{undefined{:}:{:}}{:}{{:}u{:}n{:}d',
                             rect: [36, 3, 109, 0]
-                        },
-                        '${symbolSelector}': {
-                            rect: [null, null, 156, 187]
                         }
                     }
                 },
@@ -2689,5 +2689,5 @@
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("8FA1_1_edgeActions.js");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("problem_8FA1_1_edgeActions.js");
 })("EdgeProblem");

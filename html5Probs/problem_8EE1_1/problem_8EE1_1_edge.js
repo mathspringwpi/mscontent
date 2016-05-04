@@ -167,12 +167,6 @@
                             font: ['Georgia, \'Times New Roman\', Times, serif', [16, "px"], "rgba(0,0,0,1)", "400", "none solid rgb(0, 0, 0)", "normal", "break-word", "nowrap"]
                         },
                         {
-                            id: 'human_ant',
-                            type: 'image',
-                            rect: ['100px', '195px', '114px', '176px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"human_ant.jpg",'0px','0px']
-                        },
-                        {
                             id: 'question',
                             display: 'none',
                             type: 'audio',
@@ -838,6 +832,12 @@
                             text: "The answer is a.",
                             align: "left",
                             font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(0,82,203,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'human_ant',
+                            type: 'image',
+                            rect: ['100px', '195px', '114px', '176px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"human_ant.jpg",'0px','0px']
                         }
                     ],
                     style: {
@@ -1044,22 +1044,42 @@
                             'none'
                         ],
                         [
-                            "eid568",
+                            "eid678",
                             "display",
-                            119667,
+                            176000,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy}",
+                            "${Question_TextRedNumberCopy14}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid650",
+                            "eid705",
                             "display",
-                            122500,
+                            199000,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy}",
+                            "${Question_TextRedNumberCopy14}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid706",
+                            "display",
+                            247161,
+                            0,
+                            "linear",
+                            "${Question_TextRedNumberCopy14}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid757",
+                            "display",
+                            290053,
+                            0,
+                            "linear",
+                            "${Question_TextRedNumberCopy14}",
                             'block',
                             'none'
                         ],
@@ -1184,22 +1204,22 @@
                             '0'
                         ],
                         [
-                            "eid692",
+                            "eid671",
                             "display",
-                            215000,
+                            191750,
                             0,
                             "linear",
-                            "${Hint3Text3Copy}",
+                            "${CodeCogsEqn_6}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid751",
+                            "eid719",
                             "display",
-                            290053,
+                            199000,
                             0,
                             "linear",
-                            "${Hint3Text3Copy}",
+                            "${CodeCogsEqn_6}",
                             'block',
                             'none'
                         ],
@@ -1254,22 +1274,22 @@
                             'block'
                         ],
                         [
-                            "eid725",
+                            "eid569",
                             "display",
-                            229774,
+                            119000,
                             0,
                             "linear",
-                            "${CodeCogsEqn_10}",
+                            "${Question_TextRedNumberCopy16}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid753",
+                            "eid651",
                             "display",
-                            290053,
+                            122500,
                             0,
                             "linear",
-                            "${CodeCogsEqn_10}",
+                            "${Question_TextRedNumberCopy16}",
                             'block',
                             'none'
                         ],
@@ -1424,24 +1444,24 @@
                             'none'
                         ],
                         [
-                            "eid674",
-                            "left",
-                            180061,
-                            1189,
-                            "linear",
-                            "${CodeCogsEqn_4a}",
-                            '468px',
-                            '303px'
-                        ],
-                        [
-                            "eid675",
-                            "left",
-                            181250,
+                            "eid726",
+                            "display",
+                            235264,
                             0,
                             "linear",
-                            "${CodeCogsEqn_4a}",
-                            '303px',
-                            '303px'
+                            "${CodeCogsEqn_11}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid754",
+                            "display",
+                            290053,
+                            0,
+                            "linear",
+                            "${CodeCogsEqn_11}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid558",
@@ -1504,22 +1524,22 @@
                             '306px'
                         ],
                         [
-                            "eid604",
+                            "eid697",
                             "display",
-                            170000,
+                            244709,
                             0,
                             "linear",
-                            "${Hint3Text3}",
+                            "${HInt4_TextRedNumberCopy19}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid695",
+                            "eid756",
                             "display",
-                            199000,
+                            290053,
                             0,
                             "linear",
-                            "${Hint3Text3}",
+                            "${HInt4_TextRedNumberCopy19}",
                             'block',
                             'none'
                         ],
@@ -1544,42 +1564,42 @@
                             '302px'
                         ],
                         [
-                            "eid726",
+                            "eid242",
                             "display",
-                            235264,
+                            62000,
                             0,
                             "linear",
-                            "${CodeCogsEqn_11}",
+                            "${Question_TextBlueNumberCopy}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid754",
+                            "eid272",
                             "display",
-                            290053,
+                            74500,
                             0,
                             "linear",
-                            "${CodeCogsEqn_11}",
+                            "${Question_TextBlueNumberCopy}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid562",
+                            "eid633",
                             "display",
-                            112231,
+                            177682,
                             0,
                             "linear",
-                            "${Question_TextBlueCopy5}",
+                            "${CodeCogsEqn_4a}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid595",
+                            "eid707",
                             "display",
-                            122500,
+                            199000,
                             0,
                             "linear",
-                            "${Question_TextBlueCopy5}",
+                            "${CodeCogsEqn_4a}",
                             'block',
                             'none'
                         ],
@@ -1644,104 +1664,94 @@
                             'none'
                         ],
                         [
-                            "eid569",
+                            "eid720",
                             "display",
-                            119000,
+                            267951,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy16}",
+                            "${CodeCogsEqn_14}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid651",
+                            "eid765",
                             "display",
-                            122500,
+                            290053,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy16}",
+                            "${CodeCogsEqn_14}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid606",
+                            "eid725",
                             "display",
-                            158000,
+                            229774,
                             0,
                             "linear",
-                            "${CodeCogsEqn_3}",
+                            "${CodeCogsEqn_10}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid687",
+                            "eid753",
                             "display",
-                            199000,
+                            290053,
                             0,
                             "linear",
-                            "${CodeCogsEqn_3}",
+                            "${CodeCogsEqn_10}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid661",
+                            "eid867",
+                            "top",
+                            404750,
+                            1750,
+                            "linear",
+                            "${CodeCogsEqn_20}",
+                            '260px',
+                            '240px'
+                        ],
+                        [
+                            "eid241",
                             "display",
-                            176000,
+                            55459,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy8}",
+                            "${Question_TextBlueNumber}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid699",
+                            "eid271",
                             "display",
-                            199000,
+                            74500,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy8}",
+                            "${Question_TextBlueNumber}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid834",
+                            "eid847",
                             "opacity",
-                            369040,
-                            1460,
+                            398795,
+                            955,
                             "linear",
-                            "${Hint5Text4}",
+                            "${CodeCogsEqn_22}",
                             '1',
                             '0'
                         ],
                         [
-                            "eid28",
-                            "display",
-                            0,
-                            0,
+                            "eid871",
+                            "top",
+                            404750,
+                            1750,
                             "linear",
-                            "${Sound_Container}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid671",
-                            "display",
-                            191750,
-                            0,
-                            "linear",
-                            "${CodeCogsEqn_6}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid719",
-                            "display",
-                            199000,
-                            0,
-                            "linear",
-                            "${CodeCogsEqn_6}",
-                            'block',
-                            'none'
+                            "${Hint5Text1}",
+                            '51px',
+                            '204px'
                         ],
                         [
                             "eid240",
@@ -1844,34 +1854,34 @@
                             'none'
                         ],
                         [
-                            "eid838",
-                            "top",
-                            385981,
-                            1269,
-                            "linear",
-                            "${CodeCogsEqn_18}",
-                            '322px',
-                            '368px'
-                        ],
-                        [
-                            "eid742",
+                            "eid692",
                             "display",
-                            277186,
+                            215000,
                             0,
                             "linear",
-                            "${Hint4Text4Copy22}",
+                            "${Hint3Text3Copy}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid767",
+                            "eid751",
                             "display",
                             290053,
                             0,
                             "linear",
-                            "${Hint4Text4Copy22}",
+                            "${Hint3Text3Copy}",
                             'block',
                             'none'
+                        ],
+                        [
+                            "eid821",
+                            "display",
+                            356114,
+                            0,
+                            "linear",
+                            "${CodeCogsEqn_19}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid663",
@@ -1914,54 +1924,34 @@
                             'none'
                         ],
                         [
-                            "eid608",
+                            "eid816",
                             "display",
-                            136507,
+                            290053,
                             0,
                             "linear",
-                            "${CodeCogsEqn_1}",
+                            "${CodeCogsEqn_15}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid685",
-                            "display",
-                            199000,
-                            0,
+                            "eid845",
+                            "opacity",
+                            398795,
+                            955,
                             "linear",
-                            "${CodeCogsEqn_1}",
-                            'block',
-                            'none'
+                            "${CodeCogsEqn_18}",
+                            '1',
+                            '0'
                         ],
                         [
-                            "eid241",
-                            "display",
-                            55459,
-                            0,
+                            "eid834",
+                            "opacity",
+                            369040,
+                            1460,
                             "linear",
-                            "${Question_TextBlueNumber}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid271",
-                            "display",
-                            74500,
-                            0,
-                            "linear",
-                            "${Question_TextBlueNumber}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid867",
-                            "top",
-                            404750,
-                            1750,
-                            "linear",
-                            "${CodeCogsEqn_20}",
-                            '260px',
-                            '240px'
+                            "${Hint5Text4}",
+                            '1',
+                            '0'
                         ],
                         [
                             "eid665",
@@ -2004,22 +1994,22 @@
                             'none'
                         ],
                         [
-                            "eid633",
+                            "eid280",
                             "display",
-                            177682,
+                            74500,
                             0,
                             "linear",
-                            "${CodeCogsEqn_4a}",
+                            "${Question_TextRedNumberCopy3}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid707",
+                            "eid586",
                             "display",
-                            199000,
+                            122500,
                             0,
                             "linear",
-                            "${CodeCogsEqn_4a}",
+                            "${Question_TextRedNumberCopy3}",
                             'block',
                             'none'
                         ],
@@ -2044,62 +2034,32 @@
                             'none'
                         ],
                         [
-                            "eid698",
+                            "eid740",
+                            "left",
+                            261200,
+                            1300,
+                            "linear",
+                            "${CodeCogsEqn_12Copy}",
+                            '436px',
+                            '479px'
+                        ],
+                        [
+                            "eid607",
                             "display",
-                            247536,
+                            152500,
                             0,
                             "linear",
-                            "${Hint4_TextRedNumberCopy20}",
+                            "${CodeCogsEqn_2}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid758",
-                            "display",
-                            290053,
-                            0,
-                            "linear",
-                            "${Hint4_TextRedNumberCopy20}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid678",
-                            "display",
-                            176000,
-                            0,
-                            "linear",
-                            "${Question_TextRedNumberCopy14}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid705",
+                            "eid686",
                             "display",
                             199000,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy14}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid706",
-                            "display",
-                            247161,
-                            0,
-                            "linear",
-                            "${Question_TextRedNumberCopy14}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid757",
-                            "display",
-                            290053,
-                            0,
-                            "linear",
-                            "${Question_TextRedNumberCopy14}",
+                            "${CodeCogsEqn_2}",
                             'block',
                             'none'
                         ],
@@ -2124,16 +2084,6 @@
                             'none'
                         ],
                         [
-                            "eid819",
-                            "display",
-                            340013,
-                            0,
-                            "linear",
-                            "${Hint5Text3}",
-                            'none',
-                            'block'
-                        ],
-                        [
                             "eid29",
                             "display",
                             0,
@@ -2152,6 +2102,26 @@
                             "${Hint5Text4}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid735",
+                            "display",
+                            255595,
+                            0,
+                            "linear",
+                            "${CodeCogsEqn_8Copy}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid759",
+                            "display",
+                            290053,
+                            0,
+                            "linear",
+                            "${CodeCogsEqn_8Copy}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid839",
@@ -2174,22 +2144,22 @@
                             '410px'
                         ],
                         [
-                            "eid735",
+                            "eid576",
                             "display",
-                            255595,
+                            114320,
                             0,
                             "linear",
-                            "${CodeCogsEqn_8Copy}",
+                            "${Question_TextRedNumberCopy7}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid759",
+                            "eid630",
                             "display",
-                            290053,
+                            122500,
                             0,
                             "linear",
-                            "${CodeCogsEqn_8Copy}",
+                            "${Question_TextRedNumberCopy7}",
                             'block',
                             'none'
                         ],
@@ -2224,14 +2194,14 @@
                             'none'
                         ],
                         [
-                            "eid842",
-                            "display",
-                            386750,
-                            0,
+                            "eid668",
+                            "left",
+                            183750,
+                            800,
                             "linear",
-                            "${CodeCogsEqn_20}",
-                            'none',
-                            'block'
+                            "${CodeCogsEqn_5a}",
+                            '465px',
+                            '470px'
                         ],
                         [
                             "eid861",
@@ -2254,22 +2224,22 @@
                             'block'
                         ],
                         [
-                            "eid602",
+                            "eid608",
                             "display",
-                            170000,
+                            136507,
                             0,
                             "linear",
-                            "${Hint3Text2}",
+                            "${CodeCogsEqn_1}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid690",
+                            "eid685",
                             "display",
                             199000,
                             0,
                             "linear",
-                            "${Hint3Text2}",
+                            "${CodeCogsEqn_1}",
                             'block',
                             'none'
                         ],
@@ -2324,34 +2294,34 @@
                             'none'
                         ],
                         [
-                            "eid668",
-                            "left",
-                            183750,
-                            800,
-                            "linear",
-                            "${CodeCogsEqn_5a}",
-                            '465px',
-                            '470px'
-                        ],
-                        [
-                            "eid576",
+                            "eid602",
                             "display",
-                            114320,
+                            170000,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy7}",
+                            "${Hint3Text2}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid630",
+                            "eid690",
                             "display",
-                            122500,
+                            199000,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy7}",
+                            "${Hint3Text2}",
                             'block',
                             'none'
+                        ],
+                        [
+                            "eid842",
+                            "display",
+                            386750,
+                            0,
+                            "linear",
+                            "${CodeCogsEqn_20}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid557",
@@ -2404,52 +2374,52 @@
                             'none'
                         ],
                         [
-                            "eid607",
+                            "eid819",
                             "display",
-                            152500,
+                            340013,
                             0,
                             "linear",
-                            "${CodeCogsEqn_2}",
+                            "${Hint5Text3}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid686",
+                            "eid562",
                             "display",
-                            199000,
+                            112231,
                             0,
                             "linear",
-                            "${CodeCogsEqn_2}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid740",
-                            "left",
-                            261200,
-                            1300,
-                            "linear",
-                            "${CodeCogsEqn_12Copy}",
-                            '436px',
-                            '479px'
-                        ],
-                        [
-                            "eid280",
-                            "display",
-                            74500,
-                            0,
-                            "linear",
-                            "${Question_TextRedNumberCopy3}",
+                            "${Question_TextBlueCopy5}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid586",
+                            "eid595",
                             "display",
                             122500,
                             0,
                             "linear",
-                            "${Question_TextRedNumberCopy3}",
+                            "${Question_TextBlueCopy5}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid661",
+                            "display",
+                            176000,
+                            0,
+                            "linear",
+                            "${Question_TextRedNumberCopy8}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid699",
+                            "display",
+                            199000,
+                            0,
+                            "linear",
+                            "${Question_TextRedNumberCopy8}",
                             'block',
                             'none'
                         ],
@@ -2464,34 +2434,64 @@
                             'block'
                         ],
                         [
-                            "eid845",
-                            "opacity",
-                            398795,
-                            955,
+                            "eid568",
+                            "display",
+                            119667,
+                            0,
                             "linear",
-                            "${CodeCogsEqn_18}",
-                            '1',
-                            '0'
+                            "${Question_TextRedNumberCopy}",
+                            'none',
+                            'block'
                         ],
                         [
-                            "eid816",
+                            "eid650",
+                            "display",
+                            122500,
+                            0,
+                            "linear",
+                            "${Question_TextRedNumberCopy}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid698",
+                            "display",
+                            247536,
+                            0,
+                            "linear",
+                            "${Hint4_TextRedNumberCopy20}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid758",
                             "display",
                             290053,
                             0,
                             "linear",
-                            "${CodeCogsEqn_15}",
+                            "${Hint4_TextRedNumberCopy20}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid742",
+                            "display",
+                            277186,
+                            0,
+                            "linear",
+                            "${Hint4Text4Copy22}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid821",
+                            "eid767",
                             "display",
-                            356114,
+                            290053,
                             0,
                             "linear",
-                            "${CodeCogsEqn_19}",
-                            'none',
-                            'block'
+                            "${Hint4Text4Copy22}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid563",
@@ -2514,24 +2514,34 @@
                             'none'
                         ],
                         [
-                            "eid871",
-                            "top",
-                            404750,
-                            1750,
+                            "eid606",
+                            "display",
+                            158000,
+                            0,
                             "linear",
-                            "${Hint5Text1}",
-                            '51px',
-                            '204px'
+                            "${CodeCogsEqn_3}",
+                            'none',
+                            'block'
                         ],
                         [
-                            "eid847",
-                            "opacity",
-                            398795,
-                            955,
+                            "eid687",
+                            "display",
+                            199000,
+                            0,
                             "linear",
-                            "${CodeCogsEqn_22}",
-                            '1',
-                            '0'
+                            "${CodeCogsEqn_3}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid28",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Sound_Container}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid846",
@@ -2544,62 +2554,52 @@
                             '0'
                         ],
                         [
-                            "eid720",
-                            "display",
-                            267951,
+                            "eid838",
+                            "top",
+                            385981,
+                            1269,
+                            "linear",
+                            "${CodeCogsEqn_18}",
+                            '322px',
+                            '368px'
+                        ],
+                        [
+                            "eid674",
+                            "left",
+                            180061,
+                            1189,
+                            "linear",
+                            "${CodeCogsEqn_4a}",
+                            '468px',
+                            '303px'
+                        ],
+                        [
+                            "eid675",
+                            "left",
+                            181250,
                             0,
                             "linear",
-                            "${CodeCogsEqn_14}",
+                            "${CodeCogsEqn_4a}",
+                            '303px',
+                            '303px'
+                        ],
+                        [
+                            "eid604",
+                            "display",
+                            170000,
+                            0,
+                            "linear",
+                            "${Hint3Text3}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid765",
+                            "eid695",
                             "display",
-                            290053,
+                            199000,
                             0,
                             "linear",
-                            "${CodeCogsEqn_14}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid242",
-                            "display",
-                            62000,
-                            0,
-                            "linear",
-                            "${Question_TextBlueNumberCopy}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid272",
-                            "display",
-                            74500,
-                            0,
-                            "linear",
-                            "${Question_TextBlueNumberCopy}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid697",
-                            "display",
-                            244709,
-                            0,
-                            "linear",
-                            "${HInt4_TextRedNumberCopy19}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid756",
-                            "display",
-                            290053,
-                            0,
-                            "linear",
-                            "${HInt4_TextRedNumberCopy19}",
+                            "${Hint3Text3}",
                             'block',
                             'none'
                         ],
@@ -2624,9 +2624,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'E_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2637,12 +2637,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -2741,9 +2741,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'E_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2754,25 +2754,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                                type: 'text'
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -3, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -2885,9 +2885,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'E_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2898,33 +2898,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -3016,9 +3016,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'E_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -3029,20 +3029,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
@@ -3141,9 +3141,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'D_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -3154,25 +3154,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                                type: 'text'
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -3223,14 +3223,14 @@
                             'block'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ],
                         [
                             "eid226",
@@ -3263,14 +3263,14 @@
                             'none'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ]
                     ]
                 }
@@ -3285,9 +3285,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'D_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -3298,33 +3298,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -3364,14 +3364,14 @@
                             'none'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ],
                         [
                             "eid226",
@@ -3394,14 +3394,14 @@
                             'block'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ]
                     ]
                 }
@@ -3416,9 +3416,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'D_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -3429,20 +3429,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
@@ -3489,14 +3489,14 @@
                             'none'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ],
                         [
                             "eid226",
@@ -3519,14 +3519,14 @@
                             'block'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ]
                     ]
                 }
@@ -3541,9 +3541,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'D_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -3554,20 +3554,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 94, '20px', 'auto', 'auto'],
                                 id: 'Text13',
                                 text: 'Answer Text D',
                                 align: 'left',
-                                rect: [36, 4, 94, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
@@ -3614,14 +3614,14 @@
                             'none'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ],
                         [
                             "eid226",
@@ -3644,14 +3644,14 @@
                             'block'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ]
                     ]
                 }
@@ -3666,9 +3666,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'C_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'C_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -3679,25 +3679,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text5',
                                 text: 'C',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                                type: 'text'
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -3810,9 +3810,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'B_Button',
                             rect: [0, 0, '25', '25', 'auto', 'auto'],
+                            id: 'B_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -3823,25 +3823,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 5, 27, 19, 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text4',
                                 text: 'B',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                                type: 'text'
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -3861,6 +3861,16 @@
                         "Answer Correct": 10000
                     },
                     data: [
+                        [
+                            "eid7",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy5}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
                         [
                             "eid251",
                             "display",
@@ -3890,16 +3900,6 @@
                             "${check}",
                             'none',
                             'block'
-                        ],
-                        [
-                            "eid7",
-                            "background-color",
-                            0,
-                            0,
-                            "linear",
-                            "${EllipseCopy5}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid12",
@@ -3954,9 +3954,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'A_Button',
                             rect: [8, 16, '25', '24', 'auto', 'auto'],
+                            id: 'A_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -3967,25 +3967,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 3, 27, 19, 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
+                                type: 'text',
                                 id: 'A',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 3, 27, 19, 'auto', 'auto']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             }]
                         }
@@ -4078,9 +4078,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'A_Button',
                             rect: [8, 16, '25', '24', 'auto', 'auto'],
+                            id: 'A_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -4091,20 +4091,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 3, 27, 19, 'auto', 'auto'],
                                 id: 'Text3',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                rect: [0, 3, 27, 19, 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 3, 109, '19px', 'auto', 'auto'],
                                 id: 'Text9',
                                 text: 'Answer Text A',
                                 align: 'left',
-                                rect: [36, 3, 109, '19px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
@@ -4183,49 +4183,49 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'Group',
                             rect: [0, 2, '153', '183', 'auto', 'auto'],
+                            id: 'Group',
+                            type: 'group',
                             c: [
                             {
-                                type: 'rect',
+                                rect: [8, 157, 101, 26, 'auto', 'auto'],
                                 id: 'EButton',
                                 symbolName: 'EButton_3',
-                                rect: [8, 157, 101, 26, 'auto', 'auto']
+                                type: 'rect'
                             },
                             {
-                                type: 'rect',
+                                rect: [8, 121, 101, 26, 'auto', 'auto'],
                                 id: 'DButton',
                                 symbolName: 'DButton_3',
-                                rect: [8, 121, 101, 26, 'auto', 'auto']
+                                type: 'rect'
                             },
                             {
-                                type: 'rect',
+                                rect: [8, 86, 101, 26, 'auto', 'auto'],
                                 id: 'CButton',
                                 symbolName: 'CButton_3',
-                                rect: [8, 86, 101, 26, 'auto', 'auto']
+                                type: 'rect'
                             },
                             {
-                                type: 'rect',
+                                rect: [8, 50, 125, 26, 'auto', 'auto'],
                                 id: 'BButton',
                                 symbolName: 'BButton_3',
-                                rect: [8, 50, 125, 26, 'auto', 'auto']
+                                type: 'rect'
                             },
                             {
-                                type: 'rect',
+                                rect: [0, 0, 153, 42, 'auto', 'auto'],
                                 id: 'AButton',
                                 symbolName: 'AButton_3',
-                                rect: [0, 0, 153, 42, 'auto', 'auto']
+                                type: 'rect'
                             }]
                         }
                     ],
                     style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, 156, 187]
-                        },
                         '${AnswerText}': {
                             font: '{{:}{undefined{:}:{:}}{:}{{:}u{:}n{:}d',
                             rect: [36, 3, 109, 0]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 156, 187]
                         }
                     }
                 },
@@ -4241,5 +4241,5 @@
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("8EE1_edgeActions.js");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("problem_8EE1_1_edgeActions.js");
 })("EdgeProblem");
