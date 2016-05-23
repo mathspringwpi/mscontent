@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>hint_Canvas1</title>
+<title>threeCorrect</title>
 
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
 <script src="createJs/movieclip-0.6.0.min.js"></script>
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
-<script src="hint.js"></script>
+<script src="threeCorrect.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
@@ -24,7 +24,7 @@ function init() {
 }
 
 function handleComplete(evt) {
-	exportRoot = new lib.hint_Canvas1();
+	exportRoot = new lib.threeCorrect_Canvas();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
