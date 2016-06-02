@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CreateJS export from hintUseful</title>
+<title>HintUseful_Canvas</title>
 
 <script src="createJs/easeljs-0.6.0.min.js"></script>
 <script src="createJs/tweenjs-0.4.0.min.js"></script>
 <script src="createJs/movieclip-0.6.0.min.js"></script>
 <script src="createJs/preloadjs-0.3.0.min.js"></script>
 <script src="createJs/soundjs-0.4.0.min.js"></script>
-<script src="hintUseful.js"></script>
+<script src="HintUseful.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
@@ -17,24 +17,20 @@ var canvas, stage, exportRoot;
 function init() {
 	canvas = document.getElementById("canvas");
 
-	var manifest = [
-		{src:"sounds/FemaleHintUseful.mp3|sounds/FemaleHintUseful.ogg", id:"FemaleHintUseful"}
-	];
-
 	var loader = new createjs.LoadQueue(false);
 	loader.installPlugin(createjs.Sound);
 	loader.addEventListener("complete", handleComplete);
-	loader.loadManifest(manifest);
+	loader.loadManifest(lib.properties.manifest);
 }
 
-function handleComplete() {
-	exportRoot = new lib.hintUseful();
+function handleComplete(evt) {
+	exportRoot = new lib.HintUseful();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.update();
 
-	createjs.Ticker.setFPS(24);
+	createjs.Ticker.setFPS(lib.properties.fps);
 	createjs.Ticker.addEventListener("tick", stage);
 }
 
