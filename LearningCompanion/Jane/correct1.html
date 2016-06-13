@@ -43,6 +43,7 @@ function playSound(id, loop) {
     instance.on("complete", soundComplete);
 }
 
+// When the lc finishes speaking, this will make a callback to the tutorhut so it knows.
 function soundComplete () {
     window.parent.learningCompanionDone();
 }
