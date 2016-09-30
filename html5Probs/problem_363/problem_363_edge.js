@@ -1,2755 +1,3118 @@
-/**
- * Adobe Edge: symbol definitions
- */
-(function($, Edge, compId){
-//images folder
-var im='images/';
+/*jslint */
+/*global AdobeEdge: false, window: false, document: false, console:false, alert: false */
+(function (compId) {
 
-var fonts = {};
-var opts = {};
-var resources = [
-];
-var symbols = {
-"stage": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-            {
-                id: 'Question_Text',
-                type: 'text',
-                rect: ['15px', '30px','219px','28px','auto', 'auto'],
-                text: "What is : ",
-                align: "left",
-                font: ['Times New Roman, Times, serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'hint1_16Copy',
-                type: 'image',
-                rect: ['149px', '243px','16px','41px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"hint1%201%3A6.png",'0px','0px']
-            },
-            {
-                id: 'hint1_56Copy',
-                type: 'image',
-                rect: ['324px', '243px','16px','41px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"hint1%205%3A6.png",'0px','0px']
-            },
-            {
-                id: 'Answers',
-                type: 'rect',
-                rect: ['48', '181','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'question',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/question.mp3','media/question.ogg']
-            },
-            {
-                id: 'hint1',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint1.ogg','media/hint1.mp3']
-            },
-            {
-                id: 'Answer_E',
-                type: 'image',
-                rect: ['76px', '512px','16px','64px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"Answer%20E.png",'0px','0px']
-            },
-            {
-                id: 'AnswerBText',
-                type: 'text',
-                rect: ['82px', '409px','112px','19px','auto', 'auto'],
-                text: "5",
-                align: "left",
-                font: ['Times New Roman, Times, serif', 16, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'QuestionSound_Container',
-                display: 'none',
-                type: 'rect',
-                rect: ['15px', '10px','17px','8px','auto', 'auto'],
-                fill: ["rgba(248,250,248,0.00)"],
-                stroke: [1,"rgb(4, 4, 4)","solid"]
-            },
-            {
-                id: 'Sound_Container',
-                display: 'none',
-                type: 'rect',
-                rect: ['46px', '19px','164px','7px','auto', 'auto'],
-                fill: ["rgba(248,250,248,1)"],
-                stroke: [1,"rgb(4, 4, 4)","solid"]
-            },
-            {
-                id: 'TutorialText',
-                display: 'none',
-                type: 'text',
-                rect: ['260px', '49px','237px','187px','auto', 'auto'],
-                text: "Let's pretend your hint starts here at 0:10. It does not really matter where the hints start and end, as long as they don't overlap. Don't worry that the X and Checks are showing up either - it's just because I set their timeline to 5 seconds in the symbol. They won't appear in the final animation.<br><br>This rectangle is a space for you to draw your animation. An example will follow in hint 2.",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 12, "rgba(0,0,0,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Problem_363_picture',
-                type: 'image',
-                rect: ['36px', '68px','72px','46px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"Problem%20363%20picture.png",'0px','0px']
-            },
-            {
-                id: 'Answer_A',
-                type: 'image',
-                rect: ['74px', '366px','23px','60px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"Answer%20A.png",'0px','0px']
-            },
-            {
-                id: 'Answer_C',
-                type: 'image',
-                rect: ['75px', '432px','23px','60px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"Answer%20C.png",'0px','0px']
-            },
-            {
-                id: 'Answer_D',
-                type: 'image',
-                rect: ['77px', '472px','16px','60px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"Answer%20D.png",'0px','0px']
-            },
-            {
-                id: 'Hint_1_text',
-                type: 'group',
-                rect: ['362px', '77px','112','28','auto', 'auto'],
-                c: [
-                {
-                    id: 'hint1_make',
-                    type: 'text',
-                    rect: ['0px', '0px','112px','28px','auto', 'auto'],
-                    text: "make",
-                    align: "left",
-                    font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "normal", "none", "normal"]
+    "use strict";
+    var im='images/',
+        aud='media/',
+        vid='media/',
+        js='js/',
+        fonts = {
+        },
+        opts = {
+            'gAudioPreloadPreference': 'auto',
+            'gVideoPreloadPreference': 'auto'
+        },
+        resources = [
+        ],
+        scripts = [
+            js+"jquery-1.7.1.min.js",
+            js+"jquery-2.0.3.min.js"
+        ],
+        symbols = {
+            "stage": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'Question_Text',
+                            type: 'text',
+                            rect: ['15', '30', '219', '28', 'auto', 'auto'],
+                            text: "What is : ",
+                            align: "left",
+                            font: ['Times New Roman, Times, serif', [16, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'hint1_16Copy',
+                            type: 'image',
+                            rect: ['149', '243', '16', '41', 'auto', 'auto'],
+                            opacity: '0',
+                            fill: ["rgba(0,0,0,0)",im+"hint1%201%3A6.png",'0px','0px']
+                        },
+                        {
+                            id: 'hint1_56Copy',
+                            type: 'image',
+                            rect: ['324', '243', '16', '41', 'auto', 'auto'],
+                            opacity: '0',
+                            fill: ["rgba(0,0,0,0)",im+"hint1%205%3A6.png",'0px','0px']
+                        },
+                        {
+                            id: 'Answers',
+                            symbolName: 'Answers_1',
+                            type: 'rect',
+                            rect: ['33', '348', '156', '187', 'auto', 'auto']
+                        },
+                        {
+                            id: 'question',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"question.mp3",aud+"question.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'hint1',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint1.mp3",aud+"hint1.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'Answer_E',
+                            type: 'image',
+                            rect: ['76', '512', '16', '64', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"Answer%20E.png",'0px','0px']
+                        },
+                        {
+                            id: 'AnswerBText',
+                            type: 'text',
+                            rect: ['82', '409', '112', '19px', 'auto', 'auto'],
+                            text: "5",
+                            align: "left",
+                            font: ['Times New Roman, Times, serif', [16, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'QuestionSound_Container',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['15px', '10px', '17', '8', 'auto', 'auto'],
+                            fill: ["rgba(248,250,248,0.00)"],
+                            stroke: [1,"rgb(4, 4, 4)","solid"]
+                        },
+                        {
+                            id: 'Sound_Container',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['46px', '19px', '164px', '7px', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            fill: ["rgba(248,250,248,1)"],
+                            stroke: [1,"rgb(4, 4, 4)","solid"]
+                        },
+                        {
+                            id: 'Problem_363_picture',
+                            type: 'image',
+                            rect: ['36', '68', '72', '46', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"Problem%20363%20picture.png",'0px','0px']
+                        },
+                        {
+                            id: 'Answer_A',
+                            type: 'image',
+                            rect: ['74', '366', '23', '60', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"Answer%20A.png",'0px','0px']
+                        },
+                        {
+                            id: 'Answer_C',
+                            type: 'image',
+                            rect: ['75', '432', '23', '60', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"Answer%20C.png",'0px','0px']
+                        },
+                        {
+                            id: 'Answer_D',
+                            type: 'image',
+                            rect: ['77', '472', '16', '60', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"Answer%20D.png",'0px','0px']
+                        },
+                        {
+                            id: 'Hint_1_text',
+                            type: 'group',
+                            rect: ['362', '77', '112', '28', 'auto', 'auto'],
+                            opacity: '0',
+                            c: [
+                            {
+                                id: 'hint1_make',
+                                type: 'text',
+                                rect: ['0', '0', '112px', '28px', 'auto', 'auto'],
+                                text: "make",
+                                align: "left",
+                                font: ['Verdana, Geneva, sans-serif', [16, "px"], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                            },
+                            {
+                                id: 'hint1_how_many',
+                                type: 'text',
+                                rect: ['-217', '0', '301px', '28px', 'auto', 'auto'],
+                                text: "We can ask how many ",
+                                align: "left",
+                                font: ['Verdana, Geneva, sans-serif', [16, "px"], "rgba(128,6,6,1.00)", "normal", "none", "normal", "break-word", ""]
+                            },
+                            {
+                                id: 'hint1_question_mark',
+                                type: 'text',
+                                rect: ['90', '1', '112px', '28px', 'auto', 'auto'],
+                                text: "?",
+                                align: "left",
+                                font: ['Verdana, Geneva, sans-serif', [20, "px"], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                            },
+                            {
+                                id: 'fraction_1_sixths',
+                                type: 'group',
+                                rect: ['-21', '16', '18', '25', 'auto', 'auto'],
+                                c: [
+                                {
+                                    id: 'Text2',
+                                    type: 'text',
+                                    rect: ['0', '0', '21px', '25', 'auto', 'auto'],
+                                    text: "6",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [16, ""], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'Text',
+                                    type: 'text',
+                                    rect: ['0', '-27', '21px', '20px', 'auto', 'auto'],
+                                    text: "1",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [16, ""], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'Rectangle5',
+                                    type: 'rect',
+                                    rect: ['-7', '-5', '22', '2px', 'auto', 'auto'],
+                                    fill: ["rgba(128,6,6,1)"],
+                                    stroke: [0,"rgb(0, 0, 0)","none"]
+                                }]
+                            },
+                            {
+                                id: 'fraction_5_sixthsCopy',
+                                type: 'group',
+                                rect: ['62', '17', '21', '25', 'auto', 'auto'],
+                                c: [
+                                {
+                                    id: 'Text2Copy',
+                                    type: 'text',
+                                    rect: ['0', '0', '21px', '25', 'auto', 'auto'],
+                                    text: "6",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [16, ""], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'TextCopy',
+                                    type: 'text',
+                                    rect: ['0', '-27', '21px', '20px', 'auto', 'auto'],
+                                    text: "5<br>",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [16, ""], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'Rectangle5Copy',
+                                    type: 'rect',
+                                    rect: ['-10', '-5', '28px', '2px', 'auto', 'auto'],
+                                    fill: ["rgba(128,6,6,1)"],
+                                    stroke: [0,"rgb(0, 0, 0)","none"]
+                                }]
+                            }]
+                        },
+                        {
+                            id: '_16_bar',
+                            type: 'group',
+                            rect: ['168', '175', '23', '46', 'auto', 'auto'],
+                            opacity: '0',
+                            c: [
+                            {
+                                id: 'Rectangle3Copy6',
+                                type: 'rect',
+                                rect: ['0', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3Copy5',
+                                type: 'rect',
+                                rect: ['21', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3Copy4',
+                                type: 'rect',
+                                rect: ['42', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3Copy3',
+                                type: 'rect',
+                                rect: ['63', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3Copy2',
+                                type: 'rect',
+                                rect: ['84', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3',
+                                type: 'rect',
+                                rect: ['-21', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'blue_1',
+                                type: 'rect',
+                                rect: ['-21', '0', '19', '42px', 'auto', 'auto'],
+                                opacity: '0',
+                                fill: ["rgba(106,209,244,1.00)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'blue_1Copy5',
+                                type: 'rect',
+                                rect: ['-22', '0', '19', '42px', 'auto', 'auto'],
+                                opacity: '0.000000',
+                                fill: ["rgba(106,209,244,1.00)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'blue_1Copy4',
+                                type: 'rect',
+                                rect: ['-21', '0', '19', '42px', 'auto', 'auto'],
+                                opacity: '0.000000',
+                                fill: ["rgba(106,209,244,1.00)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'blue_1Copy3',
+                                type: 'rect',
+                                rect: ['-21', '0', '19', '42px', 'auto', 'auto'],
+                                opacity: '0.000000',
+                                fill: ["rgba(106,209,244,1.00)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'blue_1Copy2',
+                                type: 'rect',
+                                rect: ['-21', '0', '19', '42px', 'auto', 'auto'],
+                                opacity: '0.000000',
+                                fill: ["rgba(106,209,244,1.00)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'blue_1Copy1',
+                                type: 'rect',
+                                rect: ['-22', '0', '19', '42px', 'auto', 'auto'],
+                                opacity: '0',
+                                fill: ["rgba(106,209,244,1.00)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            }]
+                        },
+                        {
+                            id: '_56_bar_barCopy',
+                            type: 'group',
+                            rect: ['345', '175', '23', '46', 'auto', 'auto'],
+                            opacity: '0',
+                            c: [
+                            {
+                                id: 'Rectangle3Copy13',
+                                type: 'rect',
+                                rect: ['0', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3Copy12',
+                                type: 'rect',
+                                rect: ['21', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3Copy11',
+                                type: 'rect',
+                                rect: ['42', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3Copy10',
+                                type: 'rect',
+                                rect: ['63', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3Copy9',
+                                type: 'rect',
+                                rect: ['84', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            },
+                            {
+                                id: 'Rectangle3Copy8',
+                                type: 'rect',
+                                rect: ['-21', '0', '19', '42px', 'auto', 'auto'],
+                                fill: ["rgba(251,246,246,0)"],
+                                stroke: [2,"rgb(0, 0, 0)","solid"]
+                            }]
+                        },
+                        {
+                            id: '_1',
+                            type: 'text',
+                            rect: ['328', '149', '50px', '19px', 'auto', 'auto'],
+                            opacity: '0',
+                            text: "1",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [20, "px"], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: '_2',
+                            type: 'text',
+                            rect: ['352', '149', '42px', '19px', 'auto', 'auto'],
+                            opacity: '0',
+                            text: "2",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [20, ""], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: '_3',
+                            type: 'text',
+                            rect: ['373', '149', '23px', '28px', 'auto', 'auto'],
+                            opacity: '0',
+                            text: "3<br>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [20, ""], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: '_4',
+                            type: 'text',
+                            rect: ['392', '149', '23px', '19px', 'auto', 'auto'],
+                            opacity: '0',
+                            text: "4<br>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [20, ""], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: '_5',
+                            type: 'text',
+                            rect: ['413', '149', '23px', '19px', 'auto', 'auto'],
+                            opacity: '0',
+                            text: "5<br>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [20, ""], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Hint_3',
+                            type: 'group',
+                            rect: ['275', '300', '12', '37', 'auto', 'auto'],
+                            opacity: '0',
+                            c: [
+                            {
+                                id: 'hint3_16Copy4',
+                                type: 'image',
+                                rect: ['0', '0', '12', '37', 'auto', 'auto'],
+                                fill: ["rgba(0,0,0,0)",im+"hint1%201%3A6.png",'0px','0px']
+                            },
+                            {
+                                id: 'Hint_3_4',
+                                type: 'text',
+                                rect: ['-30', '10', '47', '41px', 'auto', 'auto'],
+                                text: "5 x ",
+                                align: "left",
+                                font: ['Arial, Helvetica, sans-serif', [20, ""], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                            },
+                            {
+                                id: 'Hint3_make_up',
+                                type: 'text',
+                                rect: ['40px', '10', '112px', '19px', 'auto', 'auto'],
+                                text: "makes",
+                                align: "left",
+                                font: ['Arial, Helvetica, sans-serif', [20, ""], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                            },
+                            {
+                                id: 'Hint_3_fraction_1_sixths',
+                                type: 'group',
+                                rect: ['6', '26', '18', '25', 'auto', 'auto'],
+                                c: [
+                                {
+                                    id: 'Text2Copy2',
+                                    type: 'text',
+                                    rect: ['0', '0', '21px', '25', 'auto', 'auto'],
+                                    text: "6",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [16, ""], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'TextCopy2',
+                                    type: 'text',
+                                    rect: ['0', '-27', '21px', '20px', 'auto', 'auto'],
+                                    text: "1",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [16, ""], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'Rectangle5Copy2',
+                                    type: 'rect',
+                                    rect: ['-7', '-5', '22', '2px', 'auto', 'auto'],
+                                    fill: ["rgba(128,6,6,1)"],
+                                    stroke: [0,"rgb(0, 0, 0)","none"]
+                                }]
+                            },
+                            {
+                                id: '_Hint_3_fraction_5_sixths',
+                                type: 'group',
+                                rect: ['132', '26', '21', '25', 'auto', 'auto'],
+                                c: [
+                                {
+                                    id: 'Text2Copy3',
+                                    type: 'text',
+                                    rect: ['0', '0', '21px', '25', 'auto', 'auto'],
+                                    text: "6",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [16, ""], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'TextCopy3',
+                                    type: 'text',
+                                    rect: ['0', '-27', '21px', '20px', 'auto', 'auto'],
+                                    text: "5<br>",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [16, ""], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'Rectangle5Copy3',
+                                    type: 'rect',
+                                    rect: ['-10', '-5', '28px', '2px', 'auto', 'auto'],
+                                    fill: ["rgba(128,6,6,1)"],
+                                    stroke: [0,"rgb(0, 0, 0)","none"]
+                                }]
+                            }]
+                        },
+                        {
+                            id: 'Choose_B',
+                            type: 'text',
+                            rect: ['290', '458', '112px', '28px', 'auto', 'auto'],
+                            opacity: '0',
+                            text: "Choose (B)",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [20, ""], "rgba(40,128,6,1)", "700", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Answer_hint',
+                            type: 'group',
+                            rect: ['431', '351', '21', '19', 'auto', 'auto'],
+                            c: [
+                            {
+                                id: 'equals',
+                                type: 'text',
+                                rect: ['-166', '-6', '42px', '25', 'auto', 'auto'],
+                                opacity: '0',
+                                text: "=",
+                                font: ['Arial, Helvetica, sans-serif', [26, "px"], "rgba(128,6,6,1.00)", "normal", "none", "", "break-word", ""]
+                            },
+                            {
+                                id: 'hint4c',
+                                type: 'image',
+                                rect: ['-137', '-16', '28', '53', 'auto', 'auto'],
+                                opacity: '0',
+                                fill: ["rgba(0,0,0,0)",im+"hint4c.png",'0px','0px']
+                            },
+                            {
+                                id: 'equalsCopy',
+                                type: 'text',
+                                rect: ['-95', '-5', '42px', '25', 'auto', 'auto'],
+                                opacity: '0',
+                                text: "=",
+                                font: ['Arial, Helvetica, sans-serif', [26, "px"], "rgba(128,6,6,1)", "normal", "none", "", "break-word", ""]
+                            },
+                            {
+                                id: 'answer_hint_5',
+                                display: 'block',
+                                type: 'text',
+                                rect: ['-69', '-7', '58px', '37px', 'auto', 'auto'],
+                                opacity: '0',
+                                text: "5",
+                                align: "left",
+                                font: ['Arial, Helvetica, sans-serif', [26, ""], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                            }]
+                        },
+                        {
+                            id: 'Hint_4_',
+                            type: 'group',
+                            rect: ['269', '269', '16', '47', 'auto', 'auto'],
+                            opacity: '0.000000',
+                            c: [
+                            {
+                                id: 'divide',
+                                type: 'image',
+                                rect: ['32', '12', '19', '20', 'auto', 'auto'],
+                                opacity: '0',
+                                fill: ["rgba(0,0,0,0)",im+"divide.png",'0px','0px']
+                            },
+                            {
+                                id: 'hint_4_multiplyCopy',
+                                type: 'text',
+                                rect: ['37', '6', '23px', '19px', 'auto', 'auto'],
+                                opacity: '0',
+                                text: "x",
+                                align: "left",
+                                font: ['Arial, Helvetica, sans-serif', [26, ""], "rgba(128,6,6,1)", "normal", "none", "normal", "break-word", ""]
+                            },
+                            {
+                                id: '_Hint_4fraction_1_sixthsCopy3',
+                                type: 'group',
+                                rect: ['78', '27', '18', '25', 'auto', 'auto'],
+                                c: [
+                                {
+                                    id: 'Text2Copy5',
+                                    type: 'text',
+                                    rect: ['0px', '0px', '27', '28', 'auto', 'auto'],
+                                    autoOrient: true,
+                                    text: "6",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [22, "px"], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'TextCopy5',
+                                    type: 'text',
+                                    rect: ['0px', '-27px', '21px', '20px', 'auto', 'auto'],
+                                    autoOrient: false,
+                                    text: "1",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [22, "px"], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'Rectangle5Copy5',
+                                    type: 'rect',
+                                    rect: ['-4', '-5', '22', '2px', 'auto', 'auto'],
+                                    fill: ["rgba(128,6,6,1)"],
+                                    stroke: [0,"rgb(0, 0, 0)","none"]
+                                }]
+                            },
+                            {
+                                id: '_Hint_4_fraction_5_sixthsCopy',
+                                type: 'group',
+                                rect: ['-3', '27', '21', '25', 'auto', 'auto'],
+                                c: [
+                                {
+                                    id: 'Text2Copy4',
+                                    type: 'text',
+                                    rect: ['0', '0', '21px', '25', 'auto', 'auto'],
+                                    text: "6",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [22, "px"], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'TextCopy4',
+                                    type: 'text',
+                                    rect: ['-1', '-33', '21px', '20px', 'auto', 'auto'],
+                                    text: "5<br>",
+                                    align: "left",
+                                    font: ['Verdana, Geneva, sans-serif', [22, "px"], "rgba(128,6,6,1)", "400", "none", "normal", "break-word", ""]
+                                },
+                                {
+                                    id: 'Rectangle5Copy4',
+                                    type: 'rect',
+                                    rect: ['-10', '-5', '28px', '2px', 'auto', 'auto'],
+                                    fill: ["rgba(128,6,6,1)"],
+                                    stroke: [0,"rgb(0, 0, 0)","none"]
+                                }]
+                            }]
+                        },
+                        {
+                            id: 'hint2',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint2.mp3",aud+"hint2.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'hint3',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint3.mp3",aud+"hint3.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'hint4',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint4.mp3",aud+"hint4.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'answerhint',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"answerhint.mp3",aud+"answerhint.ogg"],
+                            preload: 'auto'
+                        }
+                    ],
+                    style: {
+                        '${Stage}': {
+                            isStage: true,
+                            rect: ['null', 'null', '600', '600', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            fill: ["rgba(255,255,255,0.00)"]
+                        }
+                    }
                 },
-                {
-                    id: 'hint1_how_many',
-                    type: 'text',
-                    rect: ['-217px', '0px','301px','28px','auto', 'auto'],
-                    text: "We can ask how many ",
-                    align: "left",
-                    font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1.00)", "normal", "none", "normal"]
-                },
-                {
-                    id: 'Rectangle',
-                    type: 'rect',
-                    rect: ['3235px', '1944px','44px','3px','auto', 'auto'],
-                    fill: ["rgba(128,6,6,1.00)"],
-                    stroke: [0,"rgba(0,0,0,1)","none"]
-                },
-                {
-                    id: 'Rectangle2',
-                    type: 'rect',
-                    rect: ['3230px', '1941px','79px','8px','auto', 'auto'],
-                    fill: ["rgba(128,6,6,1)"],
-                    stroke: [0,"rgb(0, 0, 0)","none"]
-                },
-                {
-                    id: 'hint1_question_mark',
-                    type: 'text',
-                    rect: ['90px', '1px','112px','28px','auto', 'auto'],
-                    text: "?",
-                    align: "left",
-                    font: ['Verdana, Geneva, sans-serif', 20, "rgba(128,6,6,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: 'fraction_1_sixths',
-                    type: 'group',
-                    rect: ['-21px', '16px','18px','25','auto', 'auto'],
-                    c: [
-                    {
-                        id: 'Text2',
-                        type: 'text',
-                        rect: ['0px', '0px','21px','25px','auto', 'auto'],
-                        text: "6",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
+                timeline: {
+                    duration: 80000,
+                    autoPlay: true,
+                    labels: {
+                        "Read Question": 2000,
+                        "Hint 1": 9000,
+                        "Hint 2": 27000,
+                        "Hint 3": 41000,
+                        "Hint 4": 51000,
+                        "Answer Hint": 71000
                     },
-                    {
-                        id: 'Text',
-                        type: 'text',
-                        rect: ['0px', '-27px','21px','20px','auto', 'auto'],
-                        text: "1",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
+                    data: [
+                        [
+                            "eid320",
+                            "opacity",
+                            39000,
+                            0,
+                            "linear",
+                            "${_5}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid319",
+                            "opacity",
+                            39500,
+                            0,
+                            "linear",
+                            "${_5}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid400",
+                            "location",
+                            66500,
+                            2000,
+                            "linear",
+                            "${Text2Copy5}",
+                            [[12.5, 15, 0, 0, 0, 0,0],[12.2, -19.39, 0, 0, 0, 0,34.39]]
+                        ],
+                        [
+                            "eid375",
+                            "opacity",
+                            71000,
+                            1000,
+                            "easeInQuint",
+                            "${equals}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid399",
+                            "location",
+                            66500,
+                            2000,
+                            "linear",
+                            "${TextCopy5}",
+                            [[10.5, -23, 0, 0, 0, 0,0],[11.85, 10.41, 0, 0, 0, 0,33.44]]
+                        ],
+                        [
+                            "eid275",
+                            "top",
+                            35500,
+                            500,
+                            "linear",
+                            "${blue_1Copy2}",
+                            '0px',
+                            '-69px'
+                        ],
+                        [
+                            "eid278",
+                            "top",
+                            36000,
+                            500,
+                            "easeOutQuad",
+                            "${blue_1Copy2}",
+                            '-69px',
+                            '0px'
+                        ],
+                        [
+                            "eid390",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${Answers}",
+                            '348px',
+                            '348px'
+                        ],
+                        [
+                            "eid276",
+                            "left",
+                            35500,
+                            500,
+                            "linear",
+                            "${blue_1Copy2}",
+                            '-21px',
+                            '141px'
+                        ],
+                        [
+                            "eid277",
+                            "left",
+                            36000,
+                            500,
+                            "easeOutQuad",
+                            "${blue_1Copy2}",
+                            '141px',
+                            '177px'
+                        ],
+                        [
+                            "eid389",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${Answers}",
+                            '33px',
+                            '33px'
+                        ],
+                        [
+                            "eid295",
+                            "left",
+                            37500,
+                            500,
+                            "linear",
+                            "${blue_1Copy4}",
+                            '-21px',
+                            '122px'
+                        ],
+                        [
+                            "eid296",
+                            "left",
+                            38000,
+                            500,
+                            "easeOutQuad",
+                            "${blue_1Copy4}",
+                            '122px',
+                            '218px'
+                        ],
+                        [
+                            "eid179",
+                            "opacity",
+                            24000,
+                            1000,
+                            "linear",
+                            "${hint1_56Copy}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid398",
+                            "opacity",
+                            62000,
+                            1000,
+                            "linear",
+                            "${Hint_4_}",
+                            '0.000000',
+                            '0.95'
+                        ],
+                        [
+                            "eid285",
+                            "top",
+                            36500,
+                            500,
+                            "linear",
+                            "${blue_1Copy3}",
+                            '0px',
+                            '-69px'
+                        ],
+                        [
+                            "eid288",
+                            "top",
+                            37000,
+                            500,
+                            "easeOutQuad",
+                            "${blue_1Copy3}",
+                            '-69px',
+                            '0px'
+                        ],
+                        [
+                            "eid191",
+                            "background-color",
+                            24500,
+                            500,
+                            "linear",
+                            "${Rectangle3Copy11}",
+                            'rgba(251,246,246,0)',
+                            'rgba(239,239,35,1.00)'
+                        ],
+                        [
+                            "eid299",
+                            "background-color",
+                            38500,
+                            0,
+                            "easeOutQuad",
+                            "${Rectangle3Copy11}",
+                            'rgba(239,239,35,1.00)',
+                            'rgba(239,239,35,0.00)'
+                        ],
+                        [
+                            "eid188",
+                            "background-color",
+                            24000,
+                            500,
+                            "linear",
+                            "${Rectangle3Copy12}",
+                            'rgba(251,246,246,0)',
+                            'rgba(239,239,35,1.00)'
+                        ],
+                        [
+                            "eid289",
+                            "background-color",
+                            37500,
+                            0,
+                            "easeOutQuad",
+                            "${Rectangle3Copy12}",
+                            'rgba(239,239,35,1.00)',
+                            'rgba(239,239,35,0.00)'
+                        ],
+                        [
+                            "eid305",
+                            "left",
+                            38500,
+                            500,
+                            "linear",
+                            "${blue_1Copy5}",
+                            '-22px',
+                            '122px'
+                        ],
+                        [
+                            "eid306",
+                            "left",
+                            39000,
+                            500,
+                            "easeOutQuad",
+                            "${blue_1Copy5}",
+                            '122px',
+                            '240px'
+                        ],
+                        [
+                            "eid271",
+                            "opacity",
+                            22000,
+                            1000,
+                            "easeOutQuad",
+                            "${blue_1Copy2}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid272",
+                            "opacity",
+                            35500,
+                            0,
+                            "linear",
+                            "${blue_1Copy2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid281",
+                            "opacity",
+                            22000,
+                            1000,
+                            "easeOutQuad",
+                            "${blue_1Copy3}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid282",
+                            "opacity",
+                            36500,
+                            0,
+                            "linear",
+                            "${blue_1Copy3}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid176",
+                            "opacity",
+                            22000,
+                            1000,
+                            "linear",
+                            "${blue_1}",
+                            '0.000000',
+                            '0.97'
+                        ],
+                        [
+                            "eid173",
+                            "opacity",
+                            21000,
+                            1000,
+                            "linear",
+                            "${hint1_16Copy}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid163",
+                            "opacity",
+                            16000,
+                            1000,
+                            "linear",
+                            "${Hint_1_text}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid244",
+                            "top",
+                            34500,
+                            500,
+                            "easeOutCubic",
+                            "${blue_1Copy1}",
+                            '0px',
+                            '-70px'
+                        ],
+                        [
+                            "eid270",
+                            "top",
+                            35000,
+                            500,
+                            "swing",
+                            "${blue_1Copy1}",
+                            '-70px',
+                            '0px'
+                        ],
+                        [
+                            "eid402",
+                            "font-size",
+                            80000,
+                            0,
+                            "linear",
+                            "${Text2Copy5}",
+                            '22px',
+                            '22px'
+                        ],
+                        [
+                            "eid312",
+                            "opacity",
+                            35000,
+                            0,
+                            "linear",
+                            "${_1}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid311",
+                            "opacity",
+                            35500,
+                            0,
+                            "linear",
+                            "${_1}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid401",
+                            "font-size",
+                            80000,
+                            0,
+                            "linear",
+                            "${TextCopy5}",
+                            '22px',
+                            '22px'
+                        ],
+                        [
+                            "eid294",
+                            "top",
+                            37500,
+                            500,
+                            "linear",
+                            "${blue_1Copy4}",
+                            '0px',
+                            '-71px'
+                        ],
+                        [
+                            "eid297",
+                            "top",
+                            38000,
+                            500,
+                            "easeOutQuad",
+                            "${blue_1Copy4}",
+                            '-71px',
+                            '0px'
+                        ],
+                        [
+                            "eid290",
+                            "opacity",
+                            22000,
+                            1000,
+                            "easeOutQuad",
+                            "${blue_1Copy4}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid291",
+                            "opacity",
+                            37500,
+                            0,
+                            "linear",
+                            "${blue_1Copy4}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid170",
+                            "opacity",
+                            20000,
+                            1000,
+                            "linear",
+                            "${_56_bar_barCopy}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid286",
+                            "left",
+                            36500,
+                            500,
+                            "linear",
+                            "${blue_1Copy3}",
+                            '-21px',
+                            '128px'
+                        ],
+                        [
+                            "eid287",
+                            "left",
+                            37000,
+                            500,
+                            "easeOutQuad",
+                            "${blue_1Copy3}",
+                            '128px',
+                            '198px'
+                        ],
+                        [
+                            "eid167",
+                            "opacity",
+                            18000,
+                            1000,
+                            "linear",
+                            "${_16_bar}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid318",
+                            "opacity",
+                            38000,
+                            0,
+                            "linear",
+                            "${_4}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid317",
+                            "opacity",
+                            38500,
+                            0,
+                            "linear",
+                            "${_4}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid378",
+                            "opacity",
+                            72000,
+                            1000,
+                            "easeInQuint",
+                            "${hint4c}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid372",
+                            "opacity",
+                            75750,
+                            1000,
+                            "easeInQuint",
+                            "${answer_hint_5}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid405",
+                            "height",
+                            80000,
+                            0,
+                            "linear",
+                            "${Text2Copy5}",
+                            '28px',
+                            '28px'
+                        ],
+                        [
+                            "eid182",
+                            "background-color",
+                            23000,
+                            500,
+                            "linear",
+                            "${Rectangle3Copy8}",
+                            'rgba(251,246,246,0)',
+                            'rgba(239,239,35,1.00)'
+                        ],
+                        [
+                            "eid249",
+                            "background-color",
+                            35500,
+                            0,
+                            "swing",
+                            "${Rectangle3Copy8}",
+                            'rgba(239,239,35,1.00)',
+                            'rgba(239,239,35,0.02)'
+                        ],
+                        [
+                            "eid406",
+                            "width",
+                            80000,
+                            0,
+                            "linear",
+                            "${Text2Copy5}",
+                            '27px',
+                            '27px'
+                        ],
+                        [
+                            "eid316",
+                            "opacity",
+                            37000,
+                            0,
+                            "linear",
+                            "${_3}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid315",
+                            "opacity",
+                            37500,
+                            0,
+                            "linear",
+                            "${_3}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid344",
+                            "opacity",
+                            61000,
+                            1000,
+                            "linear",
+                            "${divide}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid349",
+                            "opacity",
+                            64000,
+                            1000,
+                            "linear",
+                            "${divide}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid29",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${QuestionSound_Container}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid314",
+                            "opacity",
+                            36000,
+                            0,
+                            "linear",
+                            "${_2}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid313",
+                            "opacity",
+                            36500,
+                            0,
+                            "linear",
+                            "${_2}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid194",
+                            "background-color",
+                            25000,
+                            500,
+                            "linear",
+                            "${Rectangle3Copy10}",
+                            'rgba(251,246,246,0)',
+                            'rgba(239,239,35,1.00)'
+                        ],
+                        [
+                            "eid308",
+                            "background-color",
+                            39500,
+                            0,
+                            "easeOutQuad",
+                            "${Rectangle3Copy10}",
+                            'rgba(239,239,35,1.00)',
+                            'rgba(239,239,35,0.00)'
+                        ],
+                        [
+                            "eid300",
+                            "opacity",
+                            22000,
+                            1000,
+                            "linear",
+                            "${blue_1Copy5}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid301",
+                            "opacity",
+                            38500,
+                            0,
+                            "linear",
+                            "${blue_1Copy5}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid386",
+                            "top",
+                            80000,
+                            0,
+                            "easeInQuint",
+                            "${Choose_B}",
+                            '458px',
+                            '458px'
+                        ],
+                        [
+                            "eid28",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Sound_Container}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid385",
+                            "left",
+                            80000,
+                            0,
+                            "easeInQuint",
+                            "${Choose_B}",
+                            '290px',
+                            '290px'
+                        ],
+                        [
+                            "eid384",
+                            "opacity",
+                            79000,
+                            1000,
+                            "easeInQuint",
+                            "${Choose_B}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid324",
+                            "opacity",
+                            48000,
+                            1000,
+                            "linear",
+                            "${Hint_3}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid332",
+                            "opacity",
+                            51000,
+                            0,
+                            "linear",
+                            "${Hint_3}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid356",
+                            "opacity",
+                            65500,
+                            1000,
+                            "linear",
+                            "${hint_4_multiplyCopy}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid304",
+                            "top",
+                            38500,
+                            500,
+                            "linear",
+                            "${blue_1Copy5}",
+                            '0px',
+                            '-69px'
+                        ],
+                        [
+                            "eid307",
+                            "top",
+                            39000,
+                            500,
+                            "easeOutQuad",
+                            "${blue_1Copy5}",
+                            '-69px',
+                            '0px'
+                        ],
+                        [
+                            "eid326",
+                            "opacity",
+                            18000,
+                            0,
+                            "linear",
+                            "${blue_1Copy1}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid240",
+                            "opacity",
+                            34500,
+                            0,
+                            "easeOutCubic",
+                            "${blue_1Copy1}",
+                            '0',
+                            '0.78'
+                        ],
+                        [
+                            "eid325",
+                            "opacity",
+                            35500,
+                            0,
+                            "linear",
+                            "${blue_1Copy1}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid243",
+                            "left",
+                            34500,
+                            500,
+                            "easeOutSine",
+                            "${blue_1Copy1}",
+                            '-22px',
+                            '117px'
+                        ],
+                        [
+                            "eid269",
+                            "left",
+                            35000,
+                            500,
+                            "swing",
+                            "${blue_1Copy1}",
+                            '117px',
+                            '156px'
+                        ],
+                        [
+                            "eid185",
+                            "background-color",
+                            23500,
+                            500,
+                            "linear",
+                            "${Rectangle3Copy13}",
+                            'rgba(251,246,246,0)',
+                            'rgba(239,239,35,1.00)'
+                        ],
+                        [
+                            "eid279",
+                            "background-color",
+                            36500,
+                            0,
+                            "linear",
+                            "${Rectangle3Copy13}",
+                            'rgba(239,239,35,1.00)',
+                            'rgba(239,239,35,0.00)'
+                        ],
+                        [
+                            "eid381",
+                            "opacity",
+                            74000,
+                            1000,
+                            "easeInQuint",
+                            "${equalsCopy}",
+                            '0.000000',
+                            '1'
+                        ],
+                            [ "eid391", "trigger", 2000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${question}', [] ] ],
+                            [ "eid392", "trigger", 9000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
+                            [ "eid393", "trigger", 27000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2}', [] ] ],
+                            [ "eid394", "trigger", 41000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3}', [] ] ],
+                            [ "eid395", "trigger", 51000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint4}', [] ] ],
+                            [ "eid412", "trigger", 77000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answerhint}', [] ] ]
+                    ]
+                }
+            },
+            "EButton": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy8',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                id: 'Text8',
+                                text: 'E',
+                                align: 'center',
+                                type: 'text'
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -3, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
                     },
-                    {
-                        id: 'Rectangle5',
-                        type: 'rect',
-                        rect: ['-7px', '-5px','22px','2px','auto', 'auto'],
-                        fill: ["rgba(128,6,6,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    }]
+                    data: [
+                        [
+                            "eid9",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid13",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid257",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid258",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid230",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ]
+                    ]
+                }
+            },
+            "EButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy8',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                id: 'Text8',
+                                text: 'E',
+                                align: 'center',
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
                 },
-                {
-                    id: 'fraction_5_sixthsCopy',
-                    type: 'group',
-                    rect: ['62px', '17px','21','25','auto', 'auto'],
-                    c: [
-                    {
-                        id: 'Text2Copy',
-                        type: 'text',
-                        rect: ['0px', '0px','21px','25px','auto', 'auto'],
-                        text: "6",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
                     },
-                    {
-                        id: 'TextCopy',
-                        type: 'text',
-                        rect: ['0px', '-27px','21px','20px','auto', 'auto'],
-                        text: "5<br>",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
+                    data: [
+                        [
+                            "eid9",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid13",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid257",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid258",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid43",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid230",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid44",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ]
+                    ]
+                }
+            },
+            "EButton_2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy8',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text8',
+                                text: 'E',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text14',
+                                text: 'Answer E Text',
+                                align: 'left',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                            },
+                            {
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
                     },
-                    {
-                        id: 'Rectangle5Copy',
-                        type: 'rect',
-                        rect: ['-10px', '-5px','28px','2px','auto', 'auto'],
-                        fill: ["rgba(128,6,6,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    }]
-                }]
+                    data: [
+                        [
+                            "eid9",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid13",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid257",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid258",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid230",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ]
+                    ]
+                }
             },
-            {
-                id: '_16_bar',
-                type: 'group',
-                rect: ['168px', '175px','23','46','auto', 'auto'],
-                c: [
-                {
-                    id: 'Rectangle3Copy6',
-                    type: 'rect',
-                    rect: ['0px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
+            "EButton_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy8',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text8',
+                                text: 'E',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text14',
+                                text: 'Answer E Text',
+                                align: 'left',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -3, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
                 },
-                {
-                    id: 'Rectangle3Copy5',
-                    type: 'rect',
-                    rect: ['21px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'Rectangle3Copy4',
-                    type: 'rect',
-                    rect: ['42px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'Rectangle3Copy3',
-                    type: 'rect',
-                    rect: ['63px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'Rectangle3Copy2',
-                    type: 'rect',
-                    rect: ['84px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'Rectangle3',
-                    type: 'rect',
-                    rect: ['-21px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'blue_1',
-                    type: 'rect',
-                    rect: ['-21px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(106,209,244,1.00)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'blue_1Copy5',
-                    type: 'rect',
-                    rect: ['-22px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(106,209,244,1.00)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'blue_1Copy4',
-                    type: 'rect',
-                    rect: ['-21px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(106,209,244,1.00)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'blue_1Copy3',
-                    type: 'rect',
-                    rect: ['-21px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(106,209,244,1.00)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'blue_1Copy2',
-                    type: 'rect',
-                    rect: ['-21px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(106,209,244,1.00)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'blue_1Copy1',
-                    type: 'rect',
-                    rect: ['156px', '0px','19px','42px','auto', 'auto'],
-                    opacity: 1,
-                    fill: ["rgba(106,209,244,1.00)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                }]
-            },
-            {
-                id: '_56_bar_barCopy',
-                type: 'group',
-                rect: ['345px', '175px','23','46','auto', 'auto'],
-                c: [
-                {
-                    id: 'Rectangle3Copy13',
-                    type: 'rect',
-                    rect: ['0px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'Rectangle3Copy12',
-                    type: 'rect',
-                    rect: ['21px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'Rectangle3Copy11',
-                    type: 'rect',
-                    rect: ['42px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'Rectangle3Copy10',
-                    type: 'rect',
-                    rect: ['63px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'Rectangle3Copy9',
-                    type: 'rect',
-                    rect: ['84px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                },
-                {
-                    id: 'Rectangle3Copy8',
-                    type: 'rect',
-                    rect: ['-21px', '0px','19px','42px','auto', 'auto'],
-                    fill: ["rgba(251,246,246,0)"],
-                    stroke: [2,"rgb(0, 0, 0)","solid"]
-                }]
-            },
-            {
-                id: '_1',
-                type: 'text',
-                rect: ['328px', '149px','50px','19px','auto', 'auto'],
-                text: "1",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 20, "rgba(128,6,6,1)", "400", "none", "normal"]
-            },
-            {
-                id: '_2',
-                type: 'text',
-                rect: ['352px', '149px','42px','19px','auto', 'auto'],
-                text: "2",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 20, "rgba(128,6,6,1)", "normal", "none", "normal"]
-            },
-            {
-                id: '_3',
-                type: 'text',
-                rect: ['373px', '149px','23px','28px','auto', 'auto'],
-                text: "3<br>",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 20, "rgba(128,6,6,1)", "normal", "none", "normal"]
-            },
-            {
-                id: '_4',
-                type: 'text',
-                rect: ['392px', '149px','23px','19px','auto', 'auto'],
-                text: "4<br>",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 20, "rgba(128,6,6,1)", "normal", "none", "normal"]
-            },
-            {
-                id: '_5',
-                type: 'text',
-                rect: ['413px', '149px','23px','19px','auto', 'auto'],
-                text: "5<br>",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 20, "rgba(128,6,6,1)", "normal", "none", "normal"]
-            },
-            {
-                id: 'Hint_3',
-                type: 'group',
-                rect: ['275px', '300px','12','37','auto', 'auto'],
-                c: [
-                {
-                    id: 'hint3_16Copy4',
-                    type: 'image',
-                    rect: ['0px', '0px','12px','37px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"hint1%201%3A6.png",'0px','0px']
-                },
-                {
-                    id: 'Hint_3_4',
-                    type: 'text',
-                    rect: ['-30px', '10px','47px','41px','auto', 'auto'],
-                    text: "5 x ",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 20, "rgba(128,6,6,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: 'Hint3_make_up',
-                    type: 'text',
-                    rect: ['33px', '10px','112px','19px','auto', 'auto'],
-                    text: "make up",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 20, "rgba(128,6,6,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: 'Hint_3_fraction_1_sixths',
-                    type: 'group',
-                    rect: ['6px', '26px','18px','25','auto', 'auto'],
-                    c: [
-                    {
-                        id: 'Text2Copy2',
-                        type: 'text',
-                        rect: ['0px', '0px','21px','25px','auto', 'auto'],
-                        text: "6",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
                     },
-                    {
-                        id: 'TextCopy2',
-                        type: 'text',
-                        rect: ['0px', '-27px','21px','20px','auto', 'auto'],
-                        text: "1",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
-                    },
-                    {
-                        id: 'Rectangle5Copy2',
-                        type: 'rect',
-                        rect: ['-7px', '-5px','22px','2px','auto', 'auto'],
-                        fill: ["rgba(128,6,6,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    }]
+                    data: [
+                        [
+                            "eid9",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid13",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid257",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid258",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid230",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ]
+                    ]
+                }
+            },
+            "DButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy7',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                id: 'Text7',
+                                text: 'D<br>',
+                                align: 'center',
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
                 },
-                {
-                    id: '_Hint_3_fraction_5_sixths',
-                    type: 'group',
-                    rect: ['132px', '26px','21','25','auto', 'auto'],
-                    c: [
-                    {
-                        id: 'Text2Copy3',
-                        type: 'text',
-                        rect: ['0px', '0px','21px','25px','auto', 'auto'],
-                        text: "6",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
                     },
-                    {
-                        id: 'TextCopy3',
-                        type: 'text',
-                        rect: ['0px', '-27px','21px','20px','auto', 'auto'],
-                        text: "5<br>",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
+                    data: [
+                        [
+                            "eid255",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid256",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid266",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid10",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid226",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid267",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid3",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ]
+                    ]
+                }
+            },
+            "DButton_2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy7',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text7',
+                                text: 'D<br>',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text13',
+                                text: 'Answer D Text',
+                                align: 'left',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                            },
+                            {
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
                     },
-                    {
-                        id: 'Rectangle5Copy3',
-                        type: 'rect',
-                        rect: ['-10px', '-5px','28px','2px','auto', 'auto'],
-                        fill: ["rgba(128,6,6,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    }]
-                }]
+                    data: [
+                        [
+                            "eid255",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid256",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid10",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid226",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid3",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'Choose_B',
-                type: 'text',
-                rect: ['352px', '323px','112px','28px','auto', 'auto'],
-                text: "Choose (B)",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 20, "rgba(40,128,6,1)", "700", "none", "normal"]
-            },
-            {
-                id: 'Answer_hint',
-                type: 'group',
-                rect: ['431px', '351px','21px','19','auto', 'auto'],
-                c: [
-                {
-                    id: 'equals',
-                    type: 'text',
-                    rect: ['-166px', '-6px','42px','25px','auto', 'auto'],
-                    text: "=",
-                    font: ['Arial, Helvetica, sans-serif', 26, "rgba(128,6,6,1.00)", "normal", "none", ""]
+            "DButton_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy7',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text7',
+                                text: 'D<br>',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text13',
+                                text: 'Answer D Text',
+                                align: 'left',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -4, 42, 33]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
                 },
-                {
-                    id: 'hint4c',
-                    type: 'image',
-                    rect: ['-137px', '-16px','28px','53px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"hint4c.png",'0px','0px']
-                },
-                {
-                    id: 'equalsCopy',
-                    type: 'text',
-                    rect: ['-95px', '-5px','42px','25px','auto', 'auto'],
-                    text: "=",
-                    font: ['Arial, Helvetica, sans-serif', 26, "rgba(128,6,6,1.00)", "normal", "none", ""]
-                },
-                {
-                    id: 'answer_hint_5',
-                    display: 'block',
-                    type: 'text',
-                    rect: ['-69px', '-7px','58px','37px','auto', 'auto'],
-                    text: "5",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 26, "rgba(128,6,6,1)", "normal", "none", "normal"]
-                }]
-            },
-            {
-                id: 'Hint_4_',
-                type: 'group',
-                rect: ['269px', '269px','16','47','auto', 'auto'],
-                c: [
-                {
-                    id: 'divide',
-                    type: 'image',
-                    rect: ['32px', '12px','19px','20px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"divide.png",'0px','0px']
-                },
-                {
-                    id: 'hint_4_multiplyCopy',
-                    type: 'text',
-                    rect: ['37px', '6px','23px','19px','auto', 'auto'],
-                    text: "x",
-                    align: "left",
-                    font: ['Arial, Helvetica, sans-serif', 26, "rgba(128,6,6,1)", "normal", "none", "normal"]
-                },
-                {
-                    id: '_Hint_4fraction_1_sixthsCopy3',
-                    type: 'group',
-                    rect: ['78px', '27px','18px','25','auto', 'auto'],
-                    c: [
-                    {
-                        id: 'Text2Copy5',
-                        type: 'text',
-                        rect: ['0px', '0px','21px','25px','auto', 'auto'],
-                        autoOrient: true,
-                        text: "6",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
                     },
-                    {
-                        id: 'TextCopy5',
-                        type: 'text',
-                        rect: ['0px', '-27px','21px','20px','auto', 'auto'],
-                        autoOrient: false,
-                        text: "1",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 16, "rgba(128,6,6,1)", "400", "none", "normal"]
-                    },
-                    {
-                        id: 'Rectangle5Copy5',
-                        type: 'rect',
-                        rect: ['-4px', '-5px','22px','2px','auto', 'auto'],
-                        fill: ["rgba(128,6,6,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    }]
+                    data: [
+                        [
+                            "eid255",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid256",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid10",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid226",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid3",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ]
+                    ]
+                }
+            },
+            "DButton": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy7',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text7',
+                                text: 'D<br>',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text13',
+                                text: 'Answer Text D',
+                                align: 'left',
+                                rect: [36, 4, 94, '20px', 'auto', 'auto']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -4, 42, 33]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
                 },
-                {
-                    id: '_Hint_4_fraction_5_sixthsCopy',
-                    type: 'group',
-                    rect: ['-3px', '27px','21','25','auto', 'auto'],
-                    c: [
-                    {
-                        id: 'Text2Copy4',
-                        type: 'text',
-                        rect: ['0px', '0px','21px','25px','auto', 'auto'],
-                        text: "6",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 22, "rgba(128,6,6,1)", "400", "none", "normal"]
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
                     },
-                    {
-                        id: 'TextCopy4',
-                        type: 'text',
-                        rect: ['-1px', '-33px','21px','20px','auto', 'auto'],
-                        text: "5<br>",
-                        align: "left",
-                        font: ['Verdana, Geneva, sans-serif', 22, "rgba(128,6,6,1)", "400", "none", "normal"]
+                    data: [
+                        [
+                            "eid255",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid256",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid10",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid226",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid3",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ]
+                    ]
+                }
+            },
+            "CButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'C_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy6',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                id: 'Text5',
+                                text: 'C',
+                                align: 'center',
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
                     },
-                    {
-                        id: 'Rectangle5Copy4',
-                        type: 'rect',
-                        rect: ['-10px', '-5px','28px','2px','auto', 'auto'],
-                        fill: ["rgba(128,6,6,1)"],
-                        stroke: [0,"rgb(0, 0, 0)","none"]
-                    }]
-                }]
+                    data: [
+                        [
+                            "eid11",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy6}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid5",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy6}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid253",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid254",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid264",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid224",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid225",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid265",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'hint4_1_6_',
-                type: 'group',
-                rect: ['-3034px', '-1504px','42','12','auto', 'auto'],
-                c: [
-                {
-                    id: 'stick',
-                    type: 'rect',
-                    rect: ['-3px', '-6px','20px','2px','auto', 'auto'],
-                    fill: ["rgba(150,8,8,1.00)"],
-                    stroke: [0,"rgba(0,0,0,1)","none"]
-                }]
+            "BButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '25', 'auto', 'auto'],
+                            id: 'B_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy5',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                type: 'text',
+                                rect: [0, 5, 27, 19, 'auto', 'auto'],
+                                id: 'Text4',
+                                text: 'B',
+                                align: 'center',
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 125, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
+                    },
+                    data: [
+                        [
+                            "eid7",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy5}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid251",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid252",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid263",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid12",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy5}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid222",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid223",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid262",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'hint2',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint2.mp3','media/hint2.ogg']
+            "AButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [8, 16, '25', '24', 'auto', 'auto'],
+                            id: 'A_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'Ellipse',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                rect: [0, 3, 27, 19, 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
+                                id: 'A',
+                                text: 'A<br><br><br>',
+                                align: 'center',
+                                type: 'text'
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 153, 42]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
+                    },
+                    data: [
+                        [
+                            "eid220",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid221",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid261",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid259",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid260",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid42",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'hint3',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint3.ogg','media/hint3.mp3']
+            "AButton": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [8, 16, '25', '24', 'auto', 'auto'],
+                            id: 'A_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'Ellipse',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text3',
+                                text: 'A<br><br><br>',
+                                align: 'center',
+                                rect: [0, 3, 27, 19, 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text9',
+                                text: 'Answer Text A',
+                                align: 'left',
+                                rect: [36, 3, 109, '19px', 'auto', 'auto']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -4, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 153, 42]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
+                    },
+                    data: [
+                        [
+                            "eid220",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid221",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid259",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid260",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'hint4',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint4.ogg','media/hint4.mp3']
-            },
-            {
-                id: 'answerhint',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/answerhint.mp3','media/answerhint.ogg']
-            }],
-            symbolInstances: [
-            {
-                id: 'Answers',
-                symbolName: 'Answers_1',
-                autoPlay: {
+            "Answers_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 2, '153', '183', 'auto', 'auto'],
+                            id: 'Group',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [8, 157, 101, 26, 'auto', 'auto'],
+                                id: 'EButton',
+                                symbolName: 'EButton_3',
+                                type: 'rect'
+                            },
+                            {
+                                rect: [8, 121, 101, 26, 'auto', 'auto'],
+                                id: 'DButton',
+                                symbolName: 'DButton_3',
+                                type: 'rect'
+                            },
+                            {
+                                rect: [8, 86, 101, 26, 'auto', 'auto'],
+                                id: 'CButton',
+                                symbolName: 'CButton_3',
+                                type: 'rect'
+                            },
+                            {
+                                rect: [8, 50, 125, 26, 'auto', 'auto'],
+                                id: 'BButton',
+                                symbolName: 'BButton_3',
+                                type: 'rect'
+                            },
+                            {
+                                rect: [0, 0, 153, 42, 'auto', 'auto'],
+                                id: 'AButton',
+                                symbolName: 'AButton_3',
+                                type: 'rect'
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${AnswerText}': {
+                            font: '{:}12px{:}{:}{:}{:}{:}{:}',
+                            rect: [36, 3, 109, 0]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 156, 187]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
 
+                    ]
                 }
             }
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Rectangle3Copy8}": [
-                ["color", "background-color", 'rgba(251,246,246,0)'],
-                ["style", "top", '0px'],
-                ["style", "left", '-21px'],
-                ["style", "width", '19px']
-            ],
-            "${_Hint_3_fraction_1_sixths}": [
-                ["style", "top", '26px'],
-                ["style", "left", '6px'],
-                ["style", "width", '18px']
-            ],
-            "${_Answer_hint}": [
-                ["style", "top", '351px'],
-                ["style", "left", '431px'],
-                ["style", "width", '21px']
-            ],
-            "${__2}": [
-                ["style", "top", '149px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '352px']
-            ],
-            "${__5}": [
-                ["style", "top", '149px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '413px']
-            ],
-            "${_QuestionSound_Container}": [
-                ["style", "display", 'none'],
-                ["style", "height", '8px'],
-                ["color", "background-color", 'rgba(248,250,248,0.00)'],
-                ["style", "width", '17px']
-            ],
-            "${_hint1_how_many}": [
-                ["style", "top", '0px'],
-                ["color", "color", 'rgba(128,6,6,1.00)'],
-                ["style", "font-family", 'Verdana, Geneva, sans-serif'],
-                ["style", "left", '-217px'],
-                ["style", "font-size", '16px']
-            ],
-            "${_hint1_16Copy}": [
-                ["style", "top", '243px'],
-                ["style", "height", '41px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '149px'],
-                ["style", "width", '16px']
-            ],
-            "${_TextCopy4}": [
-                ["style", "top", '-33px'],
-                ["style", "left", '-1px'],
-                ["style", "font-size", '22px']
-            ],
-            "${_hint4c}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '53px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-137px'],
-                ["style", "width", '28px']
-            ],
-            "${__Hint_4fraction_1_sixthsCopy3}": [
-                ["style", "top", '27px'],
-                ["style", "left", '78px'],
-                ["style", "width", '18px']
-            ],
-            "${_stick}": [
-                ["style", "top", '-6px'],
-                ["style", "height", '2px'],
-                ["color", "background-color", 'rgba(150,8,8,1.00)'],
-                ["style", "left", '-3px'],
-                ["style", "width", '20px']
-            ],
-            "${_Rectangle3Copy11}": [
-                ["color", "background-color", 'rgba(251,246,246,0)'],
-                ["style", "top", '0px'],
-                ["style", "left", '42px'],
-                ["style", "width", '19px']
-            ],
-            "${_TextCopy}": [
-                ["style", "left", '0px'],
-                ["style", "top", '-27px']
-            ],
-            "${_Hint3_make_up}": [
-                ["style", "left", '33px'],
-                ["style", "top", '10px']
-            ],
-            "${__Hint_4_fraction_5_sixthsCopy}": [
-                ["style", "left", '-3px'],
-                ["style", "top", '27px']
-            ],
-            "${_Hint_3}": [
-                ["style", "top", '300px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '275px']
-            ],
-            "${_Rectangle3Copy2}": [
-                ["style", "top", '0px'],
-                ["style", "left", '84px'],
-                ["style", "width", '19px']
-            ],
-            "${_Text2Copy2}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "height", '25px']
-            ],
-            "${_blue_1Copy5}": [
-                ["color", "background-color", 'rgba(106,209,244,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.000000'],
-                ["style", "left", '-22px'],
-                ["style", "width", '19px']
-            ],
-            "${_Rectangle5Copy2}": [
-                ["style", "top", '-5px'],
-                ["style", "left", '-7px'],
-                ["style", "width", '22px']
-            ],
-            "${_Answers}": [
-                ["style", "top", '348px'],
-                ["style", "left", '33px']
-            ],
-            "${_hint_4_multiplyCopy}": [
-                ["style", "top", '6px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '37px']
-            ],
-            "${_Sound_Container}": [
-                ["style", "display", 'none'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_Answer_D}": [
-                ["style", "height", '60px'],
-                ["style", "top", '472px'],
-                ["style", "left", '77px'],
-                ["style", "width", '16px']
-            ],
-            "${_Answer_C}": [
-                ["style", "height", '60px'],
-                ["style", "top", '432px'],
-                ["style", "left", '75px'],
-                ["style", "width", '23px']
-            ],
-            "${_Choose_B}": [
-                ["style", "top", '458px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '290px'],
-                ["style", "font-weight", '700']
-            ],
-            "${_blue_1Copy3}": [
-                ["color", "background-color", 'rgba(106,209,244,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.000000'],
-                ["style", "left", '-21px'],
-                ["style", "width", '19px']
-            ],
-            "${__1}": [
-                ["style", "top", '149px'],
-                ["style", "font-weight", '400'],
-                ["style", "opacity", '0'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '328px'],
-                ["style", "font-size", '20px']
-            ],
-            "${_hint1_question_mark}": [
-                ["style", "top", '1px'],
-                ["style", "left", '90px'],
-                ["style", "font-size", '20px']
-            ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(255,255,255,0.00)'],
-                ["style", "overflow", 'hidden'],
-                ["style", "height", '600px'],
-                ["style", "width", '600px']
-            ],
-            "${__16_bar}": [
-                ["style", "top", '175px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '168px']
-            ],
-            "${_Rectangle5Copy5}": [
-                ["style", "top", '-5px'],
-                ["style", "left", '-4px'],
-                ["style", "width", '22px']
-            ],
-            "${_Problem_363_picture}": [
-                ["style", "height", '46px'],
-                ["style", "top", '68px'],
-                ["style", "left", '36px'],
-                ["style", "width", '72px']
-            ],
-            "${_Rectangle3Copy4}": [
-                ["style", "top", '0px'],
-                ["style", "left", '42px'],
-                ["style", "width", '19px']
-            ],
-            "${__56_bar_barCopy}": [
-                ["style", "top", '175px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '345px']
-            ],
-            "${_blue_1}": [
-                ["color", "background-color", 'rgba(106,209,244,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-21px'],
-                ["style", "width", '19px']
-            ],
-            "${_Answer_A}": [
-                ["style", "height", '60px'],
-                ["style", "top", '366px'],
-                ["style", "left", '74px'],
-                ["style", "width", '23px']
-            ],
-            "${_Rectangle3Copy12}": [
-                ["color", "background-color", 'rgba(251,246,246,0)'],
-                ["style", "top", '0px'],
-                ["style", "left", '21px'],
-                ["style", "width", '19px']
-            ],
-            "${_Rectangle3Copy10}": [
-                ["color", "background-color", 'rgba(251,246,246,0)'],
-                ["style", "top", '0px'],
-                ["style", "left", '63px'],
-                ["style", "width", '19px']
-            ],
-            "${_Question_Text}": [
-                ["style", "top", '30px'],
-                ["style", "width", '219px'],
-                ["style", "height", '28px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '15px'],
-                ["style", "font-size", '16px']
-            ],
-            "${_fraction_5_sixthsCopy}": [
-                ["style", "left", '62px'],
-                ["style", "top", '17px']
-            ],
-            "${_hint1_make}": [
-                ["style", "top", '0px'],
-                ["style", "font-family", 'Verdana, Geneva, sans-serif'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '16px']
-            ],
-            "${_Rectangle5Copy4}": [
-                ["style", "left", '-10px'],
-                ["style", "top", '-5px']
-            ],
-            "${_Rectangle3}": [
-                ["style", "top", '0px'],
-                ["style", "left", '-21px'],
-                ["style", "width", '19px']
-            ],
-            "${_TutorialText}": [
-                ["style", "top", '51px'],
-                ["style", "height", '187px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '260px'],
-                ["style", "display", 'none']
-            ],
-            "${_blue_1Copy4}": [
-                ["color", "background-color", 'rgba(106,209,244,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.000000'],
-                ["style", "left", '-21px'],
-                ["style", "width", '19px']
-            ],
-            "${_blue_1Copy1}": [
-                ["color", "background-color", 'rgba(106,209,244,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-22px'],
-                ["style", "width", '19px']
-            ],
-            "${_hint1_56Copy}": [
-                ["style", "top", '243px'],
-                ["style", "height", '41px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '324px'],
-                ["style", "width", '16px']
-            ],
-            "${_Answer_E}": [
-                ["style", "height", '64px'],
-                ["style", "top", '512px'],
-                ["style", "left", '76px'],
-                ["style", "width", '16px']
-            ],
-            "${_Rectangle3Copy6}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "width", '19px']
-            ],
-            "${_Rectangle5}": [
-                ["style", "top", '-5px'],
-                ["style", "left", '-7px'],
-                ["style", "width", '22px']
-            ],
-            "${__3}": [
-                ["style", "top", '149px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '373px']
-            ],
-            "${_Rectangle5Copy3}": [
-                ["style", "left", '-10px'],
-                ["style", "top", '-5px']
-            ],
-            "${__Hint_3_fraction_5_sixths}": [
-                ["style", "left", '132px'],
-                ["style", "top", '26px']
-            ],
-            "${_AnswerBText}": [
-                ["style", "top", '409px'],
-                ["style", "width", '112px'],
-                ["style", "font-family", 'Times New Roman, Times, serif'],
-                ["style", "left", '82px'],
-                ["style", "font-size", '16px']
-            ],
-            "${_equalsCopy}": [
-                ["style", "top", '-5px'],
-                ["color", "color", 'rgba(128,6,6,1)'],
-                ["style", "height", '25px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-95px'],
-                ["style", "font-size", '26px']
-            ],
-            "${_Text2Copy3}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "height", '25px']
-            ],
-            "${_divide}": [
-                ["style", "top", '12px'],
-                ["style", "height", '20px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '32px'],
-                ["style", "width", '19px']
-            ],
-            "${_Hint_1_text}": [
-                ["style", "top", '77px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '362px']
-            ],
-            "${_Hint_3_4}": [
-                ["style", "top", '10px'],
-                ["style", "left", '-30px'],
-                ["style", "width", '47px']
-            ],
-            "${_Text2Copy}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "height", '25px']
-            ],
-            "${_TextCopy2}": [
-                ["style", "left", '0px'],
-                ["style", "top", '-27px']
-            ],
-            "${_Text}": [
-                ["style", "left", '0px'],
-                ["style", "top", '-27px']
-            ],
-            "${_Rectangle}": [
-                ["color", "background-color", 'rgba(128,6,6,1.00)']
-            ],
-            "${_TextCopy3}": [
-                ["style", "left", '0px'],
-                ["style", "top", '-27px']
-            ],
-            "${_Text2}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "height", '25px']
-            ],
-            "${_Rectangle3Copy13}": [
-                ["color", "background-color", 'rgba(251,246,246,0)'],
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "width", '19px']
-            ],
-            "${_Hint_4_}": [
-                ["style", "top", '269px'],
-                ["style", "opacity", '0.000000'],
-                ["style", "left", '269px']
-            ],
-            "${_hint4_1_6_}": [
-                ["style", "top", '-1504px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-3034px']
-            ],
-            "${__4}": [
-                ["style", "top", '149px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '392px']
-            ],
-            "${_Rectangle3Copy3}": [
-                ["style", "top", '0px'],
-                ["style", "left", '63px'],
-                ["style", "width", '19px']
-            ],
-            "${_Rectangle5Copy}": [
-                ["style", "left", '-10px'],
-                ["style", "top", '-5px']
-            ],
-            "${_fraction_1_sixths}": [
-                ["style", "top", '16px'],
-                ["style", "left", '-21px'],
-                ["style", "width", '18px']
-            ],
-            "${_equals}": [
-                ["style", "top", '-6px'],
-                ["style", "height", '25px'],
-                ["color", "color", 'rgba(128,6,6,1.00)'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-166px'],
-                ["style", "font-size", '26px']
-            ],
-            "${_TextCopy5}": [
-                ["motion", "location", '10.5px -22.999959309896px'],
-                ["style", "font-size", '22px']
-            ],
-            "${_Text2Copy5}": [
-                ["style", "height", '28px'],
-                ["style", "font-size", '22px'],
-                ["motion", "location", '12.5px 15px'],
-                ["style", "width", '27px']
-            ],
-            "${_answer_hint_5}": [
-                ["style", "top", '-7px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '-69px'],
-                ["style", "display", 'block']
-            ],
-            "${_blue_1Copy2}": [
-                ["color", "background-color", 'rgba(106,209,244,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.000000'],
-                ["style", "left", '-21px'],
-                ["style", "width", '19px']
-            ],
-            "${_Rectangle3Copy5}": [
-                ["style", "top", '0px'],
-                ["style", "left", '21px'],
-                ["style", "width", '19px']
-            ],
-            "${_Text2Copy4}": [
-                ["style", "height", '25px'],
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '22px']
-            ],
-            "${_hint3_16Copy4}": [
-                ["style", "top", '0px'],
-                ["style", "height", '37px'],
-                ["style", "left", '0px'],
-                ["style", "width", '12px']
-            ],
-            "${_Rectangle3Copy9}": [
-                ["color", "background-color", 'rgba(251,246,246,0)'],
-                ["style", "top", '0px'],
-                ["style", "left", '84px'],
-                ["style", "width", '19px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 80000,
-            autoPlay: true,
-            labels: {
-                "Read Question": 2000,
-                "Hint 1": 9000,
-                "Hint 2": 27000,
-                "Hint 3": 41000,
-                "Hint 4": 51000,
-                "Answer Hint": 71000
-            },
-            timeline: [
-                { id: "eid285", tween: [ "style", "${_blue_1Copy3}", "top", '-69px', { fromValue: '0px'}], position: 36500, duration: 500 },
-                { id: "eid288", tween: [ "style", "${_blue_1Copy3}", "top", '0px', { fromValue: '-69px'}], position: 37000, duration: 500, easing: "easeOutQuad" },
-                { id: "eid318", tween: [ "style", "${__4}", "opacity", '0', { fromValue: '0'}], position: 38000, duration: 0 },
-                { id: "eid317", tween: [ "style", "${__4}", "opacity", '1', { fromValue: '0'}], position: 38500, duration: 0 },
-                { id: "eid314", tween: [ "style", "${__2}", "opacity", '0', { fromValue: '0'}], position: 36000, duration: 0 },
-                { id: "eid313", tween: [ "style", "${__2}", "opacity", '1', { fromValue: '0'}], position: 36500, duration: 0 },
-                { id: "eid281", tween: [ "style", "${_blue_1Copy3}", "opacity", '1', { fromValue: '0.000000'}], position: 22000, duration: 1000, easing: "easeOutQuad" },
-                { id: "eid282", tween: [ "style", "${_blue_1Copy3}", "opacity", '1', { fromValue: '1'}], position: 36500, duration: 0 },
-                { id: "eid389", tween: [ "style", "${_Answers}", "left", '33px', { fromValue: '33px'}], position: 0, duration: 0 },
-                { id: "eid185", tween: [ "color", "${_Rectangle3Copy13}", "background-color", 'rgba(239,239,35,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(251,246,246,0)'}], position: 23500, duration: 500 },
-                { id: "eid279", tween: [ "color", "${_Rectangle3Copy13}", "background-color", 'rgba(239,239,35,0.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(239,239,35,1.00)'}], position: 36500, duration: 0 },
-                { id: "eid244", tween: [ "style", "${_blue_1Copy1}", "top", '-70px', { fromValue: '0px'}], position: 34500, duration: 500, easing: "easeOutCubic" },
-                { id: "eid270", tween: [ "style", "${_blue_1Copy1}", "top", '0px', { fromValue: '-70px'}], position: 35000, duration: 500, easing: "swing" },
-                { id: "eid304", tween: [ "style", "${_blue_1Copy5}", "top", '-69px', { fromValue: '0px'}], position: 38500, duration: 500 },
-                { id: "eid307", tween: [ "style", "${_blue_1Copy5}", "top", '0px', { fromValue: '-69px'}], position: 39000, duration: 500, easing: "easeOutQuad" },
-                { id: "eid275", tween: [ "style", "${_blue_1Copy2}", "top", '-69px', { fromValue: '0px'}], position: 35500, duration: 500 },
-                { id: "eid278", tween: [ "style", "${_blue_1Copy2}", "top", '0px', { fromValue: '-69px'}], position: 36000, duration: 500, easing: "easeOutQuad" },
-                { id: "eid398", tween: [ "style", "${_Hint_4_}", "opacity", '0.95', { fromValue: '0.000000'}], position: 62000, duration: 1000 },
-                { id: "eid385", tween: [ "style", "${_Choose_B}", "left", '290px', { fromValue: '290px'}], position: 80000, duration: 0, easing: "easeInQuint" },
-                { id: "eid29", tween: [ "style", "${_QuestionSound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid176", tween: [ "style", "${_blue_1}", "opacity", '1', { fromValue: '0.000000'}], position: 22000, duration: 1000 },
-                { id: "eid316", tween: [ "style", "${__3}", "opacity", '0', { fromValue: '0'}], position: 37000, duration: 0 },
-                { id: "eid315", tween: [ "style", "${__3}", "opacity", '1', { fromValue: '0'}], position: 37500, duration: 0 },
-                { id: "eid326", tween: [ "style", "${_blue_1Copy1}", "opacity", '0', { fromValue: '0'}], position: 18000, duration: 0 },
-                { id: "eid240", tween: [ "style", "${_blue_1Copy1}", "opacity", '0.78', { fromValue: '0'}], position: 34500, duration: 0, easing: "easeOutCubic" },
-                { id: "eid325", tween: [ "style", "${_blue_1Copy1}", "opacity", '1', { fromValue: '1'}], position: 35500, duration: 0 },
-                { id: "eid91", tween: [ "style", "${_TutorialText}", "display", 'block', { fromValue: 'none'}], position: 36000, duration: 0 },
-                { id: "eid286", tween: [ "style", "${_blue_1Copy3}", "left", '128px', { fromValue: '-21px'}], position: 36500, duration: 500 },
-                { id: "eid287", tween: [ "style", "${_blue_1Copy3}", "left", '198px', { fromValue: '128px'}], position: 37000, duration: 500, easing: "easeOutQuad" },
-                { id: "eid372", tween: [ "style", "${_answer_hint_5}", "opacity", '1', { fromValue: '0.000000'}], position: 75750, duration: 1000, easing: "easeInQuint" },
-                { id: "eid381", tween: [ "style", "${_equalsCopy}", "opacity", '1', { fromValue: '0.000000'}], position: 74000, duration: 1000, easing: "easeInQuint" },
-                { id: "eid194", tween: [ "color", "${_Rectangle3Copy10}", "background-color", 'rgba(239,239,35,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(251,246,246,0)'}], position: 25000, duration: 500 },
-                { id: "eid308", tween: [ "color", "${_Rectangle3Copy10}", "background-color", 'rgba(239,239,35,0.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(239,239,35,1.00)'}], position: 39500, duration: 0, easing: "easeOutQuad" },
-                { id: "eid390", tween: [ "style", "${_Answers}", "top", '348px', { fromValue: '348px'}], position: 0, duration: 0 },
-                { id: "eid359", tween: [ "style", "${_hint4_1_6_}", "opacity", '1', { fromValue: '0.000000'}], position: 61000, duration: 1000 },
-                { id: "eid402", tween: [ "style", "${_Text2Copy5}", "font-size", '22px', { fromValue: '22px'}], position: 80000, duration: 0 },
-                { id: "eid294", tween: [ "style", "${_blue_1Copy4}", "top", '-71px', { fromValue: '0px'}], position: 37500, duration: 500 },
-                { id: "eid297", tween: [ "style", "${_blue_1Copy4}", "top", '0px', { fromValue: '-71px'}], position: 38000, duration: 500, easing: "easeOutQuad" },
-                { id: "eid375", tween: [ "style", "${_equals}", "opacity", '1', { fromValue: '0.000000'}], position: 71000, duration: 1000, easing: "easeInQuint" },
-                { id: "eid179", tween: [ "style", "${_hint1_56Copy}", "opacity", '1', { fromValue: '0.000000'}], position: 24000, duration: 1000 },
-                { id: "eid243", tween: [ "style", "${_blue_1Copy1}", "left", '117px', { fromValue: '-22px'}], position: 34500, duration: 500, easing: "easeOutSine" },
-                { id: "eid269", tween: [ "style", "${_blue_1Copy1}", "left", '156px', { fromValue: '117px'}], position: 35000, duration: 500, easing: "swing" },
-                { id: "eid344", tween: [ "style", "${_divide}", "opacity", '1', { fromValue: '0'}], position: 61000, duration: 1000 },
-                { id: "eid349", tween: [ "style", "${_divide}", "opacity", '0', { fromValue: '1'}], position: 64000, duration: 1000 },
-                { id: "eid173", tween: [ "style", "${_hint1_16Copy}", "opacity", '1', { fromValue: '0.000000'}], position: 21000, duration: 1000 },
-                { id: "eid182", tween: [ "color", "${_Rectangle3Copy8}", "background-color", 'rgba(239,239,35,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(251,246,246,0)'}], position: 23000, duration: 500 },
-                { id: "eid249", tween: [ "color", "${_Rectangle3Copy8}", "background-color", 'rgba(239,239,35,0.02)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(239,239,35,1.00)'}], position: 35500, duration: 0, easing: "swing" },
-                { id: "eid295", tween: [ "style", "${_blue_1Copy4}", "left", '122px', { fromValue: '-21px'}], position: 37500, duration: 500 },
-                { id: "eid296", tween: [ "style", "${_blue_1Copy4}", "left", '218px', { fromValue: '122px'}], position: 38000, duration: 500, easing: "easeOutQuad" },
-                { id: "eid386", tween: [ "style", "${_Choose_B}", "top", '458px', { fromValue: '458px'}], position: 80000, duration: 0, easing: "easeInQuint" },
-                { id: "eid320", tween: [ "style", "${__5}", "opacity", '0', { fromValue: '0'}], position: 39000, duration: 0 },
-                { id: "eid319", tween: [ "style", "${__5}", "opacity", '1', { fromValue: '0'}], position: 39500, duration: 0 },
-                { id: "eid384", tween: [ "style", "${_Choose_B}", "opacity", '1', { fromValue: '0.000000'}], position: 79000, duration: 1000, easing: "easeInQuint" },
-                { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid356", tween: [ "style", "${_hint_4_multiplyCopy}", "opacity", '1', { fromValue: '0.000000'}], position: 65500, duration: 1000 },
-                { id: "eid300", tween: [ "style", "${_blue_1Copy5}", "opacity", '1', { fromValue: '0.000000'}], position: 22000, duration: 1000 },
-                { id: "eid301", tween: [ "style", "${_blue_1Copy5}", "opacity", '1', { fromValue: '1'}], position: 38500, duration: 0 },
-                { id: "eid324", tween: [ "style", "${_Hint_3}", "opacity", '1', { fromValue: '0.000000'}], position: 48000, duration: 1000 },
-                { id: "eid332", tween: [ "style", "${_Hint_3}", "opacity", '0', { fromValue: '1'}], position: 51000, duration: 0 },
-                { id: "eid53", tween: [ "style", "${_TutorialText}", "opacity", '0', { fromValue: '1'}], position: 22000, duration: 3000 },
-                { id: "eid191", tween: [ "color", "${_Rectangle3Copy11}", "background-color", 'rgba(239,239,35,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(251,246,246,0)'}], position: 24500, duration: 500 },
-                { id: "eid299", tween: [ "color", "${_Rectangle3Copy11}", "background-color", 'rgba(239,239,35,0.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(239,239,35,1.00)'}], position: 38500, duration: 0, easing: "easeOutQuad" },
-                { id: "eid406", tween: [ "style", "${_Text2Copy5}", "width", '27px', { fromValue: '27px'}], position: 80000, duration: 0 },
-                { id: "eid378", tween: [ "style", "${_hint4c}", "opacity", '1', { fromValue: '0.000000'}], position: 72000, duration: 1000, easing: "easeInQuint" },
-                { id: "eid400", tween: [ "motion", "${_Text2Copy5}", [[12.5, 15, 0, 0],[12.2, -19.39, 0, 0]]], position: 66500, duration: 2000 },
-                { id: "eid167", tween: [ "style", "${__16_bar}", "opacity", '1', { fromValue: '0.000000'}], position: 18000, duration: 1000 },
-                { id: "eid170", tween: [ "style", "${__56_bar_barCopy}", "opacity", '1', { fromValue: '0.000000'}], position: 20000, duration: 1000 },
-                { id: "eid290", tween: [ "style", "${_blue_1Copy4}", "opacity", '1', { fromValue: '0.000000'}], position: 22000, duration: 1000, easing: "easeOutQuad" },
-                { id: "eid291", tween: [ "style", "${_blue_1Copy4}", "opacity", '1', { fromValue: '1'}], position: 37500, duration: 0 },
-                { id: "eid401", tween: [ "style", "${_TextCopy5}", "font-size", '22px', { fromValue: '22px'}], position: 80000, duration: 0 },
-                { id: "eid305", tween: [ "style", "${_blue_1Copy5}", "left", '122px', { fromValue: '-22px'}], position: 38500, duration: 500 },
-                { id: "eid306", tween: [ "style", "${_blue_1Copy5}", "left", '240px', { fromValue: '122px'}], position: 39000, duration: 500, easing: "easeOutQuad" },
-                { id: "eid163", tween: [ "style", "${_Hint_1_text}", "opacity", '1', { fromValue: '0.000000'}], position: 16000, duration: 1000 },
-                { id: "eid271", tween: [ "style", "${_blue_1Copy2}", "opacity", '1', { fromValue: '0.000000'}], position: 22000, duration: 1000, easing: "easeOutQuad" },
-                { id: "eid272", tween: [ "style", "${_blue_1Copy2}", "opacity", '1', { fromValue: '1'}], position: 35500, duration: 0 },
-                { id: "eid276", tween: [ "style", "${_blue_1Copy2}", "left", '141px', { fromValue: '-21px'}], position: 35500, duration: 500 },
-                { id: "eid277", tween: [ "style", "${_blue_1Copy2}", "left", '177px', { fromValue: '141px'}], position: 36000, duration: 500, easing: "easeOutQuad" },
-                { id: "eid312", tween: [ "style", "${__1}", "opacity", '0', { fromValue: '0'}], position: 35000, duration: 0 },
-                { id: "eid311", tween: [ "style", "${__1}", "opacity", '1', { fromValue: '0'}], position: 35500, duration: 0 },
-                { id: "eid188", tween: [ "color", "${_Rectangle3Copy12}", "background-color", 'rgba(239,239,35,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(251,246,246,0)'}], position: 24000, duration: 500 },
-                { id: "eid289", tween: [ "color", "${_Rectangle3Copy12}", "background-color", 'rgba(239,239,35,0.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(239,239,35,1.00)'}], position: 37500, duration: 0, easing: "easeOutQuad" },
-                { id: "eid399", tween: [ "motion", "${_TextCopy5}", [[10.5, -23, 0, 0],[11.85, 10.41, 0, 0]]], position: 66500, duration: 2000 },
-                { id: "eid405", tween: [ "style", "${_Text2Copy5}", "height", '28px', { fromValue: '28px'}], position: 80000, duration: 0 },
-                { id: "eid391", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question}', [] ], ""], position: 2000 },
-                { id: "eid392", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1}', [] ], ""], position: 9000 },
-                { id: "eid393", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2}', [] ], ""], position: 27000 },
-                { id: "eid394", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3}', [] ], ""], position: 41000 },
-                { id: "eid395", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4}', [] ], ""], position: 51000 },
-                { id: "eid412", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answerhint}', [] ], ""], position: 77000 }            ]
-        }
-    }
-},
-"EButton": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'E_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy8',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        type: 'text',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        id: 'Text8',
-                        text: 'E',
-                        align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_E_Button}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${_EllipseCopy8}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${_x}": [
-                ["style", "top", '-3px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"EButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'E_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy8',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        type: 'text',
-                        id: 'Text8',
-                        text: 'E',
-                        align: 'center',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
-                    },
-                    {
-                        rect: ['-8px', '-3px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_EllipseCopy8}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_E_Button}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${_x}": [
-                ["style", "top", '-3px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid44", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
-                { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid43", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"EButton_2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'E_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy8',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text8',
-                        text: 'E',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text14',
-                        text: 'Answer E Text',
-                        align: 'left',
-                        type: 'text'
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-3px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_E_Button}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${_EllipseCopy8}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_Text14}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
-            ],
-            "${_x}": [
-                ["style", "top", '-3px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"EButton_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'E_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy8',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text8',
-                        text: 'E',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text14',
-                        text: 'Answer E Text',
-                        align: 'left',
-                        type: 'text'
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_E_Button}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${_EllipseCopy8}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_Text14}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
-            ],
-            "${_x}": [
-                ["style", "top", '-3px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"DButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'D_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy7',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        type: 'text',
-                        id: 'Text7',
-                        text: 'D<br>',
-                        align: 'center',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
-                    },
-                    {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Text7}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_EllipseCopy7}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_D_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid3", tween: [ "color", "${_EllipseCopy7}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid226", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid227", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid267", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
-                { id: "eid10", tween: [ "style", "${_EllipseCopy7}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid255", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid256", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid266", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 }            ]
-        }
-    }
-},
-"DButton_2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'D_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy7',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text7',
-                        text: 'D<br>',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text13',
-                        text: 'Answer D Text',
-                        align: 'left',
-                        type: 'text'
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ],
-            "${_Text7}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_D_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_EllipseCopy7}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_Text13}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid3", tween: [ "color", "${_EllipseCopy7}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid226", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid227", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid10", tween: [ "style", "${_EllipseCopy7}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid255", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid256", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"DButton_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'D_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy7',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text7',
-                        text: 'D<br>',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text13',
-                        text: 'Answer D Text',
-                        align: 'left',
-                        type: 'text'
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ],
-            "${_Text7}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_D_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_EllipseCopy7}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_Text13}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid3", tween: [ "color", "${_EllipseCopy7}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid226", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid227", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid10", tween: [ "style", "${_EllipseCopy7}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid255", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid256", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"DButton": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'D_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy7',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text7',
-                        text: 'D<br>',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '94px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text13',
-                        text: 'Answer Text D',
-                        align: 'left',
-                        type: 'text'
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ],
-            "${_Text7}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_D_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_EllipseCopy7}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_Text13}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '94px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid3", tween: [ "color", "${_EllipseCopy7}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid226", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid227", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid10", tween: [ "style", "${_EllipseCopy7}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid255", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid256", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"CButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'C_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy6',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        type: 'text',
-                        id: 'Text5',
-                        text: 'C',
-                        align: 'center',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
-                    },
-                    {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_EllipseCopy6}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_C_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_Text5}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid11", tween: [ "style", "${_EllipseCopy6}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid224", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid225", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid265", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
-                { id: "eid253", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid254", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid264", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 },
-                { id: "eid5", tween: [ "color", "${_EllipseCopy6}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"BButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'B_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '25', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy5',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        type: 'text',
-                        id: 'Text4',
-                        text: 'B',
-                        align: 'center',
-                        rect: ['0px', '5px', '27px', '19px', 'auto', 'auto']
-                    },
-                    {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_B_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '125px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ],
-            "${_EllipseCopy5}": [
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_Text4}": [
-                ["style", "top", '5px'],
-                ["style", "text-align", 'center'],
-                ["style", "height", '19px'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid7", tween: [ "color", "${_EllipseCopy5}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid222", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid223", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid262", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
-                { id: "eid251", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid252", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid263", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 },
-                { id: "eid12", tween: [ "style", "${_EllipseCopy5}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"AButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'A_Button',
-                    type: 'group',
-                    rect: ['8px', '16px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'Ellipse',
-                        stroke: [1, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(232,241,160,1.00)']
-                    },
-                    {
-                        type: 'text',
-                        rect: ['0px', '3px', '27px', '19px', 'auto', 'auto'],
-                        id: 'A',
-                        text: 'A<br><br><br>',
-                        align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
-                    },
-                    {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    },
-                    {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_A_Button}": [
-                ["style", "left", '8px'],
-                ["style", "top", '16px']
-            ],
-            "${_A}": [
-                ["style", "top", '3px'],
-                ["style", "text-align", 'center'],
-                ["style", "height", '19px'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_Ellipse}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '42px'],
-                ["style", "width", '153px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid220", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid221", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid261", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 },
-                { id: "eid259", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid260", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid42", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 }            ]
-        }
-    }
-},
-"AButton": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'A_Button',
-                    type: 'group',
-                    rect: ['8px', '16px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'Ellipse',
-                        stroke: [1, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(232,241,160,1.00)']
-                    },
-                    {
-                        rect: ['0px', '3px', '27px', '19px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text3',
-                        text: 'A<br><br><br>',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '3px', '109px', '19px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text9',
-                        text: 'Answer Text A',
-                        align: 'left',
-                        type: 'text'
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_A_Button}": [
-                ["style", "left", '8px'],
-                ["style", "top", '16px']
-            ],
-            "${_Ellipse}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '25px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '42px'],
-                ["style", "width", '153px']
-            ],
-            "${_Text3}": [
-                ["style", "top", '3px'],
-                ["style", "text-align", 'center'],
-                ["style", "height", '19px'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_Text9}": [
-                ["style", "top", '3px'],
-                ["style", "text-align", 'left'],
-                ["style", "font-size", '12px'],
-                ["style", "left", '36px'],
-                ["style", "width", '109px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid220", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid221", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid259", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid260", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"Answers_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'Group',
-                    type: 'group',
-                    rect: ['0px', '2px', '153', '183', 'auto', 'auto'],
-                    c: [
-                    {
-                        id: 'EButton',
-                        type: 'rect',
-                        rect: ['8px', '157px', 'auto', 'auto', 'auto', 'auto']
-                    },
-                    {
-                        id: 'DButton',
-                        type: 'rect',
-                        rect: ['8px', '121px', 'auto', 'auto', 'auto', 'auto']
-                    },
-                    {
-                        id: 'CButton',
-                        type: 'rect',
-                        rect: ['8px', '86px', 'auto', 'auto', 'auto', 'auto']
-                    },
-                    {
-                        id: 'BButton',
-                        type: 'rect',
-                        rect: ['8px', '50px', 'auto', 'auto', 'auto', 'auto']
-                    },
-                    {
-                        id: 'AButton',
-                        type: 'rect',
-                        rect: ['0px', '0px', 'auto', 'auto', 'auto', 'auto']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'DButton',
-                symbolName: 'DButton_3'
-            },
-            {
-                id: 'EButton',
-                symbolName: 'EButton_3'
-            },
-            {
-                id: 'BButton',
-                symbolName: 'BButton_3'
-            },
-            {
-                id: 'CButton',
-                symbolName: 'CButton_3'
-            },
-            {
-                id: 'AButton',
-                symbolName: 'AButton_3'
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_Group}": [
-                ["style", "top", '2px'],
-                ["style", "left", '0px']
-            ],
-            "${_AnswerText}": [
-                ["style", "top", '3px'],
-                ["style", "width", '109px'],
-                ["style", "left", '36px'],
-                ["style", "font-size", '12px']
-            ],
-            "${_DButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '121px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '187px'],
-                ["style", "width", '156px']
-            ],
-            "${_BButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '50px']
-            ],
-            "${_EButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '157px']
-            ],
-            "${_CButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '86px']
-            ],
-            "${_AButton}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 0,
-            autoPlay: true,
-            timeline: [
-            ]
-        }
-    }
-}
-};
+        };
 
+    AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
-
-/**
- * Adobe Edge DOM Ready Event Handler
- */
-$(window).ready(function() {
-     Edge.launchComposition(compId);
-});
-})(jQuery, AdobeEdge, "EdgeProblem");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("problem_363_edgeActions.js");
+})("EdgeProblem");
