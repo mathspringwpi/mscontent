@@ -33,7 +33,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 122071, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 124071, function(sym, e) {
          maybeStop(sym)
 
       });
@@ -77,37 +77,37 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 29536, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 30930, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 48000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 50000, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 59000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 61000, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 71488, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 73488, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 84000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 86000, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 117071, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 119071, function(sym, e) {
          maybeStop(sym)
 
       });

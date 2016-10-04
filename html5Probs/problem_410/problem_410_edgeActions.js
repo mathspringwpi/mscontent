@@ -70,7 +70,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 34500, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 36500, function(sym, e) {
          // Wherever hint 2 ends, that is where you need to put this code.
          
          maybeStop (sym)
@@ -78,7 +78,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 45000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 47000, function(sym, e) {
          // Wherever Answer Hint ends, that is where you need to put this code.
          
          maybeStop (sym)
@@ -94,7 +94,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'EButton'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_E_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${E_Button}", "click", function(sym, e) {
          sym.play("Answer Selected");
          sym.getComposition().getStage().getSymbol("AButton").stop("Nothing Selected");
          sym.getComposition().getStage().getSymbol("BButton").stop("Nothing Selected");
@@ -124,7 +124,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_E_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${E_Button}", "click", function(sym, e) {
          answerClicked(sym, "E");
 
       });
@@ -155,7 +155,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_E_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${E_Button}", "click", function(sym, e) {
          sym.play("Answer Selected");
          sym.getComposition().getStage().getSymbol("Answers").getSymbol("AButton").stop("Nothing Selected");
          sym.getComposition().getStage().getSymbol("Answers").getSymbol("BButton").stop("Nothing Selected");
@@ -173,7 +173,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'EButton_1'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_E_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${E_Button}", "click", function(sym, e) {
          sym.play("Answer Selected");
          sym.getComposition().getStage().getSymbol("AButton").stop("Nothing Selected");
          sym.getComposition().getStage().getSymbol("BButton").stop("Nothing Selected");
@@ -205,7 +205,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_D_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${D_Button}", "click", function(sym, e) {
          answerClicked(sym, "D");
 
       });
@@ -231,7 +231,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_D_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${D_Button}", "click", function(sym, e) {
          sym.play("Answer Selected");
          sym.getComposition().getStage().getSymbol("Answers").getSymbol("AButton").stop("Nothing Selected");
          sym.getComposition().getStage().getSymbol("Answers").getSymbol("BButton").stop("Nothing Selected");
@@ -249,7 +249,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'DButton_1'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_D_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${D_Button}", "click", function(sym, e) {
          sym.play("Answer Selected");
          sym.getComposition().getStage().getSymbol("AButton").stop("Nothing Selected");
          sym.getComposition().getStage().getSymbol("BButton").stop("Nothing Selected");
@@ -273,7 +273,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'DButton'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_D_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${D_Button}", "click", function(sym, e) {
          sym.play("Answer Selected");
          sym.getComposition().getStage().getSymbol("AButton").stop("Nothing Selected");
          sym.getComposition().getStage().getSymbol("BButton").stop("Nothing Selected");
@@ -297,7 +297,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'CButton'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_C_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${C_Button}", "click", function(sym, e) {
          answerClicked(sym, "C");
 
       });
@@ -323,7 +323,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'BButton'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_B_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${B_Button}", "click", function(sym, e) {
          answerClicked(sym, "B");
 
       });
@@ -355,7 +355,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_A_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${A_Button}", "click", function(sym, e) {
          answerClicked(sym, "A");
 
       });
@@ -375,7 +375,7 @@ sym.stop();
    //Edge symbol: 'AButton'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_A_Button}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${A_Button}", "click", function(sym, e) {
          sym.play("Answer Selected");
          sym.getComposition().getStage().getSymbol("BButton").stop("Nothing Selected");
          sym.getComposition().getStage().getSymbol("CButton").stop("Nothing Selected");
@@ -408,4 +408,4 @@ sym.stop();
    })("Answers_1");
    //Edge symbol end:'Answers_1'
 
-})(jQuery, AdobeEdge, "EdgeProblem");
+})(window.jQuery || AdobeEdge.$, AdobeEdge, "EdgeProblem");
