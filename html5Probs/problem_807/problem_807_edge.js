@@ -1,2587 +1,3502 @@
-/**
- * Adobe Edge: symbol definitions
- */
-(function($, Edge, compId){
-//images folder
-var im='images/';
+/*jslint */
+/*global AdobeEdge: false, window: false, document: false, console:false, alert: false */
+(function (compId) {
 
-var fonts = {};
-var opts = {};
-var resources = [
-];
-var symbols = {
-"stage": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-            {
-                id: 'd11',
-                display: 'none',
-                type: 'image',
-                rect: ['376px', '277px','53px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d11.gif",'0px','0px']
+    "use strict";
+    var im='images/',
+        aud='media/',
+        vid='media/',
+        js='js/',
+        fonts = {
+        },
+        opts = {
+            'gAudioPreloadPreference': 'auto',
+            'gVideoPreloadPreference': 'auto'
+        },
+        resources = [
+        ],
+        scripts = [
+            js+"jquery-2.0.3.min.js"
+        ],
+        symbols = {
+            "stage": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'd11',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['376', '277', '53px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d11.gif",'0px','0px']
+                        },
+                        {
+                            id: 'Text8',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['214', '422', '95', '21px', 'auto', 'auto'],
+                            text: "Choose (C)",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [18, ""], "rgba(255,0,0,1.00)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'd9',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['550', '361', '18px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d9.gif",'0px','0px']
+                        },
+                        {
+                            id: 'Answers',
+                            symbolName: 'Answers_1',
+                            type: 'rect',
+                            rect: ['27', '328', '156', '187', 'auto', 'auto'],
+                            transform: [[],[],[],['1.17949','1.50267']]
+                        },
+                        {
+                            id: 'QuestionSound_Container',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['15px', '10px', '17', '8', 'auto', 'auto'],
+                            fill: ["rgba(248,250,248,0.00)"],
+                            stroke: [1,"rgb(4, 4, 4)","solid"]
+                        },
+                        {
+                            id: 'Sound_Container',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['46px', '19px', '164px', '7px', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            fill: ["rgba(248,250,248,1)"],
+                            stroke: [1,"rgb(4, 4, 4)","solid"]
+                        },
+                        {
+                            id: 'd3',
+                            type: 'image',
+                            rect: ['71', '362', '33px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d3.gif",'0px','0px']
+                        },
+                        {
+                            id: 'd5',
+                            type: 'image',
+                            rect: ['71', '465', '33px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d5.gif",'0px','0px']
+                        },
+                        {
+                            id: 'd4',
+                            type: 'image',
+                            rect: ['71', '414', '33px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d4.gif",'0px','0px']
+                        },
+                        {
+                            id: 'd6',
+                            type: 'image',
+                            rect: ['72', '517', '33px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d6.gif",'0px','0px']
+                        },
+                        {
+                            id: 'd1Copy2',
+                            type: 'image',
+                            rect: ['48', '36', '89px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d1.gif",'0px','0px']
+                        },
+                        {
+                            id: 'Text3',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['419', '238', '20', '25', 'auto', 'auto'],
+                            text: "?",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [18, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Text4',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['396', '231', '33px', '25px', 'auto', 'auto'],
+                            text: "_",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [18, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Text9',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['419', '240', '20px', '21px', 'auto', 'auto'],
+                            text: "?",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [18, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'd2',
+                            type: 'image',
+                            rect: ['78', '307', '20px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d2.gif",'0px','0px']
+                        },
+                        {
+                            id: 'Text',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['188', '96', '390', '56px', 'auto', 'auto'],
+                            text: "When we divide a positive number by a negative number, what is the sign of the quotient?",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [18, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Text2',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['188px', '165', '390', '47px', 'auto', 'auto'],
+                            text: "Since we're dividing a positive number by a negative number, the answer will be negative.",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [18, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Rectangle2',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['188', '308px', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1.00)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy8',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['188', '436', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy7',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['188', '420', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['188', '404', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy2',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['188', '388', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy3',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['188', '372', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy4',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['188', '356', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy5',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['188', '340', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy6',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['188', '324', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy17',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['291', '308px', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy16',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['291', '436', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy15',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['291', '420', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy14',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['291', '404', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy13',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['291', '388', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy12',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['291', '372', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy11',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['291', '356', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy10',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['291', '340', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy9',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['291', '324', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy26',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['389', '308px', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy25',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['389', '436', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(255,255,255,1.00)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy24',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['389', '420', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(255,255,255,1.00)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy23',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['389', '404', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(255,255,255,1.00)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy22',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['389', '388', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(255,255,255,1.00)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy21',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['389', '372', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(255,255,255,1.00)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy20',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['389', '356', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy19',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['389', '340', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'Rectangle2Copy18',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['389', '324', '70', '14px', 'auto', 'auto'],
+                            fill: ["rgba(0,166,10,1)"],
+                            stroke: [1,"rgb(0, 0, 0)","solid"]
+                        },
+                        {
+                            id: 'd7',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['504', '308', '43px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d7.gif",'0px','0px']
+                        },
+                        {
+                            id: 'd8',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['504', '361', '20px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d8.gif",'0px','0px']
+                        },
+                        {
+                            id: 'd14',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['327', '232', '66px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d14.gif",'0px','0px']
+                        },
+                        {
+                            id: 'Text5',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['534', '369', 'auto', 'auto', 'auto', 'auto'],
+                            text: "=",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [18, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "nowrap"]
+                        },
+                        {
+                            id: 'Text6',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['558', '372', '20px', '16px', 'auto', 'auto'],
+                            text: "?",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [18, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'd102',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['283', '277', '87px', '38px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d102.gif",'0px','0px']
+                        },
+                        {
+                            id: 'Text7',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['383px', '289px', '20px', '16px', 'auto', 'auto'],
+                            text: "?",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [18, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'd12',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['434', '277', '53px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d12.gif",'0px','0px']
+                        },
+                        {
+                            id: 'd132',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['497', '277', '33px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d132.gif",'0px','0px']
+                        },
+                        {
+                            id: 'd92',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['550', '361', '18px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d92.gif",'0px','0px']
+                        },
+                        {
+                            id: 'd82',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['300', '232', '20px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d82.gif",'0px','0px']
+                        },
+                        {
+                            id: 'answer',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"answer.mp3",aud+"answer.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'hint1',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint1.mp3",aud+"hint1.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'hint2',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint2.mp3",aud+"hint2.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'hint3',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint3.mp3",aud+"hint3.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'hint4',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint4.mp3",aud+"hint4.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'hint5',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint5.mp3",aud+"hint5.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'question',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"question.mp3",aud+"question.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'd15',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['188', '277', '87px', '37px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"d15.gif",'0px','0px']
+                        }
+                    ],
+                    style: {
+                        '${Stage}': {
+                            isStage: true,
+                            rect: ['null', 'null', '600', '600', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            fill: ["rgba(255,255,255,0.00)"]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 57960,
+                    autoPlay: true,
+                    labels: {
+                        "Read Question": 2000,
+                        "Hint 1": 8967,
+                        "Hint 2": 16615,
+                        "Hint 3": 24005,
+                        "Hint 4": 36010,
+                        "Hint 5": 44114,
+                        "Answer Hint": 51363
+                    },
+                    data: [
+                        [
+                            "eid431",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text5}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid432",
+                            "display",
+                            33051,
+                            0,
+                            "linear",
+                            "${Text5}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid421",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Text5}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid292",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy19}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid319",
+                            "display",
+                            34326,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy19}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid411",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy19}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid277",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy17}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid304",
+                            "display",
+                            34337,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy17}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid400",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy17}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid163",
+                            "top",
+                            14500,
+                            0,
+                            "linear",
+                            "${Answers}",
+                            '328px',
+                            '328px'
+                        ],
+                        [
+                            "eid293",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy18}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid320",
+                            "display",
+                            34325,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy18}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid410",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy18}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid329",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d9}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid330",
+                            "display",
+                            37033,
+                            0,
+                            "linear",
+                            "${d9}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid420",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${d9}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid331",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d92}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid332",
+                            "display",
+                            37389,
+                            0,
+                            "linear",
+                            "${d92}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid278",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy9}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid305",
+                            "display",
+                            34322,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy9}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid401",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy9}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid434",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d15}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid435",
+                            "display",
+                            44128,
+                            0,
+                            "linear",
+                            "${d15}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid283",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy11}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid310",
+                            "display",
+                            34330,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy11}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid403",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy11}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid270",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid297",
+                            "display",
+                            34329,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid397",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid348",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d102}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid349",
+                            "display",
+                            47545,
+                            0,
+                            "linear",
+                            "${d102}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid340",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d14}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid342",
+                            "display",
+                            21471,
+                            0,
+                            "linear",
+                            "${d14}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid324",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d8}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid326",
+                            "display",
+                            33036,
+                            0,
+                            "linear",
+                            "${d8}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid419",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${d8}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid289",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy22}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid316",
+                            "display",
+                            34321,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy22}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid414",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy22}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid238",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid239",
+                            "display",
+                            8972,
+                            0,
+                            "linear",
+                            "${Text}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid339",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d82}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid341",
+                            "display",
+                            21471,
+                            0,
+                            "linear",
+                            "${d82}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid345",
+                            "display",
+                            38170,
+                            0,
+                            "linear",
+                            "${d82}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid282",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy10}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid309",
+                            "display",
+                            34340,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy10}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid402",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy10}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid287",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy24}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid314",
+                            "display",
+                            34340,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy24}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid416",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy24}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid268",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy8}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid295",
+                            "display",
+                            34320,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy8}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid399",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy8}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid354",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d12}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid355",
+                            "display",
+                            52788,
+                            0,
+                            "linear",
+                            "${d12}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid285",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy16}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid312",
+                            "display",
+                            34337,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy16}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid408",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy16}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid335",
+                            "left",
+                            37389,
+                            1374,
+                            "linear",
+                            "${d92}",
+                            '550px',
+                            '300px'
+                        ],
+                        [
+                            "eid336",
+                            "top",
+                            37389,
+                            1374,
+                            "linear",
+                            "${d92}",
+                            '361px',
+                            '230px'
+                        ],
+                        [
+                            "eid286",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy25}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid313",
+                            "display",
+                            34335,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy25}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid417",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy25}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid272",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid299",
+                            "display",
+                            34332,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid395",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy3}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid291",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy20}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid318",
+                            "display",
+                            34328,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy20}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid412",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy20}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid284",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy15}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid311",
+                            "display",
+                            34319,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy15}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid407",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy15}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid280",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy13}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid307",
+                            "display",
+                            34333,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy13}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid405",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy13}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid325",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text6}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid327",
+                            "display",
+                            33036,
+                            0,
+                            "linear",
+                            "${Text6}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid328",
+                            "display",
+                            36010,
+                            0,
+                            "linear",
+                            "${Text6}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid358",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text8}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid359",
+                            "display",
+                            56367,
+                            0,
+                            "linear",
+                            "${Text8}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid279",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy14}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid306",
+                            "display",
+                            34337,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy14}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid406",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy14}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid275",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy6}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid302",
+                            "display",
+                            34322,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy6}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid392",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy6}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid350",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text7}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid351",
+                            "display",
+                            49121,
+                            0,
+                            "linear",
+                            "${Text7}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid422",
+                            "display",
+                            51398,
+                            0,
+                            "linear",
+                            "${Text7}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid356",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d132}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid357",
+                            "display",
+                            54321,
+                            0,
+                            "linear",
+                            "${d132}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid294",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy26}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid321",
+                            "display",
+                            34330,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy26}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid409",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy26}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid271",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid298",
+                            "display",
+                            34327,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid396",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid352",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d11}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid353",
+                            "display",
+                            51374,
+                            0,
+                            "linear",
+                            "${d11}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid281",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy12}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid308",
+                            "display",
+                            34325,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy12}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid404",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy12}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid274",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy5}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid301",
+                            "display",
+                            34337,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy5}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid393",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy5}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid247",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid250",
+                            "display",
+                            21583,
+                            0,
+                            "linear",
+                            "${Text3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid273",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy4}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid300",
+                            "display",
+                            34320,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy4}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid394",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy4}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid28",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Sound_Container}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid322",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${d7}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid323",
+                            "display",
+                            31987,
+                            0,
+                            "linear",
+                            "${d7}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid418",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${d7}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid344",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text9}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid288",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy23}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid315",
+                            "display",
+                            34323,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy23}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid415",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy23}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid269",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy7}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid296",
+                            "display",
+                            34325,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy7}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid398",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy7}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid29",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${QuestionSound_Container}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid276",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid303",
+                            "display",
+                            34328,
+                            0,
+                            "linear",
+                            "${Rectangle2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid391",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid246",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text4}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid343",
+                            "display",
+                            21563,
+                            0,
+                            "linear",
+                            "${Text4}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid240",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid241",
+                            "display",
+                            16609,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid290",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy21}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid317",
+                            "display",
+                            34330,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy21}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid413",
+                            "display",
+                            44144,
+                            0,
+                            "linear",
+                            "${Rectangle2Copy21}",
+                            'block',
+                            'none'
+                        ],
+                            [ "eid433", "trigger", 1996, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${question}', [] ] ],
+                            [ "eid424", "trigger", 8972, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
+                            [ "eid425", "trigger", 16614, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2}', [] ] ],
+                            [ "eid426", "trigger", 23995, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3}', [] ] ],
+                            [ "eid427", "trigger", 36017, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint4}', [] ] ],
+                            [ "eid428", "trigger", 44125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint5}', [] ] ],
+                            [ "eid429", "trigger", 52790.731686259, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer}', [] ] ]
+                    ]
+                }
             },
-            {
-                id: 'Text8',
-                display: 'none',
-                type: 'text',
-                rect: ['214px', '422px','95px','21px','auto', 'auto'],
-                text: "Choose (C)",
-                align: "left",
-                font: ['Arial, Helvetica, sans-serif', 18, "rgba(255,0,0,1.00)", "400", "none", "normal"]
+            "EButton": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy8',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                id: 'Text8',
+                                text: 'E',
+                                align: 'center',
+                                type: 'text'
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -3, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
+                    },
+                    data: [
+                        [
+                            "eid9",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid13",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid257",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid258",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid230",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'd9',
-                display: 'none',
-                type: 'image',
-                rect: ['550px', '361px','18px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d9.gif",'0px','0px']
+            "EButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy8',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                id: 'Text8',
+                                text: 'E',
+                                align: 'center',
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                            },
+                            {
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
+                    },
+                    data: [
+                        [
+                            "eid9",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid13",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid257",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid258",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid43",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid230",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid44",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'Answers',
-                type: 'rect',
-                rect: ['27px', '181','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['1.17949','1.50267']]
+            "EButton_2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy8',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text8',
+                                text: 'E',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text14',
+                                text: 'Answer E Text',
+                                align: 'left',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
+                    },
+                    data: [
+                        [
+                            "eid9",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid13",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid257",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid258",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid230",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'QuestionSound_Container',
-                display: 'none',
-                type: 'rect',
-                rect: ['15px', '10px','17px','8px','auto', 'auto'],
-                fill: ["rgba(248,250,248,0.00)"],
-                stroke: [1,"rgb(4, 4, 4)","solid"]
+            "EButton_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy8',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text8',
+                                text: 'E',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text14',
+                                text: 'Answer E Text',
+                                align: 'left',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -3, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
+                    },
+                    data: [
+                        [
+                            "eid9",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid13",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy8}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid257",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid258",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid230",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'Sound_Container',
-                display: 'none',
-                type: 'rect',
-                rect: ['46px', '19px','164px','7px','auto', 'auto'],
-                fill: ["rgba(248,250,248,1)"],
-                stroke: [1,"rgb(4, 4, 4)","solid"]
+            "DButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy7',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                id: 'Text7',
+                                text: 'D<br>',
+                                align: 'center',
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                            },
+                            {
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
+                    },
+                    data: [
+                        [
+                            "eid255",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid256",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid266",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid10",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid226",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid267",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid3",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'd3',
-                type: 'image',
-                rect: ['71px', '362px','33px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d3.gif",'0px','0px']
+            "DButton_2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy7',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text7',
+                                text: 'D<br>',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text13',
+                                text: 'Answer D Text',
+                                align: 'left',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                type: 'image',
+                                display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
+                    },
+                    data: [
+                        [
+                            "eid255",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid256",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid10",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid226",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid3",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'd5',
-                type: 'image',
-                rect: ['71px', '465px','33px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d5.gif",'0px','0px']
+            "DButton_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy7',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text7',
+                                text: 'D<br>',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text13',
+                                text: 'Answer D Text',
+                                align: 'left',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -4, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
+                    },
+                    data: [
+                        [
+                            "eid255",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid256",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid10",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid226",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid3",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'd4',
-                type: 'image',
-                rect: ['71px', '414px','33px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d4.gif",'0px','0px']
+            "DButton": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy7',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text7',
+                                text: 'D<br>',
+                                align: 'center',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text13',
+                                text: 'Answer Text D',
+                                align: 'left',
+                                rect: [36, 4, 94, '20px', 'auto', 'auto']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -4, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
+                    },
+                    data: [
+                        [
+                            "eid255",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid256",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid10",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid226",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid3",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy7}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'd6',
-                type: 'image',
-                rect: ['72px', '517px','33px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d6.gif",'0px','0px']
+            "CButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'C_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy6',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                id: 'Text5',
+                                text: 'C',
+                                align: 'center',
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                            },
+                            {
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 101, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
+                    },
+                    data: [
+                        [
+                            "eid11",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy6}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid5",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy6}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid253",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid254",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid264",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid224",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid225",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid265",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'd1Copy2',
-                type: 'image',
-                rect: ['48px', '36px','89px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d1.gif",'0px','0px']
+            "BButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '25', '25', 'auto', 'auto'],
+                            id: 'B_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'EllipseCopy5',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                type: 'text',
+                                rect: [0, 5, 27, 19, 'auto', 'auto'],
+                                id: 'Text4',
+                                text: 'B',
+                                align: 'center',
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
+                            },
+                            {
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            },
+                            {
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 125, 26]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
+                    },
+                    data: [
+                        [
+                            "eid7",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy5}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
+                        [
+                            "eid251",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid252",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid263",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid12",
+                            "border-width",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy5}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid222",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid223",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid262",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'Text3',
-                display: 'none',
-                type: 'text',
-                rect: ['419px', '238px','20px','25px','auto', 'auto'],
-                text: "?",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            "AButton_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [8, 16, '25', '24', 'auto', 'auto'],
+                            id: 'A_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'Ellipse',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                rect: [0, 3, 27, 19, 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
+                                id: 'A',
+                                text: 'A<br><br><br>',
+                                align: 'center',
+                                type: 'text'
+                            },
+                            {
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
+                            },
+                            {
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
+                                type: 'image',
+                                display: 'none',
+                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 153, 42]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Incorrect": 5000,
+                        "Answer Correct": 10000
+                    },
+                    data: [
+                        [
+                            "eid220",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid221",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid261",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid259",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid260",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid42",
+                            "display",
+                            10000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'block',
+                            'none'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'Text4',
-                display: 'none',
-                type: 'text',
-                rect: ['396px', '231px','33px','25px','auto', 'auto'],
-                text: "_",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
+            "AButton": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [8, 16, '25', '24', 'auto', 'auto'],
+                            id: 'A_Button',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [0, 0, 25, 24, 'auto', 'auto'],
+                                borderRadius: ['50%', '50%', '50%', '50%'],
+                                id: 'Ellipse',
+                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
+                                type: 'ellipse',
+                                fill: ['rgba(232,241,160,1.00)']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text3',
+                                text: 'A<br><br><br>',
+                                align: 'center',
+                                rect: [0, 3, 27, 19, 'auto', 'auto']
+                            },
+                            {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
+                                id: 'Text9',
+                                text: 'Answer Text A',
+                                align: 'left',
+                                rect: [36, 3, 109, '19px', 'auto', 'auto']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${x}': {
+                            display: 'none',
+                            rect: [-8, -4, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 153, 42]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "Nothing Selected": 0,
+                        "Answer Selected": 5000
+                    },
+                    data: [
+                        [
+                            "eid220",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid221",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${check}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid259",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid260",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${x}",
+                            'none',
+                            'none'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'Text9',
-                display: 'none',
-                type: 'text',
-                rect: ['419px', '240px','20px','21px','auto', 'auto'],
-                text: "?",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
-            },
-            {
-                id: 'd2',
-                type: 'image',
-                rect: ['78px', '307px','20px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d2.gif",'0px','0px']
-            },
-            {
-                id: 'Text',
-                display: 'none',
-                type: 'text',
-                rect: ['188px', '96px','390px','56px','auto', 'auto'],
-                text: "When we divide a positive number by a negative number, what is the sign of the quotient?",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
-            },
-            {
-                id: 'Text2',
-                display: 'none',
-                type: 'text',
-                rect: ['188px', '165px','390px','47px','auto', 'auto'],
-                text: "Since we're dividing a positive number by a negative number, the answer will be negative.",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
-            },
-            {
-                id: 'Rectangle2',
-                display: 'none',
-                type: 'rect',
-                rect: ['188px', '308px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy8',
-                display: 'none',
-                type: 'rect',
-                rect: ['188px', '436px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy7',
-                display: 'none',
-                type: 'rect',
-                rect: ['188px', '420px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy',
-                display: 'none',
-                type: 'rect',
-                rect: ['188px', '404px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy2',
-                display: 'none',
-                type: 'rect',
-                rect: ['188px', '388px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy3',
-                display: 'none',
-                type: 'rect',
-                rect: ['188px', '372px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy4',
-                display: 'none',
-                type: 'rect',
-                rect: ['188px', '356px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy5',
-                display: 'none',
-                type: 'rect',
-                rect: ['188px', '340px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy6',
-                display: 'none',
-                type: 'rect',
-                rect: ['188px', '324px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy17',
-                display: 'none',
-                type: 'rect',
-                rect: ['291px', '308px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy16',
-                display: 'none',
-                type: 'rect',
-                rect: ['291px', '436px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy15',
-                display: 'none',
-                type: 'rect',
-                rect: ['291px', '420px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy14',
-                display: 'none',
-                type: 'rect',
-                rect: ['291px', '404px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy13',
-                display: 'none',
-                type: 'rect',
-                rect: ['291px', '388px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy12',
-                display: 'none',
-                type: 'rect',
-                rect: ['291px', '372px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy11',
-                display: 'none',
-                type: 'rect',
-                rect: ['291px', '356px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy10',
-                display: 'none',
-                type: 'rect',
-                rect: ['291px', '340px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy9',
-                display: 'none',
-                type: 'rect',
-                rect: ['291px', '324px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy26',
-                display: 'none',
-                type: 'rect',
-                rect: ['389px', '308px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy25',
-                display: 'none',
-                type: 'rect',
-                rect: ['389px', '436px','70px','14px','auto', 'auto'],
-                fill: ["rgba(255,255,255,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy24',
-                display: 'none',
-                type: 'rect',
-                rect: ['389px', '420px','70px','14px','auto', 'auto'],
-                fill: ["rgba(255,255,255,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy23',
-                display: 'none',
-                type: 'rect',
-                rect: ['389px', '404px','70px','14px','auto', 'auto'],
-                fill: ["rgba(255,255,255,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy22',
-                display: 'none',
-                type: 'rect',
-                rect: ['389px', '388px','70px','14px','auto', 'auto'],
-                fill: ["rgba(255,255,255,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy21',
-                display: 'none',
-                type: 'rect',
-                rect: ['389px', '372px','70px','14px','auto', 'auto'],
-                fill: ["rgba(255,255,255,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy20',
-                display: 'none',
-                type: 'rect',
-                rect: ['389px', '356px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy19',
-                display: 'none',
-                type: 'rect',
-                rect: ['389px', '340px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'Rectangle2Copy18',
-                display: 'none',
-                type: 'rect',
-                rect: ['389px', '324px','70px','14px','auto', 'auto'],
-                fill: ["rgba(0,166,10,1.00)"],
-                stroke: [1,"rgb(0, 0, 0)","solid"]
-            },
-            {
-                id: 'd7',
-                display: 'none',
-                type: 'image',
-                rect: ['504px', '308px','43px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d7.gif",'0px','0px']
-            },
-            {
-                id: 'd8',
-                display: 'none',
-                type: 'image',
-                rect: ['504px', '361px','20px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d8.gif",'0px','0px']
-            },
-            {
-                id: 'd14',
-                display: 'none',
-                type: 'image',
-                rect: ['327px', '232px','66px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d14.gif",'0px','0px']
-            },
-            {
-                id: 'Text5',
-                display: 'none',
-                type: 'text',
-                rect: ['534px', '369px','auto','auto','auto', 'auto'],
-                text: "=",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
-            },
-            {
-                id: 'Text6',
-                display: 'none',
-                type: 'text',
-                rect: ['558px', '372px','20px','16px','auto', 'auto'],
-                text: "?",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
-            },
-            {
-                id: 'd102',
-                display: 'none',
-                type: 'image',
-                rect: ['283px', '277px','87px','38px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d102.gif",'0px','0px']
-            },
-            {
-                id: 'Text7',
-                display: 'none',
-                type: 'text',
-                rect: ['383px', '289px','20px','16px','auto', 'auto'],
-                text: "?",
-                align: "left",
-                font: ['Georgia, \'Times New Roman\', Times, serif', 18, "rgba(0,0,0,1)", "400", "none", "normal"]
-            },
-            {
-                id: 'd12',
-                display: 'none',
-                type: 'image',
-                rect: ['434px', '277px','53px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d12.gif",'0px','0px']
-            },
-            {
-                id: 'd132',
-                display: 'none',
-                type: 'image',
-                rect: ['497px', '277px','33px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d132.gif",'0px','0px']
-            },
-            {
-                id: 'd92',
-                display: 'none',
-                type: 'image',
-                rect: ['550px', '361px','18px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d92.gif",'0px','0px']
-            },
-            {
-                id: 'd82',
-                display: 'none',
-                type: 'image',
-                rect: ['300px', '232px','20px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d82.gif",'0px','0px']
-            },
-            {
-                id: 'answer',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/answer.mp3','media/answer.ogg']
-            },
-            {
-                id: 'hint1',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint1.ogg','media/hint1.mp3']
-            },
-            {
-                id: 'hint2',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint2.mp3','media/hint2.ogg']
-            },
-            {
-                id: 'hint3',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint3.ogg','media/hint3.mp3']
-            },
-            {
-                id: 'hint4',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint4.ogg','media/hint4.mp3']
-            },
-            {
-                id: 'hint5',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/hint5.mp3','media/hint5.ogg']
-            },
-            {
-                id: 'question',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['0', '0','320px','45px','auto', 'auto'],
-                source: ['media/question.mp3','media/question.ogg']
-            },
-            {
-                id: 'd15',
-                display: 'none',
-                type: 'image',
-                rect: ['188px', '277px','87px','37px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"d15.gif",'0px','0px']
-            }],
-            symbolInstances: [
-            {
-                id: 'Answers',
-                symbolName: 'Answers_1',
-                autoPlay: {
+            "Answers_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 2, '153', '183', 'auto', 'auto'],
+                            id: 'Group',
+                            type: 'group',
+                            c: [
+                            {
+                                rect: [8, 157, 101, 26, 'auto', 'auto'],
+                                id: 'EButton',
+                                symbolName: 'EButton_3',
+                                type: 'rect'
+                            },
+                            {
+                                rect: [8, 121, 101, 26, 'auto', 'auto'],
+                                id: 'DButton',
+                                symbolName: 'DButton_3',
+                                type: 'rect'
+                            },
+                            {
+                                rect: [8, 86, 101, 26, 'auto', 'auto'],
+                                id: 'CButton',
+                                symbolName: 'CButton_3',
+                                type: 'rect'
+                            },
+                            {
+                                rect: [8, 50, 125, 26, 'auto', 'auto'],
+                                id: 'BButton',
+                                symbolName: 'BButton_3',
+                                type: 'rect'
+                            },
+                            {
+                                rect: [0, 0, 153, 42, 'auto', 'auto'],
+                                id: 'AButton',
+                                symbolName: 'AButton_3',
+                                type: 'rect'
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${AnswerText}': {
+                            font: '{:}12px{:}{:}{:}{:}{:}{:}',
+                            rect: [36, 3, 109, 0]
+                        },
+                        '${symbolSelector}': {
+                            rect: [null, null, 156, 187]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
 
+                    ]
                 }
             }
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_d7}": [
-                ["style", "top", '308px'],
-                ["style", "left", '504px'],
-                ["style", "display", 'none']
-            ],
-            "${_d9}": [
-                ["style", "top", '361px'],
-                ["style", "left", '550px'],
-                ["style", "display", 'none']
-            ],
-            "${_Text8}": [
-                ["style", "top", '422px'],
-                ["style", "display", 'none'],
-                ["color", "color", 'rgba(255,0,0,1.00)'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '214px'],
-                ["style", "width", '95px']
-            ],
-            "${_Rectangle2Copy25}": [
-                ["style", "top", '436px'],
-                ["color", "background-color", 'rgba(255,255,255,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '389px'],
-                ["style", "width", '70px']
-            ],
-            "${_d12}": [
-                ["style", "top", '277px'],
-                ["style", "left", '434px'],
-                ["style", "display", 'none']
-            ],
-            "${_Rectangle2Copy5}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "top", '340px'],
-                ["style", "left", '188px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy9}": [
-                ["style", "top", '324px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "left", '291px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy13}": [
-                ["style", "top", '388px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "left", '291px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Text4}": [
-                ["style", "top", '231px'],
-                ["style", "left", '396px'],
-                ["style", "display", 'none']
-            ],
-            "${_d3}": [
-                ["style", "left", '71px'],
-                ["style", "top", '362px']
-            ],
-            "${_d132}": [
-                ["style", "top", '277px'],
-                ["style", "left", '497px'],
-                ["style", "display", 'none']
-            ],
-            "${_Rectangle2Copy11}": [
-                ["style", "top", '356px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "left", '291px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(255,255,255,0.00)'],
-                ["style", "width", '600px'],
-                ["style", "height", '600px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_d2}": [
-                ["style", "left", '78px'],
-                ["style", "top", '307px']
-            ],
-            "${_Rectangle2Copy8}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "top", '436px'],
-                ["style", "border-width", '1px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '188px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy16}": [
-                ["style", "top", '436px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "border-width", '1px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '291px'],
-                ["style", "width", '70px']
-            ],
-            "${_Text}": [
-                ["style", "top", '96px'],
-                ["style", "display", 'none'],
-                ["style", "font-size", '18px'],
-                ["style", "left", '188px'],
-                ["style", "width", '390px']
-            ],
-            "${_QuestionSound_Container}": [
-                ["style", "height", '8px'],
-                ["style", "display", 'none'],
-                ["color", "background-color", 'rgba(248,250,248,0.00)'],
-                ["style", "width", '17px']
-            ],
-            "${_d5}": [
-                ["style", "left", '71px'],
-                ["style", "top", '465px']
-            ],
-            "${_Rectangle2Copy6}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "top", '324px'],
-                ["style", "left", '188px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy12}": [
-                ["style", "top", '372px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "left", '291px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy26}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "border-width", '1px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '389px'],
-                ["style", "width", '70px']
-            ],
-            "${_Text9}": [
-                ["style", "top", '240px'],
-                ["style", "left", '419px'],
-                ["style", "display", 'none']
-            ],
-            "${_d4}": [
-                ["style", "left", '71px'],
-                ["style", "top", '414px']
-            ],
-            "${_Text3}": [
-                ["style", "top", '238px'],
-                ["style", "display", 'none'],
-                ["style", "height", '25px'],
-                ["style", "left", '419px'],
-                ["style", "width", '20px']
-            ],
-            "${_Rectangle2Copy4}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "top", '356px'],
-                ["style", "left", '188px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_d14}": [
-                ["style", "display", 'none'],
-                ["style", "left", '327px'],
-                ["style", "top", '232px']
-            ],
-            "${_Rectangle2Copy15}": [
-                ["style", "top", '420px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "border-width", '1px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '291px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2}": [
-                ["color", "background-color", 'rgba(0,166,10,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '188px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy21}": [
-                ["style", "top", '372px'],
-                ["color", "background-color", 'rgba(255,255,255,1.00)'],
-                ["style", "left", '389px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy3}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "top", '372px'],
-                ["style", "left", '188px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_d102}": [
-                ["style", "top", '277px'],
-                ["style", "left", '283px'],
-                ["style", "display", 'none']
-            ],
-            "${_Text7}": [
-                ["style", "display", 'none']
-            ],
-            "${_Text2}": [
-                ["style", "display", 'none'],
-                ["style", "top", '165px'],
-                ["style", "width", '390px']
-            ],
-            "${_Text5}": [
-                ["style", "top", '369px'],
-                ["style", "left", '534px'],
-                ["style", "display", 'none']
-            ],
-            "${_Rectangle2Copy2}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "top", '388px'],
-                ["style", "left", '188px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_d1Copy2}": [
-                ["style", "left", '48px'],
-                ["style", "top", '36px']
-            ],
-            "${_Answers}": [
-                ["transform", "scaleX", '1.17949'],
-                ["transform", "scaleY", '1.50267'],
-                ["style", "left", '27px'],
-                ["style", "top", '328px']
-            ],
-            "${_Sound_Container}": [
-                ["style", "display", 'none'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_Rectangle2Copy10}": [
-                ["style", "top", '340px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "left", '291px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_d82}": [
-                ["style", "top", '232px'],
-                ["style", "left", '300px'],
-                ["style", "display", 'none']
-            ],
-            "${_d11}": [
-                ["style", "top", '277px'],
-                ["style", "left", '376px'],
-                ["style", "display", 'none']
-            ],
-            "${_Rectangle2Copy23}": [
-                ["style", "top", '404px'],
-                ["color", "background-color", 'rgba(255,255,255,1.00)'],
-                ["style", "left", '389px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_d8}": [
-                ["style", "top", '361px'],
-                ["style", "left", '504px'],
-                ["style", "display", 'none']
-            ],
-            "${_Rectangle2Copy19}": [
-                ["style", "top", '340px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "left", '389px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy24}": [
-                ["style", "top", '420px'],
-                ["color", "background-color", 'rgba(255,255,255,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '389px'],
-                ["style", "width", '70px']
-            ],
-            "${_d6}": [
-                ["style", "left", '72px'],
-                ["style", "top", '517px']
-            ],
-            "${_Rectangle2Copy}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "top", '404px'],
-                ["style", "left", '188px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy14}": [
-                ["style", "top", '404px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "left", '291px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Text6}": [
-                ["style", "top", '372px'],
-                ["style", "left", '558px'],
-                ["style", "display", 'none']
-            ],
-            "${_Rectangle2Copy20}": [
-                ["style", "top", '356px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "left", '389px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy17}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "border-width", '1px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '291px'],
-                ["style", "width", '70px']
-            ],
-            "${_d15}": [
-                ["style", "top", '277px'],
-                ["style", "left", '188px'],
-                ["style", "display", 'none']
-            ],
-            "${_Rectangle2Copy7}": [
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "top", '420px'],
-                ["style", "border-width", '1px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '188px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy22}": [
-                ["style", "top", '388px'],
-                ["color", "background-color", 'rgba(255,255,255,1.00)'],
-                ["style", "left", '389px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_Rectangle2Copy18}": [
-                ["style", "top", '324px'],
-                ["color", "background-color", 'rgba(0,166,10,1)'],
-                ["style", "left", '389px'],
-                ["style", "display", 'none'],
-                ["style", "border-style", 'solid'],
-                ["style", "border-width", '1px'],
-                ["style", "width", '70px']
-            ],
-            "${_d92}": [
-                ["style", "top", '361px'],
-                ["style", "left", '550px'],
-                ["style", "display", 'none']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 57960,
-            autoPlay: true,
-            labels: {
-                "Read Question": 2000,
-                "Hint 1": 8967,
-                "Hint 2": 16615,
-                "Hint 3": 24005,
-                "Hint 4": 36010,
-                "Hint 5": 44114,
-                "Anwer Hint": 51363
-            },
-            timeline: [
-                { id: "eid286", tween: [ "style", "${_Rectangle2Copy25}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid313", tween: [ "style", "${_Rectangle2Copy25}", "display", 'block', { fromValue: 'none'}], position: 34335, duration: 0 },
-                { id: "eid417", tween: [ "style", "${_Rectangle2Copy25}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid270", tween: [ "style", "${_Rectangle2Copy}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid297", tween: [ "style", "${_Rectangle2Copy}", "display", 'block', { fromValue: 'none'}], position: 34329, duration: 0 },
-                { id: "eid397", tween: [ "style", "${_Rectangle2Copy}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid285", tween: [ "style", "${_Rectangle2Copy16}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid312", tween: [ "style", "${_Rectangle2Copy16}", "display", 'block', { fromValue: 'none'}], position: 34337, duration: 0 },
-                { id: "eid408", tween: [ "style", "${_Rectangle2Copy16}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid269", tween: [ "style", "${_Rectangle2Copy7}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid296", tween: [ "style", "${_Rectangle2Copy7}", "display", 'block', { fromValue: 'none'}], position: 34325, duration: 0 },
-                { id: "eid398", tween: [ "style", "${_Rectangle2Copy7}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid281", tween: [ "style", "${_Rectangle2Copy12}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid308", tween: [ "style", "${_Rectangle2Copy12}", "display", 'block', { fromValue: 'none'}], position: 34325, duration: 0 },
-                { id: "eid404", tween: [ "style", "${_Rectangle2Copy12}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid292", tween: [ "style", "${_Rectangle2Copy19}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid319", tween: [ "style", "${_Rectangle2Copy19}", "display", 'block', { fromValue: 'none'}], position: 34326, duration: 0 },
-                { id: "eid411", tween: [ "style", "${_Rectangle2Copy19}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid290", tween: [ "style", "${_Rectangle2Copy21}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid317", tween: [ "style", "${_Rectangle2Copy21}", "display", 'block', { fromValue: 'none'}], position: 34330, duration: 0 },
-                { id: "eid413", tween: [ "style", "${_Rectangle2Copy21}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid339", tween: [ "style", "${_d82}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid341", tween: [ "style", "${_d82}", "display", 'block', { fromValue: 'none'}], position: 21471, duration: 0 },
-                { id: "eid345", tween: [ "style", "${_d82}", "display", 'none', { fromValue: 'block'}], position: 38170, duration: 0 },
-                { id: "eid273", tween: [ "style", "${_Rectangle2Copy4}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid300", tween: [ "style", "${_Rectangle2Copy4}", "display", 'block', { fromValue: 'none'}], position: 34320, duration: 0 },
-                { id: "eid394", tween: [ "style", "${_Rectangle2Copy4}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid275", tween: [ "style", "${_Rectangle2Copy6}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid302", tween: [ "style", "${_Rectangle2Copy6}", "display", 'block', { fromValue: 'none'}], position: 34322, duration: 0 },
-                { id: "eid392", tween: [ "style", "${_Rectangle2Copy6}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid246", tween: [ "style", "${_Text4}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid343", tween: [ "style", "${_Text4}", "display", 'block', { fromValue: 'none'}], position: 21563, duration: 0 },
-                { id: "eid280", tween: [ "style", "${_Rectangle2Copy13}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid307", tween: [ "style", "${_Rectangle2Copy13}", "display", 'block', { fromValue: 'none'}], position: 34333, duration: 0 },
-                { id: "eid405", tween: [ "style", "${_Rectangle2Copy13}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid431", tween: [ "style", "${_Text5}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid432", tween: [ "style", "${_Text5}", "display", 'block', { fromValue: 'none'}], position: 33051, duration: 0 },
-                { id: "eid421", tween: [ "style", "${_Text5}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid29", tween: [ "style", "${_QuestionSound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid324", tween: [ "style", "${_d8}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid326", tween: [ "style", "${_d8}", "display", 'block', { fromValue: 'none'}], position: 33036, duration: 0 },
-                { id: "eid419", tween: [ "style", "${_d8}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid288", tween: [ "style", "${_Rectangle2Copy23}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid315", tween: [ "style", "${_Rectangle2Copy23}", "display", 'block', { fromValue: 'none'}], position: 34323, duration: 0 },
-                { id: "eid415", tween: [ "style", "${_Rectangle2Copy23}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid283", tween: [ "style", "${_Rectangle2Copy11}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid310", tween: [ "style", "${_Rectangle2Copy11}", "display", 'block', { fromValue: 'none'}], position: 34330, duration: 0 },
-                { id: "eid403", tween: [ "style", "${_Rectangle2Copy11}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid272", tween: [ "style", "${_Rectangle2Copy3}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid299", tween: [ "style", "${_Rectangle2Copy3}", "display", 'block', { fromValue: 'none'}], position: 34332, duration: 0 },
-                { id: "eid395", tween: [ "style", "${_Rectangle2Copy3}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid238", tween: [ "style", "${_Text}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid239", tween: [ "style", "${_Text}", "display", 'block', { fromValue: 'none'}], position: 8972, duration: 0 },
-                { id: "eid278", tween: [ "style", "${_Rectangle2Copy9}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid305", tween: [ "style", "${_Rectangle2Copy9}", "display", 'block', { fromValue: 'none'}], position: 34322, duration: 0 },
-                { id: "eid401", tween: [ "style", "${_Rectangle2Copy9}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid268", tween: [ "style", "${_Rectangle2Copy8}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid295", tween: [ "style", "${_Rectangle2Copy8}", "display", 'block', { fromValue: 'none'}], position: 34320, duration: 0 },
-                { id: "eid399", tween: [ "style", "${_Rectangle2Copy8}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid289", tween: [ "style", "${_Rectangle2Copy22}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid316", tween: [ "style", "${_Rectangle2Copy22}", "display", 'block', { fromValue: 'none'}], position: 34321, duration: 0 },
-                { id: "eid414", tween: [ "style", "${_Rectangle2Copy22}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid329", tween: [ "style", "${_d9}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid330", tween: [ "style", "${_d9}", "display", 'block', { fromValue: 'none'}], position: 37033, duration: 0 },
-                { id: "eid420", tween: [ "style", "${_d9}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid240", tween: [ "style", "${_Text2}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid241", tween: [ "style", "${_Text2}", "display", 'block', { fromValue: 'none'}], position: 16609, duration: 0 },
-                { id: "eid322", tween: [ "style", "${_d7}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid323", tween: [ "style", "${_d7}", "display", 'block', { fromValue: 'none'}], position: 31987, duration: 0 },
-                { id: "eid418", tween: [ "style", "${_d7}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid276", tween: [ "style", "${_Rectangle2}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid303", tween: [ "style", "${_Rectangle2}", "display", 'block', { fromValue: 'none'}], position: 34328, duration: 0 },
-                { id: "eid391", tween: [ "style", "${_Rectangle2}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid358", tween: [ "style", "${_Text8}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid359", tween: [ "style", "${_Text8}", "display", 'block', { fromValue: 'none'}], position: 56367, duration: 0 },
-                { id: "eid352", tween: [ "style", "${_d11}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid353", tween: [ "style", "${_d11}", "display", 'block', { fromValue: 'none'}], position: 51374, duration: 0 },
-                { id: "eid331", tween: [ "style", "${_d92}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid332", tween: [ "style", "${_d92}", "display", 'block', { fromValue: 'none'}], position: 37389, duration: 0 },
-                { id: "eid356", tween: [ "style", "${_d132}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid357", tween: [ "style", "${_d132}", "display", 'block', { fromValue: 'none'}], position: 54321, duration: 0 },
-                { id: "eid325", tween: [ "style", "${_Text6}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid327", tween: [ "style", "${_Text6}", "display", 'block', { fromValue: 'none'}], position: 33036, duration: 0 },
-                { id: "eid328", tween: [ "style", "${_Text6}", "display", 'none', { fromValue: 'block'}], position: 36010, duration: 0 },
-                { id: "eid434", tween: [ "style", "${_d15}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid435", tween: [ "style", "${_d15}", "display", 'block', { fromValue: 'none'}], position: 44128, duration: 0 },
-                { id: "eid344", tween: [ "style", "${_Text9}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid28", tween: [ "style", "${_Sound_Container}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid336", tween: [ "style", "${_d92}", "top", '230px', { fromValue: '361px'}], position: 37389, duration: 1374 },
-                { id: "eid291", tween: [ "style", "${_Rectangle2Copy20}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid318", tween: [ "style", "${_Rectangle2Copy20}", "display", 'block', { fromValue: 'none'}], position: 34328, duration: 0 },
-                { id: "eid412", tween: [ "style", "${_Rectangle2Copy20}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid284", tween: [ "style", "${_Rectangle2Copy15}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid311", tween: [ "style", "${_Rectangle2Copy15}", "display", 'block', { fromValue: 'none'}], position: 34319, duration: 0 },
-                { id: "eid407", tween: [ "style", "${_Rectangle2Copy15}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid293", tween: [ "style", "${_Rectangle2Copy18}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid320", tween: [ "style", "${_Rectangle2Copy18}", "display", 'block', { fromValue: 'none'}], position: 34325, duration: 0 },
-                { id: "eid410", tween: [ "style", "${_Rectangle2Copy18}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid274", tween: [ "style", "${_Rectangle2Copy5}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid301", tween: [ "style", "${_Rectangle2Copy5}", "display", 'block', { fromValue: 'none'}], position: 34337, duration: 0 },
-                { id: "eid393", tween: [ "style", "${_Rectangle2Copy5}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid271", tween: [ "style", "${_Rectangle2Copy2}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid298", tween: [ "style", "${_Rectangle2Copy2}", "display", 'block', { fromValue: 'none'}], position: 34327, duration: 0 },
-                { id: "eid396", tween: [ "style", "${_Rectangle2Copy2}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid294", tween: [ "style", "${_Rectangle2Copy26}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid321", tween: [ "style", "${_Rectangle2Copy26}", "display", 'block', { fromValue: 'none'}], position: 34330, duration: 0 },
-                { id: "eid409", tween: [ "style", "${_Rectangle2Copy26}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid350", tween: [ "style", "${_Text7}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid351", tween: [ "style", "${_Text7}", "display", 'block', { fromValue: 'none'}], position: 49121, duration: 0 },
-                { id: "eid422", tween: [ "style", "${_Text7}", "display", 'none', { fromValue: 'block'}], position: 51398, duration: 0 },
-                { id: "eid279", tween: [ "style", "${_Rectangle2Copy14}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid306", tween: [ "style", "${_Rectangle2Copy14}", "display", 'block', { fromValue: 'none'}], position: 34337, duration: 0 },
-                { id: "eid406", tween: [ "style", "${_Rectangle2Copy14}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid287", tween: [ "style", "${_Rectangle2Copy24}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid314", tween: [ "style", "${_Rectangle2Copy24}", "display", 'block', { fromValue: 'none'}], position: 34340, duration: 0 },
-                { id: "eid416", tween: [ "style", "${_Rectangle2Copy24}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid282", tween: [ "style", "${_Rectangle2Copy10}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid309", tween: [ "style", "${_Rectangle2Copy10}", "display", 'block', { fromValue: 'none'}], position: 34340, duration: 0 },
-                { id: "eid402", tween: [ "style", "${_Rectangle2Copy10}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid247", tween: [ "style", "${_Text3}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid250", tween: [ "style", "${_Text3}", "display", 'block', { fromValue: 'none'}], position: 21583, duration: 0 },
-                { id: "eid277", tween: [ "style", "${_Rectangle2Copy17}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid304", tween: [ "style", "${_Rectangle2Copy17}", "display", 'block', { fromValue: 'none'}], position: 34337, duration: 0 },
-                { id: "eid400", tween: [ "style", "${_Rectangle2Copy17}", "display", 'none', { fromValue: 'block'}], position: 44144, duration: 0 },
-                { id: "eid335", tween: [ "style", "${_d92}", "left", '300px', { fromValue: '550px'}], position: 37389, duration: 1374 },
-                { id: "eid163", tween: [ "style", "${_Answers}", "top", '328px', { fromValue: '328px'}], position: 14500, duration: 0 },
-                { id: "eid340", tween: [ "style", "${_d14}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid342", tween: [ "style", "${_d14}", "display", 'block', { fromValue: 'none'}], position: 21471, duration: 0 },
-                { id: "eid348", tween: [ "style", "${_d102}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid349", tween: [ "style", "${_d102}", "display", 'block', { fromValue: 'none'}], position: 47545, duration: 0 },
-                { id: "eid354", tween: [ "style", "${_d12}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid355", tween: [ "style", "${_d12}", "display", 'block', { fromValue: 'none'}], position: 52788, duration: 0 },
-                { id: "eid433", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_question}', [] ], ""], position: 1996 },
-                { id: "eid424", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint1}', [] ], ""], position: 8972 },
-                { id: "eid425", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint2}', [] ], ""], position: 16614 },
-                { id: "eid426", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint3}', [] ], ""], position: 23995 },
-                { id: "eid427", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint4}', [] ], ""], position: 36017 },
-                { id: "eid428", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_hint5}', [] ], ""], position: 44125 },
-                { id: "eid429", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_answer}', [] ], ""], position: 52790.731686259 }            ]
-        }
-    }
-},
-"EButton": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'E_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy8',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        type: 'text',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        id: 'Text8',
-                        text: 'E',
-                        align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_E_Button}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${_EllipseCopy8}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_x}": [
-                ["style", "top", '-3px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"EButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'E_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy8',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        type: 'text',
-                        id: 'Text8',
-                        text: 'E',
-                        align: 'center',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-3px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_EllipseCopy8}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_E_Button}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_x}": [
-                ["style", "top", '-3px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid44", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid43", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 }            ]
-        }
-    }
-},
-"EButton_2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'E_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy8',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text8',
-                        text: 'E',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text14',
-                        text: 'Answer E Text',
-                        align: 'left',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['-8px', '-3px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_Text14}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_E_Button}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${_EllipseCopy8}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_x}": [
-                ["style", "top", '-3px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"EButton_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'E_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy8',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text8',
-                        text: 'E',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text14',
-                        text: 'Answer E Text',
-                        align: 'left',
-                        type: 'text'
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_Text14}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_E_Button}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${_EllipseCopy8}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_Text8}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_x}": [
-                ["style", "top", '-3px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid9", tween: [ "color", "${_EllipseCopy8}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid230", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid231", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid257", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid258", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_EllipseCopy8}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"DButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'D_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy7',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        type: 'text',
-                        id: 'Text7',
-                        text: 'D<br>',
-                        align: 'center',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Text7}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_D_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_EllipseCopy7}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid3", tween: [ "color", "${_EllipseCopy7}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid226", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid227", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid267", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
-                { id: "eid10", tween: [ "style", "${_EllipseCopy7}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid255", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid256", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid266", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 }            ]
-        }
-    }
-},
-"DButton_2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'D_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy7',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text7',
-                        text: 'D<br>',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text13',
-                        text: 'Answer D Text',
-                        align: 'left',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        type: 'image',
-                        display: 'none',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Text13}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
-            ],
-            "${_Text7}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_D_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_EllipseCopy7}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid3", tween: [ "color", "${_EllipseCopy7}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid226", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid227", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid10", tween: [ "style", "${_EllipseCopy7}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid255", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid256", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"DButton_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'D_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy7',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text7',
-                        text: 'D<br>',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '101px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text13',
-                        text: 'Answer D Text',
-                        align: 'left',
-                        type: 'text'
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Text13}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '101px']
-            ],
-            "${_Text7}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_D_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_EllipseCopy7}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid3", tween: [ "color", "${_EllipseCopy7}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid226", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid227", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid10", tween: [ "style", "${_EllipseCopy7}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid255", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid256", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"DButton": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'D_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy7',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text7',
-                        text: 'D<br>',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '4px', '94px', '20px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text13',
-                        text: 'Answer Text D',
-                        align: 'left',
-                        type: 'text'
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Text13}": [
-                ["style", "top", '4px'],
-                ["style", "left", '36px'],
-                ["style", "width", '94px']
-            ],
-            "${_Text7}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_D_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_EllipseCopy7}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid3", tween: [ "color", "${_EllipseCopy7}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid226", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid227", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid10", tween: [ "style", "${_EllipseCopy7}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid255", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid256", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"CButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'C_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy6',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        type: 'text',
-                        id: 'Text5',
-                        text: 'C',
-                        align: 'center',
-                        rect: ['0px', '4px', '27px', '20px', 'auto', 'auto']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '101px']
-            ],
-            "${_Text5}": [
-                ["style", "top", '4px'],
-                ["style", "text-align", 'center'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_C_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_EllipseCopy6}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid11", tween: [ "style", "${_EllipseCopy6}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid224", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid225", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid265", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
-                { id: "eid5", tween: [ "color", "${_EllipseCopy6}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid253", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid254", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid264", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 }            ]
-        }
-    }
-},
-"BButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'B_Button',
-                    type: 'group',
-                    rect: ['0px', '0px', '25', '25', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'EllipseCopy5',
-                        stroke: [0, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(192,192,192,1)']
-                    },
-                    {
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        type: 'text',
-                        id: 'Text4',
-                        text: 'B',
-                        align: 'center',
-                        rect: ['0px', '5px', '27px', '19px', 'auto', 'auto']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_B_Button}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '26px'],
-                ["style", "width", '125px']
-            ],
-            "${_Text4}": [
-                ["style", "top", '5px'],
-                ["style", "text-align", 'center'],
-                ["style", "height", '19px'],
-                ["style", "width", '27px'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '14px']
-            ],
-            "${_EllipseCopy5}": [
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "top", '0px'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "height", '42px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "display", 'none'],
-                ["style", "height", '33px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid7", tween: [ "color", "${_EllipseCopy5}", "background-color", 'rgba(232,241,160,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(232,241,160,1.00)'}], position: 0, duration: 0 },
-                { id: "eid222", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid223", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid262", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 },
-                { id: "eid12", tween: [ "style", "${_EllipseCopy5}", "border-width", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
-                { id: "eid251", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid252", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid263", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 }            ]
-        }
-    }
-},
-"AButton_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'A_Button',
-                    type: 'group',
-                    rect: ['8px', '16px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'Ellipse',
-                        stroke: [1, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(232,241,160,1.00)']
-                    },
-                    {
-                        type: 'text',
-                        rect: ['0px', '3px', '27px', '19px', 'auto', 'auto'],
-                        id: 'A',
-                        text: 'A<br><br><br>',
-                        align: 'center',
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-16px', '65px', '42px', 'auto', 'auto'],
-                        id: 'check',
-                        fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                    },
-                    {
-                        type: 'image',
-                        display: 'none',
-                        rect: ['-8px', '-4px', '42px', '33px', 'auto', 'auto'],
-                        id: 'x',
-                        fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_A_Button}": [
-                ["style", "left", '8px'],
-                ["style", "top", '16px']
-            ],
-            "${_A}": [
-                ["style", "top", '3px'],
-                ["style", "text-align", 'center'],
-                ["style", "height", '19px'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${_Ellipse}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '42px'],
-                ["style", "width", '153px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Incorrect": 5000,
-                "Answer Correct": 10000
-            },
-            timeline: [
-                { id: "eid220", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid221", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid261", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 10000, duration: 0 },
-                { id: "eid259", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid260", tween: [ "style", "${_x}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid42", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'block'}], position: 10000, duration: 0 }            ]
-        }
-    }
-},
-"AButton": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'A_Button',
-                    type: 'group',
-                    rect: ['8px', '16px', '25', '24', 'auto', 'auto'],
-                    c: [
-                    {
-                        rect: ['0px', '0px', '25px', '24px', 'auto', 'auto'],
-                        borderRadius: ['50%', '50%', '50%', '50%'],
-                        id: 'Ellipse',
-                        stroke: [1, 'rgba(0,0,0,1)', 'solid'],
-                        type: 'ellipse',
-                        fill: ['rgba(232,241,160,1.00)']
-                    },
-                    {
-                        rect: ['0px', '3px', '27px', '19px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 14, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text3',
-                        text: 'A<br><br><br>',
-                        align: 'center',
-                        type: 'text'
-                    },
-                    {
-                        rect: ['36px', '3px', '109px', '19px', 'auto', 'auto'],
-                        font: ['Georgia, \'Times New Roman\', Times, serif', 12, 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                        id: 'Text9',
-                        text: 'Answer Text A',
-                        align: 'left',
-                        type: 'text'
-                    }]
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_A_Button}": [
-                ["style", "left", '8px'],
-                ["style", "top", '16px']
-            ],
-            "${_Ellipse}": [
-                ["style", "top", '0px'],
-                ["color", "background-color", 'rgba(232,241,160,1.00)'],
-                ["style", "border-width", '1px'],
-                ["style", "height", '24px'],
-                ["style", "border-style", 'solid'],
-                ["style", "left", '0px'],
-                ["style", "width", '25px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '42px'],
-                ["style", "width", '153px']
-            ],
-            "${_Text3}": [
-                ["style", "top", '3px'],
-                ["style", "text-align", 'center'],
-                ["style", "height", '19px'],
-                ["style", "font-size", '14px'],
-                ["style", "left", '0px'],
-                ["style", "width", '27px']
-            ],
-            "${_Text9}": [
-                ["style", "top", '3px'],
-                ["style", "text-align", 'left'],
-                ["style", "width", '109px'],
-                ["style", "left", '36px'],
-                ["style", "font-size", '12px']
-            ],
-            "${_check}": [
-                ["style", "top", '-16px'],
-                ["style", "display", 'none'],
-                ["style", "height", '42px'],
-                ["style", "left", '-8px'],
-                ["style", "width", '65px']
-            ],
-            "${_x}": [
-                ["style", "top", '-4px'],
-                ["style", "height", '33px'],
-                ["style", "display", 'none'],
-                ["style", "left", '-8px'],
-                ["style", "width", '42px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "Nothing Selected": 0,
-                "Answer Selected": 5000
-            },
-            timeline: [
-                { id: "eid220", tween: [ "style", "${_check}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid221", tween: [ "style", "${_check}", "display", 'block', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid259", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid260", tween: [ "style", "${_x}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 }            ]
-        }
-    }
-},
-"Answers_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'Group',
-                    type: 'group',
-                    rect: ['0px', '2px', '153', '183', 'auto', 'auto'],
-                    c: [
-                    {
-                        id: 'EButton',
-                        type: 'rect',
-                        rect: ['8px', '157px', 'auto', 'auto', 'auto', 'auto']
-                    },
-                    {
-                        id: 'DButton',
-                        type: 'rect',
-                        rect: ['8px', '121px', 'auto', 'auto', 'auto', 'auto']
-                    },
-                    {
-                        id: 'CButton',
-                        type: 'rect',
-                        rect: ['8px', '86px', 'auto', 'auto', 'auto', 'auto']
-                    },
-                    {
-                        id: 'BButton',
-                        type: 'rect',
-                        rect: ['8px', '50px', 'auto', 'auto', 'auto', 'auto']
-                    },
-                    {
-                        id: 'AButton',
-                        type: 'rect',
-                        rect: ['0px', '0px', 'auto', 'auto', 'auto', 'auto']
-                    }]
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'DButton',
-                symbolName: 'DButton_3'
-            },
-            {
-                id: 'EButton',
-                symbolName: 'EButton_3'
-            },
-            {
-                id: 'BButton',
-                symbolName: 'BButton_3'
-            },
-            {
-                id: 'CButton',
-                symbolName: 'CButton_3'
-            },
-            {
-                id: 'AButton',
-                symbolName: 'AButton_3'
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_Group}": [
-                ["style", "top", '2px'],
-                ["style", "left", '0px']
-            ],
-            "${_AnswerText}": [
-                ["style", "top", '3px'],
-                ["style", "font-size", '12px'],
-                ["style", "left", '36px'],
-                ["style", "width", '109px']
-            ],
-            "${_DButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '121px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '187px'],
-                ["style", "width", '156px']
-            ],
-            "${_BButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '50px']
-            ],
-            "${_AButton}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_CButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '86px']
-            ],
-            "${_EButton}": [
-                ["style", "left", '8px'],
-                ["style", "top", '157px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 0,
-            autoPlay: true,
-            timeline: [
-            ]
-        }
-    }
-}
-};
+        };
 
+    AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
-
-/**
- * Adobe Edge DOM Ready Event Handler
- */
-$(window).ready(function() {
-     Edge.launchComposition(compId);
-});
-})(jQuery, AdobeEdge, "EdgeProblem");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("problem_807_edgeActions.js");
+})("EdgeProblem");

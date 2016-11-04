@@ -459,20 +459,20 @@
                     }
                 },
                 timeline: {
-                    duration: 114000,
+                    duration: 117500,
                     autoPlay: true,
                     labels: {
                         "Read Question": 2000,
-                        "Hint 1": 8000,
-                        "Hint 2": 36000,
-                        "Hint 3": 61000,
-                        "Answer Hint": 99000
+                        "Hint 1": 11500,
+                        "Hint 2": 39500,
+                        "Hint 3": 64500,
+                        "Answer Hint": 102500
                     },
                     data: [
                         [
                             "eid189",
                             "color",
-                            64000,
+                            67500,
                             1000,
                             "linear",
                             "${squaredCopy2}",
@@ -482,7 +482,7 @@
                         [
                             "eid166",
                             "opacity",
-                            15000,
+                            18500,
                             1000,
                             "linear",
                             "${Hint_1_text1}",
@@ -492,7 +492,7 @@
                         [
                             "eid211",
                             "color",
-                            49000,
+                            52500,
                             1000,
                             "linear",
                             "${_3_plus_4_red}",
@@ -502,7 +502,7 @@
                         [
                             "eid197",
                             "opacity",
-                            72000,
+                            75500,
                             1000,
                             "linear",
                             "${Hint_3_expression_2}",
@@ -510,9 +510,29 @@
                             '1'
                         ],
                         [
+                            "eid209",
+                            "opacity",
+                            115500,
+                            1000,
+                            "linear",
+                            "${Choose_C}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
+                            "eid206",
+                            "opacity",
+                            110500,
+                            1000,
+                            "linear",
+                            "${_Answer_Hint_2_89}",
+                            '0.000000',
+                            '1'
+                        ],
+                        [
                             "eid177",
                             "opacity",
-                            30000,
+                            33500,
                             1000,
                             "linear",
                             "${Hint_2_expression_1}",
@@ -520,12 +540,12 @@
                             '1'
                         ],
                         [
-                            "eid209",
+                            "eid169",
                             "opacity",
-                            112000,
+                            20500,
                             1000,
                             "linear",
-                            "${Choose_C}",
+                            "${Order_of_Operations}",
                             '0.000000',
                             '1'
                         ],
@@ -540,26 +560,6 @@
                             'none'
                         ],
                         [
-                            "eid206",
-                            "opacity",
-                            107000,
-                            1000,
-                            "linear",
-                            "${_Answer_Hint_2_89}",
-                            '0.000000',
-                            '1'
-                        ],
-                        [
-                            "eid169",
-                            "opacity",
-                            17000,
-                            1000,
-                            "linear",
-                            "${Order_of_Operations}",
-                            '0.000000',
-                            '1'
-                        ],
-                        [
                             "eid29",
                             "display",
                             0,
@@ -572,7 +572,7 @@
                         [
                             "eid200",
                             "opacity",
-                            87000,
+                            90500,
                             1000,
                             "linear",
                             "${Hint_3_expression_3}",
@@ -582,7 +582,7 @@
                         [
                             "eid160",
                             "color",
-                            15000,
+                            18500,
                             0,
                             "linear",
                             "${Hint_1_text1}",
@@ -592,7 +592,7 @@
                         [
                             "eid192",
                             "opacity",
-                            51000,
+                            54500,
                             1000,
                             "linear",
                             "${Hint_3_expression_1}",
@@ -602,7 +602,7 @@
                         [
                             "eid203",
                             "opacity",
-                            99000,
+                            102500,
                             1000,
                             "linear",
                             "${Answer_Hint_1}",
@@ -610,16 +610,16 @@
                             '1'
                         ],
                             [ "eid212", "trigger", 2000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${question}', [] ] ],
-                            [ "eid213", "trigger", 8000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1a}', [] ] ],
-                            [ "eid214", "trigger", 19000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1b}', [] ] ],
-                            [ "eid215", "trigger", 32000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1c}', [] ] ],
-                            [ "eid216", "trigger", 36000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2a}', [] ] ],
-                            [ "eid217", "trigger", 53000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2b}', [] ] ],
-                            [ "eid218", "trigger", 64000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3a}', [] ] ],
-                            [ "eid219", "trigger", 74000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3b}', [] ] ],
-                            [ "eid228", "trigger", 89000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3c}', [] ] ],
-                            [ "eid229", "trigger", 101024, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer1}', [] ] ],
-                            [ "eid232", "trigger", 108998, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer2}', [] ] ]
+                            [ "eid213", "trigger", 11500, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1a}', [] ] ],
+                            [ "eid214", "trigger", 22500, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1b}', [] ] ],
+                            [ "eid215", "trigger", 35500, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1c}', [] ] ],
+                            [ "eid216", "trigger", 39500, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2a}', [] ] ],
+                            [ "eid217", "trigger", 56500, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2b}', [] ] ],
+                            [ "eid218", "trigger", 67500, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3a}', [] ] ],
+                            [ "eid219", "trigger", 77500, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3b}', [] ] ],
+                            [ "eid228", "trigger", 92500, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3c}', [] ] ],
+                            [ "eid229", "trigger", 104524, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer1}', [] ] ],
+                            [ "eid232", "trigger", 112498, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer2}', [] ] ]
                     ]
                 }
             },
@@ -646,12 +646,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -871,20 +871,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
                             },
                             {
                                 rect: [-8, -3, 42, 33, 'auto', 'auto'],
@@ -1002,20 +1002,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -1127,12 +1127,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
                             },
                             {
                                 type: 'image',
@@ -1271,20 +1271,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
                             },
                             {
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
@@ -1402,20 +1402,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -1527,20 +1527,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [36, 4, 94, '20px', 'auto', 'auto'],
                                 id: 'Text13',
                                 text: 'Answer Text D',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [36, 4, 94, '20px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -1652,12 +1652,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text5',
                                 text: 'C',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
                             },
                             {
                                 type: 'image',
@@ -1796,12 +1796,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 5, 27, 19, 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text4',
                                 text: 'B',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
                             },
                             {
                                 type: 'image',
@@ -1927,8 +1927,8 @@
                 content: {
                     dom: [
                         {
-                            id: 'A_Button',
                             type: 'group',
+                            id: 'A_Button',
                             rect: ['8', '16', '25', '24', 'auto', 'auto'],
                             c: [
                             {
@@ -1940,12 +1940,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: ['0', '3', '27', '19', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
                                 id: 'A',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', '']
                             },
                             {
                                 rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
@@ -1965,8 +1965,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '153', '42']
+                            rect: [null, null, '153', '42']
                         }
                     }
                 },
@@ -2065,20 +2064,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [0, 3, 27, 19, 'auto', 'auto'],
                                 id: 'Text3',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 3, 27, 19, 'auto', 'auto']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [36, 3, 109, '19px', 'auto', 'auto'],
                                 id: 'Text9',
                                 text: 'Answer Text A',
                                 align: 'left',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [36, 3, 109, '19px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -2157,46 +2156,45 @@
                 content: {
                     dom: [
                         {
-                            id: 'Group',
                             type: 'group',
+                            id: 'Group',
                             rect: ['0', '2', '153', '183', 'auto', 'auto'],
                             c: [
                             {
+                                type: 'rect',
                                 id: 'EButton',
                                 symbolName: 'EButton_3',
-                                rect: ['8', '157', '101', '26', 'auto', 'auto'],
-                                type: 'rect'
+                                rect: ['8', '157', '101', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'DButton',
                                 symbolName: 'DButton_3',
-                                rect: ['8', '121', '101', '26', 'auto', 'auto'],
-                                type: 'rect'
+                                rect: ['8', '121', '101', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'CButton',
                                 symbolName: 'CButton_3',
-                                rect: ['8', '86', '101', '26', 'auto', 'auto'],
-                                type: 'rect'
+                                rect: ['8', '86', '101', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'BButton',
                                 symbolName: 'BButton_3',
-                                rect: ['8', '50', '125', '26', 'auto', 'auto'],
-                                type: 'rect'
+                                rect: ['8', '50', '125', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'AButton',
                                 symbolName: 'AButton_3',
-                                rect: ['0', '0', '153', '42', 'auto', 'auto'],
-                                type: 'rect'
+                                rect: ['0', '0', '153', '42', 'auto', 'auto']
                             }]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '156', '187']
+                            rect: [null, null, '156', '187']
                         }
                     }
                 },

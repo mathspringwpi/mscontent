@@ -428,23 +428,23 @@
                     }
                 },
                 timeline: {
-                    duration: 83000,
+                    duration: 87000,
                     autoPlay: true,
                     labels: {
                         "Read Question": 2000,
-                        "Hint 1": 10000,
-                        "Hint 2": 17000,
-                        "Hint 3": 23483,
-                        "Hint 4": 43000,
-                        "Hint 5": 50524,
-                        "Hint 6": 55000,
-                        "Answer": 79000
+                        "Hint 1": 13000,
+                        "Hint 2": 20000,
+                        "Hint 3": 26483,
+                        "Hint 4": 46000,
+                        "Hint 5": 53524,
+                        "Hint 6": 59000,
+                        "Answer": 83000
                     },
                     data: [
                         [
                             "eid304",
                             "display",
-                            62500,
+                            66500,
                             0,
                             "easeInOutQuad",
                             "${Hint6_text5}",
@@ -452,29 +452,39 @@
                             'block'
                         ],
                         [
-                            "eid191",
-                            "top",
-                            16500,
+                            "eid248",
+                            "color",
+                            39500,
                             0,
                             "linear",
-                            "${z}",
-                            '111px',
-                            '111px'
+                            "${Hint3_text3}",
+                            'rgba(142,15,43,1)',
+                            'rgba(142,15,43,1)'
                         ],
                         [
-                            "eid324",
-                            "display",
-                            77000,
+                            "eid247",
+                            "color",
+                            46000,
                             0,
-                            "easeInOutQuad",
-                            "${Hint7_text5}",
+                            "linear",
+                            "${Hint3_text3}",
+                            'rgba(142,15,43,1)',
+                            'rgba(151,144,146,1.00)'
+                        ],
+                        [
+                            "eid285",
+                            "display",
+                            64000,
+                            0,
+                            "linear",
+                            "${Hint6_text3}",
                             'none',
                             'block'
                         ],
                         [
                             "eid213",
                             "opacity",
-                            29000,
+                            32000,
                             0,
                             "linear",
                             "${Hint3_text1}",
@@ -484,7 +494,7 @@
                         [
                             "eid214",
                             "opacity",
-                            31012,
+                            34012,
                             0,
                             "linear",
                             "${Hint3_text1}",
@@ -494,7 +504,7 @@
                         [
                             "eid239",
                             "opacity",
-                            43022,
+                            46022,
                             0,
                             "linear",
                             "${Hint3_text1}",
@@ -504,7 +514,7 @@
                         [
                             "eid308",
                             "opacity",
-                            64500,
+                            68500,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text1}",
@@ -512,19 +522,19 @@
                             '1'
                         ],
                         [
-                            "eid111",
-                            "height",
-                            39000,
+                            "eid195",
+                            "left",
+                            32990,
                             0,
                             "linear",
-                            "${height}",
-                            '31px',
-                            '31px'
+                            "${_90}",
+                            '229px',
+                            '229px'
                         ],
                         [
                             "eid241",
                             "color",
-                            36000,
+                            39000,
                             0,
                             "linear",
                             "${Hint3_text2}",
@@ -534,7 +544,7 @@
                         [
                             "eid240",
                             "color",
-                            43000,
+                            46000,
                             0,
                             "linear",
                             "${Hint3_text2}",
@@ -544,7 +554,7 @@
                         [
                             "eid215",
                             "opacity",
-                            33000,
+                            36000,
                             0,
                             "linear",
                             "${Hint3_text2}",
@@ -554,7 +564,7 @@
                         [
                             "eid216",
                             "opacity",
-                            34000,
+                            37000,
                             0,
                             "linear",
                             "${Hint3_text2}",
@@ -564,7 +574,7 @@
                         [
                             "eid163",
                             "opacity",
-                            14000,
+                            17000,
                             1000,
                             "linear",
                             "${Y}",
@@ -574,7 +584,7 @@
                         [
                             "eid177",
                             "opacity",
-                            18500,
+                            21500,
                             1000,
                             "linear",
                             "${Y}",
@@ -584,7 +594,7 @@
                         [
                             "eid306",
                             "display",
-                            65250,
+                            69250,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text1}",
@@ -594,7 +604,7 @@
                         [
                             "eid274",
                             "display",
-                            55000,
+                            59000,
                             0,
                             "linear",
                             "${Hint6_RoundRect}",
@@ -604,7 +614,7 @@
                         [
                             "eid311",
                             "display",
-                            68000,
+                            72000,
                             0,
                             "easeInOutQuad",
                             "${Hint6_RoundRect}",
@@ -614,7 +624,7 @@
                         [
                             "eid297",
                             "top",
-                            60000,
+                            64000,
                             2500,
                             "easeInOutQuad",
                             "${Hint6_text3}",
@@ -624,7 +634,7 @@
                         [
                             "eid321",
                             "display",
-                            75000,
+                            79000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text4}",
@@ -634,7 +644,7 @@
                         [
                             "eid112",
                             "width",
-                            39000,
+                            42000,
                             0,
                             "linear",
                             "${height}",
@@ -644,7 +654,7 @@
                         [
                             "eid272",
                             "display",
-                            52000,
+                            55000,
                             0,
                             "linear",
                             "${Hint5_text1}",
@@ -654,7 +664,7 @@
                         [
                             "eid284",
                             "display",
-                            60000,
+                            64000,
                             0,
                             "linear",
                             "${Hint5_text1}",
@@ -664,7 +674,7 @@
                         [
                             "eid329",
                             "display",
-                            82000,
+                            86000,
                             0,
                             "linear",
                             "${Hint8}",
@@ -674,7 +684,7 @@
                         [
                             "eid327",
                             "display",
-                            79000,
+                            83000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text6}",
@@ -694,7 +704,7 @@
                         [
                             "eid180",
                             "display",
-                            19500,
+                            22500,
                             0,
                             "linear",
                             "${_90}",
@@ -704,7 +714,7 @@
                         [
                             "eid330",
                             "display",
-                            27978,
+                            30978,
                             0,
                             "linear",
                             "${_90}",
@@ -714,7 +724,7 @@
                         [
                             "eid244",
                             "display",
-                            43000,
+                            46000,
                             0,
                             "linear",
                             "${_90}",
@@ -724,7 +734,7 @@
                         [
                             "eid278",
                             "display",
-                            58000,
+                            62000,
                             0,
                             "linear",
                             "${Hint3_text3}",
@@ -734,7 +744,7 @@
                         [
                             "eid313",
                             "color",
-                            68000,
+                            72000,
                             0,
                             "easeInOutQuad",
                             "${Hint6_text3}",
@@ -754,7 +764,7 @@
                         [
                             "eid196",
                             "top",
-                            29990,
+                            32990,
                             0,
                             "linear",
                             "${_90}",
@@ -764,7 +774,7 @@
                         [
                             "eid275",
                             "display",
-                            55000,
+                            59000,
                             0,
                             "linear",
                             "${Hint6_text1}",
@@ -774,7 +784,7 @@
                         [
                             "eid279",
                             "display",
-                            60000,
+                            64000,
                             0,
                             "linear",
                             "${Hint6_text1}",
@@ -784,7 +794,7 @@
                         [
                             "eid317",
                             "color",
-                            68000,
+                            72000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text2}",
@@ -794,7 +804,7 @@
                         [
                             "eid316",
                             "color",
-                            72000,
+                            76000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text2}",
@@ -804,7 +814,7 @@
                         [
                             "eid315",
                             "color",
-                            68000,
+                            72000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text1}",
@@ -814,7 +824,7 @@
                         [
                             "eid314",
                             "color",
-                            72000,
+                            76000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text1}",
@@ -824,7 +834,7 @@
                         [
                             "eid246",
                             "display",
-                            43000,
+                            46000,
                             0,
                             "linear",
                             "${Hint3_text4}",
@@ -832,19 +842,9 @@
                             'none'
                         ],
                         [
-                            "eid194",
-                            "left",
-                            16500,
-                            0,
-                            "linear",
-                            "${Y}",
-                            '240px',
-                            '240px'
-                        ],
-                        [
                             "eid298",
                             "left",
-                            60000,
+                            64000,
                             2500,
                             "easeInCubic",
                             "${Hint6_text3}",
@@ -852,19 +852,9 @@
                             '397px'
                         ],
                         [
-                            "eid195",
-                            "left",
-                            29990,
-                            0,
-                            "linear",
-                            "${_90}",
-                            '229px',
-                            '229px'
-                        ],
-                        [
                             "eid133",
                             "color",
-                            38000,
+                            41000,
                             0,
                             "linear",
                             "${height}",
@@ -874,7 +864,7 @@
                         [
                             "eid136",
                             "color",
-                            39000,
+                            42000,
                             0,
                             "linear",
                             "${height}",
@@ -882,9 +872,29 @@
                             'rgba(255,1,1,1.00)'
                         ],
                         [
+                            "eid111",
+                            "height",
+                            42000,
+                            0,
+                            "linear",
+                            "${height}",
+                            '31px',
+                            '31px'
+                        ],
+                        [
+                            "eid302",
+                            "left",
+                            64000,
+                            2500,
+                            "easeInQuad",
+                            "${Hint6_RoundRect}",
+                            '428px',
+                            '396px'
+                        ],
+                        [
                             "eid301",
                             "top",
-                            60000,
+                            64000,
                             2500,
                             "easeInOutQuad",
                             "${Hint6_RoundRect}",
@@ -894,7 +904,7 @@
                         [
                             "eid91",
                             "display",
-                            38000,
+                            41000,
                             0,
                             "linear",
                             "${TutorialText}",
@@ -904,7 +914,7 @@
                         [
                             "eid219",
                             "display",
-                            39000,
+                            42000,
                             0,
                             "linear",
                             "${TutorialText}",
@@ -914,7 +924,7 @@
                         [
                             "eid303",
                             "display",
-                            62500,
+                            66500,
                             0,
                             "easeInOutQuad",
                             "${Hint6_text4}",
@@ -924,7 +934,7 @@
                         [
                             "eid277",
                             "display",
-                            58000,
+                            62000,
                             0,
                             "linear",
                             "${Hint3_text2}",
@@ -932,19 +942,19 @@
                             'none'
                         ],
                         [
-                            "eid302",
-                            "left",
-                            60000,
-                            2500,
-                            "easeInQuad",
-                            "${Hint6_RoundRect}",
-                            '428px',
-                            '396px'
+                            "eid193",
+                            "top",
+                            19500,
+                            0,
+                            "linear",
+                            "${Y}",
+                            '155px',
+                            '155px'
                         ],
                         [
                             "eid328",
                             "color",
-                            79000,
+                            83000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text6}",
@@ -954,7 +964,7 @@
                         [
                             "eid53",
                             "opacity",
-                            31000,
+                            34000,
                             3000,
                             "linear",
                             "${TutorialText}",
@@ -962,19 +972,29 @@
                             '0'
                         ],
                         [
-                            "eid193",
-                            "top",
-                            16500,
+                            "eid310",
+                            "display",
+                            72000,
                             0,
-                            "linear",
-                            "${Y}",
-                            '155px',
-                            '155px'
+                            "easeInOutQuad",
+                            "${Hint7_text2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid309",
+                            "display",
+                            72750,
+                            0,
+                            "easeInOutQuad",
+                            "${Hint7_text2}",
+                            'block',
+                            'block'
                         ],
                         [
                             "eid168",
                             "color",
-                            17000,
+                            20000,
                             1000,
                             "linear",
                             "${z}",
@@ -984,7 +1004,7 @@
                         [
                             "eid228",
                             "opacity",
-                            38750,
+                            41750,
                             0,
                             "linear",
                             "${Hint3_text4}",
@@ -994,7 +1014,7 @@
                         [
                             "eid229",
                             "opacity",
-                            40000,
+                            43000,
                             0,
                             "linear",
                             "${Hint3_text4}",
@@ -1014,7 +1034,7 @@
                         [
                             "eid95",
                             "display",
-                            38000,
+                            41000,
                             0,
                             "linear",
                             "${height}",
@@ -1024,7 +1044,7 @@
                         [
                             "eid128",
                             "display",
-                            39000,
+                            42000,
                             0,
                             "linear",
                             "${height}",
@@ -1034,7 +1054,7 @@
                         [
                             "eid189",
                             "color",
-                            19500,
+                            22500,
                             2478,
                             "linear",
                             "${_90}",
@@ -1044,7 +1064,7 @@
                         [
                             "eid331",
                             "color",
-                            29990,
+                            32990,
                             0,
                             "linear",
                             "${_90}",
@@ -1052,19 +1072,39 @@
                             'rgba(151,144,146,1.00)'
                         ],
                         [
-                            "eid184",
-                            "opacity",
-                            19500,
-                            1000,
+                            "eid271",
+                            "display",
+                            52000,
+                            0,
                             "linear",
-                            "${_90}",
-                            '0',
-                            '1'
+                            "${Hint4_text1}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid273",
+                            "display",
+                            59000,
+                            0,
+                            "linear",
+                            "${Hint4_text1}",
+                            'block',
+                            'block'
+                        ],
+                        [
+                            "eid276",
+                            "display",
+                            62000,
+                            0,
+                            "linear",
+                            "${Hint4_text1}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid104",
                             "left",
-                            38000,
+                            41000,
                             1000,
                             "linear",
                             "${height}",
@@ -1084,7 +1124,7 @@
                         [
                             "eid118",
                             "font-size",
-                            38000,
+                            41000,
                             1000,
                             "linear",
                             "${height}",
@@ -1094,7 +1134,7 @@
                         [
                             "eid165",
                             "opacity",
-                            15000,
+                            18000,
                             1000,
                             "linear",
                             "${z}",
@@ -1104,7 +1144,7 @@
                         [
                             "eid105",
                             "top",
-                            38000,
+                            41000,
                             1000,
                             "linear",
                             "${height}",
@@ -1122,39 +1162,19 @@
                             'none'
                         ],
                         [
-                            "eid271",
-                            "display",
-                            49000,
-                            0,
+                            "eid184",
+                            "opacity",
+                            22500,
+                            1000,
                             "linear",
-                            "${Hint4_text1}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid273",
-                            "display",
-                            55000,
-                            0,
-                            "linear",
-                            "${Hint4_text1}",
-                            'block',
-                            'block'
-                        ],
-                        [
-                            "eid276",
-                            "display",
-                            58000,
-                            0,
-                            "linear",
-                            "${Hint4_text1}",
-                            'block',
-                            'none'
+                            "${_90}",
+                            '0',
+                            '1'
                         ],
                         [
                             "eid318",
                             "display",
-                            72000,
+                            76000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text3}",
@@ -1162,9 +1182,19 @@
                             'block'
                         ],
                         [
+                            "eid194",
+                            "left",
+                            19500,
+                            0,
+                            "linear",
+                            "${Y}",
+                            '240px',
+                            '240px'
+                        ],
+                        [
                             "eid325",
                             "color",
-                            77000,
+                            81000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text5}",
@@ -1174,7 +1204,7 @@
                         [
                             "eid326",
                             "color",
-                            79000,
+                            83000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text5}",
@@ -1182,64 +1212,34 @@
                             'rgba(151,144,146,1.00)'
                         ],
                         [
+                            "eid191",
+                            "top",
+                            19500,
+                            0,
+                            "linear",
+                            "${z}",
+                            '111px',
+                            '111px'
+                        ],
+                        [
+                            "eid324",
+                            "display",
+                            81000,
+                            0,
+                            "easeInOutQuad",
+                            "${Hint7_text5}",
+                            'none',
+                            'block'
+                        ],
+                        [
                             "eid190",
                             "left",
-                            16500,
+                            19500,
                             0,
                             "linear",
                             "${z}",
                             '250px',
                             '250px'
-                        ],
-                        [
-                            "eid310",
-                            "display",
-                            68000,
-                            0,
-                            "easeInOutQuad",
-                            "${Hint7_text2}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid309",
-                            "display",
-                            68750,
-                            0,
-                            "easeInOutQuad",
-                            "${Hint7_text2}",
-                            'block',
-                            'block'
-                        ],
-                        [
-                            "eid248",
-                            "color",
-                            36500,
-                            0,
-                            "linear",
-                            "${Hint3_text3}",
-                            'rgba(142,15,43,1)',
-                            'rgba(142,15,43,1)'
-                        ],
-                        [
-                            "eid247",
-                            "color",
-                            43000,
-                            0,
-                            "linear",
-                            "${Hint3_text3}",
-                            'rgba(142,15,43,1)',
-                            'rgba(151,144,146,1.00)'
-                        ],
-                        [
-                            "eid285",
-                            "display",
-                            60000,
-                            0,
-                            "linear",
-                            "${Hint6_text3}",
-                            'none',
-                            'block'
                         ],
                         [
                             "eid28",
@@ -1254,7 +1254,7 @@
                         [
                             "eid281",
                             "display",
-                            58000,
+                            62000,
                             0,
                             "linear",
                             "${Hint6_text2}",
@@ -1264,7 +1264,7 @@
                         [
                             "eid305",
                             "display",
-                            65250,
+                            69250,
                             0,
                             "easeInOutQuad",
                             "${Hint6_text2}",
@@ -1274,7 +1274,7 @@
                         [
                             "eid322",
                             "color",
-                            75000,
+                            79000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text4}",
@@ -1284,7 +1284,7 @@
                         [
                             "eid323",
                             "color",
-                            77000,
+                            81000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text4}",
@@ -1294,7 +1294,7 @@
                         [
                             "eid319",
                             "color",
-                            72000,
+                            76000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text3}",
@@ -1304,7 +1304,7 @@
                         [
                             "eid320",
                             "color",
-                            75000,
+                            79000,
                             0,
                             "easeInOutQuad",
                             "${Hint7_text3}",
@@ -1314,7 +1314,7 @@
                         [
                             "eid217",
                             "opacity",
-                            35000,
+                            38000,
                             0,
                             "linear",
                             "${Hint3_text3}",
@@ -1324,7 +1324,7 @@
                         [
                             "eid218",
                             "opacity",
-                            36500,
+                            39500,
                             0,
                             "linear",
                             "${Hint3_text3}",
@@ -1332,12 +1332,12 @@
                             '1'
                         ],
                             [ "eid333", "trigger", 2000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${question}', [] ] ],
-                            [ "eid335", "trigger", 10000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
-                            [ "eid336", "trigger", 17000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2}', [] ] ],
-                            [ "eid337", "trigger", 23483.075496055, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3}', [] ] ],
-                            [ "eid341", "trigger", 43000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint42}', [] ] ],
-                            [ "eid339", "trigger", 50523.504520367, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint5}', [] ] ],
-                            [ "eid340", "trigger", 79000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answerhint2}', [] ] ]
+                            [ "eid335", "trigger", 13000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
+                            [ "eid336", "trigger", 20000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2}', [] ] ],
+                            [ "eid337", "trigger", 26483.075496055, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3}', [] ] ],
+                            [ "eid341", "trigger", 46000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint42}', [] ] ],
+                            [ "eid339", "trigger", 53523.504520367, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint5}', [] ] ],
+                            [ "eid340", "trigger", 83000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answerhint2}', [] ] ]
                     ]
                 }
             },
@@ -1364,12 +1364,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
                                 type: 'image',
@@ -1487,12 +1487,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: ['0', '4', '27', '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
-                                type: 'text',
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                rect: ['0', '4', '27', '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
                                 type: 'image',
@@ -1631,20 +1631,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
+                                type: 'text',
                                 rect: [36, 4, 101, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
                                 type: 'image',
@@ -1762,20 +1762,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
+                                type: 'text',
                                 rect: [36, 4, 101, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
                                 type: 'image',
@@ -1893,12 +1893,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: ['0', '4', '27', '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
-                                type: 'text',
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: ['0', '4', '27', '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
                                 type: 'image',
@@ -2037,20 +2037,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
+                                type: 'text',
                                 rect: [36, 4, 101, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
                                 type: 'image',
@@ -2168,20 +2168,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
+                                type: 'text',
                                 rect: [36, 4, 101, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
                                 type: 'image',
@@ -2299,20 +2299,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
+                                type: 'text',
                                 rect: [36, 4, 94, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text13',
                                 text: 'Answer Text D',
                                 align: 'left',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
                                 type: 'image',
@@ -2430,12 +2430,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: ['0', '4', '27', '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
-                                type: 'text',
                                 id: 'Text5',
                                 text: 'C',
                                 align: 'center',
-                                rect: ['0', '4', '27', '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
                                 type: 'image',
@@ -2574,12 +2574,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: ['0', '5', '27', '19', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
-                                type: 'text',
                                 id: 'Text4',
                                 text: 'B',
                                 align: 'center',
-                                rect: ['0', '5', '27', '19', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
                                 type: 'image',
@@ -2718,12 +2718,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: ['0', '3', '27', '19', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
-                                type: 'text',
                                 id: 'A',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                rect: ['0', '3', '27', '19', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
                                 type: 'image',
@@ -2842,20 +2842,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 3, 27, 19, 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text3',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
+                                type: 'text',
                                 rect: [36, 3, 109, '19px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text9',
                                 text: 'Answer Text A',
                                 align: 'left',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
                                 type: 'image',

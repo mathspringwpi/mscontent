@@ -384,18 +384,18 @@
                     }
                 },
                 timeline: {
-                    duration: 124071,
+                    duration: 127071,
                     autoPlay: true,
                     labels: {
                         "Read Question": 2000,
-                        "Hint 1": 10000,
-                        "Hint 2": 23000,
-                        "Hint 3": 32000,
-                        "Hint 4": 51000,
-                        "Hint 5": 62000,
-                        "Hint 6": 74000,
-                        "Hint 7": 87000,
-                        "Answer": 120071
+                        "Hint 1": 13000,
+                        "Hint 2": 26000,
+                        "Hint 3": 35000,
+                        "Hint 4": 54000,
+                        "Hint 5": 65000,
+                        "Hint 6": 77000,
+                        "Hint 7": 90000,
+                        "Answer": 123071
                     },
                     data: [
                         [
@@ -419,14 +419,14 @@
                             '536px'
                         ],
                         [
-                            "eid330",
-                            "display",
-                            55000,
-                            0,
-                            "linear",
-                            "${Ellipse}",
-                            'none',
-                            'block'
+                            "eid325",
+                            "opacity",
+                            95000,
+                            3000,
+                            "easeInQuad",
+                            "${Hint3_text1}",
+                            '1',
+                            '0'
                         ],
                         [
                             "eid350",
@@ -441,7 +441,7 @@
                         [
                             "eid183",
                             "color",
-                            48000,
+                            51000,
                             0,
                             "linear",
                             "${Hint3_text2}",
@@ -451,7 +451,7 @@
                         [
                             "eid184",
                             "color",
-                            51000,
+                            54000,
                             0,
                             "linear",
                             "${Hint3_text2}",
@@ -461,7 +461,7 @@
                         [
                             "eid328",
                             "color",
-                            78000,
+                            81000,
                             1616,
                             "easeInQuad",
                             "${Hint3_text2}",
@@ -471,7 +471,7 @@
                         [
                             "eid329",
                             "color",
-                            106929,
+                            109929,
                             2684,
                             "easeInQuad",
                             "${Hint3_text2}",
@@ -479,19 +479,29 @@
                             'rgba(126,126,126,1.00)'
                         ],
                         [
-                            "eid348",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${AnswerBText}",
-                            '435px',
-                            '435px'
+                            "eid324",
+                            "opacity",
+                            98000,
+                            2472,
+                            "easeInQuad",
+                            "${Arrow3}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid327",
+                            "opacity",
+                            101102,
+                            1397,
+                            "easeInQuad",
+                            "${Arrow3}",
+                            '1',
+                            '0'
                         ],
                         [
                             "eid307",
                             "top",
-                            99499,
+                            102499,
                             17,
                             "easeInQuad",
                             "${Hint7_text2}",
@@ -501,7 +511,7 @@
                         [
                             "eid310",
                             "top",
-                            99516,
+                            102516,
                             3054,
                             "easeInQuad",
                             "${Hint7_text2}",
@@ -509,19 +519,19 @@
                             '181px'
                         ],
                         [
-                            "eid209",
-                            "display",
-                            100000,
+                            "eid349",
+                            "left",
                             0,
-                            "easeInQuad",
-                            "${Hint7_text1}",
-                            'none',
-                            'block'
+                            0,
+                            "linear",
+                            "${Answers}",
+                            '15px',
+                            '15px'
                         ],
                         [
                             "eid181",
                             "color",
-                            43000,
+                            46000,
                             0,
                             "linear",
                             "${Hint3_text1}",
@@ -531,7 +541,7 @@
                         [
                             "eid182",
                             "color",
-                            51000,
+                            54000,
                             0,
                             "linear",
                             "${Hint3_text1}",
@@ -541,7 +551,7 @@
                         [
                             "eid168",
                             "display",
-                            18000,
+                            21000,
                             0,
                             "linear",
                             "${Hint1_y}",
@@ -551,7 +561,7 @@
                         [
                             "eid169",
                             "display",
-                            26000,
+                            29000,
                             0,
                             "linear",
                             "${Hint1_y}",
@@ -561,7 +571,7 @@
                         [
                             "eid326",
                             "opacity",
-                            92000,
+                            95000,
                             3000,
                             "easeInQuad",
                             "${Hint4_text1}",
@@ -569,19 +579,19 @@
                             '0'
                         ],
                         [
-                            "eid321",
-                            "left",
-                            95000,
+                            "eid244",
+                            "color",
+                            123071,
                             0,
                             "easeInQuad",
-                            "${Arrow3}",
-                            '331px',
-                            '331px'
+                            "${Hint8_text1}",
+                            'rgba(126,20,20,1.00)',
+                            'rgba(126,20,20,1.00)'
                         ],
                         [
                             "eid239",
                             "display",
-                            114071,
+                            117071,
                             0,
                             "easeInQuad",
                             "${Hint7_text6}",
@@ -611,7 +621,7 @@
                         [
                             "eid374",
                             "top",
-                            58534,
+                            61534,
                             0,
                             "linear",
                             "${Ellipse}",
@@ -619,19 +629,19 @@
                             '72px'
                         ],
                         [
-                            "eid244",
-                            "color",
-                            120071,
+                            "eid321",
+                            "left",
+                            98000,
                             0,
                             "easeInQuad",
-                            "${Hint8_text1}",
-                            'rgba(126,20,20,1.00)',
-                            'rgba(126,20,20,1.00)'
+                            "${Arrow3}",
+                            '331px',
+                            '331px'
                         ],
                         [
                             "eid228",
                             "color",
-                            102570,
+                            105570,
                             7043,
                             "easeInQuad",
                             "${Hint7_text2}",
@@ -639,14 +649,14 @@
                             'rgba(126,126,126,1.00)'
                         ],
                         [
-                            "eid349",
-                            "left",
+                            "eid250",
+                            "color",
+                            125071,
                             0,
-                            0,
-                            "linear",
-                            "${Answers}",
-                            '15px',
-                            '15px'
+                            "easeInQuad",
+                            "${Hint8_text2}",
+                            'rgba(126,20,20,1.00)',
+                            'rgba(126,20,20,1.00)'
                         ],
                         [
                             "eid347",
@@ -659,24 +669,14 @@
                             '62px'
                         ],
                         [
-                            "eid324",
-                            "opacity",
-                            95000,
-                            2472,
-                            "easeInQuad",
-                            "${Arrow3}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid327",
-                            "opacity",
-                            98102,
-                            1397,
-                            "easeInQuad",
-                            "${Arrow3}",
-                            '1',
-                            '0'
+                            "eid348",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${AnswerBText}",
+                            '435px',
+                            '435px'
                         ],
                         [
                             "eid342",
@@ -689,12 +689,12 @@
                             '467px'
                         ],
                         [
-                            "eid29",
+                            "eid28",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${QuestionSound_Container}",
+                            "${Sound_Container}",
                             'none',
                             'none'
                         ],
@@ -711,7 +711,7 @@
                         [
                             "eid240",
                             "display",
-                            118071,
+                            121071,
                             0,
                             "easeInQuad",
                             "${Hint7_text7}",
@@ -721,7 +721,7 @@
                         [
                             "eid247",
                             "color",
-                            118071,
+                            121071,
                             0,
                             "easeInQuad",
                             "${Hint7_text7}",
@@ -731,7 +731,7 @@
                         [
                             "eid248",
                             "color",
-                            122071,
+                            125071,
                             0,
                             "easeInQuad",
                             "${Hint7_text7}",
@@ -741,7 +741,7 @@
                         [
                             "eid322",
                             "top",
-                            95000,
+                            98000,
                             0,
                             "easeInQuad",
                             "${Arrow3}",
@@ -751,7 +751,7 @@
                         [
                             "eid179",
                             "display",
-                            48000,
+                            51000,
                             0,
                             "linear",
                             "${Hint3_text2}",
@@ -759,19 +759,19 @@
                             'block'
                         ],
                         [
-                            "eid325",
-                            "opacity",
-                            92000,
-                            3000,
+                            "eid243",
+                            "display",
+                            125071,
+                            0,
                             "easeInQuad",
-                            "${Hint3_text1}",
-                            '1',
-                            '0'
+                            "${Hint8_text1}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid171",
                             "opacity",
-                            27000,
+                            30000,
                             0,
                             "linear",
                             "${Hint2_90}",
@@ -779,29 +779,29 @@
                             '1'
                         ],
                         [
-                            "eid305",
+                            "eid334",
                             "opacity",
-                            99499,
-                            17,
-                            "easeInQuad",
-                            "${Hint7_text2}",
-                            '1',
-                            '0.40424923780488'
+                            71113,
+                            2000,
+                            "linear",
+                            "${Hint5}",
+                            '0',
+                            '1'
                         ],
                         [
-                            "eid306",
+                            "eid338",
                             "opacity",
-                            99516,
-                            3054,
+                            106000,
+                            1929,
                             "easeInQuad",
-                            "${Hint7_text2}",
-                            '0.40424923780488',
-                            '1'
+                            "${Hint5}",
+                            '1',
+                            '0'
                         ],
                         [
                             "eid304",
                             "display",
-                            100499,
+                            103499,
                             0,
                             "easeInQuad",
                             "${Hint7_text2}",
@@ -811,7 +811,7 @@
                         [
                             "eid208",
                             "display",
-                            102570,
+                            105570,
                             0,
                             "easeInQuad",
                             "${Hint7_text2}",
@@ -821,12 +821,222 @@
                         [
                             "eid375",
                             "left",
-                            30930,
+                            33930,
                             26,
                             "linear",
                             "${Hint2_90}",
                             '68px',
                             '69px'
+                        ],
+                        [
+                            "eid180",
+                            "display",
+                            62000,
+                            0,
+                            "linear",
+                            "${Hint4_text1}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid205",
+                            "display",
+                            99000,
+                            0,
+                            "easeInQuad",
+                            "${Hint4_text1}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid178",
+                            "display",
+                            46000,
+                            0,
+                            "linear",
+                            "${Hint3_text1}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid206",
+                            "display",
+                            99000,
+                            0,
+                            "easeInQuad",
+                            "${Hint3_text1}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid280",
+                            "opacity",
+                            98000,
+                            2472,
+                            "easeInQuad",
+                            "${Hint7_redellipse}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid312",
+                            "opacity",
+                            101102,
+                            1397,
+                            "easeInQuad",
+                            "${Hint7_redellipse}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid249",
+                            "display",
+                            125071,
+                            0,
+                            "easeInQuad",
+                            "${Hint8_text2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid373",
+                            "left",
+                            61534,
+                            0,
+                            "linear",
+                            "${Ellipse}",
+                            '102px',
+                            '102px'
+                        ],
+                        [
+                            "eid172",
+                            "color",
+                            30000,
+                            0,
+                            "linear",
+                            "${Hint2_90}",
+                            'rgba(126,20,20,1.00)',
+                            'rgba(126,20,20,1.00)'
+                        ],
+                        [
+                            "eid173",
+                            "color",
+                            31956,
+                            0,
+                            "linear",
+                            "${Hint2_90}",
+                            'rgba(126,20,20,1.00)',
+                            'rgba(126,126,126,1.00)'
+                        ],
+                        [
+                            "eid163",
+                            "display",
+                            20000,
+                            0,
+                            "linear",
+                            "${Hint1_z}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid237",
+                            "color",
+                            117071,
+                            0,
+                            "easeInQuad",
+                            "${Hint7_text6}",
+                            'rgba(126,20,20,1.00)',
+                            'rgba(126,20,20,1.00)'
+                        ],
+                        [
+                            "eid242",
+                            "color",
+                            121071,
+                            0,
+                            "easeInQuad",
+                            "${Hint7_text6}",
+                            'rgba(126,20,20,1.00)',
+                            'rgba(126,126,126,1.00)'
+                        ],
+                        [
+                            "eid278",
+                            "display",
+                            98000,
+                            0,
+                            "easeInQuad",
+                            "${Hint7_redellipse}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid185",
+                            "display",
+                            71113,
+                            0,
+                            "linear",
+                            "${Hint5}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid376",
+                            "top",
+                            33930,
+                            26,
+                            "linear",
+                            "${Hint2_90}",
+                            '118px',
+                            '115px'
+                        ],
+                        [
+                            "eid210",
+                            "display",
+                            103000,
+                            0,
+                            "easeInQuad",
+                            "${Hint7_text3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid332",
+                            "opacity",
+                            58000,
+                            2000,
+                            "linear",
+                            "${Ellipse}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid333",
+                            "opacity",
+                            74000,
+                            1000,
+                            "linear",
+                            "${Ellipse}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid308",
+                            "left",
+                            102499,
+                            17,
+                            "easeInQuad",
+                            "${Hint7_text2}",
+                            '334px',
+                            '329px'
+                        ],
+                        [
+                            "eid309",
+                            "left",
+                            102516,
+                            3054,
+                            "easeInQuad",
+                            "${Hint7_text2}",
+                            '329px',
+                            '337px'
                         ],
                         [
                             "eid345",
@@ -839,259 +1049,49 @@
                             '62px'
                         ],
                         [
-                            "eid308",
-                            "left",
-                            99499,
+                            "eid330",
+                            "display",
+                            58000,
+                            0,
+                            "linear",
+                            "${Ellipse}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid305",
+                            "opacity",
+                            102499,
                             17,
                             "easeInQuad",
                             "${Hint7_text2}",
-                            '334px',
-                            '329px'
+                            '1',
+                            '0.40424923780488'
                         ],
                         [
-                            "eid309",
-                            "left",
-                            99516,
+                            "eid306",
+                            "opacity",
+                            102516,
                             3054,
                             "easeInQuad",
                             "${Hint7_text2}",
-                            '329px',
-                            '337px'
-                        ],
-                        [
-                            "eid280",
-                            "opacity",
-                            95000,
-                            2472,
-                            "easeInQuad",
-                            "${Hint7_redellipse}",
-                            '0',
+                            '0.40424923780488',
                             '1'
                         ],
                         [
-                            "eid312",
-                            "opacity",
-                            98102,
-                            1397,
-                            "easeInQuad",
-                            "${Hint7_redellipse}",
-                            '1',
-                            '0'
-                        ],
-                        [
-                            "eid249",
-                            "display",
-                            122071,
-                            0,
-                            "easeInQuad",
-                            "${Hint8_text2}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid332",
-                            "opacity",
-                            55000,
-                            2000,
-                            "linear",
-                            "${Ellipse}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid333",
-                            "opacity",
-                            71000,
-                            1000,
-                            "linear",
-                            "${Ellipse}",
-                            '1',
-                            '0'
-                        ],
-                        [
-                            "eid172",
-                            "color",
-                            27000,
-                            0,
-                            "linear",
-                            "${Hint2_90}",
-                            'rgba(126,20,20,1.00)',
-                            'rgba(126,20,20,1.00)'
-                        ],
-                        [
-                            "eid173",
-                            "color",
-                            28956,
-                            0,
-                            "linear",
-                            "${Hint2_90}",
-                            'rgba(126,20,20,1.00)',
-                            'rgba(126,126,126,1.00)'
-                        ],
-                        [
-                            "eid163",
-                            "display",
-                            17000,
-                            0,
-                            "linear",
-                            "${Hint1_z}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid376",
-                            "top",
-                            30930,
-                            26,
-                            "linear",
-                            "${Hint2_90}",
-                            '118px',
-                            '115px'
-                        ],
-                        [
-                            "eid278",
-                            "display",
-                            95000,
-                            0,
-                            "easeInQuad",
-                            "${Hint7_redellipse}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid185",
-                            "display",
-                            68113,
-                            0,
-                            "linear",
-                            "${Hint5}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid237",
-                            "color",
-                            114071,
-                            0,
-                            "easeInQuad",
-                            "${Hint7_text6}",
-                            'rgba(126,20,20,1.00)',
-                            'rgba(126,20,20,1.00)'
-                        ],
-                        [
-                            "eid242",
-                            "color",
-                            118071,
-                            0,
-                            "easeInQuad",
-                            "${Hint7_text6}",
-                            'rgba(126,20,20,1.00)',
-                            'rgba(126,126,126,1.00)'
-                        ],
-                        [
-                            "eid210",
-                            "display",
-                            100000,
-                            0,
-                            "easeInQuad",
-                            "${Hint7_text3}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid373",
-                            "left",
-                            58534,
-                            0,
-                            "linear",
-                            "${Ellipse}",
-                            '102px',
-                            '102px'
-                        ],
-                        [
-                            "eid178",
-                            "display",
-                            43000,
-                            0,
-                            "linear",
-                            "${Hint3_text1}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid206",
-                            "display",
-                            96000,
-                            0,
-                            "easeInQuad",
-                            "${Hint3_text1}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid180",
-                            "display",
-                            59000,
-                            0,
-                            "linear",
-                            "${Hint4_text1}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid205",
-                            "display",
-                            96000,
-                            0,
-                            "easeInQuad",
-                            "${Hint4_text1}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid334",
-                            "opacity",
-                            68113,
-                            2000,
-                            "linear",
-                            "${Hint5}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid338",
-                            "opacity",
-                            103000,
-                            1929,
-                            "easeInQuad",
-                            "${Hint5}",
-                            '1',
-                            '0'
-                        ],
-                        [
-                            "eid243",
-                            "display",
-                            122071,
-                            0,
-                            "easeInQuad",
-                            "${Hint8_text1}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid28",
+                            "eid29",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${Sound_Container}",
+                            "${QuestionSound_Container}",
                             'none',
                             'none'
                         ],
                         [
                             "eid186",
                             "color",
-                            74000,
+                            77000,
                             0,
                             "linear",
                             "${Hint4_text1}",
@@ -1101,7 +1101,7 @@
                         [
                             "eid336",
                             "color",
-                            77000,
+                            80000,
                             1000,
                             "easeInQuad",
                             "${Hint4_text1}",
@@ -1109,14 +1109,14 @@
                             'rgba(126,126,126,1.00)'
                         ],
                         [
-                            "eid250",
-                            "color",
-                            122071,
+                            "eid209",
+                            "display",
+                            103000,
                             0,
                             "easeInQuad",
-                            "${Hint8_text2}",
-                            'rgba(126,20,20,1.00)',
-                            'rgba(126,20,20,1.00)'
+                            "${Hint7_text1}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid339",
@@ -1131,7 +1131,7 @@
                         [
                             "eid170",
                             "display",
-                            27000,
+                            30000,
                             0,
                             "linear",
                             "${Hint2_90}",
@@ -1139,15 +1139,15 @@
                             'block'
                         ],
                             [ "eid268", "trigger", 2000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${question}', [] ] ],
-                            [ "eid269", "trigger", 10000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
-                            [ "eid270", "trigger", 23476.109927449, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2}', [] ] ],
-                            [ "eid271", "trigger", 32000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3}', [] ] ],
-                            [ "eid272", "trigger", 51000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint4}', [] ] ],
-                            [ "eid273", "trigger", 62000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint5}', [] ] ],
-                            [ "eid274", "trigger", 74000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint6}', [] ] ],
-                            [ "eid275", "trigger", 87000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint7}', [] ] ],
-                            [ "eid276", "trigger", 105610, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint7b}', [] ] ],
-                            [ "eid277", "trigger", 120071, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer}', [] ] ]
+                            [ "eid269", "trigger", 13000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
+                            [ "eid270", "trigger", 26476.109927449, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2}', [] ] ],
+                            [ "eid271", "trigger", 35000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3}', [] ] ],
+                            [ "eid272", "trigger", 54000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint4}', [] ] ],
+                            [ "eid273", "trigger", 65000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint5}', [] ] ],
+                            [ "eid274", "trigger", 77000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint6}', [] ] ],
+                            [ "eid275", "trigger", 90000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint7}', [] ] ],
+                            [ "eid276", "trigger", 108610, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint7b}', [] ] ],
+                            [ "eid277", "trigger", 123071, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer}', [] ] ]
                     ]
                 }
             },
@@ -1161,9 +1161,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'E_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1174,25 +1174,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'check.png', '0px', '0px']
                             }]
                         }
@@ -1284,9 +1284,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'E_Button',
                             rect: ['0', '0', '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: ['0', '0', '25', '24', 'auto', 'auto'],
@@ -1297,25 +1297,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: ['0', '4', '27', '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', '']
+                                type: 'text'
                             },
                             {
-                                rect: ['-8', '-3', '42', '33', 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-3', '42', '33', 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1428,9 +1428,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'E_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1441,33 +1441,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                type: 'text'
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1559,9 +1559,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'E_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'E_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1572,33 +1572,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                type: 'text'
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'check.png', '0px', '0px']
                             }]
                         }
@@ -1690,9 +1690,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'D_Button',
                             rect: ['0', '0', '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: ['0', '0', '25', '24', 'auto', 'auto'],
@@ -1703,25 +1703,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: ['0', '4', '27', '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', '']
+                                type: 'text'
                             },
                             {
-                                rect: ['-8', '-4', '42', '33', 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-4', '42', '33', 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1772,14 +1772,14 @@
                             'block'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ],
                         [
                             "eid226",
@@ -1812,14 +1812,14 @@
                             'none'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ]
                     ]
                 }
@@ -1834,9 +1834,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'D_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1847,33 +1847,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                type: 'text'
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1913,14 +1913,14 @@
                             'none'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ],
                         [
                             "eid226",
@@ -1943,14 +1943,14 @@
                             'block'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ]
                     ]
                 }
@@ -1965,9 +1965,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'D_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1978,33 +1978,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                type: 'text'
+                                rect: [36, 4, 101, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'check.png', '0px', '0px']
                             }]
                         }
@@ -2044,14 +2044,14 @@
                             'none'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ],
                         [
                             "eid226",
@@ -2074,14 +2074,14 @@
                             'block'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ]
                     ]
                 }
@@ -2096,9 +2096,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'D_Button',
                             rect: [0, 0, '25', '24', 'auto', 'auto'],
+                            id: 'D_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2109,33 +2109,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [36, 4, 94, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text13',
                                 text: 'Answer Text D',
                                 align: 'left',
-                                type: 'text'
+                                rect: [36, 4, 94, '20px', 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'check.png', '0px', '0px']
                             }]
                         }
@@ -2175,14 +2175,14 @@
                             'none'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ],
                         [
                             "eid226",
@@ -2205,14 +2205,14 @@
                             'block'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ]
                     ]
                 }
@@ -2227,9 +2227,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'C_Button',
                             rect: ['0', '0', '25', '24', 'auto', 'auto'],
+                            id: 'C_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: ['0', '0', '25', '24', 'auto', 'auto'],
@@ -2240,25 +2240,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: ['0', '4', '27', '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
                                 id: 'Text5',
                                 text: 'C',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', '']
+                                type: 'text'
                             },
                             {
-                                rect: ['-8', '-4', '42', '33', 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-4', '42', '33', 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -2371,9 +2371,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'B_Button',
                             rect: ['0', '0', '25', '25', 'auto', 'auto'],
+                            id: 'B_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: ['0', '0', '25', '24', 'auto', 'auto'],
@@ -2384,25 +2384,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: ['0', '5', '27', '19', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
                                 id: 'Text4',
                                 text: 'B',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', '']
+                                type: 'text'
                             },
                             {
-                                rect: ['-8', '-4', '42', '33', 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-4', '42', '33', 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -2422,6 +2422,16 @@
                         "Answer Correct": 10000
                     },
                     data: [
+                        [
+                            "eid7",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy5}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
+                        ],
                         [
                             "eid251",
                             "display",
@@ -2451,16 +2461,6 @@
                             "${check}",
                             'none',
                             'block'
-                        ],
-                        [
-                            "eid7",
-                            "background-color",
-                            0,
-                            0,
-                            "linear",
-                            "${EllipseCopy5}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid12",
@@ -2515,9 +2515,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'A_Button',
                             rect: ['8', '16', '25', '24', 'auto', 'auto'],
+                            id: 'A_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: ['0', '0', '25', '24', 'auto', 'auto'],
@@ -2528,25 +2528,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: ['0', '3', '27', '19', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', ''],
                                 id: 'A',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', 'break-word', '']
+                                type: 'text'
                             },
                             {
-                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-16', '65', '42', 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             },
                             {
-                                rect: ['-8', '-4', '42', '33', 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: ['-8', '-4', '42', '33', 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             }]
                         }
@@ -2639,9 +2639,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'A_Button',
                             rect: [8, 16, '25', '24', 'auto', 'auto'],
+                            id: 'A_Button',
+                            type: 'group',
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -2652,33 +2652,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 3, 27, 19, 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text3',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 3, 27, 19, 'auto', 'auto']
                             },
                             {
-                                rect: [36, 3, 109, '19px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text9',
                                 text: 'Answer Text A',
                                 align: 'left',
-                                type: 'text'
+                                rect: [36, 3, 109, '19px', 'auto', 'auto']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'check.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'x.png', '0px', '0px']
                             }]
                         }
@@ -2750,39 +2750,39 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'Group',
                             rect: ['0', '0', '153', '183', 'auto', 'auto'],
+                            id: 'Group',
+                            type: 'group',
                             c: [
                             {
-                                type: 'rect',
+                                rect: ['8', '157', '101', '26', 'auto', 'auto'],
                                 id: 'EButton',
                                 symbolName: 'EButton_3',
-                                rect: ['8', '157', '101', '26', 'auto', 'auto']
+                                type: 'rect'
                             },
                             {
-                                type: 'rect',
+                                rect: ['8', '121', '101', '26', 'auto', 'auto'],
                                 id: 'DButton',
                                 symbolName: 'DButton_3',
-                                rect: ['8', '121', '101', '26', 'auto', 'auto']
+                                type: 'rect'
                             },
                             {
-                                type: 'rect',
+                                rect: ['8', '86', '101', '26', 'auto', 'auto'],
                                 id: 'CButton',
                                 symbolName: 'CButton_3',
-                                rect: ['8', '86', '101', '26', 'auto', 'auto']
+                                type: 'rect'
                             },
                             {
-                                type: 'rect',
+                                rect: ['8', '50', '125', '26', 'auto', 'auto'],
                                 id: 'BButton',
                                 symbolName: 'BButton_3',
-                                rect: ['8', '50', '125', '26', 'auto', 'auto']
+                                type: 'rect'
                             },
                             {
-                                type: 'rect',
+                                rect: ['0', '0', '153', '42', 'auto', 'auto'],
                                 id: 'AButton',
                                 symbolName: 'AButton_3',
-                                rect: ['0', '0', '153', '42', 'auto', 'auto']
+                                type: 'rect'
                             }]
                         }
                     ],
@@ -2810,24 +2810,24 @@
                 content: {
                     dom: [
                         {
-                            transform: [[0, 0, 0], ['-52', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             rect: [10, 1, '0px', 8, 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['-52', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             id: 'Rectangle2Copy2',
                             stroke: [3, 'rgb(246, 2, 2)', 'solid'],
                             type: 'rect',
                             fill: ['rgba(192,192,192,0)']
                         },
                         {
-                            transform: [[0, 0, 0], ['14', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             rect: [0, 0, 1, 15, 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['14', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             id: 'Rectangle2',
                             stroke: [3, 'rgb(246, 2, 2)', 'solid'],
                             type: 'rect',
                             fill: ['rgba(192,192,192,0)']
                         },
                         {
-                            transform: [[0, 0, 0], ['-24', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             rect: [11, 0, '0px', 50, 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['-24', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             id: 'Rectangle2Copy',
                             stroke: [3, 'rgb(246, 2, 2)', 'solid'],
                             type: 'rect',
@@ -2855,14 +2855,24 @@
                             '-4px'
                         ],
                         [
-                            "eid292",
+                            "eid315",
+                            "left",
+                            0,
+                            97528,
+                            "easeInQuad",
+                            "${Rectangle2}",
+                            '0px',
+                            '1px'
+                        ],
+                        [
+                            "eid282",
                             "left",
                             97528,
                             2472,
                             "easeInQuad",
-                            "${Rectangle2Copy2}",
-                            '10px',
-                            '-3px'
+                            "${Rectangle2}",
+                            '1px',
+                            '10px'
                         ],
                         [
                             "eid285",
@@ -2895,44 +2905,34 @@
                             '15px'
                         ],
                         [
-                            "eid300",
+                            "eid297",
                             "top",
                             97528,
                             2472,
                             "easeInQuad",
-                            "${Rectangle2Copy2}",
-                            '1px',
-                            '-2px'
-                        ],
-                        [
-                            "eid315",
-                            "left",
-                            0,
-                            97528,
-                            "easeInQuad",
-                            "${Rectangle2}",
+                            "${Rectangle2Copy}",
                             '0px',
-                            '1px'
+                            '-7px'
                         ],
                         [
-                            "eid282",
+                            "eid292",
                             "left",
                             97528,
                             2472,
                             "easeInQuad",
-                            "${Rectangle2}",
-                            '1px',
-                            '10px'
+                            "${Rectangle2Copy2}",
+                            '10px',
+                            '-3px'
                         ],
                         [
-                            "eid288",
-                            "rotateZ",
+                            "eid291",
+                            "left",
                             97528,
                             2472,
                             "easeInQuad",
                             "${Rectangle2Copy}",
-                            '-24deg',
-                            '-65deg'
+                            '11px',
+                            '3px'
                         ],
                         [
                             "eid293",
@@ -2945,14 +2945,14 @@
                             '18deg'
                         ],
                         [
-                            "eid291",
-                            "left",
+                            "eid288",
+                            "rotateZ",
                             97528,
                             2472,
                             "easeInQuad",
                             "${Rectangle2Copy}",
-                            '11px',
-                            '3px'
+                            '-24deg',
+                            '-65deg'
                         ],
                         [
                             "eid320",
@@ -2975,14 +2975,14 @@
                             '-24deg'
                         ],
                         [
-                            "eid297",
+                            "eid300",
                             "top",
                             97528,
                             2472,
                             "easeInQuad",
-                            "${Rectangle2Copy}",
-                            '0px',
-                            '-7px'
+                            "${Rectangle2Copy2}",
+                            '1px',
+                            '-2px'
                         ]
                     ]
                 }

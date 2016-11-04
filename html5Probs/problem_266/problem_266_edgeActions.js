@@ -37,37 +37,37 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 42538, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 45538, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 54781, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 58781, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 78458, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 82458, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 9489, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 12489, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 16687, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 19687, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 23165, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 26165, function(sym, e) {
          maybeStop(sym)
 
       });
@@ -104,13 +104,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 83000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 87000, function(sym, e) {
          maybeStop(sym)
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 50341, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 53341, function(sym, e) {
          maybeStop(sym)
 
       });
