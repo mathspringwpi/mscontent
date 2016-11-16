@@ -29,254 +29,164 @@
                 content: {
                     dom: [
                         {
-                            id: 'AnswerGroup',
-                            type: 'group',
-                            rect: ['40', '417', '220', '63', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'Answer_Container',
-                                display: 'block',
-                                type: 'rect',
-                                rect: ['0', '0', '218', '61', 'auto', 'auto'],
-                                fill: ["rgba(6,6,6,0.00)"],
-                                stroke: [1,"rgba(4,4,4,0.18)","solid"]
-                            },
-                            {
-                                id: 'Grade_Check',
-                                display: 'none',
-                                type: 'image',
-                                rect: ['187', '32', '33', '31', 'auto', 'auto'],
-                                fill: ["rgba(0,0,0,0)",im+"check.png",'0px','0px']
-                            },
-                            {
-                                id: 'Grade_X',
-                                display: 'none',
-                                type: 'image',
-                                rect: ['187', '32', '33', '31', 'auto', 'auto'],
-                                fill: ["rgba(0,0,0,0)",im+"x.png",'0px','0px']
-                            }]
-                        },
-                        {
                             id: 'Question_TextBlack',
                             type: 'text',
-                            rect: ['24', '30', '276px', '121px', 'auto', 'auto'],
-                            text: "<p style=\"margin:0px\">​A company of snow globes needs to calculate how much distilled water will be needed to fill each snow globe. &nbsp;Find the volume of the snow globe with a radius of 6 cm. Enter the answer in terms of π.</p>",
+                            rect: ['24', '30', '298', '146px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​Maria and Nadia drive from Boston to Toronto to visit their friend. They take two days for the trip. &nbsp;They keep track of the actual time they spend driving, not including any stops they make. &nbsp;They use cruise control and drive the same speed whenever they are on the Interstate.&nbsp;</p>",
                             align: "left",
                             font: ['Georgia, \'Times New Roman\', Times, serif', [16, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
                         },
                         {
+                            id: 'Answers',
+                            symbolName: 'Answers_1',
+                            type: 'rect',
+                            rect: ['24', '410px', '156', '187', 'auto', 'auto']
+                        },
+                        {
+                            id: 'AnswerDText',
+                            type: 'text',
+                            rect: ['71', '538px', '101', '20px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px;\">​<span style=\"font-family: 'Times New Roman', Times, serif; font-style: italic;\">y</span><span style=\"font-family: 'Times New Roman', Times, serif;\"> = 70</span><span style=\"font-family: 'Times New Roman', Times, serif; font-style: italic;\">x</span></p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [14, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'AnswerCText',
+                            type: 'text',
+                            rect: ['71', '499px', '101', '19px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​<span style=\"font-family: 'Times New Roman', Times, serif; font-style: italic;\">y </span><span style=\"font-family: 'Times New Roman', Times, serif;\">= 65</span><span style=\"font-family: 'Times New Roman', Times, serif; font-style: italic;\">x</span></p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [14, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'AnswerBText',
+                            type: 'text',
+                            rect: ['70px', '464px', '112', '19px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px;\">​<span style=\"font-family: 'Times New Roman', Times, serif; font-style: italic;\">y</span><span style=\"font-family: 'Times New Roman', Times, serif;\"> = 55</span><span style=\"font-family: 'Times New Roman', Times, serif; font-style: italic;\">x</span></p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [14, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'AnswerAText',
+                            type: 'text',
+                            rect: ['71px', '431px', '109', '19', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​<span style=\"font-style: italic; font-family: 'Times New Roman', Times, serif;\">y </span><span style=\"font-family: 'Times New Roman', Times, serif;\">= 50</span><span style=\"font-style: italic; font-family: 'Times New Roman', Times, serif;\">x</span></p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [14, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'QuestionSound_Container',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['15px', '10px', '17', '8', 'auto', 'auto'],
+                            fill: ["rgba(248,250,248,0.00)"],
+                            stroke: [1,"rgb(4, 4, 4)","solid"]
+                        },
+                        {
+                            id: 'Sound_Container',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['46px', '19px', '164px', '7px', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            fill: ["rgba(248,250,248,1)"],
+                            stroke: [1,"rgb(4, 4, 4)","solid"]
+                        },
+                        {
+                            id: 'InstructionsText',
+                            type: 'text',
+                            rect: ['24px', '186px', '219px', '102px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​<span style=\"font-family: Arial, Helvetica, sans-serif;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Day 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Day 2</span></p><p style=\"margin:0px\"><span style=\"font-family: Arial, Helvetica, sans-serif;\">​</span></p><p style=\"margin:0px\"><span style=\"font-family: Arial, Helvetica, sans-serif;\">​Hours &nbsp; &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</span></p><p style=\"margin:0px\"><span style=\"font-family: Arial, Helvetica, sans-serif;\"> </span></p><p style=\"margin:0px\"><span style=\"font-family: Arial, Helvetica, sans-serif;\">​</span></p><p style=\"margin:0px\"><span style=\"font-family: Arial, Helvetica, sans-serif;\">Miles &nbsp; &nbsp; &nbsp; &nbsp;325 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 260&nbsp;</span></p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [16, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
+                        },
+                        {
                             id: 'Question_TextBlack2',
                             type: 'text',
-                            rect: ['25', '360', 'auto', 'auto', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​</p>",
+                            rect: ['24px', '300px', '289px', '78px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">Which of the following equations, where <span style=\"font-style: italic;\">x</span> represents hours&nbsp;​and <span style=\"font-style: italic;\">y</span> miles, represents a speed that is greater than Maria and&nbsp;​Nadia's speed?</p>",
                             align: "left",
-                            font: ['Georgia, \'Times New Roman\', Times, serif', [16, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "nowrap"]
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [16, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
                         },
                         {
-                            id: 'formula',
-                            display: 'none',
-                            type: 'group',
-                            rect: ['363px', '135px', '34', '49px', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'Question_TextRedItalics',
-                                type: 'text',
-                                rect: ['30px', '10px', '82px', '26px', 'auto', 'auto'],
-                                text: "<p style=\"margin:0px\">​π r³</p>",
-                                align: "left",
-                                font: ['Georgia, Times New Roman, Times, serif', [18, "px"], "rgba(157,0,9,1)", "normal", "none", "italic", "break-word", ""]
-                            },
-                            {
-                                id: 'fraction',
-                                type: 'group',
-                                rect: ['-8', '21', '30', '2', 'auto', 'auto'],
-                                c: [
-                                {
-                                    id: 'Rectangle2',
-                                    type: 'rect',
-                                    rect: ['0px', '0px', '28px', '0px', 'auto', 'auto'],
-                                    fill: ["rgba(157,0,9,1.00)"],
-                                    stroke: [1,"rgba(157,0,9,1.00)","solid"]
-                                },
-                                {
-                                    id: '_3',
-                                    type: 'text',
-                                    rect: ['9px', '2px', '30px', '26px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​3</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: '_4',
-                                    type: 'text',
-                                    rect: ['8px', '-19px', '34px', '28px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​4</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                }]
-                            },
-                            {
-                                id: 'Question_TextRed',
-                                type: 'text',
-                                rect: ['-45px', '14px', '97px', '29px', 'auto', 'auto'],
-                                text: "<p style=\"margin:0px\">​<span style=\"font-style: italic;\">V</span> =&nbsp;</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "normal", "none", "normal", "break-word", ""]
-                            }]
-                        },
-                        {
-                            id: 'hint_2',
-                            display: 'none',
-                            type: 'group',
-                            rect: ['384px', '201px', '191px', '24', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'Text3',
-                                type: 'text',
-                                rect: ['0px', '0px', '191px', '24px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​(6 cm) (6 cm) (6 cm) (<span style=\"font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;\">π</span>)</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            },
-                            {
-                                id: 'Text2',
-                                type: 'text',
-                                rect: ['-51px', '0px', '34px', '26px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​=&nbsp;</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            },
-                            {
-                                id: 'fraction_2',
-                                type: 'group',
-                                rect: ['-28px', '-11px', '34', '28', 'auto', 'auto'],
-                                c: [
-                                {
-                                    id: '_4Copy',
-                                    type: 'text',
-                                    rect: ['0px', '0px', '34px', '28px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​4</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: '_3Copy',
-                                    type: 'text',
-                                    rect: ['1px', '21px', '30px', '26px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​3</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: 'Rectangle2Copy',
-                                    type: 'rect',
-                                    rect: ['-8px', '19px', '28px', '0px', 'auto', 'auto'],
-                                    fill: ["rgba(157,0,9,1.00)"],
-                                    stroke: [1,"rgba(157,0,9,1.00)","solid"]
-                                }]
-                            }]
-                        },
-                        {
-                            id: 'answer_1',
-                            display: 'none',
-                            type: 'group',
-                            rect: ['387px', '255px', '166px', '24', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'Text3Copy',
-                                type: 'text',
-                                rect: ['-3px', '0px', '107px', '24px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​216&nbsp;<span style=\"font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;\">π</span><span style=\"font-style: italic;\"> </span>cm ³&nbsp;</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            },
-                            {
-                                id: 'Text2Copy',
-                                type: 'text',
-                                rect: ['-53px', '0px', '33px', '26px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​=&nbsp;</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            },
-                            {
-                                id: 'fraction_2Copy',
-                                type: 'group',
-                                rect: ['-30px', '-11px', '33px', '28', 'auto', 'auto'],
-                                c: [
-                                {
-                                    id: '_4Copy2',
-                                    type: 'text',
-                                    rect: ['0px', '0px', '33px', '28px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​4</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: '_3Copy2',
-                                    type: 'text',
-                                    rect: ['1px', '21px', '29px', '26px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​3</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: 'Rectangle2Copy2',
-                                    type: 'rect',
-                                    rect: ['-8px', '19px', '27px', '0px', 'auto', 'auto'],
-                                    fill: ["rgba(157,0,9,1.00)"],
-                                    stroke: [1,"rgba(157,0,9,1.00)","solid"]
-                                }]
-                            }]
-                        },
-                        {
-                            id: 'answer_2',
+                            id: 'answer',
                             display: 'none',
                             type: 'text',
-                            rect: ['333px', '307px', '166px', '38px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​= &nbsp;288&nbsp;<span style=\"font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;\">π</span> cm ³</p>",
+                            rect: ['354px', '518px', '170px', 'auto', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​The answer is D, with a speed of 70</p>",
                             align: "left",
-                            font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                            textStyle: ["", "", "", "", "none"]
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [18, "px"], "rgba(10,131,29,1.00)", "700", "none", "normal", "break-word", ""]
                         },
                         {
-                            id: 'Snow_Globe',
-                            type: 'group',
-                            rect: ['128px', '274px', '54', '19', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'snow_globe2',
-                                type: 'image',
-                                rect: ['-89px', '-70px', '178px', '173px', 'auto', 'auto'],
-                                fill: ["rgba(0,0,0,0)",im+"snow%20globe2.jpg",'0px','0px']
-                            },
-                            {
-                                id: 'Ellipse',
-                                type: 'ellipse',
-                                rect: ['0px', '17px', '4px', '4px', 'auto', 'auto'],
-                                borderRadius: ["50%", "50%", "50%", "50%"],
-                                fill: ["rgba(0,0,0,1.00)"],
-                                stroke: [1,"rgba(0,0,0,1)","solid"]
-                            },
-                            {
-                                id: 'Rectangle',
-                                type: 'rect',
-                                rect: ['6px', '19px', '46px', '0px', 'auto', 'auto'],
-                                fill: ["rgba(0,0,0,1)"],
-                                stroke: [1,"rgb(0, 0, 0)","solid"]
-                            },
-                            {
-                                id: '_6_cm',
-                                type: 'text',
-                                rect: ['0px', '0px', '54px', '19px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​r = 6 cm</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [14, "px"], "rgba(131,4,4,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            }]
+                            id: 'answer2',
+                            display: 'none',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"answer.mp3",aud+"answer.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'Hint_1b',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['349px', '117px', '233px', '69px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​<span style=\"font-size: 16px;\">Speed on Day 2 :</span></p><p style=\"margin:0px\"><span style=\"font-size: 16px;\">​</span></p><p style=\"margin:0px\"><span style=\"font-size: 16px;\">​distance ÷ time = 260 ÷ 4 = 65</span></p>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [18, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Hint_1a',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['349', '41px', '233', '69px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​Speed on Day 1:</p><p style=\"margin:0px\">​</p><p style=\"margin:0px\">​distance ÷ time = 325 ÷ 5 = 65</p>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Hint_1d',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['344px', '300px', '244px', '125px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​<span style=\"font-size: 16px; font-style: italic;\">If you use x to represent number of hours and y to represent number of miles, and then use 65 for the speed, you should come up with an equation that looks a lot like the answer choices. Try it!</span></p>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [18, "px"], "rgba(5,68,15,1.00)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Hint_3',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['338px', '453px', '250px', '60px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​Find the equation with the speed that is greater than 65</p>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(0,82,203,1.00)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Hint1_c',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['249px', '211px', '351px', '33px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​(number of miles) = (speed) * (number of hours)</p>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(0,82,203,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Hint_2',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['354px', '244px', '194px', '28px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\"><span style=\"font-family: 'Times New Roman', Times, serif; font-size: 24px;\">y &nbsp;= &nbsp; &nbsp; 65 &nbsp;x &nbsp; &nbsp;</span></p>",
+                            align: "left",
+                            font: ['Georgia, Times New Roman, Times, serif', [18, "px"], "rgba(157,0,9,1)", "normal", "none", "italic", "break-word", ""]
+                        },
+                        {
+                            id: 'hint2',
+                            display: 'none',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint2.mp3",aud+"hint2.ogg"],
+                            preload: 'auto'
                         },
                         {
                             id: 'question',
@@ -285,15 +195,6 @@
                             tag: 'audio',
                             rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
                             source: [aud+"question.mp3",aud+"question.ogg"],
-                            preload: 'auto'
-                        },
-                        {
-                            id: 'answer',
-                            display: 'none',
-                            type: 'audio',
-                            tag: 'audio',
-                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
-                            source: [aud+"answer.mp3",aud+"answer.ogg"],
                             preload: 'auto'
                         },
                         {
@@ -306,22 +207,12 @@
                             preload: 'auto'
                         },
                         {
-                            id: 'hint_1',
-                            display: 'none',
-                            type: 'text',
-                            rect: ['358px', '41px', '171px', '63px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​<span style=\"color: rgb(4, 81, 157);\">radius = 6 cm</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(4, 68, 131);\">​</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(4, 68, 131);\">​</span><span style=\"color: rgb(4, 81, 157);\">What is the volume?</span></p>",
-                            align: "left",
-                            font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(131,4,4,1)", "400", "none", "normal", "break-word", "normal"],
-                            textStyle: ["", "", "", "", "none"]
-                        },
-                        {
-                            id: 'hint2',
+                            id: 'hint3',
                             display: 'none',
                             type: 'audio',
                             tag: 'audio',
                             rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
-                            source: [aud+"hint2.mp3",aud+"hint2.ogg"],
+                            source: [aud+"hint3.mp3",aud+"hint3.ogg"],
                             preload: 'auto'
                         }
                     ],
@@ -335,25 +226,85 @@
                     }
                 },
                 timeline: {
-                    duration: 88000,
+                    duration: 171250,
                     autoPlay: true,
                     labels: {
-                        "Label 1": 0,
                         "Read Question": 2000,
-                        "Hint 1": 21000,
-                        "Hint 2": 34000,
-                        "Answer Hint": 62000
+                        "Hint 1": 39000,
+                        "Hint 2": 94000,
+                        "Hint 3": 115000,
+                        "Answer Hint": 166000
                     },
                     data: [
                         [
-                            "eid276",
-                            "height",
+                            "eid244",
+                            "display",
+                            92095,
+                            0,
+                            "linear",
+                            "${Hint1_c}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid246",
+                            "display",
+                            164000,
+                            0,
+                            "linear",
+                            "${Hint_3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid238",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${Answer_Container}",
-                            '61px',
-                            '61px'
+                            "${Answers}",
+                            '410px',
+                            '410px'
+                        ],
+                        [
+                            "eid241",
+                            "display",
+                            62927,
+                            0,
+                            "linear",
+                            "${Hint_1a}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid242",
+                            "display",
+                            77500,
+                            0,
+                            "linear",
+                            "${Hint_1b}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid28",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Sound_Container}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid243",
+                            "display",
+                            92750,
+                            0,
+                            "linear",
+                            "${Hint_1d}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid29",
@@ -361,164 +312,35 @@
                             0,
                             0,
                             "linear",
-                            "${Answer_Container}",
-                            'block',
-                            'block'
-                        ],
-                        [
-                            "eid270",
-                            "border-width",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            '1px',
-                            '1px'
-                        ],
-                        [
-                            "eid315",
-                            "display",
-                            38000,
-                            0,
-                            "linear",
-                            "${formula}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid319",
-                            "display",
-                            48787,
-                            0,
-                            "linear",
-                            "${hint_2}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid326",
-                            "display",
-                            32000,
-                            0,
-                            "linear",
-                            "${hint_1}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid325",
-                            "background-color",
-                            88000,
-                            0,
-                            "linear",
-                            "${Ellipse}",
-                            'rgba(0,0,0,1.00)',
-                            'rgba(0,0,0,1.00)'
-                        ],
-                        [
-                            "eid268",
-                            "background-color",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            'rgba(6,6,6,0.00)',
-                            'rgba(6,6,6,0.00)'
-                        ],
-                        [
-                            "eid280",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${Grade_X}",
+                            "${QuestionSound_Container}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid271",
-                            "border-color",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            'rgba(4,4,4,0.18)',
-                            'rgba(4,4,4,0.18)'
-                        ],
-                        [
-                            "eid277",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            '0px',
-                            '0px'
-                        ],
-                        [
-                            "eid322",
+                            "eid247",
                             "display",
-                            72933,
+                            167000,
                             0,
                             "linear",
-                            "${answer_1}",
+                            "${answer}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid244",
-                            "width",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            '218px',
-                            '218px'
-                        ],
-                        [
-                            "eid269",
-                            "background-image",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            [270,[['rgba(255,255,255,0.00)',0],['rgba(255,255,255,0.00)',100]]],
-                            [270,[['rgba(255,255,255,0.00)',0],['rgba(255,255,255,0.00)',100]]]
-                        ],
-                        [
-                            "eid323",
+                            "eid245",
                             "display",
-                            74000,
+                            94000,
                             0,
                             "linear",
-                            "${answer_2}",
+                            "${Hint_2}",
                             'none',
                             'block'
                         ],
-                        [
-                            "eid281",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${Grade_Check}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid278",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            '0px',
-                            '0px'
-                        ],
-                            [ "eid327", "trigger", 2000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${question}', [] ] ],
-                            [ "eid328", "trigger", 21000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
-                            [ "eid329", "trigger", 34000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2}', [] ] ],
-                            [ "eid330", "trigger", 62000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer}', [] ] ]
+                            [ "eid239", "trigger", 2000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${question}', [] ] ],
+                            [ "eid240", "trigger", 39000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
+                            [ "eid248", "trigger", 94000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2}', [] ] ],
+                            [ "eid249", "trigger", 115000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint3}', [] ] ],
+                            [ "eid250", "trigger", 166000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer2}', [] ] ]
                     ]
                 }
             },
@@ -532,9 +354,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'E_Button',
                             type: 'group',
+                            id: 'E_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -545,12 +367,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
@@ -648,46 +470,11 @@
                 resizeInstances: false,
                 content: {
                     dom: [
-                        {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'E_Button',
-                            type: 'group',
-                            c: [
-                            {
-                                rect: [0, 0, 25, 24, 'auto', 'auto'],
-                                borderRadius: ['50%', '50%', '50%', '50%'],
-                                id: 'EllipseCopy8',
-                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
-                                type: 'ellipse',
-                                fill: ['rgba(232,241,160,1.00)']
-                            },
-                            {
-                                type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                id: 'Text8',
-                                text: 'E',
-                                align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
-                            },
-                            {
-                                type: 'image',
-                                display: 'none',
-                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
-                                id: 'x',
-                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                            },
-                            {
-                                type: 'image',
-                                display: 'none',
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
-                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                            }]
-                        }
+
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, 101, 26]
+                            rect: [null, null, '101', '26']
                         }
                     }
                 },
@@ -700,86 +487,7 @@
                         "Answer Correct": 10000
                     },
                     data: [
-                        [
-                            "eid9",
-                            "background-color",
-                            0,
-                            0,
-                            "linear",
-                            "${EllipseCopy8}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
-                        ],
-                        [
-                            "eid13",
-                            "border-width",
-                            0,
-                            0,
-                            "linear",
-                            "${EllipseCopy8}",
-                            '1px',
-                            '1px'
-                        ],
-                        [
-                            "eid257",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${check}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid258",
-                            "display",
-                            5000,
-                            0,
-                            "linear",
-                            "${check}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid43",
-                            "display",
-                            10000,
-                            0,
-                            "linear",
-                            "${check}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid230",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${x}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid231",
-                            "display",
-                            5000,
-                            0,
-                            "linear",
-                            "${x}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid44",
-                            "display",
-                            10000,
-                            0,
-                            "linear",
-                            "${x}",
-                            'block',
-                            'none'
-                        ]
+
                     ]
                 }
             },
@@ -793,9 +501,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'E_Button',
                             type: 'group',
+                            id: 'E_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -806,20 +514,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
                                 rect: [-8, -3, 42, 33, 'auto', 'auto'],
@@ -924,9 +632,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'E_Button',
                             type: 'group',
+                            id: 'E_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -937,20 +645,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -1049,9 +757,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'D_Button',
                             type: 'group',
+                            id: 'D_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1062,12 +770,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
                                 type: 'image',
@@ -1131,14 +839,14 @@
                             'block'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid226",
@@ -1171,14 +879,14 @@
                             'none'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ]
                     ]
                 }
@@ -1193,9 +901,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'D_Button',
                             type: 'group',
+                            id: 'D_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1206,20 +914,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
@@ -1272,14 +980,14 @@
                             'none'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid226",
@@ -1302,14 +1010,14 @@
                             'block'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ]
                     ]
                 }
@@ -1324,9 +1032,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'D_Button',
                             type: 'group',
+                            id: 'D_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1337,31 +1045,31 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
                     style: {
-                        '${check}': {
-                            display: 'none',
-                            rect: [-8, -16, 65, 42]
-                        },
                         '${x}': {
                             display: 'none',
                             rect: [-8, -4, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
                         },
                         '${symbolSelector}': {
                             rect: [null, null, 101, 26]
@@ -1397,14 +1105,14 @@
                             'none'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid226",
@@ -1427,14 +1135,14 @@
                             'block'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ]
                     ]
                 }
@@ -1449,9 +1157,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'D_Button',
                             type: 'group',
+                            id: 'D_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1462,31 +1170,31 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                type: 'text'
                             },
                             {
+                                rect: [36, 4, 94, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text13',
                                 text: 'Answer Text D',
                                 align: 'left',
-                                rect: [36, 4, 94, '20px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
                     style: {
-                        '${check}': {
-                            display: 'none',
-                            rect: [-8, -16, 65, 42]
-                        },
                         '${x}': {
                             display: 'none',
                             rect: [-8, -4, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
                         },
                         '${symbolSelector}': {
                             rect: [null, null, 101, 26]
@@ -1522,14 +1230,14 @@
                             'none'
                         ],
                         [
-                            "eid10",
-                            "border-width",
+                            "eid3",
+                            "background-color",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            '1px',
-                            '1px'
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid226",
@@ -1552,14 +1260,14 @@
                             'block'
                         ],
                         [
-                            "eid3",
-                            "background-color",
+                            "eid10",
+                            "border-width",
                             0,
                             0,
                             "linear",
                             "${EllipseCopy7}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
+                            '1px',
+                            '1px'
                         ]
                     ]
                 }
@@ -1574,9 +1282,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'C_Button',
                             type: 'group',
+                            id: 'C_Button',
+                            rect: [0, 0, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1587,12 +1295,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text5',
                                 text: 'C',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             },
                             {
                                 type: 'image',
@@ -1718,9 +1426,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '25', '25', 'auto', 'auto'],
-                            id: 'B_Button',
                             type: 'group',
+                            id: 'B_Button',
+                            rect: [0, 0, '25', '25', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1731,12 +1439,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 type: 'text',
-                                rect: [0, 5, 27, 19, 'auto', 'auto'],
                                 id: 'Text4',
                                 text: 'B',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                rect: [0, 5, 27, 19, 'auto', 'auto']
                             },
                             {
                                 type: 'image',
@@ -1770,16 +1478,6 @@
                     },
                     data: [
                         [
-                            "eid7",
-                            "background-color",
-                            0,
-                            0,
-                            "linear",
-                            "${EllipseCopy5}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
-                        ],
-                        [
                             "eid251",
                             "display",
                             0,
@@ -1808,6 +1506,16 @@
                             "${check}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid7",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${EllipseCopy5}",
+                            'rgba(232,241,160,1.00)',
+                            'rgba(232,241,160,1.00)'
                         ],
                         [
                             "eid12",
@@ -1862,9 +1570,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [8, 16, '25', '24', 'auto', 'auto'],
-                            id: 'A_Button',
                             type: 'group',
+                            id: 'A_Button',
+                            rect: [8, 16, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1875,12 +1583,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                type: 'text',
                                 rect: [0, 3, 27, 19, 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 id: 'A',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', '']
                             },
                             {
                                 type: 'image',
@@ -1986,9 +1694,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [8, 16, '25', '24', 'auto', 'auto'],
-                            id: 'A_Button',
                             type: 'group',
+                            id: 'A_Button',
+                            rect: [8, 16, '25', '24', 'auto', 'auto'],
                             c: [
                             {
                                 rect: [0, 0, 25, 24, 'auto', 'auto'],
@@ -1999,20 +1707,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
+                                rect: [0, 3, 27, 19, 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text3',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                rect: [0, 3, 27, 19, 'auto', 'auto']
+                                type: 'text'
                             },
                             {
+                                rect: [36, 3, 109, '19px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
-                                type: 'text',
                                 id: 'Text9',
                                 text: 'Answer Text A',
                                 align: 'left',
-                                rect: [36, 3, 109, '19px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -2091,54 +1799,50 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 2, '153', '183', 'auto', 'auto'],
-                            id: 'Group',
                             type: 'group',
+                            id: 'Group',
+                            rect: ['0', '2', '153', '183', 'auto', 'auto'],
                             c: [
                             {
+                                type: 'rect',
                                 id: 'EButton',
-                                type: 'rect',
                                 symbolName: 'EButton_3',
-                                rect: [8, 157, 101, 26, 'auto', 'auto']
+                                rect: ['8', '157', '101', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'DButton',
-                                type: 'rect',
                                 symbolName: 'DButton_3',
-                                rect: [8, 121, 101, 26, 'auto', 'auto']
+                                rect: ['8', '121', '101', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'CButton',
-                                type: 'rect',
                                 symbolName: 'CButton_3',
-                                rect: [8, 86, 101, 26, 'auto', 'auto']
+                                rect: ['8', '86', '101', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'BButton',
-                                type: 'rect',
                                 symbolName: 'BButton_3',
-                                rect: [8, 50, 125, 26, 'auto', 'auto']
+                                rect: ['8', '50', '125', '26', 'auto', 'auto']
                             },
                             {
-                                id: 'AButton',
                                 type: 'rect',
+                                id: 'AButton',
                                 symbolName: 'AButton_3',
-                                rect: [0, 0, 153, 42, 'auto', 'auto']
+                                rect: ['0', '0', '153', '42', 'auto', 'auto']
                             }]
                         }
                     ],
                     style: {
-                        '${AnswerText}': {
-                            font: '{{:}{undefined{:}:{:}}{:}{{:}u{:}n{:}d',
-                            rect: [36, 3, 109, 0]
-                        },
                         '${symbolSelector}': {
-                            rect: [null, null, 156, 187]
+                            rect: [null, null, '156', '187']
                         }
                     }
                 },
                 timeline: {
-                    duration: 0,
+                    duration: 10000,
                     autoPlay: true,
                     data: [
 
@@ -2149,5 +1853,5 @@
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("problem_8GC9_5_edgeActions.js");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("problem_8EE5_2_edgeActions.js");
 })("EdgeProblem");

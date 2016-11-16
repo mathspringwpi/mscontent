@@ -29,254 +29,103 @@
                 content: {
                     dom: [
                         {
-                            id: 'AnswerGroup',
-                            type: 'group',
-                            rect: ['40', '417', '220', '63', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'Answer_Container',
-                                display: 'block',
-                                type: 'rect',
-                                rect: ['0', '0', '218', '61', 'auto', 'auto'],
-                                fill: ["rgba(6,6,6,0.00)"],
-                                stroke: [1,"rgba(4,4,4,0.18)","solid"]
-                            },
-                            {
-                                id: 'Grade_Check',
-                                display: 'none',
-                                type: 'image',
-                                rect: ['187', '32', '33', '31', 'auto', 'auto'],
-                                fill: ["rgba(0,0,0,0)",im+"check.png",'0px','0px']
-                            },
-                            {
-                                id: 'Grade_X',
-                                display: 'none',
-                                type: 'image',
-                                rect: ['187', '32', '33', '31', 'auto', 'auto'],
-                                fill: ["rgba(0,0,0,0)",im+"x.png",'0px','0px']
-                            }]
-                        },
-                        {
                             id: 'Question_TextBlack',
                             type: 'text',
-                            rect: ['24', '30', '276px', '121px', 'auto', 'auto'],
-                            text: "<p style=\"margin:0px\">​A company of snow globes needs to calculate how much distilled water will be needed to fill each snow globe. &nbsp;Find the volume of the snow globe with a radius of 6 cm. Enter the answer in terms of π.</p>",
+                            rect: ['24', '16px', '558px', '78px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​Richard wants to purchase one large pizza and some soft drinks for a club meeting. &nbsp;He compares the prices at two restaurants. &nbsp;Each soft drink at the first restaurant has the same price. &nbsp;The table below shows <span style=\"font-style: italic;\">y, </span>the total<span style=\"font-style: italic;\">&nbsp;</span>price of one large pizza and <span style=\"font-style: italic;\">x</span><span style=\"font-style: normal;\">​ soft drinks at the first restaurant.&nbsp;</span>&nbsp;<span style=\"font-style: italic;\">​</span></p>",
                             align: "left",
                             font: ['Georgia, \'Times New Roman\', Times, serif', [16, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
                         },
                         {
+                            id: 'Answers',
+                            symbolName: 'Answers_1',
+                            type: 'rect',
+                            rect: ['10px', '409px', '156', '187', 'auto', 'auto'],
+                            transform: [[],[],[],['1','0.99259']]
+                        },
+                        {
+                            id: 'AnswerDText',
+                            type: 'text',
+                            rect: ['55px', '535px', '310px', '20px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​The price of one soft drink is more at the first restaurant than at the second restaurant.&nbsp;</p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [14, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'AnswerCText',
+                            type: 'text',
+                            rect: ['55px', '497px', '320px', '30px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​The price of one soft drink is more at the second restaurant than at the first restaurant.</p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [14, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'AnswerBText',
+                            type: 'text',
+                            rect: ['55px', '461px', '300px', '30px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​The price of one large pizza is more at the first restaurant than at the second restaurant.&nbsp;</p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [14, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'AnswerAText',
+                            type: 'text',
+                            rect: ['55px', '421px', '342px', '33px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​The price of one large pizza is more at the second restaurant than at the first restaurant.&nbsp;</p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [14, "px"], "rgba(0,0,0,1)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'QuestionSound_Container',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['15px', '10px', '17', '8', 'auto', 'auto'],
+                            fill: ["rgba(248,250,248,0.00)"],
+                            stroke: [1,"rgb(4, 4, 4)","solid"]
+                        },
+                        {
+                            id: 'Sound_Container',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['46px', '19px', '164px', '7px', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            fill: ["rgba(248,250,248,1)"],
+                            stroke: [1,"rgb(4, 4, 4)","solid"]
+                        },
+                        {
                             id: 'Question_TextBlack2',
                             type: 'text',
-                            rect: ['25', '360', 'auto', 'auto', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​</p>",
+                            rect: ['17px', '276px', '283px', '121px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​At the <span style=\"font-weight: 700;\">second&nbsp;</span>​restaurant, the total price, <span style=\"font-style: italic;\">y</span>, of one large pizza and<span style=\"font-style: italic;\"> x</span>&nbsp;soft drinks can be represented by the equation below:</p><p style=\"margin:0px\">​ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px;\">y</span><span style=\"font-family: 'Times New Roman', Times, serif; font-size: 20px;\"> = 1.5</span><span style=\"font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px;\">x</span><span style=\"font-family: 'Times New Roman', Times, serif; font-size: 20px;\"> + 18</span></p><p style=\"margin:0px\"><span style=\"font-family: 'Times New Roman', Times, serif;\">​Which of the following statements is true?</span></p>",
                             align: "left",
-                            font: ['Georgia, \'Times New Roman\', Times, serif', [16, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "nowrap"]
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [16, ""], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", ""]
                         },
                         {
-                            id: 'formula',
-                            display: 'none',
-                            type: 'group',
-                            rect: ['363px', '135px', '34', '49px', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'Question_TextRedItalics',
-                                type: 'text',
-                                rect: ['30px', '10px', '82px', '26px', 'auto', 'auto'],
-                                text: "<p style=\"margin:0px\">​π r³</p>",
-                                align: "left",
-                                font: ['Georgia, Times New Roman, Times, serif', [18, "px"], "rgba(157,0,9,1)", "normal", "none", "italic", "break-word", ""]
-                            },
-                            {
-                                id: 'fraction',
-                                type: 'group',
-                                rect: ['-8', '21', '30', '2', 'auto', 'auto'],
-                                c: [
-                                {
-                                    id: 'Rectangle2',
-                                    type: 'rect',
-                                    rect: ['0px', '0px', '28px', '0px', 'auto', 'auto'],
-                                    fill: ["rgba(157,0,9,1.00)"],
-                                    stroke: [1,"rgba(157,0,9,1.00)","solid"]
-                                },
-                                {
-                                    id: '_3',
-                                    type: 'text',
-                                    rect: ['9px', '2px', '30px', '26px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​3</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: '_4',
-                                    type: 'text',
-                                    rect: ['8px', '-19px', '34px', '28px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​4</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                }]
-                            },
-                            {
-                                id: 'Question_TextRed',
-                                type: 'text',
-                                rect: ['-45px', '14px', '97px', '29px', 'auto', 'auto'],
-                                text: "<p style=\"margin:0px\">​<span style=\"font-style: italic;\">V</span> =&nbsp;</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "normal", "none", "normal", "break-word", ""]
-                            }]
-                        },
-                        {
-                            id: 'hint_2',
-                            display: 'none',
-                            type: 'group',
-                            rect: ['384px', '201px', '191px', '24', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'Text3',
-                                type: 'text',
-                                rect: ['0px', '0px', '191px', '24px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​(6 cm) (6 cm) (6 cm) (<span style=\"font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;\">π</span>)</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            },
-                            {
-                                id: 'Text2',
-                                type: 'text',
-                                rect: ['-51px', '0px', '34px', '26px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​=&nbsp;</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            },
-                            {
-                                id: 'fraction_2',
-                                type: 'group',
-                                rect: ['-28px', '-11px', '34', '28', 'auto', 'auto'],
-                                c: [
-                                {
-                                    id: '_4Copy',
-                                    type: 'text',
-                                    rect: ['0px', '0px', '34px', '28px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​4</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: '_3Copy',
-                                    type: 'text',
-                                    rect: ['1px', '21px', '30px', '26px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​3</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: 'Rectangle2Copy',
-                                    type: 'rect',
-                                    rect: ['-8px', '19px', '28px', '0px', 'auto', 'auto'],
-                                    fill: ["rgba(157,0,9,1.00)"],
-                                    stroke: [1,"rgba(157,0,9,1.00)","solid"]
-                                }]
-                            }]
-                        },
-                        {
-                            id: 'answer_1',
-                            display: 'none',
-                            type: 'group',
-                            rect: ['387px', '255px', '166px', '24', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'Text3Copy',
-                                type: 'text',
-                                rect: ['-3px', '0px', '107px', '24px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​216&nbsp;<span style=\"font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;\">π</span><span style=\"font-style: italic;\"> </span>cm ³&nbsp;</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            },
-                            {
-                                id: 'Text2Copy',
-                                type: 'text',
-                                rect: ['-53px', '0px', '33px', '26px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​=&nbsp;</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            },
-                            {
-                                id: 'fraction_2Copy',
-                                type: 'group',
-                                rect: ['-30px', '-11px', '33px', '28', 'auto', 'auto'],
-                                c: [
-                                {
-                                    id: '_4Copy2',
-                                    type: 'text',
-                                    rect: ['0px', '0px', '33px', '28px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​4</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: '_3Copy2',
-                                    type: 'text',
-                                    rect: ['1px', '21px', '29px', '26px', 'auto', 'auto'],
-                                    text: "<p style=\"margin:0px\">​3</p>",
-                                    align: "left",
-                                    font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1.00)", "normal", "none", "normal", "break-word", ""]
-                                },
-                                {
-                                    id: 'Rectangle2Copy2',
-                                    type: 'rect',
-                                    rect: ['-8px', '19px', '27px', '0px', 'auto', 'auto'],
-                                    fill: ["rgba(157,0,9,1.00)"],
-                                    stroke: [1,"rgba(157,0,9,1.00)","solid"]
-                                }]
-                            }]
-                        },
-                        {
-                            id: 'answer_2',
+                            id: 'Question_TextBlueNumber',
                             display: 'none',
                             type: 'text',
-                            rect: ['333px', '307px', '166px', '38px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​= &nbsp;288&nbsp;<span style=\"font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;\">π</span> cm ³</p>",
+                            rect: ['355px', '204px', '201px', '64px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​One soft drink at Restaurant One: $1.25</p>",
                             align: "left",
-                            font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(157,0,9,1)", "400", "none", "normal", "break-word", "normal"],
-                            textStyle: ["", "", "", "", "none"]
+                            font: ['Arial, Helvetica, sans-serif', [18, "px"], "rgba(0,82,203,1.00)", "normal", "none", "normal", "break-word", ""]
                         },
                         {
-                            id: 'Snow_Globe',
-                            type: 'group',
-                            rect: ['128px', '274px', '54', '19', 'auto', 'auto'],
-                            c: [
-                            {
-                                id: 'snow_globe2',
-                                type: 'image',
-                                rect: ['-89px', '-70px', '178px', '173px', 'auto', 'auto'],
-                                fill: ["rgba(0,0,0,0)",im+"snow%20globe2.jpg",'0px','0px']
-                            },
-                            {
-                                id: 'Ellipse',
-                                type: 'ellipse',
-                                rect: ['0px', '17px', '4px', '4px', 'auto', 'auto'],
-                                borderRadius: ["50%", "50%", "50%", "50%"],
-                                fill: ["rgba(0,0,0,1.00)"],
-                                stroke: [1,"rgba(0,0,0,1)","solid"]
-                            },
-                            {
-                                id: 'Rectangle',
-                                type: 'rect',
-                                rect: ['6px', '19px', '46px', '0px', 'auto', 'auto'],
-                                fill: ["rgba(0,0,0,1)"],
-                                stroke: [1,"rgb(0, 0, 0)","solid"]
-                            },
-                            {
-                                id: '_6_cm',
-                                type: 'text',
-                                rect: ['0px', '0px', '54px', '19px', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px;\">​r = 6 cm</p>",
-                                align: "left",
-                                font: ['Arial, Helvetica, sans-serif', [14, "px"], "rgba(131,4,4,1)", "400", "none", "normal", "break-word", "normal"],
-                                textStyle: ["", "", "", "", "none"]
-                            }]
+                            id: 'Question_TextBlueNumberCopy',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['355px', '268px', '201px', '64px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​One soft drink at Restaurant Two: $1.50</p>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [18, "px"], "rgba(0,82,203,1.00)", "normal", "none", "normal", "break-word", ""]
+                        },
+                        {
+                            id: 'Hint_1',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['272px', '129px', '233', '29px', 'auto', 'auto'],
+                            text: "<p style=\"margin:0px\">​$20.50 - $19.25 = $1.25</p>",
+                            align: "left",
+                            font: ['Arial, Helvetica, sans-serif', [18, "px"], "rgba(0,82,203,1)", "normal", "none", "normal", "break-word", ""]
                         },
                         {
                             id: 'question',
@@ -288,6 +137,100 @@
                             preload: 'auto'
                         },
                         {
+                            id: 'hint1',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"hint1.mp3",aud+"hint1.ogg"],
+                            preload: 'auto'
+                        },
+                        {
+                            id: 'Ellipse2Copy2',
+                            display: 'none',
+                            type: 'ellipse',
+                            rect: ['166px', '143px', '15px', '18px', 'auto', 'auto'],
+                            borderRadius: ["0px", "50%", "50%", "0px"],
+                            fill: ["rgba(255,255,255,0.00)"],
+                            stroke: [1,"rgba(199,0,0,1.00)","solid"],
+                            transform: [[],['-1']]
+                        },
+                        {
+                            id: 'Ellipse2Copy3',
+                            display: 'none',
+                            type: 'ellipse',
+                            rect: ['166px', '172px', '15px', '18px', 'auto', 'auto'],
+                            borderRadius: ["0px", "50%", "50%", "0px"],
+                            fill: ["rgba(255,255,255,0.00)"],
+                            stroke: [1,"rgba(199,0,0,1.00)","solid"],
+                            transform: [[],['-1']]
+                        },
+                        {
+                            id: 'Ellipse2Copy4',
+                            display: 'none',
+                            type: 'ellipse',
+                            rect: ['166px', '196px', '15px', '18px', 'auto', 'auto'],
+                            borderRadius: ["0px", "50%", "50%", "0px"],
+                            fill: ["rgba(255,255,255,0.00)"],
+                            stroke: [1,"rgba(199,0,0,1.00)","solid"],
+                            transform: [[],['-1']]
+                        },
+                        {
+                            id: 'Ellipse2Copy5',
+                            display: 'none',
+                            type: 'ellipse',
+                            rect: ['166px', '226px', '15px', '18px', 'auto', 'auto'],
+                            borderRadius: ["0px", "50%", "50%", "0px"],
+                            fill: ["rgba(255,255,255,0.00)"],
+                            stroke: [1,"rgba(199,0,0,1.00)","solid"],
+                            transform: [[],['-1']]
+                        },
+                        {
+                            id: 'Table',
+                            type: 'image',
+                            rect: ['21px', '94px', '162px', '176px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"Table.png",'0px','0px']
+                        },
+                        {
+                            id: 'Text',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['193px', '143px', '65px', '20px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px;\">​<span style=\"color: rgb(164, 7, 7); font-family: Arial, Helvetica, sans-serif;\">$1.25​</span></p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [16, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
+                            textStyle: ["", "", "", "", "none"]
+                        },
+                        {
+                            id: 'TextCopy',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['193px', '172px', '65px', '20px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px;\">​<span style=\"color: rgb(164, 7, 7); font-family: Arial, Helvetica, sans-serif;\">$1.25​</span></p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [16, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
+                            textStyle: ["", "", "", "", "none"]
+                        },
+                        {
+                            id: 'TextCopy2',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['193px', '196px', '65px', '20px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px;\">​<span style=\"color: rgb(164, 7, 7); font-family: Arial, Helvetica, sans-serif;\">$1.25​</span></p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [16, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
+                            textStyle: ["", "", "", "", "none"]
+                        },
+                        {
+                            id: 'TextCopy3',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['193px', '226px', '65px', '20px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px;\">​<span style=\"color: rgb(164, 7, 7); font-family: Arial, Helvetica, sans-serif;\">$1.25​</span></p>",
+                            align: "left",
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [16, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
+                            textStyle: ["", "", "", "", "none"]
+                        },
+                        {
                             id: 'answer',
                             display: 'none',
                             type: 'audio',
@@ -297,32 +240,14 @@
                             preload: 'auto'
                         },
                         {
-                            id: 'hint1',
-                            display: 'none',
-                            type: 'audio',
-                            tag: 'audio',
-                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
-                            source: [aud+"hint1.mp3",aud+"hint1.ogg"],
-                            preload: 'auto'
-                        },
-                        {
-                            id: 'hint_1',
+                            id: 'C',
                             display: 'none',
                             type: 'text',
-                            rect: ['358px', '41px', '171px', '63px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​<span style=\"color: rgb(4, 81, 157);\">radius = 6 cm</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(4, 68, 131);\">​</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(4, 68, 131);\">​</span><span style=\"color: rgb(4, 81, 157);\">What is the volume?</span></p>",
+                            rect: ['389px', '345px', '177px', '52px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px;\">​The answer is C</p>",
                             align: "left",
-                            font: ['Arial, Helvetica, sans-serif', [16, "px"], "rgba(131,4,4,1)", "400", "none", "normal", "break-word", "normal"],
+                            font: ['Georgia, \'Times New Roman\', Times, serif', [20, "px"], "rgba(2,122,21,1.00)", "700", "none", "normal", "break-word", "normal"],
                             textStyle: ["", "", "", "", "none"]
-                        },
-                        {
-                            id: 'hint2',
-                            display: 'none',
-                            type: 'audio',
-                            tag: 'audio',
-                            rect: ['0', '0', '320px', '45px', 'auto', 'auto'],
-                            source: [aud+"hint2.mp3",aud+"hint2.ogg"],
-                            preload: 'auto'
                         }
                     ],
                     style: {
@@ -335,25 +260,133 @@
                     }
                 },
                 timeline: {
-                    duration: 88000,
+                    duration: 153000,
                     autoPlay: true,
                     labels: {
-                        "Label 1": 0,
                         "Read Question": 2000,
-                        "Hint 1": 21000,
-                        "Hint 2": 34000,
-                        "Answer Hint": 62000
+                        "Hint 1": 55000,
+                        "Answer Hint": 119500
                     },
                     data: [
                         [
-                            "eid276",
-                            "height",
+                            "eid283",
+                            "display",
+                            151500,
+                            0,
+                            "linear",
+                            "${C}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid280",
+                            "display",
+                            117500,
+                            0,
+                            "linear",
+                            "${TextCopy3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid244",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${Answer_Container}",
-                            '61px',
-                            '61px'
+                            "${Answers}",
+                            '409px',
+                            '409px'
+                        ],
+                        [
+                            "eid282",
+                            "display",
+                            133500,
+                            0,
+                            "linear",
+                            "${Question_TextBlueNumberCopy}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid281",
+                            "display",
+                            141000,
+                            0,
+                            "linear",
+                            "${Question_TextBlueNumber}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid240",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${Answers}",
+                            '10px',
+                            '10px'
+                        ],
+                        [
+                            "eid275",
+                            "display",
+                            115000,
+                            0,
+                            "linear",
+                            "${Ellipse2Copy3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid273",
+                            "display",
+                            76673,
+                            0,
+                            "linear",
+                            "${Ellipse2Copy2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid276",
+                            "display",
+                            115500,
+                            0,
+                            "linear",
+                            "${TextCopy}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid28",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Sound_Container}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid279",
+                            "display",
+                            117000,
+                            0,
+                            "linear",
+                            "${Ellipse2Copy5}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid274",
+                            "display",
+                            114500,
+                            0,
+                            "linear",
+                            "${Text}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid29",
@@ -361,164 +394,53 @@
                             0,
                             0,
                             "linear",
-                            "${Answer_Container}",
-                            'block',
-                            'block'
-                        ],
-                        [
-                            "eid270",
-                            "border-width",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            '1px',
-                            '1px'
-                        ],
-                        [
-                            "eid315",
-                            "display",
-                            38000,
-                            0,
-                            "linear",
-                            "${formula}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid319",
-                            "display",
-                            48787,
-                            0,
-                            "linear",
-                            "${hint_2}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid326",
-                            "display",
-                            32000,
-                            0,
-                            "linear",
-                            "${hint_1}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid325",
-                            "background-color",
-                            88000,
-                            0,
-                            "linear",
-                            "${Ellipse}",
-                            'rgba(0,0,0,1.00)',
-                            'rgba(0,0,0,1.00)'
-                        ],
-                        [
-                            "eid268",
-                            "background-color",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            'rgba(6,6,6,0.00)',
-                            'rgba(6,6,6,0.00)'
-                        ],
-                        [
-                            "eid280",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${Grade_X}",
+                            "${QuestionSound_Container}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid271",
-                            "border-color",
+                            "eid243",
+                            "scaleY",
                             0,
                             0,
                             "linear",
-                            "${Answer_Container}",
-                            'rgba(4,4,4,0.18)',
-                            'rgba(4,4,4,0.18)'
+                            "${Answers}",
+                            '0.99259',
+                            '0.99259'
                         ],
                         [
                             "eid277",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            '0px',
-                            '0px'
-                        ],
-                        [
-                            "eid322",
                             "display",
-                            72933,
+                            116000,
                             0,
                             "linear",
-                            "${answer_1}",
+                            "${Ellipse2Copy4}",
                             'none',
                             'block'
-                        ],
-                        [
-                            "eid244",
-                            "width",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            '218px',
-                            '218px'
-                        ],
-                        [
-                            "eid269",
-                            "background-image",
-                            0,
-                            0,
-                            "linear",
-                            "${Answer_Container}",
-                            [270,[['rgba(255,255,255,0.00)',0],['rgba(255,255,255,0.00)',100]]],
-                            [270,[['rgba(255,255,255,0.00)',0],['rgba(255,255,255,0.00)',100]]]
-                        ],
-                        [
-                            "eid323",
-                            "display",
-                            74000,
-                            0,
-                            "linear",
-                            "${answer_2}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid281",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${Grade_Check}",
-                            'none',
-                            'none'
                         ],
                         [
                             "eid278",
-                            "top",
-                            0,
+                            "display",
+                            116500,
                             0,
                             "linear",
-                            "${Answer_Container}",
-                            '0px',
-                            '0px'
+                            "${TextCopy2}",
+                            'none',
+                            'block'
                         ],
-                            [ "eid327", "trigger", 2000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${question}', [] ] ],
-                            [ "eid328", "trigger", 21000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
-                            [ "eid329", "trigger", 34000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint2}', [] ] ],
-                            [ "eid330", "trigger", 62000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer}', [] ] ]
+                        [
+                            "eid269",
+                            "display",
+                            104982,
+                            0,
+                            "linear",
+                            "${Hint_1}",
+                            'none',
+                            'block'
+                        ],
+                            [ "eid270", "trigger", 2000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${question}', [] ] ],
+                            [ "eid271", "trigger", 55000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${hint1}', [] ] ],
+                            [ "eid284", "trigger", 119500, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${answer}', [] ] ]
                     ]
                 }
             },
@@ -545,12 +467,12 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                type: 'text',
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 4, 27, '20px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -648,46 +570,11 @@
                 resizeInstances: false,
                 content: {
                     dom: [
-                        {
-                            rect: [0, 0, '25', '24', 'auto', 'auto'],
-                            id: 'E_Button',
-                            type: 'group',
-                            c: [
-                            {
-                                rect: [0, 0, 25, 24, 'auto', 'auto'],
-                                borderRadius: ['50%', '50%', '50%', '50%'],
-                                id: 'EllipseCopy8',
-                                stroke: ['1px', 'rgba(0,0,0,1)', 'solid'],
-                                type: 'ellipse',
-                                fill: ['rgba(232,241,160,1.00)']
-                            },
-                            {
-                                type: 'text',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
-                                id: 'Text8',
-                                text: 'E',
-                                align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
-                            },
-                            {
-                                type: 'image',
-                                display: 'none',
-                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
-                                id: 'x',
-                                fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
-                            },
-                            {
-                                type: 'image',
-                                display: 'none',
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
-                                fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
-                            }]
-                        }
+
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, 101, 26]
+                            rect: [null, null, '101', '26']
                         }
                     }
                 },
@@ -700,86 +587,7 @@
                         "Answer Correct": 10000
                     },
                     data: [
-                        [
-                            "eid9",
-                            "background-color",
-                            0,
-                            0,
-                            "linear",
-                            "${EllipseCopy8}",
-                            'rgba(232,241,160,1.00)',
-                            'rgba(232,241,160,1.00)'
-                        ],
-                        [
-                            "eid13",
-                            "border-width",
-                            0,
-                            0,
-                            "linear",
-                            "${EllipseCopy8}",
-                            '1px',
-                            '1px'
-                        ],
-                        [
-                            "eid257",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${check}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid258",
-                            "display",
-                            5000,
-                            0,
-                            "linear",
-                            "${check}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid43",
-                            "display",
-                            10000,
-                            0,
-                            "linear",
-                            "${check}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid230",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${x}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid231",
-                            "display",
-                            5000,
-                            0,
-                            "linear",
-                            "${x}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid44",
-                            "display",
-                            10000,
-                            0,
-                            "linear",
-                            "${x}",
-                            'block',
-                            'none'
-                        ]
+
                     ]
                 }
             },
@@ -806,33 +614,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -3, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -937,20 +745,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text8',
                                 text: 'E',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text14',
                                 text: 'Answer E Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
@@ -1062,25 +870,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1206,33 +1014,33 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
-                                id: 'x',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -4, 42, 33, 'auto', 'auto'],
+                                id: 'x',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
-                                id: 'check',
                                 type: 'image',
                                 display: 'none',
+                                rect: [-8, -16, 65, 42, 'auto', 'auto'],
+                                id: 'check',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1337,31 +1145,31 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 101, '20px', 'auto', 'auto'],
                                 id: 'Text13',
                                 text: 'Answer D Text',
                                 align: 'left',
-                                rect: [36, 4, 101, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
                     style: {
-                        '${check}': {
-                            display: 'none',
-                            rect: [-8, -16, 65, 42]
-                        },
                         '${x}': {
                             display: 'none',
                             rect: [-8, -4, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
                         },
                         '${symbolSelector}': {
                             rect: [null, null, 101, 26]
@@ -1462,31 +1270,31 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 4, 27, '20px', 'auto', 'auto'],
                                 id: 'Text7',
                                 text: 'D<br>',
                                 align: 'center',
-                                rect: [0, 4, 27, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 4, 94, '20px', 'auto', 'auto'],
                                 id: 'Text13',
                                 text: 'Answer Text D',
                                 align: 'left',
-                                rect: [36, 4, 94, '20px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, ''], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
                     style: {
-                        '${check}': {
-                            display: 'none',
-                            rect: [-8, -16, 65, 42]
-                        },
                         '${x}': {
                             display: 'none',
                             rect: [-8, -4, 42, 33]
+                        },
+                        '${check}': {
+                            display: 'none',
+                            rect: [-8, -16, 65, 42]
                         },
                         '${symbolSelector}': {
                             rect: [null, null, 101, 26]
@@ -1587,25 +1395,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 4, 27, '20px', 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text5',
                                 text: 'C',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1731,25 +1539,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                type: 'text',
                                 rect: [0, 5, 27, 19, 'auto', 'auto'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
                                 id: 'Text4',
                                 text: 'B',
                                 align: 'center',
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
+                                type: 'text'
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             }]
                         }
@@ -1875,25 +1683,25 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                rect: [0, 3, 27, 19, 'auto', 'auto'],
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal', '', ''],
+                                type: 'text',
                                 id: 'A',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                type: 'text'
+                                rect: [0, 3, 27, 19, 'auto', 'auto']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -16, 65, 42, 'auto', 'auto'],
                                 id: 'check',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/check.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                display: 'none',
                                 rect: [-8, -4, 42, 33, 'auto', 'auto'],
                                 id: 'x',
+                                type: 'image',
+                                display: 'none',
                                 fill: ['rgba(0,0,0,0)', 'images/x.png', '0px', '0px']
                             }]
                         }
@@ -1999,20 +1807,20 @@
                                 fill: ['rgba(232,241,160,1.00)']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [0, 3, 27, 19, 'auto', 'auto'],
                                 id: 'Text3',
                                 text: 'A<br><br><br>',
                                 align: 'center',
-                                rect: [0, 3, 27, 19, 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [14, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             },
                             {
-                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal'],
                                 type: 'text',
+                                rect: [36, 3, 109, '19px', 'auto', 'auto'],
                                 id: 'Text9',
                                 text: 'Answer Text A',
                                 align: 'left',
-                                rect: [36, 3, 109, '19px', 'auto', 'auto']
+                                font: ['Georgia, \'Times New Roman\', Times, serif', [12, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', 'normal']
                             }]
                         }
                     ],
@@ -2091,54 +1899,50 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 2, '153', '183', 'auto', 'auto'],
-                            id: 'Group',
                             type: 'group',
+                            id: 'Group',
+                            rect: ['1px', '0px', '153', '183', 'auto', 'auto'],
                             c: [
                             {
+                                type: 'rect',
                                 id: 'EButton',
-                                type: 'rect',
                                 symbolName: 'EButton_3',
-                                rect: [8, 157, 101, 26, 'auto', 'auto']
+                                rect: ['8', '157', '101', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'DButton',
-                                type: 'rect',
                                 symbolName: 'DButton_3',
-                                rect: [8, 121, 101, 26, 'auto', 'auto']
+                                rect: ['8', '121', '101', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'CButton',
-                                type: 'rect',
                                 symbolName: 'CButton_3',
-                                rect: [8, 86, 101, 26, 'auto', 'auto']
+                                rect: ['8', '86', '101', '26', 'auto', 'auto']
                             },
                             {
+                                type: 'rect',
                                 id: 'BButton',
-                                type: 'rect',
                                 symbolName: 'BButton_3',
-                                rect: [8, 50, 125, 26, 'auto', 'auto']
+                                rect: ['8', '50', '125', '26', 'auto', 'auto']
                             },
                             {
-                                id: 'AButton',
                                 type: 'rect',
+                                id: 'AButton',
                                 symbolName: 'AButton_3',
-                                rect: [0, 0, 153, 42, 'auto', 'auto']
+                                rect: ['0', '0', '153', '42', 'auto', 'auto']
                             }]
                         }
                     ],
                     style: {
-                        '${AnswerText}': {
-                            font: '{{:}{undefined{:}:{:}}{:}{{:}u{:}n{:}d',
-                            rect: [36, 3, 109, 0]
-                        },
                         '${symbolSelector}': {
-                            rect: [null, null, 156, 187]
+                            rect: [null, null, '156', '187']
                         }
                     }
                 },
                 timeline: {
-                    duration: 0,
+                    duration: 10000,
                     autoPlay: true,
                     data: [
 
@@ -2149,5 +1953,5 @@
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("problem_8GC9_5_edgeActions.js");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("problem_8EE5_1_edgeActions.js");
 })("EdgeProblem");
