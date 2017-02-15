@@ -8,6 +8,10 @@ function isDemo() {
     return window.parent.isDemoMode();
 }
 
+function isDemoOrExample () {
+    return window.parent.isDemoOrExampleMode();
+}
+
 function debugAlert(msg) {
     if (debug ) {
         alert(msg);
@@ -83,7 +87,9 @@ function probUtilsInit(sym, multiChoice) {
         isShortAnswer = !multiChoice;
     if (!isShortAnswer)
         shuffleAnswers(sym);
-    maybeStop(sym);
+    // stop if its a regular prob, o/w let it play the read aloud when demo/example(per request)
+    if (!isDemoOrExample())
+        maybeStop(sym);
 }
 
 function answerClicked (sym, buttonName) {
